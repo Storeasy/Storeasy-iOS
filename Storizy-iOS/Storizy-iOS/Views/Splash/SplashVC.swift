@@ -16,13 +16,16 @@ class SplashVC: UIViewController {
     }
     
     @IBAction func signinAction(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "Signin", bundle: nil)
         if let signinVC = self.storyboard?.instantiateViewController(identifier: "SigninVC") {
             self.navigationController?.pushViewController(signinVC, animated: true)
         }
     }
     
     @IBAction func signupAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
+        let signupVC = storyboard.instantiateViewController(identifier: "EmailSignupVC")
+        self.navigationController?.pushViewController(signupVC, animated: true)
+
     }
     
 
