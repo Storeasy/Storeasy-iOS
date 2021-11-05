@@ -16,7 +16,6 @@ class SigninVC: UIViewController {
 //        UserDefaults.standard.key
         
         
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - 뒤로가기 버튼 클릭
@@ -29,6 +28,7 @@ class SigninVC: UIViewController {
     @IBAction func signinAction(_ sender: Any) {
         //서버로 로그인 요청 전송
         //에러 처리 (alert로)
+        
         //성공시 탭바C으로 이동
         let tabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
         let tabBarController = tabBarStoryboard.instantiateViewController(identifier: "TabBarController")
