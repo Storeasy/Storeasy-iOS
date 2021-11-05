@@ -19,10 +19,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="OlK-r0-Zlt" kind="relationship" relationship="viewControllers" id="8Zu-vJ-Aoi"/>
-                        <segue destination="6rd-ps-Il3" kind="relationship" relationship="viewControllers" id="a7I-5b-DnB"/>
-                        <segue destination="tjF-ic-TnV" kind="relationship" relationship="viewControllers" id="blO-kt-AxN"/>
-                        <segue destination="BIB-vQ-ZOU" kind="relationship" relationship="viewControllers" id="1dc-Sr-dkJ"/>
-                        <segue destination="hnK-1W-r1x" kind="relationship" relationship="viewControllers" id="dF4-7m-a76"/>
+                        <segue destination="9tt-qp-TA2" kind="relationship" relationship="viewControllers" id="cSj-XB-Kr6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez5-Mc-1s3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -39,46 +36,15 @@
             </objects>
             <point key="canvasLocation" x="875" y="-203"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="361-gP-TTb">
+        <!--HomeNC-->
+        <scene sceneID="Ftg-5i-OSX">
             <objects>
-                <viewControllerPlaceholder id="6rd-ps-Il3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="CAi-XM-1up"/>
+                <viewControllerPlaceholder storyboardName="HomeNC" id="9tt-qp-TA2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="7a3-AC-kJA"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="235-CG-UF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujz-cy-ePc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="-19"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="uXy-te-JE4">
-            <objects>
-                <viewControllerPlaceholder id="tjF-ic-TnV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="JBa-pn-fSa"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pEa-Fo-gNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="896" y="129"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="GwB-0k-Nqd">
-            <objects>
-                <viewControllerPlaceholder id="BIB-vQ-ZOU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DMX-un-qTp"/>
-                    <navigationItem key="navigationItem" id="ZzF-YO-foc"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d4z-mn-hts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="881" y="237"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="Guc-Ue-Ydb">
-            <objects>
-                <viewControllerPlaceholder id="hnK-1W-r1x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nwA-s9-69d"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i8W-eJ-vQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="834" y="331"/>
+            <point key="canvasLocation" x="875" y="16"/>
         </scene>
     </scenes>
 </document>

@@ -16,6 +16,10 @@
 		DEA36E662733D72A00BBFEF5 /* AgreementSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E652733D72A00BBFEF5 /* AgreementSignupVC.swift */; };
 		DEA36E682735113600BBFEF5 /* AgreementDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E672735113500BBFEF5 /* AgreementDetailVC.swift */; };
 		DEA36E6A27351D8300BBFEF5 /* HomeNC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E6927351D8300BBFEF5 /* HomeNC.storyboard */; };
+		DEA36E6C273522B300BBFEF5 /* HomeNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E6B273522B200BBFEF5 /* HomeNC.swift */; };
+		DEA36E6E273522E900BBFEF5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E6D273522E900BBFEF5 /* HomeVC.swift */; };
+		DEA36E72273526E200BBFEF5 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E71273526E200BBFEF5 /* OnboardingVC.swift */; };
+		DEA36E74273526F100BBFEF5 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E73273526F100BBFEF5 /* Onboarding.storyboard */; };
 		DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5412732C6260022B33B /* AppDelegate.swift */; };
 		DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5432732C6260022B33B /* SceneDelegate.swift */; };
 		DEF9E5462732C6260022B33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5452732C6260022B33B /* ViewController.swift */; };
@@ -43,6 +47,10 @@
 		DEA36E652733D72A00BBFEF5 /* AgreementSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementSignupVC.swift; sourceTree = "<group>"; };
 		DEA36E672735113500BBFEF5 /* AgreementDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementDetailVC.swift; sourceTree = "<group>"; };
 		DEA36E6927351D8300BBFEF5 /* HomeNC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HomeNC.storyboard; path = "Storizy-iOS/Views/Home/HomeNC.storyboard"; sourceTree = SOURCE_ROOT; };
+		DEA36E6B273522B200BBFEF5 /* HomeNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNC.swift; sourceTree = "<group>"; };
+		DEA36E6D273522E900BBFEF5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		DEA36E71273526E200BBFEF5 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		DEA36E73273526F100BBFEF5 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		DEF9E53E2732C6260022B33B /* Storizy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storizy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9E5412732C6260022B33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9E5432732C6260022B33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				DEA36E6927351D8300BBFEF5 /* HomeNC.storyboard */,
+				DEA36E6B273522B200BBFEF5 /* HomeNC.swift */,
+				DEA36E6D273522E900BBFEF5 /* HomeVC.swift */,
 				DEF9E5742732D6970022B33B /* ProjectCell.swift */,
 				DEF9E5752732D6970022B33B /* ProjectCell.xib */,
 			);
@@ -186,6 +196,8 @@
 		DEF9E5612732CA3D0022B33B /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36E71273526E200BBFEF5 /* OnboardingVC.swift */,
+				DEA36E73273526F100BBFEF5 /* Onboarding.storyboard */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -376,6 +388,7 @@
 				DEF9E5512732C6290022B33B /* LaunchScreen.storyboard in Resources */,
 				DEF9E54E2732C6290022B33B /* Assets.xcassets in Resources */,
 				DEF9E5492732C6260022B33B /* Main.storyboard in Resources */,
+				DEA36E74273526F100BBFEF5 /* Onboarding.storyboard in Resources */,
 				DEF9E5A82733863E0022B33B /* TabBar.storyboard in Resources */,
 				DEF9E5772732D6970022B33B /* ProjectCell.xib in Resources */,
 			);
@@ -391,10 +404,13 @@
 				DEF9E5462732C6260022B33B /* ViewController.swift in Sources */,
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
 				DEF9E5AC273389930022B33B /* SigninNC.swift in Sources */,
+				DEA36E6E273522E900BBFEF5 /* HomeVC.swift in Sources */,
 				DEA36E5E2733CC9000BBFEF5 /* NameBirthSignupVC.swift in Sources */,
 				DEF9E5AE2733A31B0022B33B /* SplashVC.swift in Sources */,
 				DEF9E54C2732C6260022B33B /* Storizy_iOS.xcdatamodeld in Sources */,
+				DEA36E72273526E200BBFEF5 /* OnboardingVC.swift in Sources */,
 				DEA36E682735113600BBFEF5 /* AgreementDetailVC.swift in Sources */,
+				DEA36E6C273522B300BBFEF5 /* HomeNC.swift in Sources */,
 				DEA36E5A2733CC3F00BBFEF5 /* EmailSignupVC.swift in Sources */,
 				DEA36E662733D72A00BBFEF5 /* AgreementSignupVC.swift in Sources */,
 				DEF9E5762732D6970022B33B /* ProjectCell.swift in Sources */,
