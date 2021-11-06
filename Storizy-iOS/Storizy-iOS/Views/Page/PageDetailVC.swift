@@ -15,7 +15,10 @@ class PageDetailVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func closeAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
