@@ -9,7 +9,10 @@ import UIKit
 
 class ProjectCell: UITableViewCell {
 
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var projectContentView: UIView!
+    @IBOutlet weak var projectTitleLabel: UILabel!
+    @IBOutlet weak var periodLabel: UILabel!
+    @IBOutlet weak var projectContentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +21,16 @@ class ProjectCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        if selected {
+            projectContentView.backgroundColor = .brown
+        } else {
+            projectContentView.backgroundColor = .none
+        }
         // Configure the view for the selected state
+    }
+    
+    @IBAction func moreAction(_ sender: Any) {
+        
     }
     
 }

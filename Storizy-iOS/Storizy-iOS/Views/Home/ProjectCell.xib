@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,25 +18,90 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jH-gy-XEs">
-                        <rect key="frame" x="46" y="55" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-qH-f5u">
+                        <rect key="frame" x="10" y="0.0" width="5" height="150"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="nzH-lH-ThP"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로젝트명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEr-KO-wxT">
+                        <rect key="frame" x="25" y="10" width="74" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.11.22 - 2021.01.16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpd-Dh-TqU">
+                        <rect key="frame" x="25" y="36" width="133.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="systemOrangeColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="30Z-NL-CWp">
+                        <rect key="frame" x="25" y="55.5" width="295" height="25"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="QSe-Hh-Ras"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L83-Rz-3GL">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZE-lf-aL6">
+                        <rect key="frame" x="25" y="88" width="285" height="43"/>
+                        <string key="text">최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자...</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-PB-UWC">
+                        <rect key="frame" x="291" y="10" width="19" height="22"/>
+                        <state key="normal" image="ellipsis" catalog="system"/>
+                        <connections>
+                            <action selector="moreAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bwH-Rl-SoB"/>
+                        </connections>
+                    </button>
                 </subviews>
-                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="3jH-gy-XEs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="55" id="3XE-zb-g7s"/>
-                    <constraint firstAttribute="bottom" secondItem="3jH-gy-XEs" secondAttribute="bottom" constant="74" id="Y3d-Wp-Qg5"/>
-                    <constraint firstItem="3jH-gy-XEs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="46" id="gfT-aU-5MW"/>
+                    <constraint firstItem="ekb-qH-f5u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1Sy-q8-W4V"/>
+                    <constraint firstAttribute="trailing" secondItem="30Z-NL-CWp" secondAttribute="trailing" id="2gg-po-k4c"/>
+                    <constraint firstItem="30Z-NL-CWp" firstAttribute="top" secondItem="mpd-Dh-TqU" secondAttribute="bottom" constant="5" id="3nF-hh-BSs"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IEr-KO-wxT" secondAttribute="trailing" constant="20" id="ANr-L6-I0F"/>
+                    <constraint firstItem="FZE-lf-aL6" firstAttribute="leading" secondItem="30Z-NL-CWp" secondAttribute="leading" id="B5u-8Y-nJm"/>
+                    <constraint firstItem="IEr-KO-wxT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="IDU-kX-bUd"/>
+                    <constraint firstItem="ekb-qH-f5u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="L27-bT-uFQ"/>
+                    <constraint firstAttribute="trailing" secondItem="FZE-lf-aL6" secondAttribute="trailing" constant="10" id="Lem-Em-gul"/>
+                    <constraint firstAttribute="trailing" secondItem="f9c-PB-UWC" secondAttribute="trailing" constant="10" id="M7N-vl-ZUb"/>
+                    <constraint firstAttribute="bottom" secondItem="ekb-qH-f5u" secondAttribute="bottom" id="b6r-MP-na8"/>
+                    <constraint firstItem="f9c-PB-UWC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eQw-aY-XAS"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FZE-lf-aL6" secondAttribute="bottom" constant="10" id="hqK-mZ-dmu"/>
+                    <constraint firstItem="mpd-Dh-TqU" firstAttribute="top" secondItem="IEr-KO-wxT" secondAttribute="bottom" constant="5" id="j6E-M9-tSQ"/>
+                    <constraint firstItem="IEr-KO-wxT" firstAttribute="leading" secondItem="ekb-qH-f5u" secondAttribute="trailing" constant="10" id="x23-ze-nQY"/>
+                    <constraint firstItem="mpd-Dh-TqU" firstAttribute="leading" secondItem="IEr-KO-wxT" secondAttribute="leading" id="xJR-86-Ko3"/>
+                    <constraint firstItem="FZE-lf-aL6" firstAttribute="top" secondItem="30Z-NL-CWp" secondAttribute="bottom" constant="7.5" id="xfW-hy-SxU"/>
+                    <constraint firstItem="30Z-NL-CWp" firstAttribute="leading" secondItem="IEr-KO-wxT" secondAttribute="leading" id="zQ5-XX-Yya"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="label" destination="3jH-gy-XEs" id="eHn-Wb-L1V"/>
+                <outlet property="periodLabel" destination="mpd-Dh-TqU" id="Uau-BO-C5r"/>
+                <outlet property="projectContentLabel" destination="FZE-lf-aL6" id="lek-Xg-KfH"/>
+                <outlet property="projectContentView" destination="H2p-sc-9uM" id="lBY-hq-l8h"/>
+                <outlet property="projectTitleLabel" destination="IEr-KO-wxT" id="yIJ-S0-Twt"/>
             </connections>
-            <point key="canvasLocation" x="112" y="109"/>
+            <point key="canvasLocation" x="111.59420289855073" y="108.48214285714285"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
