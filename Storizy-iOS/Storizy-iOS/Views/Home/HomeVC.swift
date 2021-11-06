@@ -9,8 +9,18 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var feedTableView: UITableView!
+    @IBOutlet weak var feedTableViewHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nibName = UINib(nibName: "ProjectCell", bundle: nil)
+        feedTableView.register(nibName, forCellReuseIdentifier: "projectCell")
+        
+        DispatchQueue.main.async {
+            self.feedTableViewHeight.constant = self.feedTableView.contentSize.height
+        }
 
         //최초시작
         if UserDefaults.standard.string(forKey: "firstLoad") == nil {
@@ -22,13 +32,25 @@ class HomeVC: UIViewController {
             onboardingVC.modalPresentationStyle = .popover
             present(onboardingVC, animated: true, completion: nil)
         }
+        
         //!최초시작
-        else {
-            print("!최초시작")
-            UserDefaults.standard.removeObject(forKey: "firstLoad")
-            //홉 화면 띄우기
-        }
+        
         
     }
+    
+}
+
+extension HomeVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectCell
+        cell.label.text = "project~"
+        
+        return cell
+    }
+    
     
 }
