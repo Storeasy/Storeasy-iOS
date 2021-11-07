@@ -33,6 +33,8 @@
 		DEA36E962737A5DB00BBFEF5 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E952737A5DA00BBFEF5 /* Create.storyboard */; };
 		DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */; };
 		DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */; };
+		DEA36E9E2737DF5800BBFEF5 /* CreateProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9D2737DF5700BBFEF5 /* CreateProjectVC.swift */; };
+		DEA36EA02737ECEC00BBFEF5 /* CreatePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9F2737ECEC00BBFEF5 /* CreatePageVC.swift */; };
 		DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5412732C6260022B33B /* AppDelegate.swift */; };
 		DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5432732C6260022B33B /* SceneDelegate.swift */; };
 		DEF9E5462732C6260022B33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5452732C6260022B33B /* ViewController.swift */; };
@@ -77,6 +79,8 @@
 		DEA36E952737A5DA00BBFEF5 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNC.swift; sourceTree = "<group>"; };
 		DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSelectionVC.swift; sourceTree = "<group>"; };
+		DEA36E9D2737DF5700BBFEF5 /* CreateProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectVC.swift; sourceTree = "<group>"; };
+		DEA36E9F2737ECEC00BBFEF5 /* CreatePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePageVC.swift; sourceTree = "<group>"; };
 		DEF9E53E2732C6260022B33B /* Storizy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storizy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9E5412732C6260022B33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9E5432732C6260022B33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 				DEA36E952737A5DA00BBFEF5 /* Create.storyboard */,
 				DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */,
 				DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */,
+				DEA36E9D2737DF5700BBFEF5 /* CreateProjectVC.swift */,
+				DEA36E9F2737ECEC00BBFEF5 /* CreatePageVC.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -467,12 +473,14 @@
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
 				DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */,
 				DEF9E5AC273389930022B33B /* SigninNC.swift in Sources */,
+				DEA36EA02737ECEC00BBFEF5 /* CreatePageVC.swift in Sources */,
 				DEA36E6E273522E900BBFEF5 /* HomeVC.swift in Sources */,
 				DEA36E5E2733CC9000BBFEF5 /* NameBirthSignupVC.swift in Sources */,
 				DEA36E7E27369B2700BBFEF5 /* Project.swift in Sources */,
 				DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */,
 				DEA36E8027369B7F00BBFEF5 /* Page.swift in Sources */,
 				DEF9E5AE2733A31B0022B33B /* SplashVC.swift in Sources */,
+				DEA36E9E2737DF5800BBFEF5 /* CreateProjectVC.swift in Sources */,
 				DEA36E7B2736976800BBFEF5 /* PageCell.swift in Sources */,
 				DEF9E54C2732C6260022B33B /* Storizy_iOS.xcdatamodeld in Sources */,
 				DEA36E72273526E200BBFEF5 /* OnboardingVC.swift in Sources */,
