@@ -28,6 +28,8 @@
 		DEA36E872736A81A00BBFEF5 /* ProjectDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E862736A81A00BBFEF5 /* ProjectDetailVC.swift */; };
 		DEA36E8A2736A83900BBFEF5 /* PageDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */; };
 		DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */; };
+		DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */; };
+		DEA36E9427378AFF00BBFEF5 /* PageCellInProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */; };
 		DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5412732C6260022B33B /* AppDelegate.swift */; };
 		DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5432732C6260022B33B /* SceneDelegate.swift */; };
 		DEF9E5462732C6260022B33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5452732C6260022B33B /* ViewController.swift */; };
@@ -67,6 +69,8 @@
 		DEA36E862736A81A00BBFEF5 /* ProjectDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailVC.swift; sourceTree = "<group>"; };
 		DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageDetail.storyboard; sourceTree = "<group>"; };
 		DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailVC.swift; sourceTree = "<group>"; };
+		DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCellInProject.swift; sourceTree = "<group>"; };
+		DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCellInProject.xib; sourceTree = "<group>"; };
 		DEF9E53E2732C6260022B33B /* Storizy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storizy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9E5412732C6260022B33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9E5432732C6260022B33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			children = (
 				DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */,
 				DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */,
+				DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */,
+				DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 				DEF9E5492732C6260022B33B /* Main.storyboard in Resources */,
 				DEA36E74273526F100BBFEF5 /* Onboarding.storyboard in Resources */,
 				DEA36E8A2736A83900BBFEF5 /* PageDetail.storyboard in Resources */,
+				DEA36E9427378AFF00BBFEF5 /* PageCellInProject.xib in Resources */,
 				DEA36E852736A7FF00BBFEF5 /* ProjectDetail.storyboard in Resources */,
 				DEF9E5A82733863E0022B33B /* TabBar.storyboard in Resources */,
 				DEF9E5772732D6970022B33B /* ProjectCell.xib in Resources */,
@@ -445,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEF9E5462732C6260022B33B /* ViewController.swift in Sources */,
+				DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */,
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
 				DEF9E5AC273389930022B33B /* SigninNC.swift in Sources */,
 				DEA36E6E273522E900BBFEF5 /* HomeVC.swift in Sources */,
