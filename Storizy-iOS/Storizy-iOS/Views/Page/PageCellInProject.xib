@@ -80,6 +80,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="moreBtn" destination="VqS-R7-fYQ" id="Xt7-cP-PGq"/>
                 <outlet property="pageContentLabel" destination="Yij-Qc-AiO" id="Syh-2W-NYF"/>
                 <outlet property="pagePeriodLabel" destination="t82-Bs-0NA" id="5Vz-ds-tyn"/>
                 <outlet property="pageTitleLabel" destination="3XW-Dm-3qy" id="wfJ-eI-ev2"/>

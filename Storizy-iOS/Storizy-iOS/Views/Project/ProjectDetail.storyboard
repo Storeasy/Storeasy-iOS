@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,6 +75,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uP-Ip-55s" userLabel="moreBtn">
+                                        <rect key="frame" x="375" y="15" width="19" height="22"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="ellipsis" catalog="system" renderingMode="original"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="moreBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0Ma-gm-i4G"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -83,9 +93,11 @@
                                     <constraint firstItem="O50-rS-4XJ" firstAttribute="leading" secondItem="Z0G-O1-R7l" secondAttribute="leading" id="8zV-ig-eWD"/>
                                     <constraint firstAttribute="height" constant="238" id="ADE-So-e3Z"/>
                                     <constraint firstAttribute="trailing" secondItem="HqM-5A-T95" secondAttribute="trailing" constant="30" id="IsS-18-sCg"/>
+                                    <constraint firstAttribute="trailing" secondItem="5uP-Ip-55s" secondAttribute="trailing" constant="20" id="Rc2-Fz-wzq"/>
                                     <constraint firstAttribute="bottom" secondItem="HqM-5A-T95" secondAttribute="bottom" constant="5" id="U7n-Rm-Eou"/>
                                     <constraint firstItem="O50-rS-4XJ" firstAttribute="top" secondItem="Z0G-O1-R7l" secondAttribute="bottom" constant="10" id="VeW-i2-SNE"/>
                                     <constraint firstItem="Z0G-O1-R7l" firstAttribute="top" secondItem="Jop-Jg-UPJ" secondAttribute="top" constant="20" id="ZTN-Az-dLt"/>
+                                    <constraint firstItem="5uP-Ip-55s" firstAttribute="top" secondItem="Jop-Jg-UPJ" secondAttribute="top" constant="15" id="aTQ-Sd-MtR"/>
                                     <constraint firstItem="Ikf-Aw-iSg" firstAttribute="leading" secondItem="Jop-Jg-UPJ" secondAttribute="leading" constant="30" id="ccs-pD-Oz3"/>
                                     <constraint firstItem="Z0G-O1-R7l" firstAttribute="leading" secondItem="Jop-Jg-UPJ" secondAttribute="leading" constant="30" id="h0Q-ry-NVw"/>
                                     <constraint firstItem="HqM-5A-T95" firstAttribute="top" secondItem="Ikf-Aw-iSg" secondAttribute="bottom" constant="10" id="n1X-XC-pNE"/>
@@ -122,6 +134,7 @@
                     <connections>
                         <outlet property="pageTableView" destination="QrO-QX-Gik" id="7YP-kF-4mD"/>
                         <outlet property="projectContentTextView" destination="HqM-5A-T95" id="u4M-Jw-4vP"/>
+                        <outlet property="projectMoreBtn" destination="5uP-Ip-55s" id="Vam-ea-2Am"/>
                         <outlet property="projectPeriodLabel" destination="O50-rS-4XJ" id="gd4-i8-Moo"/>
                         <outlet property="projectTitleLabel" destination="Z0G-O1-R7l" id="Zx0-ly-L6e"/>
                     </connections>
@@ -132,6 +145,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

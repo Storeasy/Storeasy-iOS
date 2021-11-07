@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,6 +78,12 @@
                                 <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paK-37-vYh" userLabel="more">
+                                <rect key="frame" x="375" y="110" width="19" height="22"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="ellipsis" catalog="system" renderingMode="original"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -85,9 +92,11 @@
                             <constraint firstItem="pAS-Xc-8aM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="5PS-O2-8xr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xfN-q6-NxG" secondAttribute="trailing" constant="20" id="6ih-zg-T5P"/>
                             <constraint firstItem="hIf-ej-HtS" firstAttribute="top" secondItem="Fdw-6x-8q3" secondAttribute="bottom" constant="20" id="C1T-nn-SrN"/>
+                            <constraint firstItem="paK-37-vYh" firstAttribute="top" secondItem="N7y-Z8-a7D" secondAttribute="bottom" constant="20" id="Dj4-RV-wAU"/>
                             <constraint firstItem="hqT-MN-ScA" firstAttribute="top" secondItem="pAS-Xc-8aM" secondAttribute="bottom" constant="5" id="FmR-fF-0HI"/>
                             <constraint firstItem="u7h-19-S4o" firstAttribute="leading" secondItem="hqT-MN-ScA" secondAttribute="leading" id="Iaw-ON-IBR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="N7y-Z8-a7D" secondAttribute="top" constant="44" id="M0u-3E-kHk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="paK-37-vYh" secondAttribute="trailing" constant="20" id="PiR-18-t8C"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hIf-ej-HtS" secondAttribute="bottom" constant="20" id="Wkw-cB-N5b"/>
                             <constraint firstItem="hqT-MN-ScA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Xjv-cP-vLf"/>
                             <constraint firstItem="N7y-Z8-a7D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YYh-nS-D22"/>
@@ -104,6 +113,9 @@
                             <constraint firstItem="u7h-19-S4o" firstAttribute="top" secondItem="hqT-MN-ScA" secondAttribute="bottom" constant="10" id="zTv-id-iEr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moreBtn" destination="paK-37-vYh" id="pjF-Zf-Kwl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +123,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

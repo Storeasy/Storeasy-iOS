@@ -12,17 +12,44 @@ class ProjectDetailVC: UIViewController {
     @IBOutlet weak var projectPeriodLabel: UILabel!
     @IBOutlet weak var projectContentTextView: UITextView!
     @IBOutlet weak var pageTableView: UITableView!
+    @IBOutlet weak var projectMoreBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let nibName = UINib(nibName: "PageCellInProject", bundle: nil)
         pageTableView.register(nibName, forCellReuseIdentifier: "pageCellInProject")
+        
+        // more btn menu setting
+        moreAction()
     }
     
+    func moreAction(){
+        projectMoreBtn.showsMenuAsPrimaryAction = true
+        // 수정하기 메뉴 아이템
+        let edit = UIAction(title: "수정하기", image: nil) { _ in
+            // 수정하기 뷰 띄우기
+            let storyboard = UIStoryboard(name: "EditProject", bundle: nil)
+            let editProjectVC = storyboard.instantiateViewController(identifier: "EditProjectVC")
+            self.navigationController?.pushViewController(editProjectVC, animated: true)
+        }
+        
+        let delete = UIAction(title: "삭제하기", image: nil) { _ in
+            // 삭제하기
+        }
+        
+        let cancel = UIAction(title: "취소", attributes: .destructive) { _ in }
+        
+        projectMoreBtn.menu = UIMenu(title: "project menu", image: nil, identifier: nil, options: .displayInline, children: [edit, delete, cancel])
+    }
+    
+    // 닫기
     @IBAction func closeAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    
 }
 
 
