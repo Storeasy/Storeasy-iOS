@@ -30,6 +30,9 @@
 		DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */; };
 		DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */; };
 		DEA36E9427378AFF00BBFEF5 /* PageCellInProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */; };
+		DEA36E962737A5DB00BBFEF5 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E952737A5DA00BBFEF5 /* Create.storyboard */; };
+		DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */; };
+		DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */; };
 		DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5412732C6260022B33B /* AppDelegate.swift */; };
 		DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5432732C6260022B33B /* SceneDelegate.swift */; };
 		DEF9E5462732C6260022B33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5452732C6260022B33B /* ViewController.swift */; };
@@ -71,6 +74,9 @@
 		DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailVC.swift; sourceTree = "<group>"; };
 		DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCellInProject.swift; sourceTree = "<group>"; };
 		DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCellInProject.xib; sourceTree = "<group>"; };
+		DEA36E952737A5DA00BBFEF5 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
+		DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNC.swift; sourceTree = "<group>"; };
+		DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSelectionVC.swift; sourceTree = "<group>"; };
 		DEF9E53E2732C6260022B33B /* Storizy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storizy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9E5412732C6260022B33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9E5432732C6260022B33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +264,9 @@
 		DEF9E5632732CC2A0022B33B /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36E952737A5DA00BBFEF5 /* Create.storyboard */,
+				DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */,
+				DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -434,6 +443,7 @@
 				DEF9E5512732C6290022B33B /* LaunchScreen.storyboard in Resources */,
 				DEA36E7C2736976800BBFEF5 /* PageCell.xib in Resources */,
 				DEF9E54E2732C6290022B33B /* Assets.xcassets in Resources */,
+				DEA36E962737A5DB00BBFEF5 /* Create.storyboard in Resources */,
 				DEF9E5492732C6260022B33B /* Main.storyboard in Resources */,
 				DEA36E74273526F100BBFEF5 /* Onboarding.storyboard in Resources */,
 				DEA36E8A2736A83900BBFEF5 /* PageDetail.storyboard in Resources */,
@@ -453,7 +463,9 @@
 			files = (
 				DEF9E5462732C6260022B33B /* ViewController.swift in Sources */,
 				DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */,
+				DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */,
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
+				DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */,
 				DEF9E5AC273389930022B33B /* SigninNC.swift in Sources */,
 				DEA36E6E273522E900BBFEF5 /* HomeVC.swift in Sources */,
 				DEA36E5E2733CC9000BBFEF5 /* NameBirthSignupVC.swift in Sources */,
