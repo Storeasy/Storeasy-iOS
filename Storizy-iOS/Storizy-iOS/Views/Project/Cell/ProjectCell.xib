@@ -87,6 +87,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="moreBtn" destination="f9c-PB-UWC" id="G9S-Ov-8Rx"/>
                 <outlet property="periodLabel" destination="mpd-Dh-TqU" id="Uau-BO-C5r"/>
                 <outlet property="projectContentLabel" destination="FZE-lf-aL6" id="lek-Xg-KfH"/>
                 <outlet property="projectContentView" destination="H2p-sc-9uM" id="lBY-hq-l8h"/>

@@ -49,6 +49,15 @@
 		DEA36EBF2739108200BBFEF5 /* HeartPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EBD2739108200BBFEF5 /* HeartPageCell.xib */; };
 		DEA36EC22739176200BBFEF5 /* HeartUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EC02739176100BBFEF5 /* HeartUserCell.swift */; };
 		DEA36EC32739176200BBFEF5 /* HeartUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EC12739176200BBFEF5 /* HeartUserCell.xib */; };
+		DEA36EC727391F0D00BBFEF5 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EC627391F0C00BBFEF5 /* CustomSegmentedControl.swift */; };
+		DEA36EC927394FF900BBFEF5 /* OtherPageDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EC827394FF700BBFEF5 /* OtherPageDetail.storyboard */; };
+		DEA36ECB2739501700BBFEF5 /* OtherPageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36ECA2739501700BBFEF5 /* OtherPageDetailVC.swift */; };
+		DEA36ECD2739553600BBFEF5 /* OtherHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36ECC2739553500BBFEF5 /* OtherHome.storyboard */; };
+		DEA36ECF2739555800BBFEF5 /* OtherHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36ECE2739555800BBFEF5 /* OtherHomeVC.swift */; };
+		DEA36ED32739867C00BBFEF5 /* OtherProjectDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36ED22739867C00BBFEF5 /* OtherProjectDetailVC.swift */; };
+		DEA36ED5273986BF00BBFEF5 /* OtherProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36ED4273986BF00BBFEF5 /* OtherProjectDetail.storyboard */; };
+		DEA36ED8273987CA00BBFEF5 /* OtherPageCellInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36ED6273987CA00BBFEF5 /* OtherPageCellInProject.swift */; };
+		DEA36ED9273987CA00BBFEF5 /* OtherPageCellInProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36ED7273987CA00BBFEF5 /* OtherPageCellInProject.xib */; };
 		DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5412732C6260022B33B /* AppDelegate.swift */; };
 		DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5432732C6260022B33B /* SceneDelegate.swift */; };
 		DEF9E5462732C6260022B33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5452732C6260022B33B /* ViewController.swift */; };
@@ -109,6 +118,15 @@
 		DEA36EBD2739108200BBFEF5 /* HeartPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeartPageCell.xib; sourceTree = "<group>"; };
 		DEA36EC02739176100BBFEF5 /* HeartUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartUserCell.swift; sourceTree = "<group>"; };
 		DEA36EC12739176200BBFEF5 /* HeartUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeartUserCell.xib; sourceTree = "<group>"; };
+		DEA36EC627391F0C00BBFEF5 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		DEA36EC827394FF700BBFEF5 /* OtherPageDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtherPageDetail.storyboard; sourceTree = "<group>"; };
+		DEA36ECA2739501700BBFEF5 /* OtherPageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPageDetailVC.swift; sourceTree = "<group>"; };
+		DEA36ECC2739553500BBFEF5 /* OtherHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtherHome.storyboard; sourceTree = "<group>"; };
+		DEA36ECE2739555800BBFEF5 /* OtherHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherHomeVC.swift; sourceTree = "<group>"; };
+		DEA36ED22739867C00BBFEF5 /* OtherProjectDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProjectDetailVC.swift; sourceTree = "<group>"; };
+		DEA36ED4273986BF00BBFEF5 /* OtherProjectDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtherProjectDetail.storyboard; sourceTree = "<group>"; };
+		DEA36ED6273987CA00BBFEF5 /* OtherPageCellInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPageCellInProject.swift; sourceTree = "<group>"; };
+		DEA36ED7273987CA00BBFEF5 /* OtherPageCellInProject.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherPageCellInProject.xib; sourceTree = "<group>"; };
 		DEF9E53E2732C6260022B33B /* Storizy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storizy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9E5412732C6260022B33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9E5432732C6260022B33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,11 +160,14 @@
 		DEA36E812736A7AF00BBFEF5 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36E7D27369B2700BBFEF5 /* Project.swift */,
 				DEA36EB62739040B00BBFEF5 /* Cell */,
 				DEA36E842736A7FF00BBFEF5 /* ProjectDetail.storyboard */,
 				DEA36E862736A81A00BBFEF5 /* ProjectDetailVC.swift */,
 				DEA36EA527383B6700BBFEF5 /* EditProject.storyboard */,
 				DEA36EA727383B7300BBFEF5 /* EditProjectVC.swift */,
+				DEA36ED22739867C00BBFEF5 /* OtherProjectDetailVC.swift */,
+				DEA36ED4273986BF00BBFEF5 /* OtherProjectDetail.storyboard */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -154,11 +175,14 @@
 		DEA36E882736A82F00BBFEF5 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36E7F27369B7F00BBFEF5 /* Page.swift */,
 				DEA36EB12739039C00BBFEF5 /* Cell */,
 				DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */,
 				DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */,
 				DEA36EA127383A0300BBFEF5 /* EditPageVC.swift */,
 				DEA36EA327383A5100BBFEF5 /* EditPage.storyboard */,
+				DEA36EC827394FF700BBFEF5 /* OtherPageDetail.storyboard */,
+				DEA36ECA2739501700BBFEF5 /* OtherPageDetailVC.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -174,6 +198,8 @@
 				DEA36E7A2736976800BBFEF5 /* PageCell.xib */,
 				DEA36EBC2739108200BBFEF5 /* HeartPageCell.swift */,
 				DEA36EBD2739108200BBFEF5 /* HeartPageCell.xib */,
+				DEA36ED6273987CA00BBFEF5 /* OtherPageCellInProject.swift */,
+				DEA36ED7273987CA00BBFEF5 /* OtherPageCellInProject.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -193,6 +219,21 @@
 				DEA36EBA27390F7000BBFEF5 /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		DEA36EC427391E9E00BBFEF5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DEA36EC527391EF200BBFEF5 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				DEA36EC627391F0C00BBFEF5 /* CustomSegmentedControl.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		DEF9E5352732C6260022B33B = {
@@ -226,6 +267,8 @@
 		DEF9E5592732C66E0022B33B /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36EC527391EF200BBFEF5 /* Custom */,
+				DEA36EC427391E9E00BBFEF5 /* Extension */,
 				DEF9E5412732C6260022B33B /* AppDelegate.swift */,
 				DEF9E5432732C6260022B33B /* SceneDelegate.swift */,
 				DEF9E54F2732C6290022B33B /* LaunchScreen.storyboard */,
@@ -296,8 +339,8 @@
 				DEA36E6927351D8300BBFEF5 /* HomeNC.storyboard */,
 				DEA36E6B273522B200BBFEF5 /* HomeNC.swift */,
 				DEA36E6D273522E900BBFEF5 /* HomeVC.swift */,
-				DEA36E7D27369B2700BBFEF5 /* Project.swift */,
-				DEA36E7F27369B7F00BBFEF5 /* Page.swift */,
+				DEA36ECC2739553500BBFEF5 /* OtherHome.storyboard */,
+				DEA36ECE2739555800BBFEF5 /* OtherHomeVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -510,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEA36E522733B1D900BBFEF5 /* Signup.storyboard in Resources */,
+				DEA36ED5273986BF00BBFEF5 /* OtherProjectDetail.storyboard in Resources */,
 				DEF9E5A32733855F0022B33B /* Signin.storyboard in Resources */,
 				DEA36EB02738F58700BBFEF5 /* Create.storyboard in Resources */,
 				DEA36E6A27351D8300BBFEF5 /* HomeNC.storyboard in Resources */,
@@ -519,11 +563,14 @@
 				DEF9E54E2732C6290022B33B /* Assets.xcassets in Resources */,
 				DEF9E5492732C6260022B33B /* Main.storyboard in Resources */,
 				DEA36EC32739176200BBFEF5 /* HeartUserCell.xib in Resources */,
+				DEA36ECD2739553600BBFEF5 /* OtherHome.storyboard in Resources */,
 				DEA36EB5273903E100BBFEF5 /* OtherPageCell.xib in Resources */,
 				DEA36EBF2739108200BBFEF5 /* HeartPageCell.xib in Resources */,
 				DEA36EA427383A5100BBFEF5 /* EditPage.storyboard in Resources */,
 				DEA36E74273526F100BBFEF5 /* Onboarding.storyboard in Resources */,
+				DEA36ED9273987CA00BBFEF5 /* OtherPageCellInProject.xib in Resources */,
 				DEA36EA627383B6700BBFEF5 /* EditProject.storyboard in Resources */,
+				DEA36EC927394FF900BBFEF5 /* OtherPageDetail.storyboard in Resources */,
 				DEA36E8A2736A83900BBFEF5 /* PageDetail.storyboard in Resources */,
 				DEA36E9427378AFF00BBFEF5 /* PageCellInProject.xib in Resources */,
 				DEA36E852736A7FF00BBFEF5 /* ProjectDetail.storyboard in Resources */,
@@ -540,6 +587,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEF9E5462732C6260022B33B /* ViewController.swift in Sources */,
+				DEA36EC727391F0D00BBFEF5 /* CustomSegmentedControl.swift in Sources */,
+				DEA36ED8273987CA00BBFEF5 /* OtherPageCellInProject.swift in Sources */,
 				DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */,
 				DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */,
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
@@ -553,14 +602,17 @@
 				DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */,
 				DEA36E8027369B7F00BBFEF5 /* Page.swift in Sources */,
 				DEA36EBB27390F7100BBFEF5 /* User.swift in Sources */,
+				DEA36ECB2739501700BBFEF5 /* OtherPageDetailVC.swift in Sources */,
 				DEF9E5AE2733A31B0022B33B /* SplashVC.swift in Sources */,
 				DEA36EAC2738F51F00BBFEF5 /* HeartNC.swift in Sources */,
 				DEA36E9E2737DF5800BBFEF5 /* CreateProjectVC.swift in Sources */,
 				DEA36E7B2736976800BBFEF5 /* PageCell.swift in Sources */,
+				DEA36ED32739867C00BBFEF5 /* OtherProjectDetailVC.swift in Sources */,
 				DEF9E54C2732C6260022B33B /* Storizy_iOS.xcdatamodeld in Sources */,
 				DEA36E72273526E200BBFEF5 /* OnboardingVC.swift in Sources */,
 				DEA36EA227383A0300BBFEF5 /* EditPageVC.swift in Sources */,
 				DEA36E682735113600BBFEF5 /* AgreementDetailVC.swift in Sources */,
+				DEA36ECF2739555800BBFEF5 /* OtherHomeVC.swift in Sources */,
 				DEA36EA827383B7300BBFEF5 /* EditProjectVC.swift in Sources */,
 				DEA36EC22739176200BBFEF5 /* HeartUserCell.swift in Sources */,
 				DEA36E6C273522B300BBFEF5 /* HomeNC.swift in Sources */,

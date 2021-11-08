@@ -13,6 +13,7 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var projectTitleLabel: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var projectContentLabel: UILabel!
+    @IBOutlet weak var moreBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,6 +9,9 @@ import UIKit
 
 class OtherPageCell: UITableViewCell {
 
+    @IBOutlet weak var pageTitleLabel: UILabel!
+    @IBOutlet weak var pagePeriodLabel: UILabel!
+    @IBOutlet weak var pageContentLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +21,10 @@ class OtherPageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    // 페이지 좋아요
+    @IBAction func likeAction(_ sender: Any) {
     }
     
 }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -23,15 +24,21 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfi-oZ-Pnu">
                                         <rect key="frame" x="373" y="56" width="21" height="22"/>
-                                        <state key="normal" image="gearshape.fill" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="gearshape.fill" catalog="system" renderingMode="original"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJG-ag-cbM">
                                         <rect key="frame" x="338" y="56" width="20" height="22"/>
-                                        <state key="normal" image="bell.fill" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="bell.fill" catalog="system" renderingMode="original"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2M-pq-iIc">
                                         <rect key="frame" x="300.5" y="56" width="22.5" height="22"/>
-                                        <state key="normal" image="bubble.left.fill" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="bubble.left.fill" catalog="system" renderingMode="original"/>
+                                        </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPD-Uc-czi">
                                         <rect key="frame" x="30" y="55" width="59.5" height="24"/>
@@ -61,7 +68,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dR9-ZO-veC">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="owP-Kp-kbU">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mimozi" translatesAutoresizingMaskIntoConstraints="NO" id="owP-Kp-kbU">
                                                         <rect key="frame" x="30" y="30" width="97" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="owP-Kp-kbU" secondAttribute="height" multiplier="97:100" id="Dcx-f3-3fo"/>
@@ -88,7 +95,9 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0M-ff-LvJ">
                                                         <rect key="frame" x="373" y="30" width="21" height="22"/>
-                                                        <state key="normal" image="gearshape.fill" catalog="system"/>
+                                                        <state key="normal">
+                                                            <imageReference key="image" image="gearshape.fill" catalog="system" renderingMode="original"/>
+                                                        </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="최대글자 150자입니다. 최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자입니다. 최대글자 150자..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-ac-K23">
                                                         <rect key="frame" x="147" y="125" width="246" height="47"/>
@@ -225,6 +234,7 @@
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="mimozi" width="640" height="652"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
