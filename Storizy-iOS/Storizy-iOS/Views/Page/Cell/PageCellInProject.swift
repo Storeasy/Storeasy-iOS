@@ -22,7 +22,7 @@ class PageCellInProject: UITableViewCell {
         setMoreBtnMenu()
     }
     
-    // more btn menu set - 
+    // more btn menu set - 네컨 가져오는게 안됨.. xib이라.. 그냥 VC에서 셀 하나하나에 이걸 넣는걸로 해결해야할수도.
     func setMoreBtnMenu(){
         moreBtn.showsMenuAsPrimaryAction = true
         // 수정하기 메뉴 아이템

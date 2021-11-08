@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeartPageCell" id="KGk-i7-Jjw" customClass="HeartPageCell" customModule="Storizy_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mimozi" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-Gb-N3t">
+                        <rect key="frame" x="20" y="15" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="HO3-EG-tCL"/>
+                            <constraint firstAttribute="width" secondItem="dXk-Gb-N3t" secondAttribute="height" multiplier="1:1" id="vcm-ai-gKQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKZ-UW-7tj">
+                        <rect key="frame" x="20" y="70" width="280" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPB-oB-ltU">
+                        <rect key="frame" x="279" y="15" width="21" height="22"/>
+                        <state key="normal">
+                            <imageReference key="image" image="suit.heart.fill" catalog="system" renderingMode="original"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김수정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amM-kd-5FD">
+                        <rect key="frame" x="70" y="17" width="34" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="페이지 명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA5-22-CRL">
+                        <rect key="frame" x="70" y="36" width="56" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SPB-oB-ltU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="4Qc-rI-2Xg"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XKZ-UW-7tj" secondAttribute="trailing" constant="20" id="Cqt-HA-XSU"/>
+                    <constraint firstAttribute="trailing" secondItem="SPB-oB-ltU" secondAttribute="trailing" constant="20" id="LcN-eF-zcX"/>
+                    <constraint firstItem="XKZ-UW-7tj" firstAttribute="top" secondItem="dXk-Gb-N3t" secondAttribute="bottom" constant="15" id="NhZ-PA-GcC"/>
+                    <constraint firstItem="dXk-Gb-N3t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="bBf-w5-y9H"/>
+                    <constraint firstItem="amM-kd-5FD" firstAttribute="leading" secondItem="dXk-Gb-N3t" secondAttribute="trailing" constant="10" id="bPs-Br-2gn"/>
+                    <constraint firstItem="XKZ-UW-7tj" firstAttribute="leading" secondItem="dXk-Gb-N3t" secondAttribute="leading" id="fPx-fM-8Pc"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XKZ-UW-7tj" secondAttribute="bottom" constant="10" id="gMT-Td-wyy"/>
+                    <constraint firstItem="oA5-22-CRL" firstAttribute="leading" secondItem="amM-kd-5FD" secondAttribute="leading" id="m0j-Ij-cxE"/>
+                    <constraint firstItem="oA5-22-CRL" firstAttribute="top" secondItem="amM-kd-5FD" secondAttribute="bottom" constant="3" id="t2s-X0-wSM"/>
+                    <constraint firstItem="amM-kd-5FD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="vZS-WO-jRb"/>
+                    <constraint firstItem="dXk-Gb-N3t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zq7-YN-tmZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="175" y="93"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mimozi" width="640" height="652"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
+</document>

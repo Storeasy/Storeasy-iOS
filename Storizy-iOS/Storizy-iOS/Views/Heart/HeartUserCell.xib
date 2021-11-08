@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeartUserCell" id="KGk-i7-Jjw" customClass="HeartUserCell" customModule="Storizy_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mimozi" translatesAutoresizingMaskIntoConstraints="NO" id="uXi-A2-HVp">
+                        <rect key="frame" x="20" y="15" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="OIn-nY-adK"/>
+                            <constraint firstAttribute="width" secondItem="uXi-A2-HVp" secondAttribute="height" multiplier="1:1" id="xlX-fd-YCs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김수정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auE-BZ-QRM">
+                        <rect key="frame" x="85" y="10" width="39" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성신여자대학교" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpL-j9-hbu">
+                        <rect key="frame" x="85" y="30" width="79" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wNm-Hd-6Gn">
+                        <rect key="frame" x="85" y="50" width="235" height="20"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="wuY-KU-pks"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="glZ-Ag-gSi">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDP-3C-HFs">
+                        <rect key="frame" x="284" y="10" width="21" height="22"/>
+                        <state key="normal">
+                            <imageReference key="image" image="suit.heart.fill" catalog="system" renderingMode="original"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wNm-Hd-6Gn" firstAttribute="leading" secondItem="auE-BZ-QRM" secondAttribute="leading" id="B9L-tc-I76"/>
+                    <constraint firstItem="uXi-A2-HVp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Fd4-gp-J5T"/>
+                    <constraint firstItem="uXi-A2-HVp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="I0t-2M-ERx"/>
+                    <constraint firstItem="cDP-3C-HFs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QMu-hI-E6Q"/>
+                    <constraint firstItem="auE-BZ-QRM" firstAttribute="leading" secondItem="uXi-A2-HVp" secondAttribute="trailing" constant="15" id="T81-6r-jdM"/>
+                    <constraint firstItem="hpL-j9-hbu" firstAttribute="leading" secondItem="auE-BZ-QRM" secondAttribute="leading" id="TEa-W6-tJB"/>
+                    <constraint firstAttribute="bottom" secondItem="wNm-Hd-6Gn" secondAttribute="bottom" constant="10" id="Ufu-hZ-Dnh"/>
+                    <constraint firstAttribute="trailing" secondItem="cDP-3C-HFs" secondAttribute="trailing" constant="15" id="W7a-NA-VK7"/>
+                    <constraint firstAttribute="trailing" secondItem="wNm-Hd-6Gn" secondAttribute="trailing" id="oZz-ef-zue"/>
+                    <constraint firstItem="wNm-Hd-6Gn" firstAttribute="top" secondItem="hpL-j9-hbu" secondAttribute="bottom" constant="4" id="pkF-as-z7c"/>
+                    <constraint firstItem="auE-BZ-QRM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="v85-2L-dpp"/>
+                    <constraint firstItem="hpL-j9-hbu" firstAttribute="top" secondItem="auE-BZ-QRM" secondAttribute="bottom" constant="2" id="wy6-M0-uc2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="105.79710144927537" y="103.79464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mimozi" width="640" height="652"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

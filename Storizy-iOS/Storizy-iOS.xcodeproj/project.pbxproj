@@ -30,7 +30,6 @@
 		DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */; };
 		DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */; };
 		DEA36E9427378AFF00BBFEF5 /* PageCellInProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */; };
-		DEA36E962737A5DB00BBFEF5 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E952737A5DA00BBFEF5 /* Create.storyboard */; };
 		DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */; };
 		DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */; };
 		DEA36E9E2737DF5800BBFEF5 /* CreateProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9D2737DF5700BBFEF5 /* CreateProjectVC.swift */; };
@@ -39,6 +38,17 @@
 		DEA36EA427383A5100BBFEF5 /* EditPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EA327383A5100BBFEF5 /* EditPage.storyboard */; };
 		DEA36EA627383B6700BBFEF5 /* EditProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EA527383B6700BBFEF5 /* EditProject.storyboard */; };
 		DEA36EA827383B7300BBFEF5 /* EditProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EA727383B7300BBFEF5 /* EditProjectVC.swift */; };
+		DEA36EAC2738F51F00BBFEF5 /* HeartNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EAB2738F51F00BBFEF5 /* HeartNC.swift */; };
+		DEA36EAE2738F53300BBFEF5 /* Heart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EAD2738F53300BBFEF5 /* Heart.storyboard */; };
+		DEA36EB02738F58700BBFEF5 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EAF2738F58600BBFEF5 /* Create.storyboard */; };
+		DEA36EB4273903E100BBFEF5 /* OtherPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EB2273903E100BBFEF5 /* OtherPageCell.swift */; };
+		DEA36EB5273903E100BBFEF5 /* OtherPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EB3273903E100BBFEF5 /* OtherPageCell.xib */; };
+		DEA36EB8273906CA00BBFEF5 /* HeartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EB7273906CA00BBFEF5 /* HeartVC.swift */; };
+		DEA36EBB27390F7100BBFEF5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EBA27390F7000BBFEF5 /* User.swift */; };
+		DEA36EBE2739108200BBFEF5 /* HeartPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EBC2739108200BBFEF5 /* HeartPageCell.swift */; };
+		DEA36EBF2739108200BBFEF5 /* HeartPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EBD2739108200BBFEF5 /* HeartPageCell.xib */; };
+		DEA36EC22739176200BBFEF5 /* HeartUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EC02739176100BBFEF5 /* HeartUserCell.swift */; };
+		DEA36EC32739176200BBFEF5 /* HeartUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EC12739176200BBFEF5 /* HeartUserCell.xib */; };
 		DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5412732C6260022B33B /* AppDelegate.swift */; };
 		DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5432732C6260022B33B /* SceneDelegate.swift */; };
 		DEF9E5462732C6260022B33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5452732C6260022B33B /* ViewController.swift */; };
@@ -80,7 +90,6 @@
 		DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailVC.swift; sourceTree = "<group>"; };
 		DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCellInProject.swift; sourceTree = "<group>"; };
 		DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCellInProject.xib; sourceTree = "<group>"; };
-		DEA36E952737A5DA00BBFEF5 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNC.swift; sourceTree = "<group>"; };
 		DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSelectionVC.swift; sourceTree = "<group>"; };
 		DEA36E9D2737DF5700BBFEF5 /* CreateProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectVC.swift; sourceTree = "<group>"; };
@@ -89,6 +98,17 @@
 		DEA36EA327383A5100BBFEF5 /* EditPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditPage.storyboard; sourceTree = "<group>"; };
 		DEA36EA527383B6700BBFEF5 /* EditProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProject.storyboard; sourceTree = "<group>"; };
 		DEA36EA727383B7300BBFEF5 /* EditProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectVC.swift; sourceTree = "<group>"; };
+		DEA36EAB2738F51F00BBFEF5 /* HeartNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartNC.swift; sourceTree = "<group>"; };
+		DEA36EAD2738F53300BBFEF5 /* Heart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Heart.storyboard; sourceTree = "<group>"; };
+		DEA36EAF2738F58600BBFEF5 /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
+		DEA36EB2273903E100BBFEF5 /* OtherPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPageCell.swift; sourceTree = "<group>"; };
+		DEA36EB3273903E100BBFEF5 /* OtherPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherPageCell.xib; sourceTree = "<group>"; };
+		DEA36EB7273906CA00BBFEF5 /* HeartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartVC.swift; sourceTree = "<group>"; };
+		DEA36EBA27390F7000BBFEF5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DEA36EBC2739108200BBFEF5 /* HeartPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartPageCell.swift; sourceTree = "<group>"; };
+		DEA36EBD2739108200BBFEF5 /* HeartPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeartPageCell.xib; sourceTree = "<group>"; };
+		DEA36EC02739176100BBFEF5 /* HeartUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartUserCell.swift; sourceTree = "<group>"; };
+		DEA36EC12739176200BBFEF5 /* HeartUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeartUserCell.xib; sourceTree = "<group>"; };
 		DEF9E53E2732C6260022B33B /* Storizy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storizy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9E5412732C6260022B33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9E5432732C6260022B33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +142,7 @@
 		DEA36E812736A7AF00BBFEF5 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36EB62739040B00BBFEF5 /* Cell */,
 				DEA36E842736A7FF00BBFEF5 /* ProjectDetail.storyboard */,
 				DEA36E862736A81A00BBFEF5 /* ProjectDetailVC.swift */,
 				DEA36EA527383B6700BBFEF5 /* EditProject.storyboard */,
@@ -133,14 +154,45 @@
 		DEA36E882736A82F00BBFEF5 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36EB12739039C00BBFEF5 /* Cell */,
 				DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */,
 				DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */,
-				DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */,
-				DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */,
 				DEA36EA127383A0300BBFEF5 /* EditPageVC.swift */,
 				DEA36EA327383A5100BBFEF5 /* EditPage.storyboard */,
 			);
 			path = Page;
+			sourceTree = "<group>";
+		};
+		DEA36EB12739039C00BBFEF5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */,
+				DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */,
+				DEA36EB2273903E100BBFEF5 /* OtherPageCell.swift */,
+				DEA36EB3273903E100BBFEF5 /* OtherPageCell.xib */,
+				DEA36E792736976800BBFEF5 /* PageCell.swift */,
+				DEA36E7A2736976800BBFEF5 /* PageCell.xib */,
+				DEA36EBC2739108200BBFEF5 /* HeartPageCell.swift */,
+				DEA36EBD2739108200BBFEF5 /* HeartPageCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DEA36EB62739040B00BBFEF5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DEF9E5742732D6970022B33B /* ProjectCell.swift */,
+				DEF9E5752732D6970022B33B /* ProjectCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DEA36EB927390F6200BBFEF5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				DEA36EBA27390F7000BBFEF5 /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		DEF9E5352732C6260022B33B = {
@@ -196,6 +248,7 @@
 		DEF9E55C2732C74D0022B33B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36EB927390F6200BBFEF5 /* User */,
 				DEA36E882736A82F00BBFEF5 /* Page */,
 				DEA36E812736A7AF00BBFEF5 /* Project */,
 				DEF9E5A4273385C80022B33B /* TabBar */,
@@ -243,10 +296,6 @@
 				DEA36E6927351D8300BBFEF5 /* HomeNC.storyboard */,
 				DEA36E6B273522B200BBFEF5 /* HomeNC.swift */,
 				DEA36E6D273522E900BBFEF5 /* HomeVC.swift */,
-				DEF9E5742732D6970022B33B /* ProjectCell.swift */,
-				DEF9E5752732D6970022B33B /* ProjectCell.xib */,
-				DEA36E792736976800BBFEF5 /* PageCell.swift */,
-				DEA36E7A2736976800BBFEF5 /* PageCell.xib */,
 				DEA36E7D27369B2700BBFEF5 /* Project.swift */,
 				DEA36E7F27369B7F00BBFEF5 /* Page.swift */,
 			);
@@ -273,6 +322,11 @@
 		DEF9E5622732CC150022B33B /* Heart */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36EAB2738F51F00BBFEF5 /* HeartNC.swift */,
+				DEA36EAD2738F53300BBFEF5 /* Heart.storyboard */,
+				DEA36EB7273906CA00BBFEF5 /* HeartVC.swift */,
+				DEA36EC02739176100BBFEF5 /* HeartUserCell.swift */,
+				DEA36EC12739176200BBFEF5 /* HeartUserCell.xib */,
 			);
 			path = Heart;
 			sourceTree = "<group>";
@@ -280,7 +334,7 @@
 		DEF9E5632732CC2A0022B33B /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				DEA36E952737A5DA00BBFEF5 /* Create.storyboard */,
+				DEA36EAF2738F58600BBFEF5 /* Create.storyboard */,
 				DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */,
 				DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */,
 				DEA36E9D2737DF5700BBFEF5 /* CreateProjectVC.swift */,
@@ -457,12 +511,16 @@
 			files = (
 				DEA36E522733B1D900BBFEF5 /* Signup.storyboard in Resources */,
 				DEF9E5A32733855F0022B33B /* Signin.storyboard in Resources */,
+				DEA36EB02738F58700BBFEF5 /* Create.storyboard in Resources */,
 				DEA36E6A27351D8300BBFEF5 /* HomeNC.storyboard in Resources */,
 				DEF9E5512732C6290022B33B /* LaunchScreen.storyboard in Resources */,
 				DEA36E7C2736976800BBFEF5 /* PageCell.xib in Resources */,
+				DEA36EAE2738F53300BBFEF5 /* Heart.storyboard in Resources */,
 				DEF9E54E2732C6290022B33B /* Assets.xcassets in Resources */,
-				DEA36E962737A5DB00BBFEF5 /* Create.storyboard in Resources */,
 				DEF9E5492732C6260022B33B /* Main.storyboard in Resources */,
+				DEA36EC32739176200BBFEF5 /* HeartUserCell.xib in Resources */,
+				DEA36EB5273903E100BBFEF5 /* OtherPageCell.xib in Resources */,
+				DEA36EBF2739108200BBFEF5 /* HeartPageCell.xib in Resources */,
 				DEA36EA427383A5100BBFEF5 /* EditPage.storyboard in Resources */,
 				DEA36E74273526F100BBFEF5 /* Onboarding.storyboard in Resources */,
 				DEA36EA627383B6700BBFEF5 /* EditProject.storyboard in Resources */,
@@ -487,13 +545,16 @@
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
 				DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */,
 				DEF9E5AC273389930022B33B /* SigninNC.swift in Sources */,
+				DEA36EB4273903E100BBFEF5 /* OtherPageCell.swift in Sources */,
 				DEA36EA02737ECEC00BBFEF5 /* CreatePageVC.swift in Sources */,
 				DEA36E6E273522E900BBFEF5 /* HomeVC.swift in Sources */,
 				DEA36E5E2733CC9000BBFEF5 /* NameBirthSignupVC.swift in Sources */,
 				DEA36E7E27369B2700BBFEF5 /* Project.swift in Sources */,
 				DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */,
 				DEA36E8027369B7F00BBFEF5 /* Page.swift in Sources */,
+				DEA36EBB27390F7100BBFEF5 /* User.swift in Sources */,
 				DEF9E5AE2733A31B0022B33B /* SplashVC.swift in Sources */,
+				DEA36EAC2738F51F00BBFEF5 /* HeartNC.swift in Sources */,
 				DEA36E9E2737DF5800BBFEF5 /* CreateProjectVC.swift in Sources */,
 				DEA36E7B2736976800BBFEF5 /* PageCell.swift in Sources */,
 				DEF9E54C2732C6260022B33B /* Storizy_iOS.xcdatamodeld in Sources */,
@@ -501,9 +562,11 @@
 				DEA36EA227383A0300BBFEF5 /* EditPageVC.swift in Sources */,
 				DEA36E682735113600BBFEF5 /* AgreementDetailVC.swift in Sources */,
 				DEA36EA827383B7300BBFEF5 /* EditProjectVC.swift in Sources */,
+				DEA36EC22739176200BBFEF5 /* HeartUserCell.swift in Sources */,
 				DEA36E6C273522B300BBFEF5 /* HomeNC.swift in Sources */,
 				DEA36E872736A81A00BBFEF5 /* ProjectDetailVC.swift in Sources */,
 				DEA36E5A2733CC3F00BBFEF5 /* EmailSignupVC.swift in Sources */,
+				DEA36EB8273906CA00BBFEF5 /* HeartVC.swift in Sources */,
 				DEA36E662733D72A00BBFEF5 /* AgreementSignupVC.swift in Sources */,
 				DEF9E5762732D6970022B33B /* ProjectCell.swift in Sources */,
 				DEA36E5C2733CC6A00BBFEF5 /* PWSignupVC.swift in Sources */,
@@ -512,6 +575,7 @@
 				DEF9E5A12733854B0022B33B /* SigninVC.swift in Sources */,
 				DEA36E642733D60100BBFEF5 /* MajorSignupVC.swift in Sources */,
 				DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */,
+				DEA36EBE2739108200BBFEF5 /* HeartPageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

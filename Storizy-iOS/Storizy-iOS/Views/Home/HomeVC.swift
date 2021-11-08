@@ -12,12 +12,13 @@ class HomeVC: UIViewController {
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var feedTableViewHeight: NSLayoutConstraint!
     
-    //var feedList: [Any] = [Page(), Project()]
+    // feedList 더미 데이터
     var feedList: [Any] = [Project(title: "프로젝트명"), Page(title: "페이지명"), Page(title: "페이지명2"), Project(title: "프로젝트명2"), Page(title: "페이지명3")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // nib 셀 등록
         let projectNibName = UINib(nibName: "ProjectCell", bundle: nil)
         feedTableView.register(projectNibName, forCellReuseIdentifier: "projectCell")
         let pageNibName = UINib(nibName: "PageCell", bundle: nil)
