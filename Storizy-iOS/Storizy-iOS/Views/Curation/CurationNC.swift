@@ -1,13 +1,13 @@
 //
-//  CreatePageVC.swift
+//  CurationNC.swift
 //  Storizy-iOS
 //
-//  Created by 임수정 on 2021/11/07.
+//  Created by 임수정 on 2021/11/09.
 //
 
 import UIKit
 
-class CreatePageVC: UIViewController {
+class CurationNC: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,10 +15,7 @@ class CreatePageVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func closeAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+
     /*
     // MARK: - Navigation
 

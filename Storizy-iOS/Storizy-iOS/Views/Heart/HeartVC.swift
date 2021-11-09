@@ -7,6 +7,10 @@
 
 import UIKit
 
+// page, user 구분 상수
+let PAGE: Int = 0
+let USER: Int = 1
+
 class HeartVC: UIViewController {
     
     @IBOutlet weak var heartTableView: UITableView!
@@ -14,10 +18,6 @@ class HeartVC: UIViewController {
     var pages: [Page] = [Page(title: "프로젝트1")]
     var users: [User] = [User(name: "임수정"), User(name: "유기현")]
     var currentDatas: [Any] = []
-    
-    // page, user 구분 상수
-    let PAGE: Int = 0
-    let USER: Int = 1
     
     var type: Int? {
         didSet{

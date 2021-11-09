@@ -19,8 +19,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="OlK-r0-Zlt" kind="relationship" relationship="viewControllers" id="8Zu-vJ-Aoi"/>
-                        <segue destination="9tt-qp-TA2" kind="relationship" relationship="viewControllers" id="cSj-XB-Kr6"/>
                         <segue destination="aUD-w4-6nc" kind="relationship" relationship="viewControllers" id="ssx-JT-uxu"/>
+                        <segue destination="9tt-qp-TA2" kind="relationship" relationship="viewControllers" id="cSj-XB-Kr6"/>
+                        <segue destination="ZvM-ga-Tjm" kind="relationship" relationship="viewControllers" id="CNy-hr-NmB"/>
+                        <segue destination="CYF-XL-Sgj" kind="relationship" relationship="viewControllers" id="El0-U7-t0V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez5-Mc-1s3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -31,7 +33,7 @@
         <scene sceneID="oVO-Tc-v1D">
             <objects>
                 <viewControllerPlaceholder storyboardName="HomeNC" id="OlK-r0-Zlt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7JB-qF-lel"/>
+                    <tabBarItem key="tabBarItem" title="홈" id="7JB-qF-lel"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpu-9A-Mzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +43,7 @@
         <scene sceneID="Ftg-5i-OSX">
             <objects>
                 <viewControllerPlaceholder storyboardName="Create" id="9tt-qp-TA2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7a3-AC-kJA"/>
+                    <tabBarItem key="tabBarItem" title="글작성" id="7a3-AC-kJA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujz-cy-ePc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,11 +53,31 @@
         <scene sceneID="aog-2Y-4cm">
             <objects>
                 <viewControllerPlaceholder storyboardName="Heart" id="aUD-w4-6nc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2LY-XE-Kn6"/>
+                    <tabBarItem key="tabBarItem" title="좋아요" id="2LY-XE-Kn6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zea-kp-YbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="894" y="157"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="hzq-y8-Wb0">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ExploreNC" storyboardName="Explore" id="ZvM-ga-Tjm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="탐색" id="WNg-UG-S8X"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYh-5h-geO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="232"/>
+        </scene>
+        <!--Curation-->
+        <scene sceneID="M3I-FG-x1r">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Curation" id="CYF-XL-Sgj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="J3c-Pc-DNc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlE-Lx-cqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="356"/>
         </scene>
     </scenes>
 </document>

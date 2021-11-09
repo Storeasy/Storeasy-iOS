@@ -37,13 +37,13 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wNm-Hd-6Gn">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wNm-Hd-6Gn">
                         <rect key="frame" x="85" y="50" width="235" height="20"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="wuY-KU-pks"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="glZ-Ag-gSi">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="glZ-Ag-gSi">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -73,6 +73,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="wNm-Hd-6Gn" id="j18-ws-Q0X"/>
+                <outlet property="heartBtn" destination="cDP-3C-HFs" id="Alz-XY-F2x"/>
+                <outlet property="profileImg" destination="uXi-A2-HVp" id="hjL-RM-sge"/>
+                <outlet property="univNameLabel" destination="hpL-j9-hbu" id="Wl2-gk-9jF"/>
+                <outlet property="usernameLabel" destination="auE-BZ-QRM" id="XeK-wQ-gnH"/>
+            </connections>
             <point key="canvasLocation" x="105.79710144927537" y="103.79464285714285"/>
         </tableViewCell>
     </objects>

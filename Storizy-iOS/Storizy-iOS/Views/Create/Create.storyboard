@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uV4-aC-DM7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -178,6 +177,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
                                         </state>
+                                        <connections>
+                                            <action selector="closeAction:" destination="n77-0H-cU6" eventType="touchUpInside" id="sQR-gw-yhz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -393,6 +395,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
                                         </state>
+                                        <connections>
+                                            <action selector="closeAction:" destination="ZR0-37-c1X" eventType="touchUpInside" id="btK-qe-GhX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
