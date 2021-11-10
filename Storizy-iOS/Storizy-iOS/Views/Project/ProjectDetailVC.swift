@@ -13,12 +13,21 @@ class ProjectDetailVC: UIViewController {
     @IBOutlet weak var projectContentTextView: UITextView!
     @IBOutlet weak var pageTableView: UITableView!
     @IBOutlet weak var projectMoreBtn: UIButton!
+    @IBOutlet weak var projectView: UIView!
+    @IBOutlet weak var projectViewHeight: NSLayoutConstraint!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let nibName = UINib(nibName: "PageCellInProject", bundle: nil)
         pageTableView.register(nibName, forCellReuseIdentifier: "pageCellInProject")
+        
+        // 프로젝트 뷰 높이
+        DispatchQueue.main.async {
+            self.projectViewHeight.constant = 125.5 + self.projectContentTextView.contentSize.height
+        }
         
         // more btn menu setting
         moreAction()
@@ -61,7 +70,7 @@ extension ProjectDetailVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "pageCellInProject", for: indexPath) as? PageCellInProject {
-            cell.pageTitleLabel.text = "페이지명"
+            cell.pageTitleLabel.text = "페이지명 페이지명"
             cell.pagePeriodLabel.text = "2021.11.22 - 2021.11.23"
             cell.pageContentLabel.text = "페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용"
             return cell

@@ -2,8 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,8 +64,16 @@
                             <action selector="moreAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bwH-Rl-SoB"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiU-LC-bcT">
+                        <rect key="frame" x="104" y="9.5" width="16" height="22"/>
+                        <state key="normal">
+                            <color key="titleColor" systemColor="labelColor"/>
+                            <imageReference key="image" image="lock.fill" catalog="system" symbolScale="small" renderingMode="original"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="hiU-LC-bcT" firstAttribute="centerY" secondItem="IEr-KO-wxT" secondAttribute="centerY" id="0Pb-zb-XhP"/>
                     <constraint firstItem="ekb-qH-f5u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1Sy-q8-W4V"/>
                     <constraint firstAttribute="trailing" secondItem="30Z-NL-CWp" secondAttribute="trailing" id="2gg-po-k4c"/>
                     <constraint firstItem="30Z-NL-CWp" firstAttribute="top" secondItem="mpd-Dh-TqU" secondAttribute="bottom" constant="5" id="3nF-hh-BSs"/>
@@ -79,6 +87,8 @@
                     <constraint firstItem="f9c-PB-UWC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eQw-aY-XAS"/>
                     <constraint firstAttribute="bottom" secondItem="FZE-lf-aL6" secondAttribute="bottom" constant="17" id="iG3-mj-EmU"/>
                     <constraint firstItem="mpd-Dh-TqU" firstAttribute="top" secondItem="IEr-KO-wxT" secondAttribute="bottom" constant="5" id="j6E-M9-tSQ"/>
+                    <constraint firstItem="f9c-PB-UWC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hiU-LC-bcT" secondAttribute="trailing" constant="10" id="pw6-QD-ye0"/>
+                    <constraint firstItem="hiU-LC-bcT" firstAttribute="leading" secondItem="IEr-KO-wxT" secondAttribute="trailing" constant="5" id="vg2-Pr-YHY"/>
                     <constraint firstItem="IEr-KO-wxT" firstAttribute="leading" secondItem="ekb-qH-f5u" secondAttribute="trailing" constant="10" id="x23-ze-nQY"/>
                     <constraint firstItem="mpd-Dh-TqU" firstAttribute="leading" secondItem="IEr-KO-wxT" secondAttribute="leading" id="xJR-86-Ko3"/>
                     <constraint firstItem="FZE-lf-aL6" firstAttribute="top" secondItem="30Z-NL-CWp" secondAttribute="bottom" constant="8" id="xfW-hy-SxU"/>
@@ -98,6 +108,10 @@
     </objects>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

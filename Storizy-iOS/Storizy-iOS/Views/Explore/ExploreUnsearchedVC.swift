@@ -47,4 +47,11 @@ extension ExploreUnsearchedVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeartPageCell") as! HeartPageCell
         return cell
     }
+    
+    // 셀 선택 시
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "OtherPageDetail", bundle: nil)
+        let otherPageDetailVC = storyboard.instantiateViewController(identifier: "OtherPageDetailVC")
+        self.navigationController?.pushViewController(otherPageDetailVC, animated: true)
+    }
 }

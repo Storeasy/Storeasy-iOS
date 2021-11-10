@@ -45,6 +45,15 @@ class HomeVC: UIViewController {
         
     }
     
+    // 프로필 편집
+    @IBAction func editProfileAction(_ sender: Any) {
+        // 프로필 편집 뷰 이동
+        let storyboard = UIStoryboard(name: "EditProfile", bundle: nil)
+        let editProfileVC = storyboard.instantiateViewController(identifier: "EditProfileVC")
+        self.navigationController?.pushViewController(editProfileVC, animated: true)
+    }
+    
+    
 }
 
 // 피드 테이블 뷰

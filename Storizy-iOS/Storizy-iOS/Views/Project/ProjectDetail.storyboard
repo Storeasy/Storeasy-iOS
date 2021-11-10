@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -33,8 +32,11 @@
                                     <constraint firstAttribute="height" constant="90" id="onQ-Zq-jHw"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fib-wS-3rH">
-                                <rect key="frame" x="364" y="49" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fib-wS-3rH">
+                                <rect key="frame" x="373" y="49" width="21" height="22"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
+                                </state>
                                 <connections>
                                     <action selector="closeAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZMC-5l-UJp"/>
                                 </connections>
@@ -70,7 +72,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HqM-5A-T95">
                                         <rect key="frame" x="30" y="115.5" width="354" height="117.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniaiber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -83,6 +85,13 @@
                                         <connections>
                                             <action selector="moreBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0Ma-gm-i4G"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTg-1E-SYd">
+                                        <rect key="frame" x="113" y="19.5" width="16" height="22"/>
+                                        <state key="normal">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <imageReference key="image" image="lock.fill" catalog="system" symbolScale="small" renderingMode="original"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -99,8 +108,11 @@
                                     <constraint firstItem="Z0G-O1-R7l" firstAttribute="top" secondItem="Jop-Jg-UPJ" secondAttribute="top" constant="20" id="ZTN-Az-dLt"/>
                                     <constraint firstItem="5uP-Ip-55s" firstAttribute="top" secondItem="Jop-Jg-UPJ" secondAttribute="top" constant="15" id="aTQ-Sd-MtR"/>
                                     <constraint firstItem="Ikf-Aw-iSg" firstAttribute="leading" secondItem="Jop-Jg-UPJ" secondAttribute="leading" constant="30" id="ccs-pD-Oz3"/>
+                                    <constraint firstItem="VTg-1E-SYd" firstAttribute="centerY" secondItem="Z0G-O1-R7l" secondAttribute="centerY" id="g7e-Xd-Iyg"/>
                                     <constraint firstItem="Z0G-O1-R7l" firstAttribute="leading" secondItem="Jop-Jg-UPJ" secondAttribute="leading" constant="30" id="h0Q-ry-NVw"/>
                                     <constraint firstItem="HqM-5A-T95" firstAttribute="top" secondItem="Ikf-Aw-iSg" secondAttribute="bottom" constant="10" id="n1X-XC-pNE"/>
+                                    <constraint firstItem="VTg-1E-SYd" firstAttribute="leading" secondItem="Z0G-O1-R7l" secondAttribute="trailing" constant="5" id="q4J-ru-sQo"/>
+                                    <constraint firstItem="5uP-Ip-55s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VTg-1E-SYd" secondAttribute="trailing" constant="10" id="yF8-AR-AbC"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QrO-QX-Gik">
@@ -137,6 +149,8 @@
                         <outlet property="projectMoreBtn" destination="5uP-Ip-55s" id="Vam-ea-2Am"/>
                         <outlet property="projectPeriodLabel" destination="O50-rS-4XJ" id="gd4-i8-Moo"/>
                         <outlet property="projectTitleLabel" destination="Z0G-O1-R7l" id="Zx0-ly-L6e"/>
+                        <outlet property="projectView" destination="Jop-Jg-UPJ" id="cjO-hB-a1P"/>
+                        <outlet property="projectViewHeight" destination="ADE-So-e3Z" id="qDC-5q-VsL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,6 +160,8 @@
     </scenes>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -2,8 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,14 +59,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upy-fC-Odz">
+                        <rect key="frame" x="94" y="23.5" width="16" height="22"/>
+                        <state key="normal">
+                            <color key="titleColor" systemColor="labelColor"/>
+                            <imageReference key="image" image="lock.fill" catalog="system" symbolScale="small" renderingMode="original"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="3XW-Dm-3qy" firstAttribute="top" secondItem="Cjf-kE-MXE" secondAttribute="bottom" constant="3" id="3cV-RY-shF"/>
+                    <constraint firstItem="upy-fC-Odz" firstAttribute="centerY" secondItem="3XW-Dm-3qy" secondAttribute="centerY" id="99u-Ee-2fW"/>
                     <constraint firstAttribute="trailing" secondItem="4HK-By-ERH" secondAttribute="trailing" id="AXX-qU-Urx"/>
                     <constraint firstItem="VqS-R7-fYQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="B2F-y6-CuF"/>
                     <constraint firstItem="4HK-By-ERH" firstAttribute="top" secondItem="t82-Bs-0NA" secondAttribute="bottom" constant="5" id="FF9-bW-WjI"/>
                     <constraint firstItem="Cjf-kE-MXE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Psw-qZ-3ia"/>
                     <constraint firstItem="Yij-Qc-AiO" firstAttribute="top" secondItem="4HK-By-ERH" secondAttribute="bottom" constant="8" id="Ptf-EU-fvL"/>
+                    <constraint firstItem="upy-fC-Odz" firstAttribute="leading" secondItem="3XW-Dm-3qy" secondAttribute="trailing" constant="5" id="Qzw-Xg-myW"/>
                     <constraint firstAttribute="trailing" secondItem="VqS-R7-fYQ" secondAttribute="trailing" constant="10" id="RqG-pP-sOa"/>
                     <constraint firstAttribute="trailing" secondItem="Yij-Qc-AiO" secondAttribute="trailing" constant="20" id="VOJ-ZT-EFu"/>
                     <constraint firstItem="t82-Bs-0NA" firstAttribute="top" secondItem="3XW-Dm-3qy" secondAttribute="bottom" constant="5" id="Xzt-9d-rYD"/>
@@ -75,6 +84,7 @@
                     <constraint firstItem="4HK-By-ERH" firstAttribute="leading" secondItem="3XW-Dm-3qy" secondAttribute="leading" id="j8a-lE-s8I"/>
                     <constraint firstItem="3XW-Dm-3qy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="nym-oN-7Ov"/>
                     <constraint firstItem="Cjf-kE-MXE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="q0d-at-IOR"/>
+                    <constraint firstItem="VqS-R7-fYQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="upy-fC-Odz" secondAttribute="trailing" constant="20" id="yf8-E1-Vad"/>
                     <constraint firstItem="Yij-Qc-AiO" firstAttribute="leading" secondItem="4HK-By-ERH" secondAttribute="leading" id="yoo-YF-xvq"/>
                 </constraints>
             </tableViewCellContentView>
@@ -91,6 +101,10 @@
     </objects>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

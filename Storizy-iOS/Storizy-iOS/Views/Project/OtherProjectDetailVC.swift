@@ -10,6 +10,8 @@ import UIKit
 class OtherProjectDetailVC: UIViewController {
 
     @IBOutlet weak var pageTableView: UITableView!
+    @IBOutlet weak var projectViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var projectContentTextView: UITextView!
     
     var pages: [Page] = [Page(title: "페이지 이름11"), Page(title: "페이지 이름22")]
     
@@ -18,6 +20,11 @@ class OtherProjectDetailVC: UIViewController {
         
         let nibName = UINib(nibName: "OtherPageCellInProject", bundle: nil)
         pageTableView.register(nibName, forCellReuseIdentifier: "OtherPageCellInProject")
+        
+        // 프로젝트 뷰 높이
+        DispatchQueue.main.async {
+            self.projectViewHeight.constant = 125.5 + self.projectContentTextView.contentSize.height
+        }
 
     }
     

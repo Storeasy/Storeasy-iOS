@@ -32,6 +32,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
                                         </state>
+                                        <connections>
+                                            <action selector="closeAction:" destination="Dcu-qY-A8R" eventType="touchUpInside" id="mRq-Bu-UJP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,6 +153,9 @@
                                 <state key="normal" title="완료">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="completeAction:" destination="Dcu-qY-A8R" eventType="touchUpInside" id="f0C-mp-7bI"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yrP-1O-UGU">
                                 <rect key="frame" x="20" y="385" width="374" height="387"/>

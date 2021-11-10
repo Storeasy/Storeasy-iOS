@@ -9,11 +9,18 @@ import UIKit
 
 class PageDetailVC: UIViewController {
 
+    @IBOutlet weak var imgCollectionView: UICollectionView!
     @IBOutlet weak var moreBtn: UIButton!
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var contentTextViewHeight: NSLayoutConstraint!
     // 단독 페이지면 프로젝트명 공란
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // content text view height
+        DispatchQueue.main.async {
+            self.contentTextViewHeight.constant = self.contentTextView.contentSize.height
+        }
         // more btn menu set
         setMoreBtnMenu()
     }
@@ -42,5 +49,25 @@ class PageDetailVC: UIViewController {
     @IBAction func closeAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+}
+
+// 이미지 collection view
+extension PageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PageDetailImgCell", for: indexPath) as! PageDetailImgCell
+        // 이미지 등록
+        return cell
+    }
+    
+    
+}
+
+class PageDetailImgCell: UICollectionViewCell {
+    @IBOutlet weak var imgView: UIView!
     
 }

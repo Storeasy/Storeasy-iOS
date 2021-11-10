@@ -27,7 +27,7 @@ class PageCellInProject: UITableViewCell {
         moreBtn.showsMenuAsPrimaryAction = true
         // 수정하기 메뉴 아이템
         let edit = UIAction(title: "수정하기", image: nil) { _ in
-            // 수정하기 뷰 띄우기
+            // 수정하기 뷰 띄우기 - 안댐..
             let storyboard = UIStoryboard(name: "EditPage", bundle: nil)
             let editPageVC = storyboard.instantiateViewController(identifier: "EditPageVC")
         }
@@ -38,7 +38,7 @@ class PageCellInProject: UITableViewCell {
         
         let cancel = UIAction(title: "취소", attributes: .destructive) { _ in }
         
-        moreBtn.menu = UIMenu(title: "project menu", image: nil, identifier: nil, options: .displayInline, children: [edit, delete, cancel])
+//        moreBtn.menu = UIMenu(title: "project menu", image: nil, identifier: nil, options: .displayInline, children: [edit, delete, cancel])
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

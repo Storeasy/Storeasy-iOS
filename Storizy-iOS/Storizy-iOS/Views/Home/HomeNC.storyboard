@@ -98,6 +98,9 @@
                                                         <state key="normal">
                                                             <imageReference key="image" image="gearshape.fill" catalog="system" renderingMode="original"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="editProfileAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LKt-mZ-dRE"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="최대글자 150자입니다. 최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자입니다. 최대글자 150자..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-ac-K23">
                                                         <rect key="frame" x="147" y="125" width="246" height="47"/>

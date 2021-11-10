@@ -74,5 +74,22 @@ extension ExploreSearchedVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        // 페이지
+        if type == PAGE {
+            let storyboard = UIStoryboard(name: "OtherPageDetail", bundle: nil)
+            let otherPageDetailVC = storyboard.instantiateViewController(identifier: "OtherPageDetailVC")
+            self.navigationController?.pushViewController(otherPageDetailVC, animated: true)
+        }
+        
+        // 사용자
+        else {
+            let storyboard = UIStoryboard(name: "OtherHome", bundle: nil)
+            let otherHomeVC = storyboard.instantiateViewController(identifier: "OtherHomeVC")
+            self.navigationController?.pushViewController(otherHomeVC, animated: true)
+        }
+    }
+    
     
 }

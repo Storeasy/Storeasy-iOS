@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,8 +65,11 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S1D-h2-9zf">
-                                <rect key="frame" x="30" y="265.5" width="354" height="576.5"/>
+                                <rect key="frame" x="30" y="265.5" width="354" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Qmh-E8-FzC"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -99,15 +103,65 @@
                                     <action selector="profileAction:" destination="gyn-eJ-eFo" eventType="touchUpInside" id="xsu-GQ-A81"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-hp-eZO" userLabel="projectLink">
+                                <rect key="frame" x="30" y="575.5" width="214" height="30"/>
+                                <state key="normal" title="프로젝트1에 속해있는 페이지입니다.">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vDB-aX-WEr">
+                                <rect key="frame" x="30" y="485.5" width="354" height="70"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="t9g-kD-GJs"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4L7-oK-lWR">
+                                    <size key="itemSize" width="70" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OtherPageDetailImgCell" id="bgl-Ia-tf0" customClass="OtherPageDetailImgCell" customModule="Storizy_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iyP-Eu-FMQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mimozi" translatesAutoresizingMaskIntoConstraints="NO" id="1dy-kX-Pe6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1dy-kX-Pe6" firstAttribute="top" secondItem="iyP-Eu-FMQ" secondAttribute="top" id="0D4-k9-8CX"/>
+                                                <constraint firstAttribute="bottom" secondItem="1dy-kX-Pe6" secondAttribute="bottom" id="2Oq-CP-2g2"/>
+                                                <constraint firstAttribute="trailing" secondItem="1dy-kX-Pe6" secondAttribute="trailing" id="5yK-xT-LRM"/>
+                                                <constraint firstItem="1dy-kX-Pe6" firstAttribute="leading" secondItem="iyP-Eu-FMQ" secondAttribute="leading" id="Eyp-KV-xLF"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="1dy-kX-Pe6" id="Pdy-tO-tU1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="gyn-eJ-eFo" id="VXI-EZ-kah"/>
+                                    <outlet property="delegate" destination="gyn-eJ-eFo" id="kBe-a0-4Vk"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IoA-9G-jDR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Zw1-hp-eZO" firstAttribute="leading" secondItem="vDB-aX-WEr" secondAttribute="leading" id="1K5-zb-WnO"/>
                             <constraint firstItem="3lG-tZ-9p7" firstAttribute="top" secondItem="3pX-G5-dSC" secondAttribute="bottom" constant="15" id="2EB-aW-2Tx"/>
                             <constraint firstItem="5ee-cT-0yv" firstAttribute="top" secondItem="XCw-0l-igC" secondAttribute="bottom" constant="10" id="2lH-L4-crY"/>
                             <constraint firstItem="gob-X9-ACU" firstAttribute="top" secondItem="5ee-cT-0yv" secondAttribute="bottom" constant="10" id="3FO-ql-coM"/>
                             <constraint firstItem="s58-b4-Had" firstAttribute="leading" secondItem="IoA-9G-jDR" secondAttribute="leading" id="3NY-Wa-GQz"/>
                             <constraint firstItem="XCw-0l-igC" firstAttribute="leading" secondItem="IoA-9G-jDR" secondAttribute="leading" constant="30" id="467-AS-q0U"/>
+                            <constraint firstItem="Zw1-hp-eZO" firstAttribute="top" secondItem="vDB-aX-WEr" secondAttribute="bottom" constant="20" id="47G-FX-9ex"/>
+                            <constraint firstItem="vDB-aX-WEr" firstAttribute="leading" secondItem="IoA-9G-jDR" secondAttribute="leading" constant="30" id="5C7-GV-oRM"/>
                             <constraint firstItem="VpY-jh-tDp" firstAttribute="leading" secondItem="IoA-9G-jDR" secondAttribute="leading" constant="30" id="76q-q3-uON"/>
                             <constraint firstItem="IoA-9G-jDR" firstAttribute="top" secondItem="3pX-G5-dSC" secondAttribute="top" constant="44" id="8Fj-cv-DbM"/>
                             <constraint firstItem="IoA-9G-jDR" firstAttribute="trailing" secondItem="s58-b4-Had" secondAttribute="trailing" id="96S-Cg-ZkV"/>
@@ -115,29 +169,36 @@
                             <constraint firstItem="VpY-jh-tDp" firstAttribute="top" secondItem="IoA-9G-jDR" secondAttribute="top" constant="11" id="CVX-au-jW1"/>
                             <constraint firstItem="IoA-9G-jDR" firstAttribute="trailing" secondItem="S1D-h2-9zf" secondAttribute="trailing" constant="30" id="Efb-T9-DhY"/>
                             <constraint firstItem="3xs-8i-i9d" firstAttribute="centerY" secondItem="3lG-tZ-9p7" secondAttribute="centerY" id="FTF-j1-8hj"/>
+                            <constraint firstItem="vDB-aX-WEr" firstAttribute="top" secondItem="S1D-h2-9zf" secondAttribute="bottom" constant="20" id="G93-bw-Ovy"/>
                             <constraint firstItem="7Gj-7q-iQJ" firstAttribute="top" secondItem="IoA-9G-jDR" secondAttribute="top" constant="5" id="LcR-pC-Uir"/>
                             <constraint firstItem="3lG-tZ-9p7" firstAttribute="leading" secondItem="IoA-9G-jDR" secondAttribute="leading" constant="30" id="PzJ-Rf-Kte"/>
-                            <constraint firstItem="IoA-9G-jDR" firstAttribute="bottom" secondItem="S1D-h2-9zf" secondAttribute="bottom" constant="20" id="QLL-vQ-SQ6"/>
                             <constraint firstItem="IoA-9G-jDR" firstAttribute="trailing" secondItem="3pX-G5-dSC" secondAttribute="trailing" id="Tdz-VZ-gCz"/>
                             <constraint firstItem="gob-X9-ACU" firstAttribute="leading" secondItem="IoA-9G-jDR" secondAttribute="leading" constant="30" id="Wgz-8c-pw8"/>
+                            <constraint firstItem="S1D-h2-9zf" firstAttribute="top" secondItem="gob-X9-ACU" secondAttribute="bottom" constant="20" id="XOs-wn-Vrb"/>
                             <constraint firstItem="3pX-G5-dSC" firstAttribute="leading" secondItem="IoA-9G-jDR" secondAttribute="leading" id="Z3A-FR-mfL"/>
+                            <constraint firstItem="IoA-9G-jDR" firstAttribute="trailing" secondItem="vDB-aX-WEr" secondAttribute="trailing" constant="30" id="cgJ-0Y-lo6"/>
                             <constraint firstItem="1ky-C1-iSL" firstAttribute="centerY" secondItem="XCw-0l-igC" secondAttribute="centerY" id="eRQ-Yq-UxL"/>
                             <constraint firstItem="IoA-9G-jDR" firstAttribute="trailing" secondItem="gob-X9-ACU" secondAttribute="trailing" id="eVB-7N-8cC"/>
                             <constraint firstItem="XCw-0l-igC" firstAttribute="top" secondItem="3lG-tZ-9p7" secondAttribute="bottom" constant="15" id="mjD-gk-6C8"/>
+                            <constraint firstItem="IoA-9G-jDR" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zw1-hp-eZO" secondAttribute="bottom" constant="20" id="ocB-zl-Y6L"/>
                             <constraint firstItem="IoA-9G-jDR" firstAttribute="trailing" secondItem="1ky-C1-iSL" secondAttribute="trailing" constant="20" id="r3Z-LM-eTC"/>
                             <constraint firstItem="3xs-8i-i9d" firstAttribute="leading" secondItem="3lG-tZ-9p7" secondAttribute="trailing" constant="15" id="rXV-1F-5v7"/>
                             <constraint firstItem="IoA-9G-jDR" firstAttribute="trailing" secondItem="7Gj-7q-iQJ" secondAttribute="trailing" constant="20" id="sH1-y3-xcn"/>
                             <constraint firstItem="S1D-h2-9zf" firstAttribute="leading" secondItem="IoA-9G-jDR" secondAttribute="leading" constant="30" id="t5L-Or-8ZD"/>
                             <constraint firstItem="s58-b4-Had" firstAttribute="top" secondItem="3pX-G5-dSC" secondAttribute="bottom" id="tvS-ma-rDa"/>
                             <constraint firstItem="IoA-9G-jDR" firstAttribute="trailing" secondItem="XCw-0l-igC" secondAttribute="trailing" constant="178" id="v0M-Rp-gbS"/>
-                            <constraint firstItem="S1D-h2-9zf" firstAttribute="top" secondItem="gob-X9-ACU" secondAttribute="bottom" constant="20" id="wHh-Kc-H2W"/>
                             <constraint firstItem="5ee-cT-0yv" firstAttribute="leading" secondItem="XCw-0l-igC" secondAttribute="leading" id="yZn-N8-xdh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="S1D-h2-9zf" id="cTY-9A-55R"/>
+                        <outlet property="contentTextViewHeight" destination="Qmh-E8-FzC" id="1te-bc-HvT"/>
+                        <outlet property="imgCollectionView" destination="vDB-aX-WEr" id="Exl-ZE-G76"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMy-cz-Hvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="80"/>
+            <point key="canvasLocation" x="308.69565217391306" y="79.6875"/>
         </scene>
     </scenes>
     <resources>
