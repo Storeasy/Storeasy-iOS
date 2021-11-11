@@ -12,9 +12,11 @@ class AgreementSignupVC: UIViewController {
     let agreementTitles: [String] = ["서비스 약관 동의", "서비스 유료화 약관 동의"]
     let agreementContents: [String] = ["서비스 약관 내용", "서비스 유료화 약관 내용"]
     
+    var signupUser: SignupUser = SignupUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(signupUser)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,17 +35,12 @@ class AgreementSignupVC: UIViewController {
         performSegue(withIdentifier: "service", sender: nil)
     }
     
-    //서비스 유료화 자세히 보기
-    @IBAction func serviceChargeAgreementDetailAction(_ sender: Any) {
-        performSegue(withIdentifier: "charging", sender: nil)
-    }
-    
     //회원가입 취소
     @IBAction func giveupSignupAction(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    //이전 페이지(학교관련)로 이동
+    // 뒤로가기
     @IBAction func backToMajorSignupAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

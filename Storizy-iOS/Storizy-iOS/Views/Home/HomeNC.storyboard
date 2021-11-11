@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ySG-71-Io3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -214,11 +213,14 @@
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="88.392857142857139"/>
         </scene>
-        <!--Item-->
+        <!--홈-->
         <scene sceneID="cqm-qi-sBn">
             <objects>
-                <navigationController storyboardIdentifier="HomeNC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ySG-71-Io3" customClass="HomeNC" customModule="Storizy_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ZG2-UZ-yh9"/>
+                <navigationController storyboardIdentifier="HomeNC" title="홈" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ySG-71-Io3" customClass="HomeNC" customModule="Storizy_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" id="ZG2-UZ-yh9">
+                        <imageReference key="image" image="house" catalog="system" renderingMode="original"/>
+                        <imageReference key="selectedImage" image="house.fill" catalog="system" renderingMode="original"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zbw-83-fkq">
                         <autoresizingMask key="autoresizingMask"/>
@@ -237,6 +239,8 @@
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="mimozi" width="640" height="652"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J3v-Ra-PEQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -63,20 +62,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시스템 메세지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrm-iv-UgT">
-                                <rect key="frame" x="40" y="375" width="82" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrm-iv-UgT">
+                                <rect key="frame" x="40" y="375" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증번호 전송을 누르시면 필요한 접근권한에 동의하는 것으로 간주합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-c6-6Gx">
-                                <rect key="frame" x="40" y="403" width="344" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  인증번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLC-6J-NRN">
-                                <rect key="frame" x="30" y="444" width="354" height="50"/>
+                                <rect key="frame" x="30" y="426" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="POp-aN-feb"/>
                                 </constraints>
@@ -84,13 +77,13 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="one-time-code"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl5-nz-1pO">
-                                <rect key="frame" x="40" y="413" width="59" height="21"/>
+                                <rect key="frame" x="40" y="395" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ds-eA-fSL">
-                                <rect key="frame" x="40" y="504" width="243" height="36"/>
+                                <rect key="frame" x="40" y="486" width="243" height="36"/>
                                 <string key="text">인증코드가 발송되었습니다.
 이메일을 확인해주세요. 00분 00초 남음.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -98,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQx-bl-WTM">
-                                <rect key="frame" x="40" y="550" width="95" height="30"/>
+                                <rect key="frame" x="40" y="532" width="95" height="30"/>
                                 <state key="normal" title="인증번호 재전송"/>
                                 <connections>
                                     <action selector="resendAuthAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TjK-mn-07K"/>
@@ -111,12 +104,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vpr-69-vdj" secondAttribute="trailing" constant="30" id="17b-zT-yim"/>
                             <constraint firstItem="qrm-iv-UgT" firstAttribute="top" secondItem="q2H-YT-Ql5" secondAttribute="bottom" constant="10" id="3gR-p0-nHF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DLC-6J-NRN" secondAttribute="trailing" constant="30" id="7WV-lw-wBH"/>
-                            <constraint firstItem="m5e-c6-6Gx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-30" id="CMa-XT-55t"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7Ds-eA-fSL" secondAttribute="trailing" constant="30" id="De3-RS-EWL"/>
                             <constraint firstItem="wl5-nz-1pO" firstAttribute="top" secondItem="qrm-iv-UgT" secondAttribute="bottom" constant="20" id="Fby-vR-dKk"/>
                             <constraint firstItem="xQx-bl-WTM" firstAttribute="top" secondItem="7Ds-eA-fSL" secondAttribute="bottom" constant="10" id="JK1-kc-RCb"/>
                             <constraint firstItem="oMK-LR-NHB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="240" id="O8A-eZ-f9D"/>
-                            <constraint firstItem="m5e-c6-6Gx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="ObP-G9-TWq"/>
                             <constraint firstItem="oMK-LR-NHB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Q0l-WE-hzd"/>
                             <constraint firstItem="q2H-YT-Ql5" firstAttribute="top" secondItem="oMK-LR-NHB" secondAttribute="bottom" constant="10" id="Si2-df-nDX"/>
                             <constraint firstItem="wl5-nz-1pO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="So8-Sn-YgG"/>
@@ -127,7 +118,6 @@
                             <constraint firstItem="7Ds-eA-fSL" firstAttribute="top" secondItem="DLC-6J-NRN" secondAttribute="bottom" constant="10" id="bgX-NA-uD4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qrm-iv-UgT" secondAttribute="trailing" constant="30" id="bj9-FZ-fze"/>
                             <constraint firstItem="xQx-bl-WTM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="cII-RI-E5f"/>
-                            <constraint firstItem="m5e-c6-6Gx" firstAttribute="top" secondItem="qrm-iv-UgT" secondAttribute="bottom" constant="10" id="fLH-yL-fWz"/>
                             <constraint firstItem="Vpr-69-vdj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="iEE-Sd-s9p"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="StG-Wh-rA3" secondAttribute="bottom" constant="20" id="lhI-s7-mFI"/>
                             <constraint firstItem="q2H-YT-Ql5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="p0e-Pp-ULH"/>
@@ -145,7 +135,6 @@
                         <outlet property="authMsg" destination="7Ds-eA-fSL" id="sT5-9N-crN"/>
                         <outlet property="authTextField" destination="DLC-6J-NRN" id="49x-rp-mdD"/>
                         <outlet property="authTitleLabel" destination="wl5-nz-1pO" id="lML-yo-yc2"/>
-                        <outlet property="emailAgreementMsg" destination="m5e-c6-6Gx" id="K13-EA-0V6"/>
                         <outlet property="emailSysMsg" destination="qrm-iv-UgT" id="HbQ-1V-w6a"/>
                         <outlet property="gotoPWbtn" destination="Vpr-69-vdj" id="0xU-vN-f6J"/>
                         <outlet property="resendAuthBtn" destination="xQx-bl-WTM" id="ynJ-C5-fVc"/>
@@ -270,6 +259,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cQI-JI-rse"/>
+                    <connections>
+                        <outlet property="pw2MsgLabel" destination="4jQ-q7-6Su" id="kyh-IF-PgX"/>
+                        <outlet property="pw2TF" destination="oP8-Vu-DsG" id="zmQ-P5-6ft"/>
+                        <outlet property="pwMsgLabel" destination="aWd-0V-aBC" id="soW-eH-0M8"/>
+                        <outlet property="pwTF" destination="QNZ-09-wvo" id="pUT-WW-j3Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWq-aA-wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,6 +367,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bU6-tR-SId"/>
+                    <connections>
+                        <outlet property="birthTF" destination="mPj-l3-wnK" id="gt9-52-wQ8"/>
+                        <outlet property="nameTF" destination="Y7m-AP-VnA" id="cRS-Zv-Jmh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SsZ-Zx-lPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -501,6 +500,11 @@
                             <constraint firstItem="ybh-e3-MAf" firstAttribute="top" secondItem="u6e-rb-0tW" secondAttribute="bottom" constant="10" id="siY-NM-kBU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enterYearTF" destination="JIi-dc-hV5" id="PMk-oD-Hhx"/>
+                        <outlet property="majorTF" destination="G6P-Qb-yVw" id="aAH-KC-O38"/>
+                        <outlet property="univTF" destination="ybh-e3-MAf" id="eRc-H8-o1y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaD-Hc-4Op" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -566,40 +570,21 @@
                                     <segue destination="Kse-wn-otX" kind="presentation" identifier="service" id="glk-gA-em3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서비스 유료화 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVX-dx-tFR">
-                                <rect key="frame" x="40" y="405.5" width="133.5" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URP-Bi-PIi">
-                                <rect key="frame" x="328" y="401.5" width="56" height="30"/>
-                                <state key="normal" title="약관 보기"/>
-                                <connections>
-                                    <action selector="serviceChargeAgreementDetailAction:" destination="IFL-px-41K" eventType="touchUpInside" id="qnH-TX-zqk"/>
-                                    <segue destination="Kse-wn-otX" kind="presentation" identifier="charging" id="Tx7-hF-vQW"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B4q-O8-A70"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8nR-PD-i3U" firstAttribute="top" secondItem="B4q-O8-A70" secondAttribute="top" constant="50" id="1Rz-RN-Y6b"/>
-                            <constraint firstItem="MVX-dx-tFR" firstAttribute="leading" secondItem="B4q-O8-A70" secondAttribute="leading" constant="40" id="6h4-wp-QLA"/>
                             <constraint firstItem="cec-P6-hcV" firstAttribute="leading" secondItem="Dy6-PJ-Df1" secondAttribute="leading" constant="20" id="AKH-cS-qKS"/>
-                            <constraint firstItem="URP-Bi-PIi" firstAttribute="centerY" secondItem="MVX-dx-tFR" secondAttribute="centerY" id="FDB-2V-9Xz"/>
                             <constraint firstItem="xd2-ML-Kb5" firstAttribute="leading" secondItem="B4q-O8-A70" secondAttribute="leading" constant="40" id="QZ0-Zq-tlg"/>
                             <constraint firstItem="B4q-O8-A70" firstAttribute="trailing" secondItem="8nR-PD-i3U" secondAttribute="trailing" constant="30" id="S3J-z2-ewL"/>
                             <constraint firstItem="Vso-Nr-FnF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xd2-ML-Kb5" secondAttribute="trailing" constant="20" id="WIL-JO-hL6"/>
                             <constraint firstItem="B4q-O8-A70" firstAttribute="trailing" secondItem="Vso-Nr-FnF" secondAttribute="trailing" constant="30" id="YRZ-YV-aqC"/>
                             <constraint firstItem="Vso-Nr-FnF" firstAttribute="centerY" secondItem="xd2-ML-Kb5" secondAttribute="centerY" id="ZOi-Cm-0fA"/>
                             <constraint firstItem="xd2-ML-Kb5" firstAttribute="top" secondItem="B4q-O8-A70" secondAttribute="top" constant="270" id="cKC-B3-UGb"/>
-                            <constraint firstItem="MVX-dx-tFR" firstAttribute="top" secondItem="xd2-ML-Kb5" secondAttribute="bottom" constant="70" id="eTv-yd-sHd"/>
                             <constraint firstItem="B4q-O8-A70" firstAttribute="bottom" secondItem="cec-P6-hcV" secondAttribute="bottom" constant="20" id="hR4-kq-iBN"/>
-                            <constraint firstItem="B4q-O8-A70" firstAttribute="trailing" secondItem="URP-Bi-PIi" secondAttribute="trailing" constant="30" id="mf8-2F-PRe"/>
                             <constraint firstAttribute="trailing" secondItem="cec-P6-hcV" secondAttribute="trailing" constant="20" id="rja-Ob-q2t"/>
                             <constraint firstItem="cec-P6-hcV" firstAttribute="centerX" secondItem="B4q-O8-A70" secondAttribute="centerX" id="tXP-iY-CR0"/>
-                            <constraint firstItem="URP-Bi-PIi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MVX-dx-tFR" secondAttribute="trailing" constant="20" id="vsB-ac-HGR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -687,9 +672,6 @@
             <point key="canvasLocation" x="-142.02898550724638" y="44.866071428571423"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Tx7-hF-vQW"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -699,6 +681,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
