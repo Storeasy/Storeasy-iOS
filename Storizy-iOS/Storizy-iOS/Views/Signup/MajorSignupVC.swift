@@ -39,7 +39,7 @@ class MajorSignupVC: UIViewController {
     // 다음
     @IBAction func nextToAgreementSignupAction(_ sender: Any) {
         if let agreementSignupVC = self.storyboard?.instantiateViewController(identifier: "AgreementSignupVC") as? AgreementSignupVC {
-            signupUser.enterYear = enterYearTF.text
+            signupUser.enterYear = Int(enterYearTF.text!)
             signupUser.univName = univTF.text
             signupUser.major = majorTF.text
             agreementSignupVC.signupUser = self.signupUser

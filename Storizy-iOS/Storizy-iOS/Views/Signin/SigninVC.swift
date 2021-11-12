@@ -9,6 +9,9 @@ import UIKit
 
 class SigninVC: UIViewController {
 
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var pwTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        UserDefaults.standard.setValue("email", forKey: "email")
@@ -16,6 +19,10 @@ class SigninVC: UIViewController {
 //        UserDefaults.standard.key
         
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // MARK: - 뒤로가기 버튼 클릭
@@ -26,14 +33,33 @@ class SigninVC: UIViewController {
     
     // MARK: - 로그인 시도
     @IBAction func signinAction(_ sender: Any) {
-        //서버로 로그인 요청 전송
-        //에러 처리 (alert로)
+        let email = emailTF.text!
+        let pw = pwTF.text!
         
-        //성공시 탭바C으로 이동
-        let tabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
-        let tabBarController = tabBarStoryboard.instantiateViewController(identifier: "TabBarController")
-        tabBarController.modalPresentationStyle = .fullScreen
-        self.present(tabBarController, animated: true, completion: nil)
+        //서버로 로그인 요청 전송
+        SigninService.shared.signinReq(email: email, pw: pw) { (responseCode, responseBody) in
+            // 로그인 성공
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<SigninResponseData>
+                print(body)
+                
+                // access token 저장
+                let accessToken = body.data?.accessToken
+                UserDefaults.standard.setValue(accessToken, forKey: "accessToken")
+                print(UserDefaults.standard.string(forKey: "accessToken"))
+                //성공시 탭바C으로 이동
+                let tabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
+                let tabBarController = tabBarStoryboard.instantiateViewController(identifier: "TabBarController")
+                tabBarController.modalPresentationStyle = .fullScreen
+                self.present(tabBarController, animated: true, completion: nil)
+            }
+            // 로그인 실패
+            else {
+                print(responseCode)
+                //에러 처리 (alert로)
+            }
+        }
+        
     }
     
 }

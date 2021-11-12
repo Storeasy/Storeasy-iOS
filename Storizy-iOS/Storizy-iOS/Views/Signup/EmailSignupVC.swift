@@ -81,6 +81,37 @@ class EmailSignupVC: UIViewController {
         sendAuthBtn.isEnabled = false
     }
     
+    func sendEmailReq(_ email: String) {
+        // 인증 메일 전송
+        SendAuthEmailService.shared.sendAuthEmail(email) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<String>
+                print(body)
+                self.authMsg.text = "인증 메일이 전송되었습니다. 5분안에 인증해주세요."
+            } else {
+                self.authMsg.text = "인증 메일 전송 실패. 다시 시도해주세요."
+                print(responseCode)
+            }
+        }
+    }
+    
+    func checkEmailReq(_ email: String) {
+        // 메일 중복 확인
+        EmailCheckService.shared.emailCheckService(email) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<String>
+                print(body)
+                self.emailSysMsg.text = ""
+                // 이메일 중복 통과되면 -> 인증 번호 입력란 보이기
+                self.setAuthVisible()
+            } else {
+                // 실패
+                self.emailSysMsg.text = "이미 존재하는 이메일입니다."
+                print(responseCode)
+            }
+        }
+    }
+    
     // MARK: 회원가입 취소 버튼 클릭
     @IBAction func backAction(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
@@ -91,54 +122,64 @@ class EmailSignupVC: UIViewController {
         let email = EmailTextField.text!
         
         // 메일 중복 확인
-        EmailCheckService.shared.emailCheckService(email) { (responseCode, responseBody) in
-            if responseCode == .success {
-                let body = responseBody as! ResponseData<String>
-                print(responseBody)
-                self.emailSysMsg.text = ""
-                // 이메일 중복 통과되면 -> 인증 번호 입력란 보이기
-                self.setAuthVisible()
-            } else {
-                // 실패
-                self.emailSysMsg.text = "이미 존재하는 이메일입니다."
-                print(responseCode)
-            }
-        }
+        checkEmailReq(email)
         
         // 인증 메일 전송
-        
-        
+        sendEmailReq(email)
         
     }
     
     // MARK: 인증번호 재전송 버튼 클릭
     @IBAction func resendAuthAction(_ sender: Any) {
-        let email = EmailTextField.text
+        let email = EmailTextField.text!
         
         // 인증 메일 전송
-        
+        SendAuthEmailService.shared.sendAuthEmail(email) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<String>
+                print(body)
+                self.authMsg.text = "인증 메일이 전송되었습니다. 5분안에 인증해주세요."
+            } else {
+                self.authMsg.text = "인증 메일 전송 실패. 다시 시도해주세요."
+                print(responseCode)
+            }
+        }
     }
     
     
     // MARK: 다음 버튼 클릭 (인증번호 확인)
     @IBAction func goPWAction(_ sender: Any) {
         // 인증번호 확인
-        //// API
-        /*
-        if isValidAuth {
-            if let pwSignupVC = self.storyboard?.instantiateViewController(identifier: "PWSignupVC") {
-                self.navigationController?.pushViewController(pwSignupVC, animated: true)
+        let email = EmailTextField.text!
+        let authNum = authTextField.text!
+        let request: [String: String] = [
+            "email": email,
+            "code": authNum
+        ]
+        CheckAuthEmailService.shared.checkAuthEmail(request) { responseCode, responseBody in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<String>
+                print(body)
+                if let pwSignupVC = self.storyboard?.instantiateViewController(identifier: "PWSignupVC") as? PWSignupVC {
+                    self.signupUser.email = self.EmailTextField.text!
+                    pwSignupVC.signupUser = self.signupUser
+                    self.navigationController?.pushViewController(pwSignupVC, animated: true)
+                }
+            } else {
+                print(responseCode)
+                self.authMsg.text = "인증번호가 올바르지 않습니다.\n다시 시도해주세요."
+                if let pwSignupVC = self.storyboard?.instantiateViewController(identifier: "PWSignupVC") as? PWSignupVC {
+                    self.signupUser.email = self.EmailTextField.text!
+                    pwSignupVC.signupUser = self.signupUser
+                    self.navigationController?.pushViewController(pwSignupVC, animated: true)
+                }
             }
-        } else {
-            authMsg.text = "인증번호가 올바르지 않습니다.\n다시 시도해주세요."
         }
-         */
         if let pwSignupVC = self.storyboard?.instantiateViewController(identifier: "PWSignupVC") as? PWSignupVC {
-            signupUser.email = EmailTextField.text!
+            self.signupUser.email = self.EmailTextField.text!
             pwSignupVC.signupUser = self.signupUser
             self.navigationController?.pushViewController(pwSignupVC, animated: true)
         }
-        
     }
     
 }

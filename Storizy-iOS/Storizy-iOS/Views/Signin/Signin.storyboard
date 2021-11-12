@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Kk4-Ae-XLQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Qh-tS-h0k">
                                 <rect key="frame" x="30" y="469" width="354" height="50"/>
@@ -37,7 +37,7 @@
                                     <constraint firstAttribute="height" constant="50" id="ZXh-Al-EbU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL2-rL-awo" userLabel="Back">
                                 <rect key="frame" x="20" y="44" width="67" height="22"/>
@@ -81,6 +81,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i4k-p5-kjx"/>
+                    <connections>
+                        <outlet property="emailTF" destination="S5a-gr-LMu" id="m8F-qW-Pcr"/>
+                        <outlet property="pwTF" destination="7Qh-tS-h0k" id="xTd-Vj-ZJA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

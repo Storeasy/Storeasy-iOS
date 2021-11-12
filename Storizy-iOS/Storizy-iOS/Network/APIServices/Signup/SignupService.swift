@@ -9,9 +9,12 @@ import Foundation
 import Alamofire
 
 struct SignupService {
-    static let shared = SignupService()
     
-    func signupRequest(_ signupUser: SignupUser){
+    static let shared = SignupService()
+
+    
+    func signupReq(_ signupUser: SignupUser, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
+
         let url = APIUrls.signupPostURL
         let header: HTTPHeaders = [ "Content-Type":"application/json"]
         let body: Parameters = [
@@ -23,22 +26,44 @@ struct SignupService {
             "universityName": signupUser.univName!,
             "department": signupUser.major!
         ]
-        
+        let encoder = JSONEncoder()
+//        let body = try? encoder.encode(signupUser)
+//        guard let bodyData = body, let bodyString = String(data: body!, encoding: .utf8) else {
+//        }
         let dataRequest = AF.request(url,
                                      method: .post,
                                      parameters: body,
-                                     encoding: JSONEncoding.default, headers: header)
-        
-        dataRequest.responseJSON() { response in
+                                     encoding: JSONEncoding.default,
+                                     headers: header)
+        dataRequest.responseData { (response) in
             switch response.result {
             case .success:
-                if let data = try! response.result.get() as? [String: Any] {
-                  print(data)
+                guard let status = response.response?.statusCode else { return }
+                guard let body =  response.value else { return }
+                
+                // 상태 코드 처리
+                var responseCode: ResponseCode = .success
+                if status == 201 {
+                    print("회원가입 성공")
+                    responseCode = .success
+                } else {
+                    print("회원가입 실패")
+                    print(response)
+                    responseCode = .serverError
                 }
-                break
-            case .failure:
-                break
+                
+                // response body 파싱
+                let decoder = JSONDecoder()
+                guard let responseBody = try? decoder.decode(ResponseData<String>.self, from: body) else { return }
+                
+                // 응답 결과 전송
+                completionHandler(responseCode, responseBody)
+            case .failure(let error):
+                print(error)
+                completionHandler(.requestError, "request fail")
             }
         }
     }
+    
+    
 }

@@ -12,7 +12,7 @@ struct SignupUser: Codable {
     var pw: String?
     var name: String?
     var birth: String?
-    var enterYear: String?
+    var enterYear: Int?
     var major: String?
     var univName: String?
     

@@ -48,9 +48,17 @@ class AgreementSignupVC: UIViewController {
     //회원가입 완료
     @IBAction func completeSignupAction(_ sender: Any) {
         //회원가입 요청 전송
-        //로그인 화면으로 이동? -> 하게 해주세요 제발요 이게 제일 편해요 사실 아닌데 이렇게 해야 뷰가 덜 쌓일 것 같아요
-        //메인 화면으로 이동?
-        self.navigationController?.popToRootViewController(animated: true)
+        SignupService.shared.signupReq(signupUser) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<String>
+                print(body)
+                
+                //로그인 화면으로 이동
+                self.navigationController?.popToRootViewController(animated: true)
+            } else {
+                print(responseCode)
+            }
+        }
     }
     
 }

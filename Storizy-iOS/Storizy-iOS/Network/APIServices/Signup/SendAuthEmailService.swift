@@ -1,27 +1,26 @@
 //
-//  EmailCheckService.swift
+//  SendAuthEmailService.swift
 //  Storizy-iOS
 //
-//  Created by 임수정 on 2021/11/11.
+//  Created by 임수정 on 2021/11/12.
 //
 
 import Foundation
 import Alamofire
 
-struct EmailCheckService {
+struct SendAuthEmailService {
     
-    static let shared = EmailCheckService()
+    static let shared = SendAuthEmailService()
 
     
-    func emailCheckService(_ email: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
+    func sendAuthEmail(_ email: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
-        let url = APIUrls.checkEmailGetURL + email
+        let url = APIUrls.sendAuthEmaiGetURL + email
         let header: HTTPHeaders = [ "Content-Type":"application/json"]
         let dataRequest = AF.request(url,
                                      method: .get,
                                      encoding: JSONEncoding.default,
                                      headers: header)
-        
         dataRequest.responseData { (response) in
             switch response.result {
             case .success:
@@ -31,9 +30,11 @@ struct EmailCheckService {
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
                 if status == 200 {
-                    print("이메일 중복 확인 성공")
+                    print("인증 메일 전송 성공")
                     responseCode = .success
                 } else {
+                    print("인증 메일 전송 실패")
+                    print(status)
                     responseCode = .serverError
                 }
                 
