@@ -15,7 +15,7 @@ struct EmailCheckService {
     
     func emailCheckService(_ email: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
-        let url = APIUrls.checkEmailGetURL + email
+        let url = APIUrls.getCheckEmailURL + email
         let header: HTTPHeaders = [ "Content-Type":"application/json"]
         let dataRequest = AF.request(url,
                                      method: .get,

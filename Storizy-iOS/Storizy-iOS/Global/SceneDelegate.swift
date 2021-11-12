@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         //자동로그인
-        if (UserDefaults.standard.string(forKey: "email") != nil) {
+        if (UserDefaults.standard.string(forKey: "accessToken") != nil) {
             let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
             let initialVC = storyboard.instantiateViewController(identifier: "TabBarController")
             self.window?.rootViewController = initialVC

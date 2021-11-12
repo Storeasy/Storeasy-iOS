@@ -81,6 +81,18 @@
 		DEA36F09273E2A5E00BBFEF5 /* CheckAuthEmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F08273E2A5E00BBFEF5 /* CheckAuthEmailService.swift */; };
 		DEA36F0B273E3E8300BBFEF5 /* SigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F0A273E3E8300BBFEF5 /* SigninService.swift */; };
 		DEA36F0E273E406400BBFEF5 /* SigninResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F0D273E406400BBFEF5 /* SigninResponseData.swift */; };
+		DEA36F11273E456100BBFEF5 /* MyProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F10273E456100BBFEF5 /* MyProfileService.swift */; };
+		DEA36F13273E46A900BBFEF5 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F12273E46A900BBFEF5 /* ProfileData.swift */; };
+		DEA36F15273E476300BBFEF5 /* TagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F14273E476300BBFEF5 /* TagData.swift */; };
+		DEA36F19273E86D400BBFEF5 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F18273E86D400BBFEF5 /* ProfileService.swift */; };
+		DEA36F1B273E87EB00BBFEF5 /* UpdateProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F1A273E87EB00BBFEF5 /* UpdateProfileService.swift */; };
+		DEA36F1D273E8C0800BBFEF5 /* CreateProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F1C273E8C0800BBFEF5 /* CreateProjectService.swift */; };
+		DEA36F1F273E8CC600BBFEF5 /* UpdateProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F1E273E8CC600BBFEF5 /* UpdateProjectService.swift */; };
+		DEA36F21273E8CFE00BBFEF5 /* DeleteProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F20273E8CFE00BBFEF5 /* DeleteProjectService.swift */; };
+		DEA36F23273E8D8D00BBFEF5 /* CreatePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F22273E8D8D00BBFEF5 /* CreatePageService.swift */; };
+		DEA36F25273E8DC500BBFEF5 /* UpdatePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F24273E8DC500BBFEF5 /* UpdatePageService.swift */; };
+		DEA36F27273E8E0000BBFEF5 /* DeletePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F26273E8DFF00BBFEF5 /* DeletePageService.swift */; };
+		DEA36F29273E8E5F00BBFEF5 /* ReadPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F28273E8E5F00BBFEF5 /* ReadPageService.swift */; };
 		DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5412732C6260022B33B /* AppDelegate.swift */; };
 		DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5432732C6260022B33B /* SceneDelegate.swift */; };
 		DEF9E5462732C6260022B33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5452732C6260022B33B /* ViewController.swift */; };
@@ -175,6 +187,18 @@
 		DEA36F08273E2A5E00BBFEF5 /* CheckAuthEmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAuthEmailService.swift; sourceTree = "<group>"; };
 		DEA36F0A273E3E8300BBFEF5 /* SigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninService.swift; sourceTree = "<group>"; };
 		DEA36F0D273E406400BBFEF5 /* SigninResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninResponseData.swift; sourceTree = "<group>"; };
+		DEA36F10273E456100BBFEF5 /* MyProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileService.swift; sourceTree = "<group>"; };
+		DEA36F12273E46A900BBFEF5 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		DEA36F14273E476300BBFEF5 /* TagData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagData.swift; sourceTree = "<group>"; };
+		DEA36F18273E86D400BBFEF5 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		DEA36F1A273E87EB00BBFEF5 /* UpdateProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileService.swift; sourceTree = "<group>"; };
+		DEA36F1C273E8C0800BBFEF5 /* CreateProjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectService.swift; sourceTree = "<group>"; };
+		DEA36F1E273E8CC600BBFEF5 /* UpdateProjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProjectService.swift; sourceTree = "<group>"; };
+		DEA36F20273E8CFE00BBFEF5 /* DeleteProjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectService.swift; sourceTree = "<group>"; };
+		DEA36F22273E8D8D00BBFEF5 /* CreatePageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePageService.swift; sourceTree = "<group>"; };
+		DEA36F24273E8DC500BBFEF5 /* UpdatePageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePageService.swift; sourceTree = "<group>"; };
+		DEA36F26273E8DFF00BBFEF5 /* DeletePageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePageService.swift; sourceTree = "<group>"; };
+		DEA36F28273E8E5F00BBFEF5 /* ReadPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPageService.swift; sourceTree = "<group>"; };
 		DEF9E53E2732C6260022B33B /* Storizy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storizy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9E5412732C6260022B33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9E5432732C6260022B33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -319,6 +343,8 @@
 				DEA36F02273D686400BBFEF5 /* ResponseData.swift */,
 				DEA36F04273D78EB00BBFEF5 /* ResponseCode.swift */,
 				DEA36F0D273E406400BBFEF5 /* SigninResponseData.swift */,
+				DEA36F12273E46A900BBFEF5 /* ProfileData.swift */,
+				DEA36F14273E476300BBFEF5 /* TagData.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -549,6 +575,9 @@
 		DEF9E56C2732CD980022B33B /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36F1C273E8C0800BBFEF5 /* CreateProjectService.swift */,
+				DEA36F1E273E8CC600BBFEF5 /* UpdateProjectService.swift */,
+				DEA36F20273E8CFE00BBFEF5 /* DeleteProjectService.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -556,6 +585,10 @@
 		DEF9E56D2732CDBC0022B33B /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36F22273E8D8D00BBFEF5 /* CreatePageService.swift */,
+				DEA36F24273E8DC500BBFEF5 /* UpdatePageService.swift */,
+				DEA36F26273E8DFF00BBFEF5 /* DeletePageService.swift */,
+				DEA36F28273E8E5F00BBFEF5 /* ReadPageService.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -577,6 +610,9 @@
 		DEF9E5712732CE030022B33B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36F18273E86D400BBFEF5 /* ProfileService.swift */,
+				DEA36F10273E456100BBFEF5 /* MyProfileService.swift */,
+				DEA36F1A273E87EB00BBFEF5 /* UpdateProfileService.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -751,7 +787,9 @@
 			files = (
 				DEA36EFB273D168800BBFEF5 /* SignupUser.swift in Sources */,
 				DEA36F09273E2A5E00BBFEF5 /* CheckAuthEmailService.swift in Sources */,
+				DEA36F1B273E87EB00BBFEF5 /* UpdateProfileService.swift in Sources */,
 				DEF9E5462732C6260022B33B /* ViewController.swift in Sources */,
+				DEA36F23273E8D8D00BBFEF5 /* CreatePageService.swift in Sources */,
 				DEA36EC727391F0D00BBFEF5 /* CustomSegmentedControl.swift in Sources */,
 				DEA36EE0273A26F900BBFEF5 /* ExploreUnsearchedVC.swift in Sources */,
 				DEA36F03273D686500BBFEF5 /* ResponseData.swift in Sources */,
@@ -765,9 +803,14 @@
 				DEA36EB4273903E100BBFEF5 /* OtherPageCell.swift in Sources */,
 				DEA36EA02737ECEC00BBFEF5 /* CreatePageVC.swift in Sources */,
 				DEA36E6E273522E900BBFEF5 /* HomeVC.swift in Sources */,
+				DEA36F15273E476300BBFEF5 /* TagData.swift in Sources */,
 				DEA36EE2273A270B00BBFEF5 /* ExploreSearchedVC.swift in Sources */,
+				DEA36F29273E8E5F00BBFEF5 /* ReadPageService.swift in Sources */,
 				DEA36E5E2733CC9000BBFEF5 /* NameBirthSignupVC.swift in Sources */,
+				DEA36F25273E8DC500BBFEF5 /* UpdatePageService.swift in Sources */,
+				DEA36F1F273E8CC600BBFEF5 /* UpdateProjectService.swift in Sources */,
 				DEA36E7E27369B2700BBFEF5 /* Project.swift in Sources */,
+				DEA36F19273E86D400BBFEF5 /* ProfileService.swift in Sources */,
 				DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */,
 				DEA36EF9273CF1A600BBFEF5 /* APIUrls.swift in Sources */,
 				DEA36EE8273A408D00BBFEF5 /* TagCell.swift in Sources */,
@@ -779,6 +822,7 @@
 				DEA36F0B273E3E8300BBFEF5 /* SigninService.swift in Sources */,
 				DEF9E5AE2733A31B0022B33B /* SplashVC.swift in Sources */,
 				DEA36EAC2738F51F00BBFEF5 /* HeartNC.swift in Sources */,
+				DEA36F21273E8CFE00BBFEF5 /* DeleteProjectService.swift in Sources */,
 				DEA36E9E2737DF5800BBFEF5 /* CreateProjectVC.swift in Sources */,
 				DEA36F0E273E406400BBFEF5 /* SigninResponseData.swift in Sources */,
 				DEA36E7B2736976800BBFEF5 /* PageCell.swift in Sources */,
@@ -788,9 +832,11 @@
 				DEA36E72273526E200BBFEF5 /* OnboardingVC.swift in Sources */,
 				DEA36EA227383A0300BBFEF5 /* EditPageVC.swift in Sources */,
 				DEA36EFF273D19FC00BBFEF5 /* SignupService.swift in Sources */,
+				DEA36F13273E46A900BBFEF5 /* ProfileData.swift in Sources */,
 				DEA36E682735113600BBFEF5 /* AgreementDetailVC.swift in Sources */,
 				DEA36ECF2739555800BBFEF5 /* OtherHomeVC.swift in Sources */,
 				DEA36EA827383B7300BBFEF5 /* EditProjectVC.swift in Sources */,
+				DEA36F1D273E8C0800BBFEF5 /* CreateProjectService.swift in Sources */,
 				DEA36EC22739176200BBFEF5 /* HeartUserCell.swift in Sources */,
 				DEA36E6C273522B300BBFEF5 /* HomeNC.swift in Sources */,
 				DEA36E872736A81A00BBFEF5 /* ProjectDetailVC.swift in Sources */,
@@ -803,9 +849,11 @@
 				DEA36E5C2733CC6A00BBFEF5 /* PWSignupVC.swift in Sources */,
 				DEF9E5AA273388B20022B33B /* TabBarController.swift in Sources */,
 				DEA36E582733CAEA00BBFEF5 /* SignupNC.swift in Sources */,
+				DEA36F27273E8E0000BBFEF5 /* DeletePageService.swift in Sources */,
 				DEF9E5A12733854B0022B33B /* SigninVC.swift in Sources */,
 				DEA36E642733D60100BBFEF5 /* MajorSignupVC.swift in Sources */,
 				DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */,
+				DEA36F11273E456100BBFEF5 /* MyProfileService.swift in Sources */,
 				DEA36EF1273BB83A00BBFEF5 /* EditProfileVC.swift in Sources */,
 				DEA36EBE2739108200BBFEF5 /* HeartPageCell.swift in Sources */,
 			);

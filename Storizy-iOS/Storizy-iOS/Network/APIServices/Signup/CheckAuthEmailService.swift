@@ -15,7 +15,7 @@ struct CheckAuthEmailService {
     
     func checkAuthEmail(_ body: [String: String], completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
-        let url = APIUrls.authEmailGetURL
+        let url = APIUrls.getAuthEmailURL
         let header: HTTPHeaders = [ "Content-Type":"application/json"]
         let dataRequest = AF.request(url,
                                      method: .get,

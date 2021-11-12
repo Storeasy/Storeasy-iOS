@@ -15,7 +15,7 @@ struct SignupService {
     
     func signupReq(_ signupUser: SignupUser, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
-        let url = APIUrls.signupPostURL
+        let url = APIUrls.postSignupURL
         let header: HTTPHeaders = [ "Content-Type":"application/json"]
         let body: Parameters = [
             "email": signupUser.email!,

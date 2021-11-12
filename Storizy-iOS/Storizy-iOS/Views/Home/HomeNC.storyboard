@@ -151,8 +151,8 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZq-20-ySk">
-                                                <rect key="frame" x="0.0" y="260" width="414" height="740"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZq-20-ySk">
+                                                <rect key="frame" x="20" y="260" width="374" height="740"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="740" id="WmG-4X-tbc"/>
@@ -166,8 +166,8 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="xZq-20-ySk" firstAttribute="leading" secondItem="cQd-Pi-Ffa" secondAttribute="leading" id="41I-Yz-4Ed"/>
-                                            <constraint firstAttribute="trailing" secondItem="xZq-20-ySk" secondAttribute="trailing" id="GQY-FJ-xeh"/>
+                                            <constraint firstItem="xZq-20-ySk" firstAttribute="leading" secondItem="cQd-Pi-Ffa" secondAttribute="leading" constant="20" id="41I-Yz-4Ed"/>
+                                            <constraint firstAttribute="trailing" secondItem="xZq-20-ySk" secondAttribute="trailing" constant="20" id="GQY-FJ-xeh"/>
                                             <constraint firstItem="xZq-20-ySk" firstAttribute="top" secondItem="xS2-ve-i6d" secondAttribute="bottom" id="LMh-O4-uUM"/>
                                             <constraint firstItem="dR9-ZO-veC" firstAttribute="leading" secondItem="cQd-Pi-Ffa" secondAttribute="leading" id="PKd-U2-74b"/>
                                             <constraint firstItem="dR9-ZO-veC" firstAttribute="top" secondItem="cQd-Pi-Ffa" secondAttribute="top" id="X3H-eL-y0x"/>
@@ -205,8 +205,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="5U4-WC-bmc"/>
                     <connections>
+                        <outlet property="bioLB" destination="dc6-ac-K23" id="BLy-ja-mYz"/>
+                        <outlet property="contactLB" destination="yWJ-zg-ich" id="dY9-Tg-lbK"/>
                         <outlet property="feedTableView" destination="xZq-20-ySk" id="xSA-vQ-ptO"/>
                         <outlet property="feedTableViewHeight" destination="WmG-4X-tbc" id="9T3-qj-hRo"/>
+                        <outlet property="nameLB" destination="Fqp-3E-qAa" id="djM-03-HHp"/>
+                        <outlet property="profileImgView" destination="owP-Kp-kbU" id="i7C-y8-bB5"/>
+                        <outlet property="univLB" destination="GId-YY-qSM" id="Hxq-eq-O2Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

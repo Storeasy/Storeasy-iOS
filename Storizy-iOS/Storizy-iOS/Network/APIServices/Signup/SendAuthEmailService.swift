@@ -15,7 +15,7 @@ struct SendAuthEmailService {
     
     func sendAuthEmail(_ email: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
-        let url = APIUrls.sendAuthEmaiGetURL + email
+        let url = APIUrls.getSendAuthEmailURL + email
         let header: HTTPHeaders = [ "Content-Type":"application/json"]
         let dataRequest = AF.request(url,
                                      method: .get,

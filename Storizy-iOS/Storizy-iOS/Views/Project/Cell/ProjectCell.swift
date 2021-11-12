@@ -9,6 +9,10 @@ import UIKit
 
 class ProjectCell: UITableViewCell {
 
+    @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var insideFrameView: UIView!
+    @IBOutlet weak var dotView: UIView!
+    
     @IBOutlet weak var projectContentView: UIView!
     @IBOutlet weak var projectTitleLabel: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
@@ -18,6 +22,14 @@ class ProjectCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setUI()
+    }
+    
+    // UI Set
+    func setUI(){
+        insideFrameView.layer.cornerRadius = 15
+        dotView.layer.cornerRadius = 5
+        dotView.layer.zPosition = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

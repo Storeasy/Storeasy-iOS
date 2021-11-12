@@ -9,16 +9,35 @@ import Foundation
 struct APIUrls {
     static let baseURL = "http://3.38.20.217:3000/api/"
     
-    static let signinPostURL = baseURL + "auth/login"
-    static let signupPostURL = baseURL + "auth/signup"
-    static let checkEmailGetURL = baseURL + "auth/check-email/"
-    static let sendAuthEmaiGetURL = baseURL + "auth/mail/"
-    static let authEmailGetURL = baseURL + "auth/mail"
+    // auth
+    static let postSigninURL = baseURL + "auth/login"
+    static let postSignupURL = baseURL + "auth/signup"
+    static let getCheckEmailURL = baseURL + "auth/check-email/"
+    static let getSendAuthEmailURL = baseURL + "auth/mail/"
+    static let getAuthEmailURL = baseURL + "auth/mail"
     
-    static let recomTagGetURL = baseURL + "profile/tags/recommend" // 추천 태그 조회
-    static let setProfileTagsPostURL = baseURL + "profile/tags" // 프로필 태그 설정
+    // profile
+    static let getMyProfileURL = baseURL + "profile" // 내 프로필 조회
+    static let getProfileURL = baseURL + "profile/" // 다른 사람 프로필 조회
+    static let postUpdateProfileURL = baseURL + "profile" // 내 프로필 수정
+    static let getRecomTagURL = baseURL + "profile/tags/recommend" // 추천 태그 조회
+    static let postSetProfileTagsURL = baseURL + "profile/tags" // 프로필 태그 설정
     
-    static let addTagPostURL = baseURL + "tags" // 태그 추가
+    // tag
+    static let postAddTagURL = baseURL + "tags" // 태그 추가
+    
+    // project
+    static let getColorsURL = baseURL + "project/colors" // 색 목록 조회
+    static let postCreateProjectURL = baseURL + "project" // 프로젝트 생성
+    static let postUpdateProjectURL = baseURL + "project/" // 프로젝트 수정
+    static let delProjectURL = baseURL + "project/" // 프로젝트 삭제
+    
+    // page
+    static let postCreatePageURL = baseURL + "page" // 페이지 생성
+    static let postUpdatePageURL = baseURL + "page/" // 페이지 수정
+    static let delPageURL = baseURL + "page/" // 페이지 삭제
+    static let getPageURL = baseURL + "page/" // 페이지 상세 조회
+    
 
 
 }
