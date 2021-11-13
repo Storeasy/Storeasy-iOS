@@ -11,6 +11,7 @@ import Alamofire
 struct ProfileService {
     
     static let shared = ProfileService()
+
     
     func getProfile(accessToken: String, userId: Int, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
@@ -31,10 +32,10 @@ struct ProfileService {
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
                 if status == 200 {
-                    print("타인 프로필 조회 성공")
+                    print("프로필 조회 성공")
                     responseCode = .success
                 } else {
-                    print("타인 프로필 조회 실패")
+                    print("프로필 조회 실패")
                     print(body)
                     responseCode = .serverError
                 }
@@ -43,7 +44,6 @@ struct ProfileService {
                 let decoder = JSONDecoder()
                 guard let responseBody = try? decoder.decode(ResponseData<ProfileData>.self, from: body) else { return }
                 print(responseBody)
-                
                 // 응답 결과 전송
                 completionHandler(responseCode, responseBody)
             case .failure(let error):

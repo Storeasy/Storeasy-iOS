@@ -8,20 +8,27 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     // components
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var feedTableViewHeight: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var profileFrameView: UIView!
     @IBOutlet weak var profileImgView: UIImageView!
     @IBOutlet weak var nameLB: UILabel!
     @IBOutlet weak var univLB: UILabel!
     @IBOutlet weak var contactLB: UILabel!
     @IBOutlet weak var bioLB: UILabel!
     
+    @IBOutlet weak var feedFrameView: UIView!
+    
     // 실데이터
     var accessToken: String?
     var myProfileData: ProfileData?
+    // 더미
     var feedList: [Any] = [Project(title: "프로젝트명"), Page(title: "페이지명"), Page(title: "페이지명2"), Project(title: "프로젝트명2"), Page(title: "페이지명3")]
     
     override func viewDidLoad() {
@@ -39,6 +46,7 @@ class HomeVC: UIViewController {
         }
         
         // !최초시작
+        
         // 이미지 뷰 UI
         setImageUI()
         
@@ -58,23 +66,26 @@ class HomeVC: UIViewController {
         // 프로필 데이터 불러오기
         getMyProfile()
     }
+    
     // MARK: - UI 설정
     
     func setImageUI(){
-        profileImgView.layer.cornerRadius = 50
+        profileFrameView.layer.cornerRadius = 15
+        feedFrameView.layer.cornerRadius = 15
+        profileImgView.layer.cornerRadius = 35
     }
 
     
     
     // MARK: - 프로필 데이터 뷰에 반영
-    func setProfile(){
+    func loadProfile(){
         // 이미지 URL
         let url = URL(string: myProfileData?.profileImage ??
-                        "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/0916ab6b-6041-4290-a572-6be789a82b4e-11.jpg") // 없으면 기본이미지
+                        "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
         let imgData = try! Data(contentsOf: url!)
         profileImgView.image = UIImage(data: imgData)
         nameLB.text = myProfileData?.nickname ?? "nickname"
-        univLB.text = ( myProfileData?.universityName ?? "" ) + "대학교"
+        univLB.text = ( myProfileData?.universityName ?? "")
         contactLB.text = myProfileData?.contact ?? "연락처를 추가해주세요"
         bioLB.text = myProfileData?.bio ?? "자기소개를 추가해주세요"
     }
@@ -84,16 +95,21 @@ class HomeVC: UIViewController {
         // access token 전송
         guard let token = UserDefaults.standard.string(forKey: "accessToken") else { return }
         accessToken = "Bearer \(token)"
-        MyProfileService.shared.getMyProfile(accessToken: self.accessToken!) { (responseCode, responseBody)in
+        MyProfileService.shared.getMyProfile(accessToken: self.accessToken!) { (responseCode, responseBody) in
             if responseCode == .success {
                 let body = responseBody as! ResponseData<ProfileData>
                 print(body)
-                
+                print(responseCode)
+                print("shdfj!!!kshfskj")
+
                 // 프로필에 불러오기
                 self.myProfileData = body.data
-                self.setProfile()
+                self.loadProfile()
 
             } else {
+                print("shdfjkshfskj")
+                UserDefaults.standard.removeObject(forKey: "accessToken")
+                self.appDelegate.switchRootSignin()
                 print(responseCode)
             }
         }

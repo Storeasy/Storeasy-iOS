@@ -18,6 +18,7 @@ struct MyProfileService {
         let url = APIUrls.getMyProfileURL
         let header: HTTPHeaders = [ "Content-Type": "application/json"
                                     ,"Authorization": accessToken]
+        
         let dataRequest = AF.request(url,
                                      method: .get,
                                      encoding: JSONEncoding.default,
@@ -27,13 +28,20 @@ struct MyProfileService {
             switch response.result {
             case .success:
                 guard let status = response.response?.statusCode else { return }
-                guard let body =  response.value else { return }
+                guard let body =  response.value else { print("###"); return }
+                
                 
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
                 if status == 200 {
                     print("프로필 조회 성공")
                     responseCode = .success
+                    // response body 파싱
+                    let decoder = JSONDecoder()
+                    guard let responseBody = try? decoder.decode(ResponseData<ProfileData>.self, from: body ) else { print("!!!"); print(body); return }
+                    print(responseBody)
+                    // 응답 결과 전송
+                    completionHandler(responseCode, responseBody)
                 } else {
                     print("프로필 조회 실패")
                     print(body)
@@ -42,7 +50,9 @@ struct MyProfileService {
                 
                 // response body 파싱
                 let decoder = JSONDecoder()
-                guard let responseBody = try? decoder.decode(ResponseData<ProfileData>.self, from: body) else { return }
+                guard let responseBody = try? decoder.decode(ResponseData<ProfileData>.self, from: body) else {
+                    print("@@@")
+                    return }
                 print(responseBody)
                 // 응답 결과 전송
                 completionHandler(responseCode, responseBody)

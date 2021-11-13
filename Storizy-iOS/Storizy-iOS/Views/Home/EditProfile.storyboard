@@ -59,6 +59,9 @@
                                 <state key="normal" title="프로필 이미지 변경">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateProfileImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xcJ-GQ-LYp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nz2-Dn-kUs">
                                 <rect key="frame" x="40" y="321" width="29.5" height="21"/>
@@ -72,7 +75,7 @@
                                     <constraint firstAttribute="height" constant="40" id="XaE-Gp-oIm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKm-sP-ONe">
                                 <rect key="frame" x="40" y="382" width="30" height="21"/>
@@ -116,7 +119,7 @@
                                     <constraint firstAttribute="height" constant="40" id="7Tg-st-MgZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자기소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hip-5f-5Te">
                                 <rect key="frame" x="40" y="504" width="59" height="21"/>
@@ -130,7 +133,7 @@
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK8-iq-EM2">
                                 <rect key="frame" x="30" y="802" width="354" height="50"/>
@@ -182,6 +185,13 @@
                             <constraint firstItem="Vk7-mi-R6t" firstAttribute="leading" secondItem="LKm-sP-ONe" secondAttribute="trailing" constant="40" id="zJf-eq-ofh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bioTV" destination="nAu-0k-lAe" id="HiM-m2-QKe"/>
+                        <outlet property="contactTF" destination="6MK-Ps-gIm" id="KjG-6y-040"/>
+                        <outlet property="nicknameTF" destination="Lhf-DT-CEq" id="pEd-95-BPM"/>
+                        <outlet property="profileImageView" destination="mmQ-gJ-VR6" id="aAf-7r-8QS"/>
+                        <outlet property="tagsCV" destination="Vk7-mi-R6t" id="duY-2c-alj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

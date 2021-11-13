@@ -20,10 +20,10 @@ import Foundation
 
 struct ProfileData: Codable {
     let userId: Int?
-    let profileImage: String?
-    let nickname: String?
-    let universityName: String?
-    let contact: String?
-    let bio: String?
-    let tags: [TagData?]
+    var profileImage: String?
+    var nickname: String?
+    var universityName: String?
+    var contact: String?
+    var bio: String?
+    var tags: [TagData]
 }

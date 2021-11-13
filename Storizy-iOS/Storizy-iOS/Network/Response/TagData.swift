@@ -8,7 +8,7 @@
 import Foundation
 
 struct TagData: Codable {
-    let id: Int?
+    let id: String?
     let tagName: String?
     let tagColor: String?
 }
