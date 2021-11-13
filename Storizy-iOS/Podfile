@@ -5,6 +5,11 @@ target 'Storizy-iOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire', '~> 5.4'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'NVActivityIndicatorView'
+  pod 'PinLayout'
+  pod 'SnapKit', '~> 5.0.0'
+  pod "TTGTagCollectionView"
 
   # Pods for Storizy-iOS
 

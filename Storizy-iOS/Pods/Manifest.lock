@@ -1,16 +1,38 @@
 PODS:
   - Alamofire (5.4.3)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - PinLayout (1.10.0)
+  - SnapKit (5.0.1)
+  - SwiftyJSON (4.3.0)
+  - TTGTagCollectionView (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
+  - NVActivityIndicatorView
+  - PinLayout
+  - SnapKit (~> 5.0.0)
+  - SwiftyJSON (~> 4.0)
+  - TTGTagCollectionView
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - NVActivityIndicatorView
+    - PinLayout
+    - SnapKit
+    - SwiftyJSON
+    - TTGTagCollectionView
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  PinLayout: e50e9a748b632905fca6e67043ea4b05d6c92186
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  TTGTagCollectionView: 29d01ece199c257943ba490e9989734382cda5ae
 
-PODFILE CHECKSUM: 4ab4de5a7209f9adeaeb0b5df5564209bad5d97c
+PODFILE CHECKSUM: cf7dea7356dbc2e37b6a9200d75b8d80bb1b0cbf
 
 COCOAPODS: 1.10.1
