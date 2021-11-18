@@ -27,19 +27,18 @@ class ProjectCell: UITableViewCell {
     
     // UI Set
     func setUI(){
-        insideFrameView.layer.cornerRadius = 15
-        dotView.layer.cornerRadius = 5
+        insideFrameView.layer.cornerRadius = 12
+        dotView.layer.cornerRadius = 10
         dotView.layer.zPosition = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if selected {
-            projectContentView.backgroundColor = .brown
+            projectContentView.backgroundColor = UIColor(named: "extra_white")
         } else {
-            projectContentView.backgroundColor = .none
+            projectContentView.backgroundColor = UIColor(named: "extra_white")
         }
-        // Configure the view for the selected state
     }
     
     @IBAction func moreAction(_ sender: Any) {

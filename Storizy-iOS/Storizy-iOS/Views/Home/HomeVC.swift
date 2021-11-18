@@ -16,6 +16,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var feedTableViewHeight: NSLayoutConstraint!
     
     
+    @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var profileFrameView: UIView!
     @IBOutlet weak var profileImgView: UIImageView!
     @IBOutlet weak var nameLB: UILabel!
@@ -47,8 +48,8 @@ class HomeVC: UIViewController {
         
         // !최초시작
         
-        // 이미지 뷰 UI
-        setImageUI()
+        // UI 적용
+        setViewUI()
         
         // nib 셀 등록
         let projectNibName = UINib(nibName: "ProjectCell", bundle: nil)
@@ -69,10 +70,28 @@ class HomeVC: UIViewController {
     
     // MARK: - UI 설정
     
-    func setImageUI(){
-        profileFrameView.layer.cornerRadius = 15
-        feedFrameView.layer.cornerRadius = 15
-        profileImgView.layer.cornerRadius = 35
+    func setShadow(view: UIView){
+        //그림자 설정
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowRadius = 6
+        view.layer.shadowOpacity = 1
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05).cgColor
+    }
+    
+    func setViewUI(){
+        // 이미지 원
+        profileImgView.layer.cornerRadius = profileImgView.bounds.width / 2
+        // 둥글
+        profileFrameView.layer.cornerRadius = 20
+        feedFrameView.layer.cornerRadius = 20
+        // 그림자
+        setShadow(view: profileFrameView)
+        setShadow(view: feedFrameView)
+        // 헤더 그림자
+        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        headBarView.layer.shadowRadius = 6
+        headBarView.layer.shadowOpacity = 1
+        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
     }
 
     

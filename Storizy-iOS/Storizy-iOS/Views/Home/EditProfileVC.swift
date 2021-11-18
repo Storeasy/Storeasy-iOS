@@ -11,6 +11,7 @@ let accessToken = "Bearer \(UserDefaults.standard.string(forKey: "accessToken")!
 
 class EditProfileVC: UIViewController {
     // components
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nicknameTF: UITextField!
     @IBOutlet weak var tagsCV: UICollectionView!
@@ -27,8 +28,8 @@ class EditProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 이미지 뷰 UI
-        setImgViewUI()
+        // UI
+        setUI()
         // 이미지 피커 위임
         setImagePicker()
         // 프로필 불러오기
@@ -49,10 +50,6 @@ class EditProfileVC: UIViewController {
         picker.delegate = self
     }
     
-    // MARK: - UI
-    func setImgViewUI(){
-        profileImageView.layer.cornerRadius = 65
-    }
     
     // MARK: - 서버에서 프로필 데이터 불러오기
     // 뷰에 데이터 반영
@@ -131,9 +128,40 @@ class EditProfileVC: UIViewController {
             }
         }
     }
+    
+    // MARK: - UI
+    func setUI(){
+        // 헤더 그림자
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        headerView.layer.shadowRadius = 6
+        headerView.layer.shadowOpacity = 1
+        headerView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+        
+        // 이미지 뷰 원
+        profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
+
+        // 둥글, 테두리
+        // 이름 입력 칸
+        nicknameTF.layer.cornerRadius = 12
+        nicknameTF.layer.borderWidth = 1
+        nicknameTF.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
+        nicknameTF.clipsToBounds = true
+        
+        // 연락처 입력 칸
+        contactTF.layer.cornerRadius = 12
+        contactTF.layer.borderWidth = 1
+        contactTF.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
+        contactTF.clipsToBounds = true
+
+        // 자기소개 Text View
+        bioTV.layer.cornerRadius = 12
+        bioTV.layer.borderWidth = 1
+        bioTV.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
+        bioTV.textContainerInset = UIEdgeInsets(top: 12, left: 12,bottom: 12,right: 12)
+    }
 }
 
-
+// MARK: -
 // MARK: - 이미지 피커
 extension EditProfileVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,

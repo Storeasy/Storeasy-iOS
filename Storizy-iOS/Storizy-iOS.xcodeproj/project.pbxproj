@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		194341CFD6EC693CC2CFEB6A /* Pods_Storizy_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDD343F17D2006155264A4F /* Pods_Storizy_iOS.framework */; };
+		DE1E360B274654590095F581 /* DashedLineHorizonatalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */; };
 		DEA36E522733B1D900BBFEF5 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E512733B1D900BBFEF5 /* Signup.storyboard */; };
 		DEA36E582733CAEA00BBFEF5 /* SignupNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */; };
 		DEA36E5A2733CC3F00BBFEF5 /* EmailSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E592733CC3F00BBFEF5 /* EmailSignupVC.swift */; };
@@ -115,6 +116,7 @@
 		2F71D0D8576CEB0DA0BB93D6 /* Pods-Storizy-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storizy-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Storizy-iOS/Pods-Storizy-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ABDD343F17D2006155264A4F /* Pods_Storizy_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storizy_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B590BD19FAB941A712CFC66A /* Pods-Storizy-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storizy-iOS.release.xcconfig"; path = "Target Support Files/Pods-Storizy-iOS/Pods-Storizy-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineHorizonatalView.swift; sourceTree = "<group>"; };
 		DEA36E512733B1D900BBFEF5 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNC.swift; sourceTree = "<group>"; };
 		DEA36E592733CC3F00BBFEF5 /* EmailSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignupVC.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				DEF9E5592732C66E0022B33B /* Global */,
 				DEF9E5452732C6260022B33B /* ViewController.swift */,
 				DEF9E5472732C6260022B33B /* Main.storyboard */,
+				DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */,
 			);
 			path = "Storizy-iOS";
 			sourceTree = "<group>";
@@ -800,6 +803,7 @@
 				DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */,
 				DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */,
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
+				DE1E360B274654590095F581 /* DashedLineHorizonatalView.swift in Sources */,
 				DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */,
 				DEF9E5AC273389930022B33B /* SigninNC.swift in Sources */,
 				DEA36F01273D361800BBFEF5 /* EmailCheckService.swift in Sources */,
