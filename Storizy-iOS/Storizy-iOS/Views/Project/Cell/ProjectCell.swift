@@ -18,11 +18,22 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var projectContentLabel: UILabel!
     @IBOutlet weak var moreBtn: UIButton!
+    @IBOutlet weak var tagCV: UICollectionView!
+    
+    var tags: [String] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        tagCV.delegate = self
+        tagCV.dataSource = self
         setUI()
+        registerNib()
+    }
+    
+    // nib 등록
+    func registerNib(){
+        let nibName = UINib(nibName: "PTagCell", bundle: nil)
+        tagCV.register(nibName, forCellWithReuseIdentifier: "PTagCell")
     }
     
     // UI Set
@@ -44,5 +55,25 @@ class ProjectCell: UITableViewCell {
     @IBAction func moreAction(_ sender: Any) {
         
     }
+    
+}
+
+extension ProjectCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return tags.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PTagCell", for: indexPath) as? PTagCell else {
+            return UICollectionViewCell()
+        }
+        cell.backgroundColor = UIColor(named: "extra_white")
+        cell.tagNameLB.text = tags[indexPath.item]
+        return cell
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+////        let width = 24 +
+//    }
     
 }

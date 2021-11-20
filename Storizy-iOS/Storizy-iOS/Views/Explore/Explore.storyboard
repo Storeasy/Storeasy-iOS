@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEd-zD-CFS">
-                                <rect key="frame" x="0.0" y="205" width="414" height="657"/>
+                                <rect key="frame" x="0.0" y="205" width="414" height="608"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAn-cM-vjY">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="657"/>
@@ -157,11 +157,13 @@
             </objects>
             <point key="canvasLocation" x="986.95652173913049" y="80.357142857142847"/>
         </scene>
-        <!--ExploreNC-->
+        <!--탐색-->
         <scene sceneID="FS3-C8-iWV">
             <objects>
                 <navigationController storyboardIdentifier="ExploreNC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="JiB-nS-JVR" customClass="ExploreNC" customModule="Storizy_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="탐색" image="search" selectedImage="search_active" id="Vw9-61-fG2"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hA5-eN-fps">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -259,6 +261,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="search" width="24" height="24"/>
+        <image name="search_active" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

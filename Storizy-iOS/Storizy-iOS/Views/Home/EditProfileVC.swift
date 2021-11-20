@@ -17,11 +17,16 @@ class EditProfileVC: UIViewController {
     @IBOutlet weak var tagsCV: UICollectionView!
     @IBOutlet weak var contactTF: UITextField!
     @IBOutlet weak var bioTV: UITextView!
+    @IBOutlet weak var completeBTN: UIButton!
     
     let picker = UIImagePickerController()
     
     // data
-    var profileData: ProfileData?
+    var profileData: ProfileData? {
+        didSet {
+            tagsCV.reloadData()
+        }
+    }
     var profileImgDto: UIImage?
     var profileImgData: Data?
     var tagIdsString: String = ""
@@ -34,6 +39,8 @@ class EditProfileVC: UIViewController {
         setImagePicker()
         // 프로필 불러오기
         getMyProfile()
+        // nib 등록
+        registerNib()
 
     }
     
@@ -50,6 +57,10 @@ class EditProfileVC: UIViewController {
         picker.delegate = self
     }
     
+    func registerNib(){
+        let profileTagNibName = UINib(nibName: "ProfileTagCell", bundle: nil)
+        tagsCV.register(profileTagNibName, forCellWithReuseIdentifier: "ProfileTagCell")
+    }
     
     // MARK: - 서버에서 프로필 데이터 불러오기
     // 뷰에 데이터 반영
@@ -130,6 +141,13 @@ class EditProfileVC: UIViewController {
     }
     
     // MARK: - UI
+    func frameUI<T: UIView>(_ view: T){
+        view.layer.cornerRadius = 12
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
+        view.clipsToBounds = true
+    }
+    
     func setUI(){
         // 헤더 그림자
         headerView.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -142,26 +160,42 @@ class EditProfileVC: UIViewController {
 
         // 둥글, 테두리
         // 이름 입력 칸
-        nicknameTF.layer.cornerRadius = 12
-        nicknameTF.layer.borderWidth = 1
-        nicknameTF.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
-        nicknameTF.clipsToBounds = true
-        
+        frameUI(nicknameTF)
         // 연락처 입력 칸
-        contactTF.layer.cornerRadius = 12
-        contactTF.layer.borderWidth = 1
-        contactTF.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
-        contactTF.clipsToBounds = true
-
+        frameUI(contactTF)
         // 자기소개 Text View
-        bioTV.layer.cornerRadius = 12
-        bioTV.layer.borderWidth = 1
-        bioTV.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
-        bioTV.textContainerInset = UIEdgeInsets(top: 12, left: 12,bottom: 12,right: 12)
+        frameUI(bioTV)
+        bioTV.textContainerInset = UIEdgeInsets(top: 12, left: 6,bottom: 12,right: 12)
+        
+        // 완료 버튼 UI
+        completeBTN.layer.cornerRadius = 12
     }
 }
 
-// MARK: -
+// MARK: - 태그 collection view
+
+extension EditProfileVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return profileData?.tags.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileTagCell", for: indexPath) as? ProfileTagCell else {
+            return UICollectionViewCell()
+        }
+        cell.tagNameLabel.text = profileData?.tags[indexPath.item].tagName
+        // TAG UI
+        cell.frameView.backgroundColor = UIColor(named: "dark_gray1")
+        cell.tagNameLabel.textColor = UIColor(named: "extra_white")
+        cell.frameView.layer.borderWidth = 0
+        return cell
+    }
+    
+    // 선택시 태그 수정
+    
+}
+
 // MARK: - 이미지 피커
 extension EditProfileVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,

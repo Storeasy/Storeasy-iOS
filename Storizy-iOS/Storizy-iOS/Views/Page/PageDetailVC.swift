@@ -9,23 +9,36 @@ import UIKit
 
 class PageDetailVC: UIViewController {
 
+    @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var imgCollectionView: UICollectionView!
     @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var contentTextView: UITextView!
-    @IBOutlet weak var contentTextViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var frameViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var frameView: UIView!
+    @IBOutlet weak var tagCV: UICollectionView!
+    
+    // data
+    var tags: [String] = ["러시아워","유기현최고"]
+    
     // 단독 페이지면 프로젝트명 공란
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // content text view height
+        // view height
         DispatchQueue.main.async {
-            self.contentTextViewHeight.constant = self.contentTextView.contentSize.height
+            self.frameViewHeight.constant = 314 + self.contentTextView.contentSize.height
         }
         // more btn menu set
         setMoreBtnMenu()
+        
+        //ui
+        setUI()
+        
+        //tag cell 등록
+        registerNib()
     }
     
-    // more btn menu set
+    // MARK: - more btn menu set
     func setMoreBtnMenu(){
         moreBtn.showsMenuAsPrimaryAction = true
         // 수정하기 메뉴 아이템
@@ -50,18 +63,63 @@ class PageDetailVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - 함수
+    
+    func registerNib(){
+        let storyTagNibName = UINib(nibName: "StoryTagCell", bundle: nil)
+        tagCV.register(storyTagNibName, forCellWithReuseIdentifier: "StoryTagCell")
+    }
+    
+    
+    
+    // MARK: - UI
+    func setShadow(view: UIView){
+        //그림자 설정
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowRadius = 6
+        view.layer.shadowOpacity = 1
+        view.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+    }
+    
+    func setUI(){
+        setShadow(view: topBarView)
+        setShadow(view: frameView)
+        // 둥글
+        frameView.layer.cornerRadius = 20
+    }
+    
 }
 
-// 이미지 collection view
+// MARK: - 이미지, 태그 collection view
 extension PageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        switch collectionView {
+        case tagCV:
+            return tags.count
+        case imgCollectionView:
+            return 5
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PageDetailImgCell", for: indexPath) as! PageDetailImgCell
-        // 이미지 등록
-        return cell
+        switch collectionView {
+        case tagCV:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryTagCell", for: indexPath) as! StoryTagCell
+            cell.frameView.backgroundColor = UIColor(named: "white")
+            cell.tagNameLB.textColor = UIColor(named: "main")
+            cell.tagNameLB.text = tags[indexPath.item]
+            return cell
+        case imgCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PageDetailImgCell", for: indexPath) as! PageDetailImgCell
+            cell.imgView.layer.cornerRadius = 12
+            // 이미지 등록
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
+        
     }
     
     
@@ -69,5 +127,4 @@ extension PageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 class PageDetailImgCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIView!
-    
 }

@@ -40,7 +40,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="QSe-Hh-Ras"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L83-Rz-3GL">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L83-Rz-3GL">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -143,6 +143,7 @@
                 <outlet property="projectContentLabel" destination="FZE-lf-aL6" id="lek-Xg-KfH"/>
                 <outlet property="projectContentView" destination="H2p-sc-9uM" id="lBY-hq-l8h"/>
                 <outlet property="projectTitleLabel" destination="IEr-KO-wxT" id="yIJ-S0-Twt"/>
+                <outlet property="tagCV" destination="30Z-NL-CWp" id="D8l-tw-u5j"/>
                 <outlet property="topBar" destination="Z53-FC-gqi" id="trN-5w-CCE"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="96.428571428571431"/>

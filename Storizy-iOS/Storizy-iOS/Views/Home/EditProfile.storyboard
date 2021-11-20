@@ -117,6 +117,10 @@
                                         <size key="customSize" width="118" height="43"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="Id0-2x-rDB"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="qe0-du-4vt"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xu-cb-oKG">
                                 <rect key="frame" x="30" y="389.5" width="42" height="19.5"/>
@@ -148,11 +152,12 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK8-iq-EM2">
                                 <rect key="frame" x="30" y="782" width="354" height="50"/>
-                                <color key="backgroundColor" red="0.52219945189999994" green="0.43162399530000001" blue="0.60786223409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="black"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5E0-ek-lt8"/>
                                 </constraints>
-                                <state key="normal" title="완료">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="정보수정">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -203,6 +208,7 @@
                     </view>
                     <connections>
                         <outlet property="bioTV" destination="nAu-0k-lAe" id="HiM-m2-QKe"/>
+                        <outlet property="completeBTN" destination="nK8-iq-EM2" id="Lwh-bM-7Am"/>
                         <outlet property="contactTF" destination="6MK-Ps-gIm" id="KjG-6y-040"/>
                         <outlet property="headerView" destination="FVj-Yd-UOl" id="RQJ-kH-EO2"/>
                         <outlet property="nicknameTF" destination="Lhf-DT-CEq" id="pEd-95-BPM"/>

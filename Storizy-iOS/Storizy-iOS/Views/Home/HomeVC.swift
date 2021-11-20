@@ -15,7 +15,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var feedTableViewHeight: NSLayoutConstraint!
     
-    
+    // - 프로필
     @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var profileFrameView: UIView!
     @IBOutlet weak var profileImgView: UIImageView!
@@ -23,14 +23,23 @@ class HomeVC: UIViewController {
     @IBOutlet weak var univLB: UILabel!
     @IBOutlet weak var contactLB: UILabel!
     @IBOutlet weak var bioLB: UILabel!
+    @IBOutlet weak var profileTagCV: UICollectionView!
     
+    // - 스토리
     @IBOutlet weak var feedFrameView: UIView!
+    @IBOutlet weak var storyTagCV: UICollectionView!
     
     // 실데이터
     var accessToken: String?
-    var myProfileData: ProfileData?
+    var myProfileData: ProfileData? {
+        didSet {
+            loadProfile()
+        }
+    }
+    
     // 더미
     var feedList: [Any] = [Project(title: "프로젝트명"), Page(title: "페이지명"), Page(title: "페이지명2"), Project(title: "프로젝트명2"), Page(title: "페이지명3")]
+    var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "몬스타엑스", "러시아워", "많관부"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +61,9 @@ class HomeVC: UIViewController {
         setViewUI()
         
         // nib 셀 등록
-        let projectNibName = UINib(nibName: "ProjectCell", bundle: nil)
-        feedTableView.register(projectNibName, forCellReuseIdentifier: "projectCell")
-        let pageNibName = UINib(nibName: "PageCell", bundle: nil)
-        feedTableView.register(pageNibName, forCellReuseIdentifier: "pageCell")
+        registerNib()
 
+        
         // 피드 테이블 뷰 높이 동적 조정
         DispatchQueue.main.async {
             self.feedTableViewHeight.constant = self.feedTableView.contentSize.height
@@ -66,6 +73,72 @@ class HomeVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         // 프로필 데이터 불러오기
         getMyProfile()
+    }
+    
+    // MARK: - 함수
+    func registerNib(){
+        let profileTagNibName = UINib(nibName: "ProfileTagCell", bundle: nil)
+        profileTagCV.register(profileTagNibName, forCellWithReuseIdentifier: "ProfileTagCell")
+        
+        let storyTagNibName = UINib(nibName: "StoryTagCell", bundle: nil)
+        storyTagCV.register(storyTagNibName, forCellWithReuseIdentifier: "StoryTagCell")
+        
+        let projectNibName = UINib(nibName: "ProjectCell", bundle: nil)
+        feedTableView.register(projectNibName, forCellReuseIdentifier: "projectCell")
+        
+        let pageNibName = UINib(nibName: "PageCell", bundle: nil)
+        feedTableView.register(pageNibName, forCellReuseIdentifier: "pageCell")
+    }
+    
+    
+    // MARK: - 프로필 데이터 뷰에 반영
+    
+    func loadProfile(){
+        // 이미지 URL
+        let url = URL(string: myProfileData?.profileImage ??
+                        "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
+        let imgData = try! Data(contentsOf: url!)
+        profileImgView.image = UIImage(data: imgData)
+        nameLB.text = myProfileData?.nickname ?? "nickname"
+        univLB.text = ( myProfileData?.universityName ?? "")
+        contactLB.text = myProfileData?.contact ?? "연락처를 추가해주세요"
+        bioLB.text = myProfileData?.bio ?? "자기소개를 추가해주세요"
+        
+        profileTagCV.reloadData()
+        storyTagCV.reloadData()
+        feedTableView.reloadData()
+    }
+    
+    // MARK: - 서버에서 프로필 데이터 불러오기
+    
+    func getMyProfile(){
+        // access token 전송
+        guard let token = UserDefaults.standard.string(forKey: "accessToken") else { return }
+        accessToken = "Bearer \(token)"
+        MyProfileService.shared.getMyProfile(accessToken: self.accessToken!) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<ProfileData>
+                print(body)
+                print(responseCode)
+
+                // 프로필에 불러오기
+                self.myProfileData = body.data
+
+            } else {
+                UserDefaults.standard.removeObject(forKey: "accessToken")
+                self.appDelegate.switchRootSignin()
+                print(responseCode)
+            }
+        }
+    }
+    
+    // MARK: - 프로필 편집으로 이동
+    
+    @IBAction func editProfileAction(_ sender: Any) {
+        // 프로필 편집 뷰 이동
+        let storyboard = UIStoryboard(name: "EditProfile", bundle: nil)
+        let editProfileVC = storyboard.instantiateViewController(identifier: "EditProfileVC")
+        self.navigationController?.pushViewController(editProfileVC, animated: true)
     }
     
     // MARK: - UI 설정
@@ -95,51 +168,45 @@ class HomeVC: UIViewController {
     }
 
     
-    
-    // MARK: - 프로필 데이터 뷰에 반영
-    func loadProfile(){
-        // 이미지 URL
-        let url = URL(string: myProfileData?.profileImage ??
-                        "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
-        let imgData = try! Data(contentsOf: url!)
-        profileImgView.image = UIImage(data: imgData)
-        nameLB.text = myProfileData?.nickname ?? "nickname"
-        univLB.text = ( myProfileData?.universityName ?? "")
-        contactLB.text = myProfileData?.contact ?? "연락처를 추가해주세요"
-        bioLB.text = myProfileData?.bio ?? "자기소개를 추가해주세요"
-    }
-    
-    // MARK: - 서버에서 프로필 데이터 불러오기
-    func getMyProfile(){
-        // access token 전송
-        guard let token = UserDefaults.standard.string(forKey: "accessToken") else { return }
-        accessToken = "Bearer \(token)"
-        MyProfileService.shared.getMyProfile(accessToken: self.accessToken!) { (responseCode, responseBody) in
-            if responseCode == .success {
-                let body = responseBody as! ResponseData<ProfileData>
-                print(body)
-                print(responseCode)
-                print("shdfj!!!kshfskj")
+}
 
-                // 프로필에 불러오기
-                self.myProfileData = body.data
-                self.loadProfile()
+// MARK: - 프로필 태그, 전체 태그, 프로젝트 컬렉션 뷰
+extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-            } else {
-                print("shdfjkshfskj")
-                UserDefaults.standard.removeObject(forKey: "accessToken")
-                self.appDelegate.switchRootSignin()
-                print(responseCode)
-            }
+        switch collectionView {
+        case profileTagCV:
+            return myProfileData?.tags.count ?? 0
+        case storyTagCV:
+            return storyTags.count
+        default:
+            return 0
         }
     }
     
-    // MARK: - 프로필 편집으로 이동
-    @IBAction func editProfileAction(_ sender: Any) {
-        // 프로필 편집 뷰 이동
-        let storyboard = UIStoryboard(name: "EditProfile", bundle: nil)
-        let editProfileVC = storyboard.instantiateViewController(identifier: "EditProfileVC")
-        self.navigationController?.pushViewController(editProfileVC, animated: true)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch collectionView {
+        // 프로필 태그 셀 표현
+        case profileTagCV:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileTagCell", for: indexPath) as? ProfileTagCell else {
+                return UICollectionViewCell()
+            }
+            cell.tagNameLabel.text = myProfileData?.tags[indexPath.item].tagName
+            return cell
+            
+        // 스토리 태그 셀 표현
+        case storyTagCV:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryTagCell", for: indexPath) as? StoryTagCell else {
+                return UICollectionViewCell()
+            }
+            cell.tagNameLB.text = storyTags[indexPath.item]
+            return cell
+            
+        default:
+            return UICollectionViewCell()
+        }
     }
     
     
@@ -166,6 +233,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             cell.projectTitleLabel.text = project.title
             cell.projectContentLabel.text = "프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용"
             cell.periodLabel.text = "2020.11.22 - 2021.01.16"
+            cell.tags = storyTags
             return cell
             
         }
@@ -176,6 +244,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             cell.pageTitleLabel.text = page.title
             cell.periodLabel.text = "2020.11.22 - 2021.01.16"
             cell.pageContentLabel.text = "페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용"
+            cell.tags = storyTags
             return cell
         }
         

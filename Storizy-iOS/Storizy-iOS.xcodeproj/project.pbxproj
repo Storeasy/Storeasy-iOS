@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		194341CFD6EC693CC2CFEB6A /* Pods_Storizy_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDD343F17D2006155264A4F /* Pods_Storizy_iOS.framework */; };
 		DE1E360B274654590095F581 /* DashedLineHorizonatalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */; };
+		DE1E3612274785080095F581 /* StoryTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3610274785070095F581 /* StoryTagCell.swift */; };
+		DE1E3613274785080095F581 /* StoryTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1E3611274785070095F581 /* StoryTagCell.xib */; };
+		DE1E3616274796170095F581 /* PTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3614274796160095F581 /* PTagCell.swift */; };
+		DE1E3617274796170095F581 /* PTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1E3615274796160095F581 /* PTagCell.xib */; };
 		DEA36E522733B1D900BBFEF5 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E512733B1D900BBFEF5 /* Signup.storyboard */; };
 		DEA36E582733CAEA00BBFEF5 /* SignupNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */; };
 		DEA36E5A2733CC3F00BBFEF5 /* EmailSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E592733CC3F00BBFEF5 /* EmailSignupVC.swift */; };
@@ -64,8 +68,8 @@
 		DEA36EDE273A262600BBFEF5 /* ExploreNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EDD273A262600BBFEF5 /* ExploreNC.swift */; };
 		DEA36EE0273A26F900BBFEF5 /* ExploreUnsearchedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EDF273A26F900BBFEF5 /* ExploreUnsearchedVC.swift */; };
 		DEA36EE2273A270B00BBFEF5 /* ExploreSearchedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EE1273A270B00BBFEF5 /* ExploreSearchedVC.swift */; };
-		DEA36EE8273A408D00BBFEF5 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EE6273A408D00BBFEF5 /* TagCell.swift */; };
-		DEA36EE9273A408D00BBFEF5 /* TagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EE7273A408D00BBFEF5 /* TagCell.xib */; };
+		DEA36EE8273A408D00BBFEF5 /* ProfileTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EE6273A408D00BBFEF5 /* ProfileTagCell.swift */; };
+		DEA36EE9273A408D00BBFEF5 /* ProfileTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EE7273A408D00BBFEF5 /* ProfileTagCell.xib */; };
 		DEA36EEB273AC02A00BBFEF5 /* Curation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EEA273AC02900BBFEF5 /* Curation.storyboard */; };
 		DEA36EED273AC04900BBFEF5 /* CurationNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EEC273AC04900BBFEF5 /* CurationNC.swift */; };
 		DEA36EEF273BB81E00BBFEF5 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EEE273BB81D00BBFEF5 /* EditProfile.storyboard */; };
@@ -117,6 +121,10 @@
 		ABDD343F17D2006155264A4F /* Pods_Storizy_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storizy_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B590BD19FAB941A712CFC66A /* Pods-Storizy-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storizy-iOS.release.xcconfig"; path = "Target Support Files/Pods-Storizy-iOS/Pods-Storizy-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineHorizonatalView.swift; sourceTree = "<group>"; };
+		DE1E3610274785070095F581 /* StoryTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTagCell.swift; sourceTree = "<group>"; };
+		DE1E3611274785070095F581 /* StoryTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTagCell.xib; sourceTree = "<group>"; };
+		DE1E3614274796160095F581 /* PTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTagCell.swift; sourceTree = "<group>"; };
+		DE1E3615274796160095F581 /* PTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PTagCell.xib; sourceTree = "<group>"; };
 		DEA36E512733B1D900BBFEF5 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNC.swift; sourceTree = "<group>"; };
 		DEA36E592733CC3F00BBFEF5 /* EmailSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignupVC.swift; sourceTree = "<group>"; };
@@ -172,8 +180,8 @@
 		DEA36EDD273A262600BBFEF5 /* ExploreNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreNC.swift; sourceTree = "<group>"; };
 		DEA36EDF273A26F900BBFEF5 /* ExploreUnsearchedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUnsearchedVC.swift; sourceTree = "<group>"; };
 		DEA36EE1273A270B00BBFEF5 /* ExploreSearchedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSearchedVC.swift; sourceTree = "<group>"; };
-		DEA36EE6273A408D00BBFEF5 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
-		DEA36EE7273A408D00BBFEF5 /* TagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCell.xib; sourceTree = "<group>"; };
+		DEA36EE6273A408D00BBFEF5 /* ProfileTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTagCell.swift; sourceTree = "<group>"; };
+		DEA36EE7273A408D00BBFEF5 /* ProfileTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTagCell.xib; sourceTree = "<group>"; };
 		DEA36EEA273AC02900BBFEF5 /* Curation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Curation.storyboard; sourceTree = "<group>"; };
 		DEA36EEC273AC04900BBFEF5 /* CurationNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationNC.swift; sourceTree = "<group>"; };
 		DEA36EEE273BB81D00BBFEF5 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
@@ -335,8 +343,12 @@
 		DEA36EE3273A405900BBFEF5 /* Tag */ = {
 			isa = PBXGroup;
 			children = (
-				DEA36EE6273A408D00BBFEF5 /* TagCell.swift */,
-				DEA36EE7273A408D00BBFEF5 /* TagCell.xib */,
+				DEA36EE6273A408D00BBFEF5 /* ProfileTagCell.swift */,
+				DEA36EE7273A408D00BBFEF5 /* ProfileTagCell.xib */,
+				DE1E3610274785070095F581 /* StoryTagCell.swift */,
+				DE1E3611274785070095F581 /* StoryTagCell.xib */,
+				DE1E3614274796160095F581 /* PTagCell.swift */,
+				DE1E3615274796160095F581 /* PTagCell.xib */,
 			);
 			path = Tag;
 			sourceTree = "<group>";
@@ -714,7 +726,7 @@
 				DEA36ED5273986BF00BBFEF5 /* OtherProjectDetail.storyboard in Resources */,
 				DEA36EDC273A25FF00BBFEF5 /* Explore.storyboard in Resources */,
 				DEF9E5A32733855F0022B33B /* Signin.storyboard in Resources */,
-				DEA36EE9273A408D00BBFEF5 /* TagCell.xib in Resources */,
+				DEA36EE9273A408D00BBFEF5 /* ProfileTagCell.xib in Resources */,
 				DEA36EF5273BDA8A00BBFEF5 /* ImageCell.xib in Resources */,
 				DEA36EB02738F58700BBFEF5 /* Create.storyboard in Resources */,
 				DEA36E6A27351D8300BBFEF5 /* HomeNC.storyboard in Resources */,
@@ -736,6 +748,8 @@
 				DEA36EC927394FF900BBFEF5 /* OtherPageDetail.storyboard in Resources */,
 				DEA36E8A2736A83900BBFEF5 /* PageDetail.storyboard in Resources */,
 				DEA36E9427378AFF00BBFEF5 /* PageCellInProject.xib in Resources */,
+				DE1E3613274785080095F581 /* StoryTagCell.xib in Resources */,
+				DE1E3617274796170095F581 /* PTagCell.xib in Resources */,
 				DEA36E852736A7FF00BBFEF5 /* ProjectDetail.storyboard in Resources */,
 				DEF9E5A82733863E0022B33B /* TabBar.storyboard in Resources */,
 				DEF9E5772732D6970022B33B /* ProjectCell.xib in Resources */,
@@ -793,6 +807,7 @@
 			files = (
 				DEA36EFB273D168800BBFEF5 /* SignupUser.swift in Sources */,
 				DEA36F09273E2A5E00BBFEF5 /* CheckAuthEmailService.swift in Sources */,
+				DE1E3612274785080095F581 /* StoryTagCell.swift in Sources */,
 				DEA36F1B273E87EB00BBFEF5 /* UpdateProfileService.swift in Sources */,
 				DEF9E5462732C6260022B33B /* ViewController.swift in Sources */,
 				DEA36F23273E8D8D00BBFEF5 /* CreatePageService.swift in Sources */,
@@ -820,7 +835,7 @@
 				DEA36F19273E86D400BBFEF5 /* ProfileService.swift in Sources */,
 				DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */,
 				DEA36EF9273CF1A600BBFEF5 /* APIUrls.swift in Sources */,
-				DEA36EE8273A408D00BBFEF5 /* TagCell.swift in Sources */,
+				DEA36EE8273A408D00BBFEF5 /* ProfileTagCell.swift in Sources */,
 				DEA36E8027369B7F00BBFEF5 /* Page.swift in Sources */,
 				DEA36EBB27390F7100BBFEF5 /* User.swift in Sources */,
 				DEA36EF4273BDA8A00BBFEF5 /* ImageCell.swift in Sources */,
@@ -859,6 +874,7 @@
 				DEA36E582733CAEA00BBFEF5 /* SignupNC.swift in Sources */,
 				DEA36F27273E8E0000BBFEF5 /* DeletePageService.swift in Sources */,
 				DEF9E5A12733854B0022B33B /* SigninVC.swift in Sources */,
+				DE1E3616274796170095F581 /* PTagCell.swift in Sources */,
 				DEA36E642733D60100BBFEF5 /* MajorSignupVC.swift in Sources */,
 				DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */,
 				DEA36F11273E456100BBFEF5 /* MyProfileService.swift in Sources */,

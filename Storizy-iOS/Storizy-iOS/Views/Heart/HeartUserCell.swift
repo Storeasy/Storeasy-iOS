@@ -23,15 +23,12 @@ class HeartUserCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let nibName = UINib(nibName: "TagCell", bundle: nil)
-        collectionView.register(nibName, forCellWithReuseIdentifier: "TagCell")
-        // Initialization code
+        let nibName = UINib(nibName: "ProfileTagCell", bundle: nil)
+        collectionView.register(nibName, forCellWithReuseIdentifier: "ProfileTagCell")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
@@ -43,7 +40,7 @@ extension HeartUserCell: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as! TagCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileTagCell", for: indexPath) as! ProfileTagCell
         cell.tagNameLabel.text = tags[indexPath.item]
         return cell
     }

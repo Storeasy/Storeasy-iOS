@@ -51,7 +51,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Prw-Wq-qtJ"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mRo-vY-0SY">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mRo-vY-0SY">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -135,6 +135,7 @@
                 <outlet property="pageContentView" destination="H2p-sc-9uM" id="2rY-LZ-wQy"/>
                 <outlet property="pageTitleLabel" destination="mNO-b7-RsW" id="aH8-wy-Kpd"/>
                 <outlet property="periodLabel" destination="3Fm-qW-uJ1" id="s6z-th-f0A"/>
+                <outlet property="tagCV" destination="jOh-AB-GN8" id="hL8-cb-M79"/>
             </connections>
             <point key="canvasLocation" x="5.7971014492753632" y="103.79464285714285"/>
         </tableViewCell>

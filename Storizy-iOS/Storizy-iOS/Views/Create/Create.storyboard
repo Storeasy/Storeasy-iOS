@@ -360,7 +360,9 @@
         <scene sceneID="Ocm-KR-DxY">
             <objects>
                 <navigationController storyboardIdentifier="CreateNC" title="글작성" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uV4-aC-DM7" customClass="CreateNC" customModule="Storizy_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="글쓰기" image="write" selectedImage="write_active" id="NPx-df-SO0"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xfu-3a-qky">
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -611,6 +613,8 @@
         <image name="arrow.forward" catalog="system" width="128" height="98"/>
         <image name="lock.open.fill" catalog="system" width="128" height="112"/>
         <image name="mimozi" width="640" height="652"/>
+        <image name="write" width="24" height="24"/>
+        <image name="write_active" width="24" height="24"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
