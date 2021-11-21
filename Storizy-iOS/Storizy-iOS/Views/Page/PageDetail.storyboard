@@ -167,6 +167,7 @@
                                 <constraints>
                                     <constraint firstItem="xfN-q6-NxG" firstAttribute="centerY" secondItem="sna-hR-kkJ" secondAttribute="centerY" id="08D-c7-HTi"/>
                                     <constraint firstAttribute="trailing" secondItem="xfN-q6-NxG" secondAttribute="trailing" constant="30" id="Ub6-GM-roj"/>
+                                    <constraint firstAttribute="bottom" secondItem="sna-hR-kkJ" secondAttribute="bottom" constant="10" id="jGF-kp-9ab"/>
                                     <constraint firstAttribute="height" constant="90" id="qF8-Pb-0Bl"/>
                                 </constraints>
                             </view>
@@ -181,7 +182,6 @@
                             <constraint firstItem="piV-dG-2vx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="OB8-qc-tbU"/>
                             <constraint firstItem="piV-dG-2vx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TvL-mo-lmr"/>
                             <constraint firstItem="N7y-Z8-a7D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YYh-nS-D22"/>
-                            <constraint firstItem="sna-hR-kkJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="11" id="mIV-4I-Oek"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N7y-Z8-a7D" secondAttribute="trailing" id="oXX-ee-J4j"/>
                             <constraint firstItem="sna-hR-kkJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="tip-3Y-vko"/>
                         </constraints>

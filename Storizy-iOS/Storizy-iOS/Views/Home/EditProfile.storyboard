@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="-1" width="414" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7je-Bg-xWf">
-                                        <rect key="frame" x="363" y="56" width="21" height="22"/>
+                                        <rect key="frame" x="363" y="57" width="21" height="22"/>
                                         <state key="normal">
                                             <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
                                         </state>
@@ -32,7 +32,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 편집" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxX-g7-PUR">
-                                        <rect key="frame" x="30" y="55" width="91" height="24"/>
+                                        <rect key="frame" x="30" y="56" width="91" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
@@ -41,9 +41,9 @@
                                 <color key="backgroundColor" name="extra_white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="2yj-t8-Nsq"/>
-                                    <constraint firstItem="zxX-g7-PUR" firstAttribute="top" secondItem="FVj-Yd-UOl" secondAttribute="top" constant="55" id="3hn-EN-i1p"/>
                                     <constraint firstItem="zxX-g7-PUR" firstAttribute="leading" secondItem="FVj-Yd-UOl" secondAttribute="leading" constant="30" id="B2a-Zn-gQY"/>
                                     <constraint firstItem="7je-Bg-xWf" firstAttribute="centerY" secondItem="zxX-g7-PUR" secondAttribute="centerY" id="D2t-xC-hFp"/>
+                                    <constraint firstAttribute="bottom" secondItem="zxX-g7-PUR" secondAttribute="bottom" constant="10" id="Jh4-Bl-zDV"/>
                                     <constraint firstAttribute="trailing" secondItem="7je-Bg-xWf" secondAttribute="trailing" constant="30" id="gVG-pM-hBB"/>
                                 </constraints>
                             </view>

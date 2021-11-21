@@ -10,6 +10,7 @@ import UIKit
 class ProjectCell: UITableViewCell {
 
     @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var bottomBar: UIView!
     @IBOutlet weak var insideFrameView: UIView!
     @IBOutlet weak var dotView: UIView!
     

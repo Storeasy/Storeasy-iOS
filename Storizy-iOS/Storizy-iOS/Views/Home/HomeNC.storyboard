@@ -290,25 +290,25 @@
                                 <rect key="frame" x="0.0" y="-1" width="414" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfi-oZ-Pnu">
-                                        <rect key="frame" x="373" y="56" width="21" height="22"/>
+                                        <rect key="frame" x="373" y="57" width="21" height="22"/>
                                         <state key="normal">
                                             <imageReference key="image" image="gearshape.fill" catalog="system" renderingMode="original"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJG-ag-cbM">
-                                        <rect key="frame" x="338" y="56" width="20" height="22"/>
+                                        <rect key="frame" x="338" y="57" width="20" height="22"/>
                                         <state key="normal">
                                             <imageReference key="image" image="bell.fill" catalog="system" renderingMode="original"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2M-pq-iIc">
-                                        <rect key="frame" x="300.5" y="56" width="22.5" height="22"/>
+                                        <rect key="frame" x="300.5" y="57" width="22.5" height="22"/>
                                         <state key="normal">
                                             <imageReference key="image" image="bubble.left.fill" catalog="system" renderingMode="original"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPD-Uc-czi">
-                                        <rect key="frame" x="30" y="55" width="17.5" height="24"/>
+                                        <rect key="frame" x="30" y="56" width="17.5" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
@@ -316,11 +316,11 @@
                                 </subviews>
                                 <color key="backgroundColor" name="extra_white"/>
                                 <constraints>
-                                    <constraint firstItem="rPD-Uc-czi" firstAttribute="top" secondItem="sjE-Z2-8Fr" secondAttribute="top" constant="55" id="JIc-fK-NNp"/>
                                     <constraint firstAttribute="height" constant="90" id="TE0-s2-YHW"/>
                                     <constraint firstItem="gfi-oZ-Pnu" firstAttribute="leading" secondItem="qJG-ag-cbM" secondAttribute="trailing" constant="15" id="VIs-fR-bfz"/>
                                     <constraint firstItem="gfi-oZ-Pnu" firstAttribute="centerY" secondItem="rPD-Uc-czi" secondAttribute="centerY" id="Xxa-0W-U6c"/>
                                     <constraint firstItem="G2M-pq-iIc" firstAttribute="centerY" secondItem="qJG-ag-cbM" secondAttribute="centerY" id="ZgZ-Lf-JMu"/>
+                                    <constraint firstAttribute="bottom" secondItem="rPD-Uc-czi" secondAttribute="bottom" constant="10" id="dBP-k7-kV0"/>
                                     <constraint firstItem="rPD-Uc-czi" firstAttribute="leading" secondItem="sjE-Z2-8Fr" secondAttribute="leading" constant="30" id="gEi-Nt-ehq"/>
                                     <constraint firstItem="qJG-ag-cbM" firstAttribute="centerY" secondItem="gfi-oZ-Pnu" secondAttribute="centerY" id="rvx-t9-lkB"/>
                                     <constraint firstItem="qJG-ag-cbM" firstAttribute="leading" secondItem="G2M-pq-iIc" secondAttribute="trailing" constant="15" id="yqv-wX-aiQ"/>

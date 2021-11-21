@@ -9,6 +9,8 @@ import UIKit
 
 class PageCell: UITableViewCell {
 
+    @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var bottomBar: UIView!
     @IBOutlet weak var pageContentView: UIView!
     @IBOutlet weak var frameView: UIView!
     @IBOutlet weak var pageTitleLabel: UILabel!
@@ -63,9 +65,5 @@ extension PageCell: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         cell.tagNameLB.text = tags[indexPath.item]
         return cell
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-////        let width = 24 +
-//    }
     
 }

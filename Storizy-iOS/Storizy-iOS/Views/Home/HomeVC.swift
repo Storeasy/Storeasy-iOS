@@ -84,10 +84,10 @@ class HomeVC: UIViewController {
         storyTagCV.register(storyTagNibName, forCellWithReuseIdentifier: "StoryTagCell")
         
         let projectNibName = UINib(nibName: "ProjectCell", bundle: nil)
-        feedTableView.register(projectNibName, forCellReuseIdentifier: "projectCell")
+        feedTableView.register(projectNibName, forCellReuseIdentifier: "ProjectCell")
         
         let pageNibName = UINib(nibName: "PageCell", bundle: nil)
-        feedTableView.register(pageNibName, forCellReuseIdentifier: "pageCell")
+        feedTableView.register(pageNibName, forCellReuseIdentifier: "PageCell")
     }
     
     
@@ -224,27 +224,40 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         // 프로젝트 셀
         if let project = feedList[indexPath.row] as? Project  {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectCell
-            // components ui
-            if indexPath.row == 0 {
-                cell.topBar.isHidden = true
-            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectCell", for: indexPath) as! ProjectCell
+            
             // components
             cell.projectTitleLabel.text = project.title
             cell.projectContentLabel.text = "프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용"
             cell.periodLabel.text = "2020.11.22 - 2021.01.16"
             cell.tags = storyTags
+            
+            // components ui
+            if indexPath.row == 0 {
+                cell.topBar.isHidden = true
+            } else if indexPath.row == feedList.count - 1 {
+                cell.bottomBar.isHidden = true
+            }
             return cell
             
         }
         
         // 페이지 셀
         else if let page = feedList[indexPath.row] as? Page {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "pageCell", for: indexPath) as! PageCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PageCell", for: indexPath) as! PageCell
+            
             cell.pageTitleLabel.text = page.title
             cell.periodLabel.text = "2020.11.22 - 2021.01.16"
             cell.pageContentLabel.text = "페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용"
             cell.tags = storyTags
+            
+            // components ui
+            if indexPath.row == 0 {
+                cell.topBar.isHidden = true
+            } else if indexPath.row == feedList.count - 1 {
+                cell.bottomBar.isHidden = true
+            }
+            
             return cell
         }
         
