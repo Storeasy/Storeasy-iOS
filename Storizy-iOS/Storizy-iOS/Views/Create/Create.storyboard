@@ -394,7 +394,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evV-yH-XLa">
-                                <rect key="frame" x="30" y="168" width="306" height="44"/>
+                                <rect key="frame" x="30" y="161" width="306" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="sl5-AH-e3L"/>
                                 </constraints>
@@ -403,14 +403,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmJ-DP-IaU">
-                                <rect key="frame" x="344" y="179" width="40" height="22"/>
+                                <rect key="frame" x="344" y="172" width="40" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="kLL-P0-UfO"/>
                                 </constraints>
                                 <state key="normal" image="lock.open.fill" catalog="system"/>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="w3Y-kY-deL" userLabel="from Date Picker">
-                                <rect key="frame" x="30" y="227" width="100" height="44"/>
+                                <rect key="frame" x="30" y="213" width="100" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="IEp-mG-cik"/>
                                     <constraint firstAttribute="width" constant="100" id="xne-eO-1Db"/>
@@ -418,7 +418,7 @@
                                 <locale key="locale" localeIdentifier="ko"/>
                             </datePicker>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="VpD-h6-9SI">
-                                <rect key="frame" x="284" y="227" width="100" height="44"/>
+                                <rect key="frame" x="284" y="213" width="100" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="5hM-eN-xwb"/>
                                     <constraint firstAttribute="height" constant="44" id="pb9-Jk-C87"/>
@@ -426,7 +426,7 @@
                                 <locale key="locale" localeIdentifier="ko"/>
                             </datePicker>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="adI-P4-ycB">
-                                <rect key="frame" x="30" y="293" width="354" height="32"/>
+                                <rect key="frame" x="30" y="279" width="354" height="32"/>
                                 <color key="backgroundColor" name="extra_white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="LEW-gs-pac"/>
@@ -467,7 +467,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hJ8-A4-M1l">
-                                <rect key="frame" x="30" y="345" width="354" height="339"/>
+                                <rect key="frame" x="30" y="331" width="354" height="353"/>
                                 <color key="backgroundColor" name="white"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" name="black"/>
@@ -539,14 +539,14 @@
                             <constraint firstItem="VpD-h6-9SI" firstAttribute="centerY" secondItem="w3Y-kY-deL" secondAttribute="centerY" id="MGd-1j-xyr"/>
                             <constraint firstItem="evV-yH-XLa" firstAttribute="leading" secondItem="lnw-lW-hh3" secondAttribute="leading" constant="30" id="Mhs-Hp-12g"/>
                             <constraint firstItem="hJ8-A4-M1l" firstAttribute="top" secondItem="adI-P4-ycB" secondAttribute="bottom" constant="20" id="Qng-1U-dCP"/>
-                            <constraint firstItem="w3Y-kY-deL" firstAttribute="top" secondItem="evV-yH-XLa" secondAttribute="bottom" constant="15" id="Qz8-wM-5bd"/>
+                            <constraint firstItem="w3Y-kY-deL" firstAttribute="top" secondItem="evV-yH-XLa" secondAttribute="bottom" constant="8" id="Qz8-wM-5bd"/>
                             <constraint firstItem="Gfz-IZ-wVh" firstAttribute="top" secondItem="UcV-Ak-0Pr" secondAttribute="bottom" constant="28" id="R3F-Xw-0qe"/>
                             <constraint firstItem="Gfz-IZ-wVh" firstAttribute="leading" secondItem="lnw-lW-hh3" secondAttribute="leading" constant="20" id="YgS-HH-nEm"/>
                             <constraint firstItem="fgR-fY-d3u" firstAttribute="top" secondItem="HVM-Hi-kE4" secondAttribute="bottom" constant="20" id="ZtB-Ie-t5R"/>
                             <constraint firstItem="lnw-lW-hh3" firstAttribute="trailing" secondItem="hJ8-A4-M1l" secondAttribute="trailing" constant="30" id="aeO-WV-Z1b"/>
                             <constraint firstItem="lnw-lW-hh3" firstAttribute="trailing" secondItem="VpD-h6-9SI" secondAttribute="trailing" constant="30" id="bE9-W1-DhI"/>
                             <constraint firstItem="lnw-lW-hh3" firstAttribute="trailing" secondItem="Gfz-IZ-wVh" secondAttribute="trailing" constant="20" id="bmK-ek-vD7"/>
-                            <constraint firstItem="evV-yH-XLa" firstAttribute="top" secondItem="fgR-fY-d3u" secondAttribute="bottom" constant="15" id="feF-WN-PsG"/>
+                            <constraint firstItem="evV-yH-XLa" firstAttribute="top" secondItem="fgR-fY-d3u" secondAttribute="bottom" constant="8" id="feF-WN-PsG"/>
                             <constraint firstItem="lnw-lW-hh3" firstAttribute="trailing" secondItem="XmJ-DP-IaU" secondAttribute="trailing" constant="30" id="lcW-rq-c72"/>
                             <constraint firstItem="UcV-Ak-0Pr" firstAttribute="leading" secondItem="lnw-lW-hh3" secondAttribute="leading" constant="30" id="nez-Dy-9SN"/>
                             <constraint firstItem="adI-P4-ycB" firstAttribute="top" secondItem="w3Y-kY-deL" secondAttribute="bottom" constant="22" id="ptd-Hl-yKt"/>
