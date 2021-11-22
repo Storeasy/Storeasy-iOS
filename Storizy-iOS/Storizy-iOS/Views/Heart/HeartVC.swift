@@ -15,8 +15,9 @@ class HeartVC: UIViewController {
     
     @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var heartTableView: UITableView!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
-    var pages: [Page] = [Page(title: "프로젝트1")]
+    var pages: [Page] = [Page(title: "페이지1"), Page(title: "러시아워")]
     var users: [User] = [User(name: "임수정"), User(name: "유기현")]
     var currentDatas: [Any] = []
     
@@ -79,12 +80,26 @@ class HeartVC: UIViewController {
         heartTableView.register(userNibName, forCellReuseIdentifier: "HeartUserCell")
     }
     
+    // MARK: - UI
+    func setShadow(view: UIView){
+        //그림자 설정
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowRadius = 6
+        view.layer.shadowOpacity = 1
+        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+    }
     func setUI(){
         // 헤더 그림자
-        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        headBarView.layer.shadowRadius = 6
-        headBarView.layer.shadowOpacity = 1
-        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+        setShadow(view: headBarView)
+        // TV 높이 설정
+        let maxHeight = self.view.bounds.height - 97
+        let contentHeight = heartTableView.contentSize.height + 20
+        let TVHeight = contentHeight < maxHeight ? contentHeight : maxHeight
+        tableViewHeight.constant = TVHeight
+        
+        // TV UI
+        heartTableView.layer.cornerRadius = 20
+        setShadow(view: heartTableView)
     }
 
 }
