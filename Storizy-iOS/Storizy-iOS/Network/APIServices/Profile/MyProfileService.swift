@@ -30,7 +30,6 @@ struct MyProfileService {
                 guard let status = response.response?.statusCode else { return }
                 guard let body =  response.value else { print("###"); return }
                 
-                
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
                 if status == 200 {
@@ -38,7 +37,7 @@ struct MyProfileService {
                     responseCode = .success
                     // response body 파싱
                     let decoder = JSONDecoder()
-                    guard let responseBody = try? decoder.decode(ResponseData<ProfileData>.self, from: body ) else { print("!!!"); print(body); return }
+                    guard let responseBody = try? decoder.decode(ResponseData<ProfileData>.self, from: body) else { print("!!!"); return }
                     print(responseBody)
                     // 응답 결과 전송
                     completionHandler(responseCode, responseBody)

@@ -8,6 +8,7 @@
 import Foundation
 //{
 //  "userId": 1,
+//  "isPublic": true,
 //  "profileImage": "http://어쩌구저쩌구",
 //  "nickname": "testnickname",
 //  "universityName": "성신여자대학교",
@@ -20,6 +21,7 @@ import Foundation
 
 struct ProfileData: Codable {
     let userId: Int?
+    var isPublic: Int?
     var profileImage: String?
     var nickname: String?
     var universityName: String?

@@ -19,7 +19,7 @@ class OtherHomeVC: UIViewController {
         
         // nib 셀 등록
         let projectNibName = UINib(nibName: "ProjectCell", bundle: nil)
-        feedTableView.register(projectNibName, forCellReuseIdentifier: "projectCell")
+        feedTableView.register(projectNibName, forCellReuseIdentifier: "ProjectCell")
         let pageNibName = UINib(nibName: "OtherPageCell", bundle: nil)
         feedTableView.register(pageNibName, forCellReuseIdentifier: "OtherPageCell")
 
@@ -43,7 +43,7 @@ extension OtherHomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let project = feedList[indexPath.row] as? Project {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectCell", for: indexPath) as! ProjectCell
             cell.projectTitleLabel.text = project.title
             cell.projectContentLabel.text = "프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용"
             cell.periodLabel.text = "2020.11.22 - 2021.01.16"
