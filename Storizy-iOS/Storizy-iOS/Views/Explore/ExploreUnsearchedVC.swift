@@ -9,6 +9,7 @@ import UIKit
 
 class ExploreUnsearchedVC: UIViewController {
     
+    @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
@@ -17,14 +18,8 @@ class ExploreUnsearchedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // nib 등록
-        let nibName = UINib(nibName: "HeartPageCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "HeartPageCell")
-        
-        // table view - scroll view
-        DispatchQueue.main.async {
-            self.tableViewHeight.constant = self.tableView.contentSize.height
-        }
+        registerNib()   // nib 등록
+        setUI()         // UI
 
     }
     
@@ -34,6 +29,25 @@ class ExploreUnsearchedVC: UIViewController {
         self.navigationController?.pushViewController(exploreSearchedVC, animated: false)
     }
     
+    // nib 등록
+    func registerNib(){
+        let nibName = UINib(nibName: "HeartPageCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "HeartPageCell")
+    }
+    
+    // ui
+    func setUI(){
+        // 헤더 그림자
+        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        headBarView.layer.shadowRadius = 6
+        headBarView.layer.shadowOpacity = 1
+        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+        
+        // table view - scroll view
+        DispatchQueue.main.async {
+            self.tableViewHeight.constant = self.tableView.contentSize.height
+        }
+    }
 
 }
 

@@ -290,19 +290,19 @@
                                 <rect key="frame" x="0.0" y="-1" width="414" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfi-oZ-Pnu">
-                                        <rect key="frame" x="373" y="57" width="21" height="22"/>
+                                        <rect key="frame" x="363" y="57" width="21" height="22"/>
                                         <state key="normal">
                                             <imageReference key="image" image="gearshape.fill" catalog="system" renderingMode="original"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJG-ag-cbM">
-                                        <rect key="frame" x="338" y="57" width="20" height="22"/>
+                                        <rect key="frame" x="328" y="57" width="20" height="22"/>
                                         <state key="normal">
                                             <imageReference key="image" image="bell.fill" catalog="system" renderingMode="original"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2M-pq-iIc">
-                                        <rect key="frame" x="300.5" y="57" width="22.5" height="22"/>
+                                        <rect key="frame" x="290.5" y="57" width="22.5" height="22"/>
                                         <state key="normal">
                                             <imageReference key="image" image="bubble.left.fill" catalog="system" renderingMode="original"/>
                                         </state>
@@ -334,7 +334,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RfQ-EI-XFk" secondAttribute="bottom" id="8Qy-YL-erM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RfQ-EI-XFk" secondAttribute="trailing" id="9DW-gE-sUT"/>
                             <constraint firstItem="RfQ-EI-XFk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LYd-k9-XL7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gfi-oZ-Pnu" secondAttribute="trailing" constant="20" id="ZDN-qx-z1H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gfi-oZ-Pnu" secondAttribute="trailing" constant="30" id="ZDN-qx-z1H"/>
                             <constraint firstItem="RfQ-EI-XFk" firstAttribute="top" secondItem="sjE-Z2-8Fr" secondAttribute="bottom" id="aYS-s9-6kv"/>
                             <constraint firstItem="sjE-Z2-8Fr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tEv-gd-wPE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="sjE-Z2-8Fr" secondAttribute="top" constant="45" id="zaV-21-8yI"/>

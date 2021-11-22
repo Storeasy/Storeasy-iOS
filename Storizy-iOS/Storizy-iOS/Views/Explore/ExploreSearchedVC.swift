@@ -9,6 +9,7 @@ import UIKit
 
 class ExploreSearchedVC: UIViewController {
 
+    @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var pages: [Page] = [Page(title: "프로젝트1")]
@@ -33,6 +34,12 @@ class ExploreSearchedVC: UIViewController {
         // 페이지가 default
         type = PAGE
         
+        registerNib()
+        setUI()
+    }
+    
+    // nib 등록
+    func registerNib(){
         // 셀 등록
         let pageNibName = UINib(nibName: "HeartPageCell", bundle: nil)
         tableView.register(pageNibName, forCellReuseIdentifier: "HeartPageCell")
@@ -44,6 +51,14 @@ class ExploreSearchedVC: UIViewController {
     @IBAction func segmentedDidChange(_ sender: UISegmentedControl) {
         type = sender.selectedSegmentIndex
     }
+    
+    // ui
+    func setUI(){
+        // 헤더 그림자
+        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        headBarView.layer.shadowRadius = 6
+        headBarView.layer.shadowOpacity = 1
+        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor    }
     
 }
 
