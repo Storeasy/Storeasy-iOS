@@ -17,11 +17,11 @@ class ProjectDetailVC: UIViewController {
     @IBOutlet weak var pageTableView: UITableView!
     @IBOutlet weak var projectMoreBtn: UIButton!
     @IBOutlet weak var projectView: UIView!
-    @IBOutlet weak var projectInsideFrameHeight: NSLayoutConstraint!
+    @IBOutlet weak var contentTVHeight: NSLayoutConstraint!
     
     @IBOutlet weak var projectInsideFrameView: UIView!
     
-    var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "몬스타엑스", "러시아워", "많관부"]
+    var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "예선진출", "경축", "많관부"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +77,7 @@ class ProjectDetailVC: UIViewController {
         
         // 프로젝트 뷰 높이
         DispatchQueue.main.async {
-            self.projectInsideFrameHeight.constant = 106 + self.projectContentTextView.contentSize.height
+            self.contentTVHeight.constant = self.projectContentTextView.contentSize.height
         }
     }
     

@@ -56,6 +56,9 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HqM-5A-T95">
                                                 <rect key="frame" x="16" y="90" width="286" height="92"/>
                                                 <color key="backgroundColor" name="white"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="92" id="VzR-Zs-Lgb"/>
+                                                </constraints>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniaiber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" name="dark_gray2"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -95,7 +98,6 @@
                                             <constraint firstAttribute="trailing" secondItem="HqM-5A-T95" secondAttribute="trailing" constant="16" id="cfs-k8-z77"/>
                                             <constraint firstItem="Z0G-O1-R7l" firstAttribute="top" secondItem="yiX-fu-VOl" secondAttribute="top" constant="16" id="ht3-bI-XKW"/>
                                             <constraint firstItem="HqM-5A-T95" firstAttribute="leading" secondItem="Z0G-O1-R7l" secondAttribute="leading" id="xxo-hF-PQf"/>
-                                            <constraint firstAttribute="height" constant="198" id="zbw-Gw-xlD"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOd-bM-lT0">
@@ -179,10 +181,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentTVHeight" destination="VzR-Zs-Lgb" id="aWw-7u-LDm"/>
                         <outlet property="headBarView" destination="mea-G8-mvs" id="LYX-aM-LFO"/>
                         <outlet property="pageTableView" destination="QrO-QX-Gik" id="7YP-kF-4mD"/>
                         <outlet property="projectContentTextView" destination="HqM-5A-T95" id="u4M-Jw-4vP"/>
-                        <outlet property="projectInsideFrameHeight" destination="zbw-Gw-xlD" id="jqO-LQ-Xmd"/>
                         <outlet property="projectInsideFrameView" destination="yiX-fu-VOl" id="t32-1v-7Ca"/>
                         <outlet property="projectMoreBtn" destination="5uP-Ip-55s" id="Vam-ea-2Am"/>
                         <outlet property="projectPeriodLabel" destination="O50-rS-4XJ" id="gd4-i8-Moo"/>

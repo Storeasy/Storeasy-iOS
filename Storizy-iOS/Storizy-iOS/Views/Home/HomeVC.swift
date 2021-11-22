@@ -39,8 +39,8 @@ class HomeVC: UIViewController {
     
     // 더미
     var feedList: [Any] = [Project(title: "프로젝트명"), Page(title: "페이지명"), Page(title: "페이지명2"), Project(title: "프로젝트명2"), Page(title: "페이지명3")]
-    var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "몬스타엑스", "러시아워", "많관부"]
-    
+    var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "예선진출", "경축", "많관부"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,10 +64,7 @@ class HomeVC: UIViewController {
         registerNib()
 
         
-        // 피드 테이블 뷰 높이 동적 조정
-        DispatchQueue.main.async {
-            self.feedTableViewHeight.constant = self.feedTableView.contentSize.height
-        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -152,6 +149,12 @@ class HomeVC: UIViewController {
     }
     
     func setViewUI(){
+        
+        // 헤더 그림자
+        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        headBarView.layer.shadowRadius = 6
+        headBarView.layer.shadowOpacity = 1
+        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
         // 이미지 원
         profileImgView.layer.cornerRadius = profileImgView.bounds.width / 2
         // 둥글
@@ -160,11 +163,10 @@ class HomeVC: UIViewController {
         // 그림자
         setShadow(view: profileFrameView)
         setShadow(view: feedFrameView)
-        // 헤더 그림자
-        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        headBarView.layer.shadowRadius = 6
-        headBarView.layer.shadowOpacity = 1
-        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+        // 피드 테이블 뷰 높이 동적 조정
+        DispatchQueue.main.async {
+            self.feedTableViewHeight.constant = self.feedTableView.contentSize.height
+        }
     }
 
     

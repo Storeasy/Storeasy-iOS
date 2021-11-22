@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="89" width="414" height="773"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-Pi-Ffa">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1115.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1116"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dR9-ZO-veC">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
@@ -36,34 +36,34 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5N-Ah-W1H" userLabel="line1">
-                                                        <rect key="frame" x="135" y="102" width="249" height="1"/>
+                                                        <rect key="frame" x="135" y="102.5" width="249" height="1"/>
                                                         <color key="backgroundColor" name="light_gray2"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="OY7-HE-wgp"/>
                                                         </constraints>
                                                     </view>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_back" translatesAutoresizingMaskIntoConstraints="NO" id="RAt-HA-wdg">
-                                                        <rect key="frame" x="30" y="53.5" width="80" height="80"/>
+                                                        <rect key="frame" x="30" y="54" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="h5G-b6-ugO"/>
                                                             <constraint firstAttribute="width" secondItem="RAt-HA-wdg" secondAttribute="height" multiplier="1:1" id="jwP-uX-gzw"/>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_back" translatesAutoresizingMaskIntoConstraints="NO" id="owP-Kp-kbU">
-                                                        <rect key="frame" x="34" y="57.5" width="72" height="72"/>
+                                                        <rect key="frame" x="34" y="58" width="72" height="72"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="owP-Kp-kbU" secondAttribute="height" multiplier="1:1" id="Dcx-f3-3fo"/>
                                                             <constraint firstAttribute="height" constant="72" id="KQY-ou-vFn"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="김수정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqp-3E-qAa">
-                                                        <rect key="frame" x="135" y="57.5" width="42" height="22.5"/>
+                                                        <rect key="frame" x="135" y="58" width="42" height="22.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="16"/>
                                                         <color key="textColor" name="black"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="성신여자대학교" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GId-YY-qSM">
-                                                        <rect key="frame" x="135" y="80" width="85" height="17"/>
+                                                        <rect key="frame" x="135" y="80.5" width="85" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" name="dark_gray2"/>
                                                         <nil key="highlightedColor"/>
@@ -78,7 +78,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-ac-K23">
-                                                        <rect key="frame" x="30" y="194.5" width="354" height="50.5"/>
+                                                        <rect key="frame" x="30" y="195" width="354" height="50.5"/>
                                                         <string key="text">UXUI디자이너를 꿈꾸는 대학교 2학년.
 기획&amp;디자인에 관심 많고 새로운 거 좋아합니다.
 함께 프로젝트 하실 분 구하고있어요. </string>
@@ -86,14 +86,14 @@
                                                         <color key="textColor" name="dark_gray1"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내프로필" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwv-SE-JHo">
-                                                        <rect key="frame" x="30" y="20" width="69.5" height="28.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 프로필" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwv-SE-JHo">
+                                                        <rect key="frame" x="30" y="20" width="78" height="29"/>
                                                         <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="20"/>
                                                         <color key="textColor" name="black"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nEW-7z-9VK">
-                                                        <rect key="frame" x="135" y="112.5" width="12" height="11.5"/>
+                                                        <rect key="frame" x="135" y="113" width="12" height="11.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="BlY-Zc-mra"/>
                                                             <constraint firstAttribute="height" constant="12" id="hjf-yk-Tga"/>
@@ -101,7 +101,7 @@
                                                         <imageReference key="image" image="message" catalog="system" renderingMode="original"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="soojung@sungshin.ac.kr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWJ-zg-ich">
-                                                        <rect key="frame" x="152" y="108" width="157" height="20"/>
+                                                        <rect key="frame" x="152" y="108.5" width="157" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="Rzm-NA-Yon"/>
                                                         </constraints>
@@ -110,7 +110,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E2K-rx-tU2">
-                                                        <rect key="frame" x="30" y="153.5" width="354" height="26"/>
+                                                        <rect key="frame" x="30" y="154" width="354" height="26"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="26" id="o8E-0H-HIe"/>
@@ -174,14 +174,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKH-kl-tcD">
-                                                <rect key="frame" x="0.0" y="275" width="414" height="100.5"/>
+                                                <rect key="frame" x="0.0" y="275" width="414" height="101"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIc-Ed-CC0">
-                                                        <rect key="frame" x="0.0" y="52.5" width="414" height="48"/>
+                                                        <rect key="frame" x="0.0" y="53" width="414" height="48"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xS2-ve-i6d">
-                                                        <rect key="frame" x="0.0" y="52.5" width="414" height="32"/>
+                                                        <rect key="frame" x="0.0" y="53" width="414" height="32"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="PJn-TS-yyE"/>
@@ -208,8 +208,8 @@
                                                             <outlet property="delegate" destination="Y6W-OH-hqX" id="ydd-cE-n37"/>
                                                         </connections>
                                                     </collectionView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내스토리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq7-mC-4c4">
-                                                        <rect key="frame" x="30" y="20" width="62.5" height="25.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 스토리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zq7-mC-4c4">
+                                                        <rect key="frame" x="30" y="20" width="71" height="26"/>
                                                         <fontDescription key="fontDescription" name="NotoSansOriya-Bold" family="Noto Sans Oriya" pointSize="18"/>
                                                         <color key="textColor" name="black"/>
                                                         <nil key="highlightedColor"/>
@@ -241,11 +241,11 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKD-eS-5Ut">
-                                                <rect key="frame" x="0.0" y="375.5" width="414" height="740"/>
+                                                <rect key="frame" x="0.0" y="376" width="414" height="740"/>
                                                 <color key="backgroundColor" name="extra_white"/>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZq-20-ySk">
-                                                <rect key="frame" x="30" y="375.5" width="354" height="740"/>
+                                                <rect key="frame" x="30" y="376" width="354" height="740"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="740" id="WmG-4X-tbc"/>
