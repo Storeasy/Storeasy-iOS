@@ -31,6 +31,10 @@ class HeartUserCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func setUI(){
+        profileImg.layer.cornerRadius = profileImg.bounds.height / 2
+    }
+    
 }
 
 extension HeartUserCell: UICollectionViewDelegate, UICollectionViewDataSource {

@@ -86,20 +86,12 @@ class HeartVC: UIViewController {
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shadowRadius = 6
         view.layer.shadowOpacity = 1
-        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+        view.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
     }
+    
     func setUI(){
         // 헤더 그림자
         setShadow(view: headBarView)
-        // TV 높이 설정
-        let maxHeight = self.view.bounds.height - 97
-        let contentHeight = heartTableView.contentSize.height + 20
-        let TVHeight = contentHeight < maxHeight ? contentHeight : maxHeight
-        tableViewHeight.constant = TVHeight
-        
-        // TV UI
-        heartTableView.layer.cornerRadius = 20
-        setShadow(view: heartTableView)
     }
 
 }

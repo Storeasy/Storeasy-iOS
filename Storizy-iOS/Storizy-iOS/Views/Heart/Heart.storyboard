@@ -49,10 +49,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irz-gc-iuD">
                                 <rect key="frame" x="0.0" y="141" width="414" height="672"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="672" id="r4I-r4-rFj"/>
-                                </constraints>
+                                <color key="backgroundColor" name="white"/>
                                 <color key="separatorColor" name="light_gray2"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="hgQ-5e-yKJ"/>
@@ -90,7 +87,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="H6w-8u-yId" secondAttribute="trailing" id="af5-el-TpO"/>
                             <constraint firstItem="2cB-NT-7ie" firstAttribute="top" secondItem="2jR-mL-DVZ" secondAttribute="bottom" id="byt-Fj-B81"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2cB-NT-7ie" secondAttribute="trailing" id="mMJ-zY-NRT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Irz-gc-iuD" secondAttribute="bottom" id="q0k-0V-KMt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Irz-gc-iuD" secondAttribute="bottom" id="q0k-0V-KMt"/>
                             <constraint firstItem="2jR-mL-DVZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="slU-ZL-ytL"/>
                             <constraint firstItem="Irz-gc-iuD" firstAttribute="top" secondItem="2cB-NT-7ie" secondAttribute="bottom" id="z4r-Hx-hxn"/>
                         </constraints>
@@ -99,7 +96,6 @@
                     <connections>
                         <outlet property="headBarView" destination="2jR-mL-DVZ" id="UJW-Cv-iOF"/>
                         <outlet property="heartTableView" destination="Irz-gc-iuD" id="kAy-s4-ThZ"/>
-                        <outlet property="tableViewHeight" destination="r4I-r4-rFj" id="QMb-NV-utG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
