@@ -17,61 +17,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jR-mL-DVZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-NT-7ie">
+                                <rect key="frame" x="0.0" y="89" width="414" height="52"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="좋아요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK1-fe-oE3">
-                                        <rect key="frame" x="30" y="55" width="52" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-jP-1Lh">
+                                        <rect key="frame" x="30" y="10" width="354" height="33"/>
+                                        <segments>
+                                            <segment title="페이지"/>
+                                            <segment title="사용자"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentDidChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Gla-a2-lvk"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="PGr-PU-ayd"/>
+                                    <constraint firstItem="j6z-jP-1Lh" firstAttribute="top" secondItem="2cB-NT-7ie" secondAttribute="top" constant="10" id="Bqg-HF-aOf"/>
+                                    <constraint firstAttribute="height" constant="52" id="NLN-vU-74Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="j6z-jP-1Lh" secondAttribute="trailing" constant="30" id="OPp-cu-YCa"/>
+                                    <constraint firstAttribute="bottom" secondItem="j6z-jP-1Lh" secondAttribute="bottom" constant="10" id="l0T-ug-wsd"/>
+                                    <constraint firstItem="j6z-jP-1Lh" firstAttribute="leading" secondItem="2cB-NT-7ie" secondAttribute="leading" constant="30" id="paB-Mu-cPc"/>
                                 </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-jP-1Lh">
-                                <rect key="frame" x="20" y="105" width="374" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jgG-RI-NP3"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="페이지"/>
-                                    <segment title="사용자"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentDidChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Gla-a2-lvk"/>
-                                </connections>
-                            </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irz-gc-iuD">
-                                <rect key="frame" x="0.0" y="150" width="414" height="663"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irz-gc-iuD">
+                                <rect key="frame" x="0.0" y="141" width="414" height="672"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" name="light_gray2"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="hgQ-5e-yKJ"/>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="A8g-1o-vM4"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jR-mL-DVZ">
+                                <rect key="frame" x="0.0" y="-1" width="414" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋아요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK1-fe-oE3">
+                                        <rect key="frame" x="30" y="56" width="52" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" name="black"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="extra_white"/>
+                                <constraints>
+                                    <constraint firstItem="yK1-fe-oE3" firstAttribute="leading" secondItem="2jR-mL-DVZ" secondAttribute="leading" constant="30" id="FHw-kG-SJG"/>
+                                    <constraint firstAttribute="height" constant="90" id="PGr-PU-ayd"/>
+                                    <constraint firstAttribute="bottom" secondItem="yK1-fe-oE3" secondAttribute="bottom" constant="10" id="Tip-QP-Uvz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Irz-gc-iuD" secondAttribute="trailing" id="9D5-YH-1M3"/>
-                            <constraint firstItem="j6z-jP-1Lh" firstAttribute="top" secondItem="2jR-mL-DVZ" secondAttribute="bottom" constant="15" id="Hgc-jR-vCM"/>
                             <constraint firstItem="Irz-gc-iuD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Me7-By-nAn"/>
+                            <constraint firstItem="2cB-NT-7ie" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QLg-zO-3QI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2jR-mL-DVZ" secondAttribute="trailing" id="S5b-AI-Kww"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="2jR-mL-DVZ" secondAttribute="top" constant="44" id="UC0-p0-fVl"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="j6z-jP-1Lh" secondAttribute="trailing" constant="20" id="cB3-WK-KcS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="2jR-mL-DVZ" secondAttribute="top" constant="45" id="UC0-p0-fVl"/>
+                            <constraint firstItem="2cB-NT-7ie" firstAttribute="top" secondItem="2jR-mL-DVZ" secondAttribute="bottom" id="byt-Fj-B81"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2cB-NT-7ie" secondAttribute="trailing" id="mMJ-zY-NRT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Irz-gc-iuD" secondAttribute="bottom" id="q0k-0V-KMt"/>
-                            <constraint firstItem="j6z-jP-1Lh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="q9q-fC-Ucl"/>
                             <constraint firstItem="2jR-mL-DVZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="slU-ZL-ytL"/>
-                            <constraint firstItem="Irz-gc-iuD" firstAttribute="top" secondItem="j6z-jP-1Lh" secondAttribute="bottom" constant="15" id="xK7-L4-p8m"/>
+                            <constraint firstItem="Irz-gc-iuD" firstAttribute="top" secondItem="2cB-NT-7ie" secondAttribute="bottom" id="z4r-Hx-hxn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="131-Y8-Eop"/>
                     <connections>
+                        <outlet property="headBarView" destination="2jR-mL-DVZ" id="UJW-Cv-iOF"/>
                         <outlet property="heartTableView" destination="Irz-gc-iuD" id="kAy-s4-ThZ"/>
                     </connections>
                 </viewController>
@@ -107,11 +120,14 @@
         <namedColor name="black">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="extra_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="light_gray2">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

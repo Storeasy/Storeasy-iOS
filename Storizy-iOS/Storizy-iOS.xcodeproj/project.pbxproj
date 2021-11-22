@@ -259,6 +259,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE1E3650274B6F5D0095F581 /* Aside */ = {
+			isa = PBXGroup;
+			children = (
+				DEA36EF2273BDA8900BBFEF5 /* ImageCell.swift */,
+				DEA36EF3273BDA8900BBFEF5 /* ImageCell.xib */,
+				DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */,
+				DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */,
+				DEA36ED6273987CA00BBFEF5 /* OtherPageCellInProject.swift */,
+				DEA36ED7273987CA00BBFEF5 /* OtherPageCellInProject.xib */,
+			);
+			path = Aside;
+			sourceTree = "<group>";
+		};
 		DEA36E812736A7AF00BBFEF5 /* Project */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,12 +292,12 @@
 			children = (
 				DEA36E7F27369B7F00BBFEF5 /* Page.swift */,
 				DEA36EB12739039C00BBFEF5 /* Cell */,
-				DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */,
 				DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */,
+				DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */,
 				DEA36EA127383A0300BBFEF5 /* EditPageVC.swift */,
 				DEA36EA327383A5100BBFEF5 /* EditPage.storyboard */,
-				DEA36EC827394FF700BBFEF5 /* OtherPageDetail.storyboard */,
 				DEA36ECA2739501700BBFEF5 /* OtherPageDetailVC.swift */,
+				DEA36EC827394FF700BBFEF5 /* OtherPageDetail.storyboard */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -292,18 +305,12 @@
 		DEA36EB12739039C00BBFEF5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */,
-				DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */,
 				DEA36EB2273903E100BBFEF5 /* OtherPageCell.swift */,
 				DEA36EB3273903E100BBFEF5 /* OtherPageCell.xib */,
 				DEA36E792736976800BBFEF5 /* PageCell.swift */,
 				DEA36E7A2736976800BBFEF5 /* PageCell.xib */,
 				DEA36EBC2739108200BBFEF5 /* HeartPageCell.swift */,
 				DEA36EBD2739108200BBFEF5 /* HeartPageCell.xib */,
-				DEA36ED6273987CA00BBFEF5 /* OtherPageCellInProject.swift */,
-				DEA36ED7273987CA00BBFEF5 /* OtherPageCellInProject.xib */,
-				DEA36EF2273BDA8900BBFEF5 /* ImageCell.swift */,
-				DEA36EF3273BDA8900BBFEF5 /* ImageCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -321,6 +328,8 @@
 			isa = PBXGroup;
 			children = (
 				DEA36EBA27390F7000BBFEF5 /* User.swift */,
+				DEA36EC02739176100BBFEF5 /* HeartUserCell.swift */,
+				DEA36EC12739176200BBFEF5 /* HeartUserCell.xib */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -434,6 +443,7 @@
 		DEF9E55C2732C74D0022B33B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE1E3650274B6F5D0095F581 /* Aside */,
 				DEA36EE3273A405900BBFEF5 /* Tag */,
 				DEA36EB927390F6200BBFEF5 /* User */,
 				DEA36E882736A82F00BBFEF5 /* Page */,
@@ -514,8 +524,6 @@
 				DEA36EAB2738F51F00BBFEF5 /* HeartNC.swift */,
 				DEA36EAD2738F53300BBFEF5 /* Heart.storyboard */,
 				DEA36EB7273906CA00BBFEF5 /* HeartVC.swift */,
-				DEA36EC02739176100BBFEF5 /* HeartUserCell.swift */,
-				DEA36EC12739176200BBFEF5 /* HeartUserCell.xib */,
 			);
 			path = Heart;
 			sourceTree = "<group>";

@@ -13,6 +13,7 @@ let USER: Int = 1
 
 class HeartVC: UIViewController {
     
+    @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var heartTableView: UITableView!
     
     var pages: [Page] = [Page(title: "프로젝트1")]
@@ -60,6 +61,17 @@ class HeartVC: UIViewController {
         // 페이지가 default
         type = PAGE
         
+        registerNib()
+        setUI()
+    }
+    
+    // segment 변경시
+    @IBAction func segmentDidChanged(_ sender: UISegmentedControl) {
+        type = sender.selectedSegmentIndex
+    }
+    
+    // MARK: - Nib 등록
+    func registerNib(){
         // 셀 등록
         let pageNibName = UINib(nibName: "HeartPageCell", bundle: nil)
         heartTableView.register(pageNibName, forCellReuseIdentifier: "HeartPageCell")
@@ -67,11 +79,13 @@ class HeartVC: UIViewController {
         heartTableView.register(userNibName, forCellReuseIdentifier: "HeartUserCell")
     }
     
-    @IBAction func segmentDidChanged(_ sender: UISegmentedControl) {
-        type = sender.selectedSegmentIndex
+    func setUI(){
+        // 헤더 그림자
+        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        headBarView.layer.shadowRadius = 6
+        headBarView.layer.shadowOpacity = 1
+        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
     }
-    
-    
 
 }
 

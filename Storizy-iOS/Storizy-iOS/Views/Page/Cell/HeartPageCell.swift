@@ -9,15 +9,30 @@ import UIKit
 
 class HeartPageCell: UITableViewCell {
 
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var nicknameLB: UILabel!
+    @IBOutlet weak var pageTitleLB: UILabel!
+    @IBOutlet weak var pageContentLB: UILabel!
+    @IBOutlet weak var heartBTN: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        if selected {
+            self.contentView.backgroundColor = UIColor(named: "extra_white")
+        } else {
+            self.contentView.backgroundColor = UIColor(named: "extra_white")
+        }
 
-        // Configure the view for the selected state
+    }
+    
+    // ui
+    func setUI(){
+        profileImg.layer.cornerRadius = profileImg.bounds.width / 2
     }
     
 }
