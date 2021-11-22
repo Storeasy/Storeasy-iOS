@@ -18,8 +18,8 @@ class OtherProjectDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nibName = UINib(nibName: "OtherPageCellInProject", bundle: nil)
-        pageTableView.register(nibName, forCellReuseIdentifier: "OtherPageCellInProject")
+        let nibName = UINib(nibName: "OtherPageCell", bundle: nil)
+        pageTableView.register(nibName, forCellReuseIdentifier: "OtherPageCell")
         
         // 프로젝트 뷰 높이
         DispatchQueue.main.async {
@@ -40,7 +40,7 @@ extension OtherProjectDetailVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OtherPageCellInProject", for: indexPath) as! OtherPageCellInProject
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OtherPageCell", for: indexPath) as! OtherPageCell
         return cell
     }
     

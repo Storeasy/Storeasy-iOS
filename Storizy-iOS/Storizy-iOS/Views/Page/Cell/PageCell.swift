@@ -19,7 +19,7 @@ class PageCell: UITableViewCell {
     @IBOutlet weak var tagCV: UICollectionView!
     
     // data
-    var tags: [String] = []
+    var tags: [String] = ["kiki", "보브영원해라"]
     
     override func awakeFromNib() {
         super.awakeFromNib()

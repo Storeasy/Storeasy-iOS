@@ -29,6 +29,11 @@ class HeartUserCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        if selected {
+            self.contentView.backgroundColor = UIColor(named: "extra_white")
+        } else {
+            self.contentView.backgroundColor = UIColor(named: "extra_white")
+        }
     }
     
     func setUI(){
