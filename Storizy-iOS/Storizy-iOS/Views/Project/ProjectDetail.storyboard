@@ -38,16 +38,20 @@
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ikf-Aw-iSg">
                                                 <rect key="frame" x="16" y="62" width="302" height="20"/>
-                                                <color key="backgroundColor" red="0.95439606899999996" green="0.75371390579999997" blue="0.34891277549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" name="white"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="dXg-fd-dqv"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eax-JM-CDA">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eax-JM-CDA">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="UcF-Xg-A9e"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="dgV-eB-GFG"/>
+                                                </connections>
                                             </collectionView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HqM-5A-T95">
                                                 <rect key="frame" x="16" y="90" width="286" height="92"/>
@@ -182,6 +186,7 @@
                         <outlet property="projectInsideFrameView" destination="yiX-fu-VOl" id="t32-1v-7Ca"/>
                         <outlet property="projectMoreBtn" destination="5uP-Ip-55s" id="Vam-ea-2Am"/>
                         <outlet property="projectPeriodLabel" destination="O50-rS-4XJ" id="gd4-i8-Moo"/>
+                        <outlet property="projectTagCV" destination="Ikf-Aw-iSg" id="tMh-cU-oIA"/>
                         <outlet property="projectTitleLabel" destination="Z0G-O1-R7l" id="Zx0-ly-L6e"/>
                         <outlet property="projectView" destination="Jop-Jg-UPJ" id="cjO-hB-a1P"/>
                     </connections>

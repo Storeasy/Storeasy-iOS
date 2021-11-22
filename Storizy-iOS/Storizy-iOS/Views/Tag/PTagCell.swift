@@ -14,6 +14,7 @@ class PTagCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUI()
     }
 
     func setUI(){

@@ -73,8 +73,12 @@ extension ProjectCell: UICollectionViewDataSource, UICollectionViewDelegate, UIC
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-////        let width = 24 +
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let cell = collectionView.cellForItem(at: indexPath) as! PTagCell
+//        let width = 16 + cell.tagNameLB.bounds.width
+        let width = collectionView.cellForItem(at: indexPath)?.bounds.width ?? 60
+        let height = tagCV.bounds.height
+        return CGSize(width: width, height: height)
+    }
     
 }

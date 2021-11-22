@@ -13,6 +13,7 @@ class ProjectDetailVC: UIViewController {
     @IBOutlet weak var projectTitleLabel: UILabel!
     @IBOutlet weak var projectPeriodLabel: UILabel!
     @IBOutlet weak var projectContentTextView: UITextView!
+    @IBOutlet weak var projectTagCV: UICollectionView!
     @IBOutlet weak var pageTableView: UITableView!
     @IBOutlet weak var projectMoreBtn: UIButton!
     @IBOutlet weak var projectView: UIView!
@@ -57,6 +58,9 @@ class ProjectDetailVC: UIViewController {
     func registerNib(){
         let nibName = UINib(nibName: "PageCell", bundle: nil)
         pageTableView.register(nibName, forCellReuseIdentifier: "PageCell")
+        
+        let tagNibName = UINib(nibName: "PTagCell", bundle: nil)
+        projectTagCV.register(tagNibName, forCellWithReuseIdentifier: "PTagCell")
     }
     
     
@@ -112,4 +116,19 @@ extension ProjectDetailVC: UITableViewDataSource, UITableViewDelegate {
     
 }
 
-
+// MARK: - Collection View
+extension ProjectDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return storyTags.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PTagCell", for: indexPath) as? PTagCell else { return UICollectionViewCell() }
+        cell.tagNameLB.text = storyTags[indexPath.item]
+        cell.frameView.backgroundColor = UIColor(named: "tag_pink-light")
+        cell.tagNameLB.textColor = UIColor(named: "tag_pink")
+        return cell
+    }
+    
+    
+}
