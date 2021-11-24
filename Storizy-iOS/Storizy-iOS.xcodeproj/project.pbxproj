@@ -13,6 +13,7 @@
 		DE1E3613274785080095F581 /* StoryTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1E3611274785070095F581 /* StoryTagCell.xib */; };
 		DE1E3616274796170095F581 /* PTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3614274796160095F581 /* PTagCell.swift */; };
 		DE1E3617274796170095F581 /* PTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1E3615274796160095F581 /* PTagCell.xib */; };
+		DE1E3652274E23600095F581 /* FinalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3651274E235E0095F581 /* FinalPageVC.swift */; };
 		DEA36E522733B1D900BBFEF5 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E512733B1D900BBFEF5 /* Signup.storyboard */; };
 		DEA36E582733CAEA00BBFEF5 /* SignupNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */; };
 		DEA36E5A2733CC3F00BBFEF5 /* EmailSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E592733CC3F00BBFEF5 /* EmailSignupVC.swift */; };
@@ -125,6 +126,7 @@
 		DE1E3611274785070095F581 /* StoryTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTagCell.xib; sourceTree = "<group>"; };
 		DE1E3614274796160095F581 /* PTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTagCell.swift; sourceTree = "<group>"; };
 		DE1E3615274796160095F581 /* PTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PTagCell.xib; sourceTree = "<group>"; };
+		DE1E3651274E235E0095F581 /* FinalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPageVC.swift; sourceTree = "<group>"; };
 		DEA36E512733B1D900BBFEF5 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNC.swift; sourceTree = "<group>"; };
 		DEA36E592733CC3F00BBFEF5 /* EmailSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignupVC.swift; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 				DEA36E632733D60100BBFEF5 /* MajorSignupVC.swift */,
 				DEA36E652733D72A00BBFEF5 /* AgreementSignupVC.swift */,
 				DEA36E672735113500BBFEF5 /* AgreementDetailVC.swift */,
+				DE1E3651274E235E0095F581 /* FinalPageVC.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -833,6 +836,7 @@
 				DEA36EB4273903E100BBFEF5 /* OtherPageCell.swift in Sources */,
 				DEA36EA02737ECEC00BBFEF5 /* CreatePageVC.swift in Sources */,
 				DEA36E6E273522E900BBFEF5 /* HomeVC.swift in Sources */,
+				DE1E3652274E23600095F581 /* FinalPageVC.swift in Sources */,
 				DEA36F15273E476300BBFEF5 /* TagData.swift in Sources */,
 				DEA36EE2273A270B00BBFEF5 /* ExploreSearchedVC.swift in Sources */,
 				DEA36F29273E8E5F00BBFEF5 /* ReadPageService.swift in Sources */,

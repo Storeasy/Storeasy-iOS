@@ -46,7 +46,7 @@ class SigninVC: UIViewController {
                 print(body)
                 
                 // access token 저장
-                let accessToken = body.data?.accessToken
+                let accessToken = "Bearer \(body.data?.accessToken ?? "")"
                 UserDefaults.standard.setValue(accessToken, forKey: "accessToken")
                 print(UserDefaults.standard.string(forKey: "accessToken"))
                 //성공시 탭바C으로 이동

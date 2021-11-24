@@ -18,8 +18,8 @@ class PageDetailVC: UIViewController {
     @IBOutlet weak var tagCV: UICollectionView!
     
     // data
-    var tags: [String] = ["러시아워","유기현최고"]
-    
+    var tags: [String] = ["예선진출","경축", "스토리지", "빅토리지", "도미토리"]
+
     // 단독 페이지면 프로젝트명 공란
     override func viewDidLoad() {
         super.viewDidLoad()

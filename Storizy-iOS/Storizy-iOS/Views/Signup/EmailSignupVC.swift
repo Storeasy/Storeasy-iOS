@@ -9,6 +9,7 @@ import UIKit
 
 class EmailSignupVC: UIViewController {
 
+    @IBOutlet weak var headBarView: UIView!
     
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var emailSysMsg: UILabel!
@@ -27,6 +28,7 @@ class EmailSignupVC: UIViewController {
         super.viewDidLoad()
         setAuthInvisible()
         sendAuthBtn.isEnabled = false // 인증번호 전송 비활성화
+        setUI() // UI
     }
     
     
@@ -180,6 +182,38 @@ class EmailSignupVC: UIViewController {
             pwSignupVC.signupUser = self.signupUser
             self.navigationController?.pushViewController(pwSignupVC, animated: true)
         }
+    }
+    
+    // MARK: - UI
+    // TF, 이전 BNT
+    func borderUI<T: UIView>(_ view: T){
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
+    }
+    
+    // TF, BTNs
+    func roundUI<T: UIView>(_ view: T){
+        view.layer.cornerRadius = 12
+        view.clipsToBounds = true
+    }
+    
+    func setUI(){
+        // 헤더 그림자
+        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        headBarView.layer.shadowRadius = 6
+        headBarView.layer.shadowOpacity = 1
+        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+        // TF
+        roundUI(EmailTextField)
+        borderUI(EmailTextField)
+        
+        roundUI(authTextField)
+        borderUI(authTextField)
+        
+        // BTN
+        roundUI(sendAuthBtn)
+        roundUI(gotoPWbtn)
+        
     }
     
 }

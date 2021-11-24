@@ -7,7 +7,7 @@
 
 import UIKit
 
-let accessToken = "Bearer \(UserDefaults.standard.string(forKey: "accessToken")!)"
+let accessToken = UserDefaults.standard.string(forKey: "accessToken") ?? ""
 
 class EditProfileVC: UIViewController {
     // components

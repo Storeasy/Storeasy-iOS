@@ -43,7 +43,8 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        UserDefaults.standard.removeObject(forKey: "accessToken")
+
         // 최초시작
         if UserDefaults.standard.string(forKey: "firstLoad") == nil {
             print("최초시작")
@@ -111,7 +112,7 @@ class HomeVC: UIViewController {
     func getMyProfile(){
         // access token 전송
         guard let token = UserDefaults.standard.string(forKey: "accessToken") else { return }
-        accessToken = "Bearer \(token)"
+        accessToken = token
         MyProfileService.shared.getMyProfile(accessToken: self.accessToken!) { (responseCode, responseBody) in
             if responseCode == .success {
                 let body = responseBody as! ResponseData<ProfileData>

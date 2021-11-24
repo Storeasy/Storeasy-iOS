@@ -15,11 +15,14 @@ class OtherPageDetailVC: UIViewController {
     @IBOutlet weak var imgCollectionView: UICollectionView!
     @IBOutlet weak var contentTextViewHeight: NSLayoutConstraint!
     @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var tagCV: UICollectionView!
+    
+    var tags: [String] = ["예선진출","경축", "스토리지", "빅토리지", "도미토리"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        
-
+        registerNib()
     }
     
     @IBAction func closeBtnAction(_ sender: Any) {
@@ -31,6 +34,13 @@ class OtherPageDetailVC: UIViewController {
         let otherHomeVC = storyboard.instantiateViewController(identifier: "OtherHomeVC")
         self.navigationController?.pushViewController(otherHomeVC, animated: true)
     }
+    
+    // MARK: - nib 등록
+    func registerNib(){
+        let storyTagNibName = UINib(nibName: "StoryTagCell", bundle: nil)
+        tagCV.register(storyTagNibName, forCellWithReuseIdentifier: "StoryTagCell")
+    }
+    
     
     // MARK: - UI
     
@@ -62,14 +72,32 @@ class OtherPageDetailVC: UIViewController {
 // 이미지 collection view
 extension OtherPageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        // tag
+        if collectionView == tagCV {
+            return tags.count
+        }
+        // img
+        else {
+            return 5
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OtherPageDetailImgCell", for: indexPath) as! OtherPageDetailImgCell
-        cell.imageView.layer.cornerRadius = 12
-        // 이미지 등록
-        return cell
+        // tag
+        if collectionView == tagCV {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryTagCell", for: indexPath) as! StoryTagCell
+            cell.frameView.backgroundColor = UIColor(named: "tag_green-light")
+            cell.tagNameLB.textColor = UIColor(named: "tag_green")
+            cell.tagNameLB.text = tags[indexPath.item]
+            return cell
+        }
+        // img
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OtherPageDetailImgCell", for: indexPath) as! OtherPageDetailImgCell
+            cell.imageView.layer.cornerRadius = 12
+            // 이미지 등록
+            return cell
+        }
     }
     
     

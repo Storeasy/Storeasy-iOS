@@ -9,6 +9,12 @@ import UIKit
 
 class AgreementSignupVC: UIViewController {
 
+    @IBOutlet weak var headBarView: UIView!
+    @IBOutlet weak var frameView: UIView!
+    
+    @IBOutlet weak var prevBTN: UIButton!
+    @IBOutlet weak var nextBTN: UIButton!
+    
     let agreementTitles: [String] = ["서비스 약관 동의", "서비스 유료화 약관 동의"]
     let agreementContents: [String] = ["서비스 약관 내용", "서비스 유료화 약관 내용"]
     
@@ -16,6 +22,7 @@ class AgreementSignupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
         print(signupUser)
     }
     
@@ -52,13 +59,41 @@ class AgreementSignupVC: UIViewController {
             if responseCode == .success {
                 let body = responseBody as! ResponseData<String>
                 print(body)
-                
-                //로그인 화면으로 이동
-                self.navigationController?.popToRootViewController(animated: true)
+                guard let finalVC = self.storyboard?.instantiateViewController(identifier: "FinalPageVC") else { return }
+                self.navigationController?.pushViewController(finalVC, animated: true)
             } else {
                 print(responseCode)
+                return
             }
         }
+        
+    }
+    
+    // MARK: - UI
+    // 이전 BNT
+    func borderUI<T: UIView>(_ view: T){
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
+    }
+    
+    // BTNs
+    func roundUI<T: UIView>(_ view: T){
+        view.layer.cornerRadius = 12
+        view.clipsToBounds = true
+    }
+    
+    func setUI(){
+        // 헤더 그림자
+        headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        headBarView.layer.shadowRadius = 6
+        headBarView.layer.shadowOpacity = 1
+        headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+        //border
+        borderUI(prevBTN)
+        //round
+        roundUI(prevBTN)
+        roundUI(nextBTN)
+        roundUI(frameView)
     }
     
 }

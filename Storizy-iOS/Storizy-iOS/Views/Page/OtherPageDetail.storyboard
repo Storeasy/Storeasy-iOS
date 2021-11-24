@@ -46,12 +46,16 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="nB3-G5-JEu"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mkl-mx-hf9">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mkl-mx-hf9">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
+                                        <connections>
+                                            <outlet property="dataSource" destination="gyn-eJ-eFo" id="ngQ-Cq-EXW"/>
+                                            <outlet property="delegate" destination="gyn-eJ-eFo" id="TAC-01-YYR"/>
+                                        </connections>
                                     </collectionView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="페이지 내용을 입력해주세요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S1D-h2-9zf">
                                         <rect key="frame" x="30" y="122" width="354" height="200"/>
@@ -267,6 +271,7 @@
                         <outlet property="imgCollectionView" destination="vDB-aX-WEr" id="Exl-ZE-G76"/>
                         <outlet property="pageFrameView" destination="304-Ws-87A" id="NoG-QR-3Cm"/>
                         <outlet property="profileImg" destination="lXV-Tc-67S" id="HBG-dc-Wxc"/>
+                        <outlet property="tagCV" destination="gob-X9-ACU" id="DI2-3f-GFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMy-cz-Hvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
