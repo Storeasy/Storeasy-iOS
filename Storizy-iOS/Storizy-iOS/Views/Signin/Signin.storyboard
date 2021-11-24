@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,19 +25,20 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5a-gr-LMu">
-                                <rect key="frame" x="30" y="399" width="354" height="50"/>
+                                <rect key="frame" x="30" y="387" width="354" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Kk4-Ae-XLQ"/>
+                                    <constraint firstAttribute="height" constant="44" id="Kk4-Ae-XLQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="black"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Qh-tS-h0k">
-                                <rect key="frame" x="30" y="469" width="354" height="50"/>
+                                <rect key="frame" x="30" y="439" width="354" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ZXh-Al-EbU"/>
+                                    <constraint firstAttribute="height" constant="44" id="ZXh-Al-EbU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL2-rL-awo" userLabel="Back">
@@ -48,13 +50,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7A-96-9Dq">
-                                <rect key="frame" x="30" y="549" width="354" height="50"/>
-                                <color key="backgroundColor" red="0.52219945189999994" green="0.43162399530000001" blue="0.60786223409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="30" y="513" width="354" height="44"/>
+                                <color key="backgroundColor" name="black"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="2ih-pB-JbD"/>
+                                    <constraint firstAttribute="height" constant="44" id="2ih-pB-JbD"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="로그인">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="extra_white"/>
                                 </state>
                                 <connections>
                                     <action selector="signinAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fpF-o9-Ebi"/>
@@ -72,18 +75,19 @@
                             <constraint firstItem="b7A-96-9Dq" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="U35-Wz-7fi"/>
                             <constraint firstItem="S5a-gr-LMu" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="VNj-Ys-31A"/>
                             <constraint firstItem="7Qh-tS-h0k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="X3i-gT-vgD"/>
-                            <constraint firstItem="S5a-gr-LMu" firstAttribute="top" secondItem="9Cw-3a-A07" secondAttribute="bottom" constant="75" id="ZaR-cy-BRN"/>
+                            <constraint firstItem="S5a-gr-LMu" firstAttribute="top" secondItem="9Cw-3a-A07" secondAttribute="bottom" constant="63" id="ZaR-cy-BRN"/>
                             <constraint firstItem="9Cw-3a-A07" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="hWv-oj-jPJ"/>
                             <constraint firstItem="b7A-96-9Dq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="pkm-Xp-7GQ"/>
                             <constraint firstItem="S5a-gr-LMu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="qiP-0D-da2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="b7A-96-9Dq" secondAttribute="trailing" constant="30" id="qmF-fE-Y10"/>
-                            <constraint firstItem="7Qh-tS-h0k" firstAttribute="top" secondItem="S5a-gr-LMu" secondAttribute="bottom" constant="20" id="uRf-qD-FOm"/>
+                            <constraint firstItem="7Qh-tS-h0k" firstAttribute="top" secondItem="S5a-gr-LMu" secondAttribute="bottom" constant="8" id="uRf-qD-FOm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i4k-p5-kjx"/>
                     <connections>
                         <outlet property="emailTF" destination="S5a-gr-LMu" id="m8F-qW-Pcr"/>
                         <outlet property="pwTF" destination="7Qh-tS-h0k" id="xTd-Vj-ZJA"/>
+                        <outlet property="signinBTN" destination="b7A-96-9Dq" id="Nat-SJ-qKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -105,26 +109,28 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vD-fw-ZZ6">
-                                <rect key="frame" x="30" y="692" width="354" height="50"/>
-                                <color key="backgroundColor" red="0.52219945189999994" green="0.43162399530000001" blue="0.60786223409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="30" y="774" width="354" height="44"/>
+                                <color key="backgroundColor" name="black"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="gJi-s2-eIf"/>
+                                    <constraint firstAttribute="height" constant="44" id="gJi-s2-eIf"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="로그인">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="extra_white"/>
                                 </state>
                                 <connections>
                                     <action selector="signinAction:" destination="gqG-di-FdE" eventType="touchUpInside" id="Pm7-h1-LiR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRf-1p-kSR">
-                                <rect key="frame" x="30" y="762" width="354" height="50"/>
-                                <color key="backgroundColor" red="0.52219945189999994" green="0.43162399530000001" blue="0.60786223409999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="30" y="715" width="354" height="44"/>
+                                <color key="backgroundColor" name="extra_white"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="a3m-Eb-R1R"/>
+                                    <constraint firstAttribute="height" constant="44" id="a3m-Eb-R1R"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="회원가입">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="black"/>
                                 </state>
                                 <connections>
                                     <action selector="signupAction:" destination="gqG-di-FdE" eventType="touchUpInside" id="xTf-T5-hoO"/>
@@ -134,11 +140,11 @@
                         <viewLayoutGuide key="safeArea" id="VA3-Xa-xpx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RRf-1p-kSR" firstAttribute="top" secondItem="4vD-fw-ZZ6" secondAttribute="bottom" constant="20" id="1e8-Fs-syO"/>
+                            <constraint firstItem="4vD-fw-ZZ6" firstAttribute="top" secondItem="RRf-1p-kSR" secondAttribute="bottom" constant="15" id="4uF-AV-j2Q"/>
                             <constraint firstItem="4vD-fw-ZZ6" firstAttribute="centerX" secondItem="VA3-Xa-xpx" secondAttribute="centerX" id="Fhi-BV-EQ5"/>
                             <constraint firstItem="VA3-Xa-xpx" firstAttribute="trailing" secondItem="4vD-fw-ZZ6" secondAttribute="trailing" constant="30" id="HGf-p6-HcC"/>
+                            <constraint firstItem="VA3-Xa-xpx" firstAttribute="bottom" secondItem="4vD-fw-ZZ6" secondAttribute="bottom" constant="44" id="JT7-Ma-3lp"/>
                             <constraint firstItem="RRf-1p-kSR" firstAttribute="centerX" secondItem="VA3-Xa-xpx" secondAttribute="centerX" id="Q2D-9w-3Uz"/>
-                            <constraint firstItem="VA3-Xa-xpx" firstAttribute="bottom" secondItem="RRf-1p-kSR" secondAttribute="bottom" constant="50" id="YUl-92-gyl"/>
                             <constraint firstItem="hn9-bb-NsR" firstAttribute="width" secondItem="hn9-bb-NsR" secondAttribute="height" multiplier="1:1" id="bIk-AQ-Dy2"/>
                             <constraint firstItem="VA3-Xa-xpx" firstAttribute="trailing" secondItem="RRf-1p-kSR" secondAttribute="trailing" constant="30" id="i8j-je-Mvr"/>
                             <constraint firstItem="RRf-1p-kSR" firstAttribute="leading" secondItem="VA3-Xa-xpx" secondAttribute="leading" constant="30" id="jB5-9X-dI1"/>
@@ -148,6 +154,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iFS-oA-6rK"/>
+                    <connections>
+                        <outlet property="signinBTN" destination="4vD-fw-ZZ6" id="laV-tM-1WY"/>
+                        <outlet property="signupBTN" destination="RRf-1p-kSR" id="aX5-aj-6LF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTK-XH-kV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,6 +183,12 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <namedColor name="black">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="extra_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

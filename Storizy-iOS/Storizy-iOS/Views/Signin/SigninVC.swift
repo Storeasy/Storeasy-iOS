@@ -11,9 +11,11 @@ class SigninVC: UIViewController {
 
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var pwTF: UITextField!
+    @IBOutlet weak var signinBTN: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
 //        UserDefaults.standard.setValue("email", forKey: "email")
 //        UserDefaults.standard.removeObject(forKey: "email")
 //        UserDefaults.standard.key
@@ -60,6 +62,22 @@ class SigninVC: UIViewController {
             }
         }
         
+    }
+    
+    // MARK: - UI
+    
+    func frameUI<T: UIView>(_ view: T){
+        view.layer.cornerRadius = 12
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor(named: "light_gray2")?.cgColor
+        view.clipsToBounds = true
+    }
+    
+    func setUI(){
+        frameUI(emailTF)
+        frameUI(pwTF)
+        
+        signinBTN.layer.cornerRadius = 12
     }
     
 }

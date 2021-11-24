@@ -9,10 +9,12 @@ import UIKit
 
 class SplashVC: UIViewController {
 
+    @IBOutlet weak var signupBTN: UIButton!
+    @IBOutlet weak var signinBTN: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUI()
     }
     
     @IBAction func signinAction(_ sender: Any) {
@@ -26,6 +28,12 @@ class SplashVC: UIViewController {
         let signupVC = storyboard.instantiateViewController(identifier: "EmailSignupVC")
         self.navigationController?.pushViewController(signupVC, animated: true)
 
+    }
+    
+    // UI
+    func setUI(){
+        signupBTN.layer.cornerRadius = 12
+        signinBTN.layer.cornerRadius = 12
     }
     
 

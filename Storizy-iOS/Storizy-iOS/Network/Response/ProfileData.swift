@@ -21,7 +21,7 @@ import Foundation
 
 struct ProfileData: Codable {
     let userId: Int?
-    var isPublic: Int?
+    var isPublic: Bool?
     var profileImage: String?
     var nickname: String?
     var universityName: String?

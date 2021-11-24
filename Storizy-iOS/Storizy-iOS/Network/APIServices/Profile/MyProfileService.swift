@@ -29,7 +29,8 @@ struct MyProfileService {
             case .success:
                 guard let status = response.response?.statusCode else { return }
                 guard let body =  response.value else { print("###"); return }
-                
+                let str = String(decoding: body, as: UTF8.self)
+                print(str)
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
                 if status == 200 {
