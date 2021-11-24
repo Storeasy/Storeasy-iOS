@@ -110,8 +110,9 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3o-Ru-Fhd">
-                                        <rect key="frame" x="354" y="53" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3o-Ru-Fhd">
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
+                                        <state key="normal" image="clear"/>
                                         <connections>
                                             <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Vxd-Zw-EvD"/>
                                         </connections>
@@ -126,7 +127,7 @@
                                     <constraint firstAttribute="height" constant="90" id="tns-aW-8tw"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="41f-VX-HFC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page_nav-1" translatesAutoresizingMaskIntoConstraints="NO" id="41f-VX-HFC">
                                 <rect key="frame" x="169" y="110" width="76" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="Lbu-9T-bn8"/>
@@ -291,8 +292,9 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SS6-Bs-RzC">
-                                        <rect key="frame" x="354" y="53" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SS6-Bs-RzC">
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
+                                        <state key="normal" image="clear"/>
                                         <connections>
                                             <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yNZ-7d-Bus"/>
                                             <action selector="giveupSignupAction:" destination="gZ8-4n-wZI" eventType="touchUpInside" id="eCp-4a-O24"/>
@@ -308,7 +310,7 @@
                                     <constraint firstAttribute="height" constant="90" id="iu2-zP-ReS"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="48F-Fg-uLi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page_nav-2" translatesAutoresizingMaskIntoConstraints="NO" id="48F-Fg-uLi">
                                 <rect key="frame" x="169" y="109" width="76" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="8Lm-Go-RyZ"/>
@@ -446,8 +448,9 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-zd-i1Z">
-                                        <rect key="frame" x="354" y="53" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-zd-i1Z">
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
+                                        <state key="normal" image="clear"/>
                                         <connections>
                                             <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vOv-uw-srP"/>
                                             <action selector="giveupSignupAction:" destination="cJh-QX-4TY" eventType="touchUpInside" id="hDT-dg-gE4"/>
@@ -463,7 +466,7 @@
                                     <constraint firstItem="nVu-kw-Ti5" firstAttribute="leading" secondItem="TXK-Oc-wIE" secondAttribute="leading" constant="30" id="wor-gg-AqZ"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MYe-Al-I1M">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page_nav-3" translatesAutoresizingMaskIntoConstraints="NO" id="MYe-Al-I1M">
                                 <rect key="frame" x="169" y="109" width="76" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="9Ui-vX-QXW"/>
@@ -648,8 +651,9 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYS-Ah-gRj">
-                                        <rect key="frame" x="354" y="53" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYS-Ah-gRj">
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
+                                        <state key="normal" image="clear"/>
                                         <connections>
                                             <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sZJ-aB-XgU"/>
                                             <action selector="giveupSignupAction:" destination="Sbr-Ph-uxO" eventType="touchUpInside" id="PLe-Ia-DyW"/>
@@ -665,7 +669,7 @@
                                     <constraint firstItem="EYS-Ah-gRj" firstAttribute="centerY" secondItem="WIG-Yz-dZB" secondAttribute="centerY" id="iM4-eq-ec7"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uci-EM-hmw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page_nav-4" translatesAutoresizingMaskIntoConstraints="NO" id="uci-EM-hmw">
                                 <rect key="frame" x="169" y="109" width="76" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="9Fu-a7-Pi1"/>
@@ -784,8 +788,9 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nR-PD-i3U">
-                                        <rect key="frame" x="354" y="53" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nR-PD-i3U">
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
+                                        <state key="normal" image="clear"/>
                                         <connections>
                                             <action selector="backAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YvS-kV-3Yg"/>
                                             <action selector="giveupSignupAction:" destination="IFL-px-41K" eventType="touchUpInside" id="Sfb-W8-ca9"/>
@@ -801,7 +806,7 @@
                                     <constraint firstItem="BFO-BJ-n1E" firstAttribute="leading" secondItem="w3c-CC-t4I" secondAttribute="leading" constant="30" id="v8Y-ks-pFI"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VTh-9L-Wpu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page_nav-5" translatesAutoresizingMaskIntoConstraints="NO" id="VTh-9L-Wpu">
                                 <rect key="frame" x="169" y="110" width="76" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="86e-8G-ROk"/>
@@ -1064,12 +1069,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clear" width="24" height="24"/>
         <image name="join_us-1" width="187.5" height="406"/>
         <image name="join_us-2" width="187.5" height="406"/>
         <image name="join_us-3" width="187.5" height="406"/>
         <image name="join_us-4" width="187.5" height="406"/>
         <image name="join_us-5" width="187.5" height="406"/>
         <image name="join_us_end" width="187.5" height="406"/>
+        <image name="page_nav-1" width="76" height="8"/>
+        <image name="page_nav-2" width="76" height="8"/>
+        <image name="page_nav-3" width="76" height="8"/>
+        <image name="page_nav-4" width="76" height="8"/>
+        <image name="page_nav-5" width="76" height="8"/>
         <namedColor name="black">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
