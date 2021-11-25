@@ -14,6 +14,11 @@
 		DE1E3616274796170095F581 /* PTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3614274796160095F581 /* PTagCell.swift */; };
 		DE1E3617274796170095F581 /* PTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1E3615274796160095F581 /* PTagCell.xib */; };
 		DE1E3652274E23600095F581 /* FinalPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3651274E235E0095F581 /* FinalPageVC.swift */; };
+		DE1E3654274E92550095F581 /* UploadProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3653274E92540095F581 /* UploadProfileImage.swift */; };
+		DE1E365C274F29680095F581 /* OnboardingFristVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E365B274F29680095F581 /* OnboardingFristVC.swift */; };
+		DE1E365E274F2B0D0095F581 /* TagSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E365D274F2B0D0095F581 /* TagSelectVC.swift */; };
+		DE1E3660274F3F070095F581 /* TagListReadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E365F274F3F060095F581 /* TagListReadService.swift */; };
+		DE1E3663274F471D0095F581 /* PostProfileTagsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3662274F471C0095F581 /* PostProfileTagsService.swift */; };
 		DEA36E522733B1D900BBFEF5 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E512733B1D900BBFEF5 /* Signup.storyboard */; };
 		DEA36E582733CAEA00BBFEF5 /* SignupNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */; };
 		DEA36E5A2733CC3F00BBFEF5 /* EmailSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E592733CC3F00BBFEF5 /* EmailSignupVC.swift */; };
@@ -127,6 +132,11 @@
 		DE1E3614274796160095F581 /* PTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTagCell.swift; sourceTree = "<group>"; };
 		DE1E3615274796160095F581 /* PTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PTagCell.xib; sourceTree = "<group>"; };
 		DE1E3651274E235E0095F581 /* FinalPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPageVC.swift; sourceTree = "<group>"; };
+		DE1E3653274E92540095F581 /* UploadProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProfileImage.swift; sourceTree = "<group>"; };
+		DE1E365B274F29680095F581 /* OnboardingFristVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFristVC.swift; sourceTree = "<group>"; };
+		DE1E365D274F2B0D0095F581 /* TagSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectVC.swift; sourceTree = "<group>"; };
+		DE1E365F274F3F060095F581 /* TagListReadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListReadService.swift; sourceTree = "<group>"; };
+		DE1E3662274F471C0095F581 /* PostProfileTagsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProfileTagsService.swift; sourceTree = "<group>"; };
 		DEA36E512733B1D900BBFEF5 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNC.swift; sourceTree = "<group>"; };
 		DEA36E592733CC3F00BBFEF5 /* EmailSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignupVC.swift; sourceTree = "<group>"; };
@@ -274,6 +284,15 @@
 			path = Aside;
 			sourceTree = "<group>";
 		};
+		DE1E3661274F3F2D0095F581 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				DE1E365F274F3F060095F581 /* TagListReadService.swift */,
+				DE1E3662274F471C0095F581 /* PostProfileTagsService.swift */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
 		DEA36E812736A7AF00BBFEF5 /* Project */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,7 +427,6 @@
 				DEF9E55C2732C74D0022B33B /* Views */,
 				DEF9E55B2732C71F0022B33B /* Network */,
 				DEF9E5592732C66E0022B33B /* Global */,
-				DEF9E5452732C6260022B33B /* ViewController.swift */,
 				DEF9E5472732C6260022B33B /* Main.storyboard */,
 				DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */,
 			);
@@ -423,6 +441,7 @@
 				DEF9E5412732C6260022B33B /* AppDelegate.swift */,
 				DEF9E5432732C6260022B33B /* SceneDelegate.swift */,
 				DEF9E54F2732C6290022B33B /* LaunchScreen.storyboard */,
+				DEF9E5452732C6260022B33B /* ViewController.swift */,
 				DEF9E5522732C6290022B33B /* Info.plist */,
 				DEF9E54D2732C6290022B33B /* Assets.xcassets */,
 				DEF9E54A2732C6260022B33B /* Storizy_iOS.xcdatamodeld */,
@@ -434,8 +453,7 @@
 		DEF9E55B2732C71F0022B33B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DEA36F0F273E436600BBFEF5 /* Request */,
-				DEA36F0C273E404900BBFEF5 /* Response */,
+				DEA36EF8273CF1A400BBFEF5 /* APIUrls.swift */,
 				DEF9E56B2732CD720022B33B /* APIServices */,
 				DEF9E56A2732CD410022B33B /* APIModels */,
 			);
@@ -517,6 +535,8 @@
 			children = (
 				DEA36E71273526E200BBFEF5 /* OnboardingVC.swift */,
 				DEA36E73273526F100BBFEF5 /* Onboarding.storyboard */,
+				DE1E365B274F29680095F581 /* OnboardingFristVC.swift */,
+				DE1E365D274F2B0D0095F581 /* TagSelectVC.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -580,6 +600,8 @@
 		DEF9E56A2732CD410022B33B /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				DEA36F0F273E436600BBFEF5 /* Request */,
+				DEA36F0C273E404900BBFEF5 /* Response */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -587,7 +609,7 @@
 		DEF9E56B2732CD720022B33B /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
-				DEA36EF8273CF1A400BBFEF5 /* APIUrls.swift */,
+				DE1E3661274F3F2D0095F581 /* Tag */,
 				DEF9E5722732CE190022B33B /* Signup */,
 				DEF9E5732732CE240022B33B /* Signin */,
 				DEF9E5712732CE030022B33B /* Profile */,
@@ -642,6 +664,7 @@
 				DEA36F18273E86D400BBFEF5 /* ProfileService.swift */,
 				DEA36F10273E456100BBFEF5 /* MyProfileService.swift */,
 				DEA36F1A273E87EB00BBFEF5 /* UpdateProfileService.swift */,
+				DE1E3653274E92540095F581 /* UploadProfileImage.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -849,6 +872,7 @@
 				DEA36EF9273CF1A600BBFEF5 /* APIUrls.swift in Sources */,
 				DEA36EE8273A408D00BBFEF5 /* ProfileTagCell.swift in Sources */,
 				DEA36E8027369B7F00BBFEF5 /* Page.swift in Sources */,
+				DE1E365E274F2B0D0095F581 /* TagSelectVC.swift in Sources */,
 				DEA36EBB27390F7100BBFEF5 /* User.swift in Sources */,
 				DEA36EF4273BDA8A00BBFEF5 /* ImageCell.swift in Sources */,
 				DEA36ECB2739501700BBFEF5 /* OtherPageDetailVC.swift in Sources */,
@@ -858,6 +882,7 @@
 				DEA36EAC2738F51F00BBFEF5 /* HeartNC.swift in Sources */,
 				DEA36F21273E8CFE00BBFEF5 /* DeleteProjectService.swift in Sources */,
 				DEA36E9E2737DF5800BBFEF5 /* CreateProjectVC.swift in Sources */,
+				DE1E3654274E92550095F581 /* UploadProfileImage.swift in Sources */,
 				DEA36F0E273E406400BBFEF5 /* SigninResponseData.swift in Sources */,
 				DEA36E7B2736976800BBFEF5 /* PageCell.swift in Sources */,
 				DEA36ED32739867C00BBFEF5 /* OtherProjectDetailVC.swift in Sources */,
@@ -876,10 +901,13 @@
 				DEA36E872736A81A00BBFEF5 /* ProjectDetailVC.swift in Sources */,
 				DEA36F07273E0AE800BBFEF5 /* SendAuthEmailService.swift in Sources */,
 				DEA36F05273D78EC00BBFEF5 /* ResponseCode.swift in Sources */,
+				DE1E365C274F29680095F581 /* OnboardingFristVC.swift in Sources */,
 				DEA36E5A2733CC3F00BBFEF5 /* EmailSignupVC.swift in Sources */,
 				DEA36EB8273906CA00BBFEF5 /* HeartVC.swift in Sources */,
+				DE1E3660274F3F070095F581 /* TagListReadService.swift in Sources */,
 				DEA36E662733D72A00BBFEF5 /* AgreementSignupVC.swift in Sources */,
 				DEF9E5762732D6970022B33B /* ProjectCell.swift in Sources */,
+				DE1E3663274F471D0095F581 /* PostProfileTagsService.swift in Sources */,
 				DEA36F2B273EAFAA00BBFEF5 /* TokenData.swift in Sources */,
 				DEA36E5C2733CC6A00BBFEF5 /* PWSignupVC.swift in Sources */,
 				DEF9E5AA273388B20022B33B /* TabBarController.swift in Sources */,

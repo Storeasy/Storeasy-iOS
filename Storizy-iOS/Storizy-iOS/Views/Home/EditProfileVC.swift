@@ -84,7 +84,6 @@ class EditProfileVC: UIViewController {
             if responseCode == .success {
                 let body = responseBody as! ResponseData<ProfileData>
                 print(body)
-                
                 // 프로필에 불러오기
                 self.profileData = body.data
                 self.loadProfile()
@@ -95,21 +94,53 @@ class EditProfileVC: UIViewController {
     }
     
     // MARK: - 변경 데이터 반영 (완료 버튼 누를때 호출)
-    func updateProfileData(){
-        profileData?.nickname = nicknameTF.text ?? ""
-        profileData?.contact = contactTF.text ?? ""
-        profileData?.bio = bioTV.text ?? ""
+    // 3 프로필 업데이트 함수
+    func updateProfileData(_ imageUrl: String){
+        profileData?.profileImage = imageUrl // "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png"
+
+        self.profileData?.nickname = self.nicknameTF.text ?? ""
+        self.profileData?.contact = self.contactTF.text ?? ""
+        self.profileData?.bio = self.bioTV.text ?? ""
         
-        profileImgData = profileImgDto?.jpegData(compressionQuality: 1)
+        let tagIds = self.profileData?.tags.map({ $0.id ?? 0 })
         
-        // tag id 들 배열 형태의 문자열로 변환
-        var tagIds: [String] = []
-        for tag in profileData!.tags {
-            tagIds.append(String(tag.id!))
+        // 프로필 업데이트 API 호출
+        UpdateProfileService.shared.updateProfile(accessToken: accessToken, tagIds: tagIds ?? [], profileData: self.profileData! ) { (responseCode, responseBody) in
+            if responseCode == .success {
+                print(responseCode, responseBody)
+                // 편집 뷰 나가기
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                print(responseCode, responseBody)
+                // 편집 실패 alert
+                self.navigationController?.popViewController(animated: true) // temp
+            }
         }
-        tagIdsString = "[\(tagIds.joined(separator: ","))]"
-        
     }
+    
+    
+    // 2 이미지 업로드 후 프로필 업데이트 함수를 호출하며 이미지 URL을 전달하는 함수
+    func getImageUrl(imageData: Data) {
+        UploadProfileImage.shared.uploadProfileImage(accessToken: accessToken, imageData: imageData) { (responseCode, responseBody) in
+            if responseCode == .success {
+                print(responseCode, responseBody)
+                guard let body = responseBody as? ResponseData<String> else { return }
+                let imgUrl = body.data ?? "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png"
+                print("urlurlurl\(imgUrl)")
+                self.updateProfileData(imgUrl)
+            } else {
+                print(responseCode, responseBody)
+            }
+        }
+    }
+    
+    // 1 이미지 -> 데이터 -> 업로드 함수 호출
+    func uploadImage(){
+        self.profileImgData = self.profileImgDto?.jpegData(compressionQuality: 1)
+        self.getImageUrl(imageData: self.profileImgData!)
+    }
+    
+    
     
     // MARK: - 버튼 액션
     
@@ -125,19 +156,11 @@ class EditProfileVC: UIViewController {
     
     // 완료
     @IBAction func completeAction(_ sender: Any) {
+        // 1
+        uploadImage()
         // 프로필 업데이트 완료 (바뀐 데이터들 담기)
-        updateProfileData()
-        // 프로필 업데이트 API 호출
-        UpdateProfileService.shared.updateProfile(accessToken: accessToken, imageData: profileImgData!, tagIdsStr: tagIdsString, profileData: profileData! ) { (responseCode, responseBody) in
-            if responseCode == .success {
-                print(responseCode, responseBody)
-                // 편집 뷰 나가기
-                self.navigationController?.popViewController(animated: true)
-            } else {
-                print(responseCode, responseBody)
-                // 편집 실패 alert
-            }
-        }
+//        updateProfileData()
+        
     }
     
     // MARK: - UI

@@ -31,6 +31,9 @@ class SigninVC: UIViewController {
     // 스플래시 화면으로 이동
     @IBAction func backAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+        let storyboard = UIStoryboard(name: "Signup", bundle: nil)
+        let signupVC = storyboard.instantiateViewController(identifier: "EmailSignupVC")
+        self.navigationController?.pushViewController(signupVC, animated: true)
     }
     
     // MARK: - 로그인 시도

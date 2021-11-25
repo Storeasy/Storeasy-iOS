@@ -31,8 +31,6 @@ class EmailSignupVC: UIViewController {
         setUI() // UI
     }
     
-    
-    
     // 이메일 형식 검사
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
@@ -83,7 +81,12 @@ class EmailSignupVC: UIViewController {
         sendAuthBtn.isEnabled = false
     }
     
+    // MARK: 인증 메일 전송 요청 전송하는 함수
     func sendEmailReq(_ email: String) {
+        
+        // 이메일 중복 통과되면 -> 인증 번호 입력란 보이기
+        self.setAuthVisible()
+        
         // 인증 메일 전송
         SendAuthEmailService.shared.sendAuthEmail(email) { (responseCode, responseBody) in
             if responseCode == .success {
@@ -97,21 +100,23 @@ class EmailSignupVC: UIViewController {
         }
     }
     
-    func checkEmailReq(_ email: String) {
-        // 메일 중복 확인
+    // MARK: 메일 중복 확인 요청 전송하는 함수
+    func checkEmailReq(_ email: String) -> Bool {
+        var isUnique: Bool = false
         EmailCheckService.shared.emailCheckService(email) { (responseCode, responseBody) in
             if responseCode == .success {
                 let body = responseBody as! ResponseData<String>
                 print(body)
                 self.emailSysMsg.text = ""
-                // 이메일 중복 통과되면 -> 인증 번호 입력란 보이기
-                self.setAuthVisible()
+                isUnique = true
             } else {
                 // 실패
                 self.emailSysMsg.text = "이미 존재하는 이메일입니다."
                 print(responseCode)
+                isUnique = false
             }
         }
+        return isUnique
     }
     
     // MARK: 회원가입 취소 버튼 클릭
@@ -124,11 +129,11 @@ class EmailSignupVC: UIViewController {
         let email = EmailTextField.text!
         
         // 메일 중복 확인
-        checkEmailReq(email)
-        
-        // 인증 메일 전송
-        sendEmailReq(email)
-        
+        if checkEmailReq(email) {
+            // 인증 메일 전송
+            sendEmailReq(email)
+        }
+                
     }
     
     // MARK: 인증번호 재전송 버튼 클릭
@@ -159,6 +164,7 @@ class EmailSignupVC: UIViewController {
             "code": authNum
         ]
         CheckAuthEmailService.shared.checkAuthEmail(request) { responseCode, responseBody in
+            // 인증번호 인증 성공
             if responseCode == .success {
                 let body = responseBody as! ResponseData<String>
                 print(body)
@@ -167,20 +173,12 @@ class EmailSignupVC: UIViewController {
                     pwSignupVC.signupUser = self.signupUser
                     self.navigationController?.pushViewController(pwSignupVC, animated: true)
                 }
-            } else {
+            }
+            // 인증 실패
+            else {
                 print(responseCode)
                 self.authMsg.text = "인증번호가 올바르지 않습니다.\n다시 시도해주세요."
-                if let pwSignupVC = self.storyboard?.instantiateViewController(identifier: "PWSignupVC") as? PWSignupVC {
-                    self.signupUser.email = self.EmailTextField.text!
-                    pwSignupVC.signupUser = self.signupUser
-                    self.navigationController?.pushViewController(pwSignupVC, animated: true)
-                }
             }
-        }
-        if let pwSignupVC = self.storyboard?.instantiateViewController(identifier: "PWSignupVC") as? PWSignupVC {
-            self.signupUser.email = self.EmailTextField.text!
-            pwSignupVC.signupUser = self.signupUser
-            self.navigationController?.pushViewController(pwSignupVC, animated: true)
         }
     }
     

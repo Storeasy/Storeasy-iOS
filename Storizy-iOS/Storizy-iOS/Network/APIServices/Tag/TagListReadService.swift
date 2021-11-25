@@ -1,21 +1,21 @@
 //
-//  MyProfileService.swift
+//  TagListReadService.swift
 //  Storizy-iOS
 //
-//  Created by 임수정 on 2021/11/12.
+//  Created by 임수정 on 2021/11/25.
 //
 
 import Foundation
 import Alamofire
 
-struct MyProfileService {
+struct TagListReadService {
     
-    static let shared = MyProfileService()
+    static let shared = TagListReadService()
 
     
-    func getMyProfile(accessToken: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
+    func getTagList(accessToken: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
-        let url = APIUrls.getMyProfileURL
+        let url = APIUrls.getRecomTagURL
         let header: HTTPHeaders = [ "Content-Type": "application/json"
                                     ,"Authorization": accessToken]
         
@@ -34,16 +34,16 @@ struct MyProfileService {
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
                 if status == 200 {
-                    print("프로필 조회 성공")
+                    print("태그 조회 성공")
                     responseCode = .success
                     // response body 파싱
                     let decoder = JSONDecoder()
-                    guard let responseBody = try? decoder.decode(ResponseData<ProfileData>.self, from: body) else { print("!!!"); return }
+                    guard let responseBody = try? decoder.decode(ResponseData<[TagData]>.self, from: body) else { print("!!!"); return }
                     print(responseBody)
                     // 응답 결과 전송
                     completionHandler(responseCode, responseBody)
                 } else {
-                    print("프로필 조회 실패")
+                    print("태그 조회 실패")
                     print(body)
                     responseCode = .serverError
                     completionHandler(responseCode, "error")

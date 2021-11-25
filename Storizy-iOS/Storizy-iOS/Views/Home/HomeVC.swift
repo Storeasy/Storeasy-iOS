@@ -44,17 +44,29 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        UserDefaults.standard.removeObject(forKey: "accessToken")
-
+        
+        
+        
+        
+        // 온보딩 TEST
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        let onboardingFristVC = storyboard.instantiateViewController(identifier: "OnboardingFristVC") as! OnboardingFristVC
+        self.navigationController?.pushViewController(onboardingFristVC, animated: true)
+        
+        
+        
+        
         // 최초시작
         if UserDefaults.standard.string(forKey: "firstLoad") == nil {
             print("최초시작")
             UserDefaults.standard.setValue("false", forKey: "firstLoad")
             // 온보딩
             let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-            let onboardingVC = storyboard.instantiateViewController(identifier: "OnboardingVC") as! OnboardingVC
-            onboardingVC.modalPresentationStyle = .popover
-            present(onboardingVC, animated: true, completion: nil)
+            let onboardingFristVC = storyboard.instantiateViewController(identifier: "OnboardingFristVC") as! OnboardingFristVC
+            self.navigationController?.pushViewController(onboardingFristVC, animated: true)
         }
+//        UserDefaults.standard.removeObject(forKey: "firstLoad")
+
         
         // !최초시작
         
@@ -93,8 +105,8 @@ class HomeVC: UIViewController {
     
     func loadProfile(){
         // 이미지 URL
-        let url = URL(string: myProfileData?.profileImage ??
-                        "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
+//        let url = URL(string: "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png")
+        let url = URL(string: myProfileData?.profileImage ?? "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
         let imgData = try! Data(contentsOf: url!)
         profileImgView.image = UIImage(data: imgData)
         nameLB.text = myProfileData?.nickname ?? "nickname"
@@ -115,9 +127,8 @@ class HomeVC: UIViewController {
         accessToken = token
         MyProfileService.shared.getMyProfile(accessToken: self.accessToken!) { (responseCode, responseBody) in
             if responseCode == .success {
-                let body = responseBody as! ResponseData<ProfileData>
+                guard let body = responseBody as? ResponseData<ProfileData> else { return }
                 print(body)
-                print(responseCode)
 
                 // 프로필에 불러오기
                 self.myProfileData = body.data

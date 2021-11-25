@@ -20,10 +20,14 @@ struct APIUrls {
     static let getMyProfileURL = baseURL + "profile" // 내 프로필 조회
     static let getProfileURL = baseURL + "profile/" // 다른 사람 프로필 조회
     static let postUpdateProfileURL = baseURL + "profile" // 내 프로필 수정
-    static let getRecomTagURL = baseURL + "profile/tags/recommend" // 추천 태그 조회
-    static let postSetProfileTagsURL = baseURL + "profile/tags" // 프로필 태그 설정
+    
+    // upload
+    static let uploadProfileImageURL = baseURL + "upload/profile" // 프로필 이미지 업로드
+    static let uploadPageImagesURL = baseURL + "upload/page" // 페이지 이미지 업로드
     
     // tag
+    static let getRecomTagURL = baseURL + "profile/tags/recommend" // 추천 태그 조회
+    static let postSetProfileTagsURL = baseURL + "profile/tags" // 프로필 태그 설정
     static let postAddTagURL = baseURL + "tags" // 태그 추가
     
     // project

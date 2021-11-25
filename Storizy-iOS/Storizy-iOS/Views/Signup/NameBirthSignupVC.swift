@@ -19,12 +19,16 @@ class NameBirthSignupVC: UIViewController {
     @IBOutlet weak var nextBTN: UIButton!
     
     var signupUser: SignupUser = SignupUser()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
 
+    }
+    
+    // 생년월일 유효
+    func is8Birth(){
+        
     }
     
     // 화면 터치 시

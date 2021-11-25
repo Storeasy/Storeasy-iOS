@@ -27,7 +27,7 @@ class PWSignupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        print(signupUser.email)
+//        print(signupUser.email)
     }
     
     // 비밀번호 검사
@@ -72,11 +72,15 @@ class PWSignupVC: UIViewController {
     
     // 다음
     @IBAction func nextToNameBirthAction(_ sender: Any) {
-        if let nameBirthSignupVC = self.storyboard?.instantiateViewController(identifier: "NameBirthSignupVC") as? NameBirthSignupVC {
-            signupUser.pw = pwTF.text!
-            nameBirthSignupVC.signupUser = self.signupUser
-            self.navigationController?.pushViewController(nameBirthSignupVC, animated: true)
+        // 비밀번호 유효 통과시 다음페이지 이동
+        if isValid {
+            if let nameBirthSignupVC = self.storyboard?.instantiateViewController(identifier: "NameBirthSignupVC") as? NameBirthSignupVC {
+                signupUser.pw = pwTF.text!
+                nameBirthSignupVC.signupUser = self.signupUser
+                self.navigationController?.pushViewController(nameBirthSignupVC, animated: true)
+            }
         }
+        
     }
     
     // MARK: - UI

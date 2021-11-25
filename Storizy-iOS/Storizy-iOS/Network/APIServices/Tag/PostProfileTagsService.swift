@@ -1,28 +1,30 @@
 //
-//  EmailCheckService.swift
+//  PostProfileTagsService.swift
 //  Storizy-iOS
 //
-//  Created by 임수정 on 2021/11/11.
+//  Created by 임수정 on 2021/11/25.
 //
 
 import Foundation
 import Alamofire
 
-struct EmailCheckService {
+struct PostProfileTagsService {
     
-    static let shared = EmailCheckService()
-
+    static let shared = PostProfileTagsService()
     
-    func emailCheckService(_ email: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
+    func postProfileTags (accessToken: String, tagIds: [Int], completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
-        let url = APIUrls.getCheckEmailURL + email
-        let header: HTTPHeaders = [ "Content-Type":"application/json"]
-        let dataRequest = AF.request(url,
-                                     method: .get,
-                                     encoding: JSONEncoding.default,
-                                     headers: header)
-        
-        dataRequest.responseData { (response) in
+        let url = APIUrls.postSetProfileTagsURL
+        let header: HTTPHeaders = [ "Content-Type": "application/json"
+                                    ,"Authorization": accessToken]
+        let body: Parameters = [
+            "tags" : tagIds
+        ]
+        AF.request(url,
+                   method: .post,
+                   parameters: body,
+                   encoding: JSONEncoding.default,
+                   headers: header).responseData { (response) in
             switch response.result {
             case .success:
                 guard let status = response.response?.statusCode else { return }
@@ -30,13 +32,14 @@ struct EmailCheckService {
                 
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
-                if status == 200 {
-                    print("이메일 중복 확인 성공")
+                if status == 201 {
+                    print("성공")
                     responseCode = .success
                 } else {
+                    print("실패")
+                    print(response)
                     responseCode = .serverError
                 }
-                //400 추가
                 
                 // response body 파싱
                 let decoder = JSONDecoder()
@@ -49,6 +52,7 @@ struct EmailCheckService {
                 completionHandler(.requestError, "request fail")
             }
         }
+        
     }
     
     
