@@ -81,17 +81,17 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s87-dh-e8Z" userLabel="bar view">
-                        <rect key="frame" x="9.5" y="26.5" width="1" height="113.5"/>
+                        <rect key="frame" x="9" y="26.5" width="2" height="113.5"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="1" id="9rO-p4-7Ot"/>
+                            <constraint firstAttribute="width" constant="2" id="9rO-p4-7Ot"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTD-kc-le4" userLabel="top bar view">
-                        <rect key="frame" x="9.5" y="0.0" width="1" height="26.5"/>
+                        <rect key="frame" x="9" y="0.0" width="2" height="26.5"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="1" id="J0w-T4-c6W"/>
+                            <constraint firstAttribute="width" constant="2" id="J0w-T4-c6W"/>
                         </constraints>
                     </view>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yw0-p6-D72" userLabel="dot" customClass="UIImageView">

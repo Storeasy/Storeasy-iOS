@@ -83,17 +83,17 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-pN-HRM" userLabel="bar view">
-                        <rect key="frame" x="9.5" y="26.5" width="1" height="113.5"/>
+                        <rect key="frame" x="9" y="26.5" width="2" height="113.5"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="1" id="5gi-xI-h1O"/>
+                            <constraint firstAttribute="width" constant="2" id="5gi-xI-h1O"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUT-ss-Y6B" userLabel="top bar view">
-                        <rect key="frame" x="9.5" y="0.0" width="1" height="26.5"/>
+                        <rect key="frame" x="9" y="0.0" width="2" height="26.5"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="1" id="IZI-He-QcO"/>
+                            <constraint firstAttribute="width" constant="2" id="IZI-He-QcO"/>
                         </constraints>
                     </view>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DtG-px-vsf" userLabel="dot" customClass="UIImageView">

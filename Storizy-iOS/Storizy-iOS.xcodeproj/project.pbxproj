@@ -23,7 +23,6 @@
 		DE1E3667274F6FD00095F581 /* AddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1E3665274F6FCF0095F581 /* AddCell.xib */; };
 		DE1E3669274F7E700095F581 /* ProjectRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3668274F7E6F0095F581 /* ProjectRequest.swift */; };
 		DE1E366B274F93130095F581 /* PageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E366A274F93120095F581 /* PageRequest.swift */; };
-		DE1E366D274F936A0095F581 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E366C274F936A0095F581 /* Page.swift */; };
 		DE1E366F274F93790095F581 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E366E274F93790095F581 /* Project.swift */; };
 		DEA36E522733B1D900BBFEF5 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E512733B1D900BBFEF5 /* Signup.storyboard */; };
 		DEA36E582733CAEA00BBFEF5 /* SignupNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */; };
@@ -137,6 +136,10 @@
 		DEFE07552750A39F002EDC4C /* PageDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE07542750A39E002EDC4C /* PageDetailData.swift */; };
 		DEFE07572750B0BE002EDC4C /* PageInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE07562750B0BD002EDC4C /* PageInProject.swift */; };
 		DEFE07592750DAB6002EDC4C /* GetRecomPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE07582750DAB5002EDC4C /* GetRecomPageService.swift */; };
+		DEFE075B27510413002EDC4C /* SearchPageByTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE075A27510412002EDC4C /* SearchPageByTag.swift */; };
+		DEFE075D27510427002EDC4C /* SearchProfileByTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE075C27510426002EDC4C /* SearchProfileByTag.swift */; };
+		DEFE075F27512E78002EDC4C /* GetHeartUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE075E27512E77002EDC4C /* GetHeartUserService.swift */; };
+		DEFE076127512E87002EDC4C /* GetHeartPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE076027512E87002EDC4C /* GetHeartPageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,7 +161,6 @@
 		DE1E3665274F6FCF0095F581 /* AddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCell.xib; sourceTree = "<group>"; };
 		DE1E3668274F7E6F0095F581 /* ProjectRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRequest.swift; sourceTree = "<group>"; };
 		DE1E366A274F93120095F581 /* PageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageRequest.swift; sourceTree = "<group>"; };
-		DE1E366C274F936A0095F581 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		DE1E366E274F93790095F581 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		DEA36E512733B1D900BBFEF5 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		DEA36E572733CAEA00BBFEF5 /* SignupNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNC.swift; sourceTree = "<group>"; };
@@ -274,6 +276,10 @@
 		DEFE07542750A39E002EDC4C /* PageDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailData.swift; sourceTree = "<group>"; };
 		DEFE07562750B0BD002EDC4C /* PageInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInProject.swift; sourceTree = "<group>"; };
 		DEFE07582750DAB5002EDC4C /* GetRecomPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecomPageService.swift; sourceTree = "<group>"; };
+		DEFE075A27510412002EDC4C /* SearchPageByTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageByTag.swift; sourceTree = "<group>"; };
+		DEFE075C27510426002EDC4C /* SearchProfileByTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProfileByTag.swift; sourceTree = "<group>"; };
+		DEFE075E27512E77002EDC4C /* GetHeartUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeartUserService.swift; sourceTree = "<group>"; };
+		DEFE076027512E87002EDC4C /* GetHeartPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeartPageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,7 +432,6 @@
 				DEA36F0D273E406400BBFEF5 /* SigninResponseData.swift */,
 				DEA36F12273E46A900BBFEF5 /* ProfileData.swift */,
 				DEA36F14273E476300BBFEF5 /* TagData.swift */,
-				DE1E366C274F936A0095F581 /* Page.swift */,
 				DE1E366E274F93790095F581 /* Project.swift */,
 				DEFE0740275035AD002EDC4C /* ProjectDetail.swift */,
 				DEFE074227504020002EDC4C /* Story.swift */,
@@ -638,6 +643,8 @@
 			isa = PBXGroup;
 			children = (
 				DEFE07582750DAB5002EDC4C /* GetRecomPageService.swift */,
+				DEFE075A27510412002EDC4C /* SearchPageByTag.swift */,
+				DEFE075C27510426002EDC4C /* SearchProfileByTag.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -693,6 +700,8 @@
 		DEF9E56E2732CDCF0022B33B /* Heart */ = {
 			isa = PBXGroup;
 			children = (
+				DEFE075E27512E77002EDC4C /* GetHeartUserService.swift */,
+				DEFE076027512E87002EDC4C /* GetHeartPageService.swift */,
 			);
 			path = Heart;
 			sourceTree = "<group>";
@@ -891,8 +900,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFE075B27510413002EDC4C /* SearchPageByTag.swift in Sources */,
 				DEA36EFB273D168800BBFEF5 /* SignupUser.swift in Sources */,
 				DE1E3666274F6FD00095F581 /* AddCell.swift in Sources */,
+				DEFE075D27510427002EDC4C /* SearchProfileByTag.swift in Sources */,
 				DEA36F09273E2A5E00BBFEF5 /* CheckAuthEmailService.swift in Sources */,
 				DEFE074F27504BD3002EDC4C /* SearchStoryService.swift in Sources */,
 				DE1E3612274785080095F581 /* StoryTagCell.swift in Sources */,
@@ -929,6 +940,7 @@
 				DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */,
 				DEA36EF9273CF1A600BBFEF5 /* APIUrls.swift in Sources */,
 				DEA36EE8273A408D00BBFEF5 /* ProfileTagCell.swift in Sources */,
+				DEFE076127512E87002EDC4C /* GetHeartPageService.swift in Sources */,
 				DE1E365E274F2B0D0095F581 /* TagSelectVC.swift in Sources */,
 				DEA36EBB27390F7100BBFEF5 /* User.swift in Sources */,
 				DEA36EF4273BDA8A00BBFEF5 /* ImageCell.swift in Sources */,
@@ -949,6 +961,7 @@
 				DEA36EDE273A262600BBFEF5 /* ExploreNC.swift in Sources */,
 				DEA36E72273526E200BBFEF5 /* OnboardingVC.swift in Sources */,
 				DEFE07572750B0BE002EDC4C /* PageInProject.swift in Sources */,
+				DEFE075F27512E78002EDC4C /* GetHeartUserService.swift in Sources */,
 				DEA36EA227383A0300BBFEF5 /* EditPageVC.swift in Sources */,
 				DEA36EFF273D19FC00BBFEF5 /* SignupService.swift in Sources */,
 				DEA36F13273E46A900BBFEF5 /* ProfileData.swift in Sources */,
@@ -980,7 +993,6 @@
 				DEF9E5A12733854B0022B33B /* SigninVC.swift in Sources */,
 				DE1E3616274796170095F581 /* PTagCell.swift in Sources */,
 				DEA36E642733D60100BBFEF5 /* MajorSignupVC.swift in Sources */,
-				DE1E366D274F936A0095F581 /* Page.swift in Sources */,
 				DE1E3669274F7E700095F581 /* ProjectRequest.swift in Sources */,
 				DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */,
 				DEA36F11273E456100BBFEF5 /* MyProfileService.swift in Sources */,

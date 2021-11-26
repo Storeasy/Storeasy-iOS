@@ -21,4 +21,5 @@ struct PageDetailData: Codable {
     var images: [String]
     var imageCount: Int?
     var tags: [TagData?]
+    var projectColor: String?
 }

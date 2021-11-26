@@ -29,10 +29,9 @@ class CreatePageVC: UIViewController {
         }
     }
     var tagIds: [Int] = []
-    var tags: [String] = ["스토리지","예선진출"]
     
     var projectList: [String] = ["오늘의 옷장"] // 프로젝트 id + name 구조체로 대체
-    var projectId = 8
+    var projectId = 11
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,6 +154,10 @@ class CreatePageVC: UIViewController {
         contentTV.textContainerInset = UIEdgeInsets(top: 12, left: 6,bottom: 12,right: 12)
         // 완료 버튼
         doneBTN.layer.cornerRadius = 12
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     

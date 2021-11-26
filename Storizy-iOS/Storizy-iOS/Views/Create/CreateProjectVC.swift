@@ -31,9 +31,6 @@ class CreateProjectVC: UIViewController {
         }
     }
     var tagIds: [Int] = []
-
-//    var tags: [String] = ["스토리지","예선진출"]
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,7 +143,7 @@ class CreateProjectVC: UIViewController {
         tagIds = tagDatas.map({ $0.id ?? 0 })
         let colorId = Int(self.colorTTGCV.allSelectedTags()[0].tagId) % 7 + 1
 
-        var projectRequest = ProjectRequest(title: titleTF.text,
+        let projectRequest = ProjectRequest(title: titleTF.text,
                                             description: contentTV.text,
                                             startDate: getDateString(startDataPicker),
                                             endDate: getDateString(endDataPicker),
@@ -200,6 +197,10 @@ class CreateProjectVC: UIViewController {
         contentTV.textContainerInset = UIEdgeInsets(top: 12, left: 6,bottom: 12,right: 12)
         // 완료 버튼
         doneBTN.layer.cornerRadius = 12
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 }

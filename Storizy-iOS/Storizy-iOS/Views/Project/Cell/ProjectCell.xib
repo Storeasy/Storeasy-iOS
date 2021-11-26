@@ -91,17 +91,17 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-qH-f5u">
-                        <rect key="frame" x="9.5" y="26.5" width="1" height="113.5"/>
+                        <rect key="frame" x="9" y="26.5" width="2" height="113.5"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="1" id="nzH-lH-ThP"/>
+                            <constraint firstAttribute="width" constant="2" id="nzH-lH-ThP"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z53-FC-gqi">
-                        <rect key="frame" x="9.5" y="0.0" width="1" height="26.5"/>
+                        <rect key="frame" x="9" y="0.0" width="2" height="26.5"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="1" id="iWr-8Q-Kft"/>
+                            <constraint firstAttribute="width" constant="2" id="iWr-8Q-Kft"/>
                         </constraints>
                     </view>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7U-7u-WyF" customClass="UIImageView">

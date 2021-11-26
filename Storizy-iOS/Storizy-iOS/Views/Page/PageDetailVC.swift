@@ -23,7 +23,6 @@ class PageDetailVC: UIViewController {
     // data
     var pageId: Int = 0
     var pageDetailData: PageDetailData?
-//    var tags: [String] = ["예선진출","경축", "스토리지", "빅토리지", "도미토리"]
 
     // 단독 페이지면 프로젝트명 공란
     override func viewDidLoad() {

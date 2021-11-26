@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-Hi-8eP">
-                                <rect key="frame" x="39.5" y="133" width="1" height="234"/>
+                                <rect key="frame" x="39" y="133" width="2" height="234"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="1" id="Dbb-tf-RsP"/>
+                                    <constraint firstAttribute="width" constant="2" id="Dbb-tf-RsP"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tag_orange_project" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-uw-4P7">
@@ -104,7 +104,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClF-J9-Srf">
                                         <rect key="frame" x="360" y="56" width="24" height="24"/>
-                                        <state key="normal" image="clear"/>
+                                        <state key="normal" image="keyboard_arrow_left"/>
                                         <connections>
                                             <action selector="closeAction:" destination="smV-Go-mqX" eventType="touchUpInside" id="QLU-Uc-KGz"/>
                                         </connections>
@@ -164,8 +164,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clear" width="24" height="24"/>
-        <image name="tag_orange_project" width="28" height="28"/>
+        <image name="keyboard_arrow_left" width="24" height="24"/>
+        <image name="tag_orange_project" width="20" height="20"/>
         <namedColor name="black">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

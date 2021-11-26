@@ -228,7 +228,6 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(myStoryTagData[indexPath.item]!.id!)
         // 검색 스토리 조회
         SearchStoryService.shared.getSearchedStory(accessToken: accessToken ?? "", tagId: myStoryTagData[indexPath.item]!.id!) { (responseCode, responseBody) in
             if responseCode == .success {
@@ -283,7 +282,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                 cell.periodLabel.text = "\(page.startDate!) - \(page.endDate!)"
                 cell.pageContentLabel.text = page.content
                 cell.tags = page.tags
-                cell.dotImage.image = UIImage(named: "tag_black_page")
+                cell.dotImage.image = UIImage(named: "\(page.projectColor ?? "tag_black")_page")
 
                 // components ui
                 if indexPath.row == 0 {

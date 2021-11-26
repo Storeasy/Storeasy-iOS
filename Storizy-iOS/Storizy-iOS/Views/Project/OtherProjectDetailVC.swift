@@ -17,7 +17,7 @@ class OtherProjectDetailVC: UIViewController {
     @IBOutlet weak var contentTVHeight: NSLayoutConstraint!
     @IBOutlet weak var tagCV: UICollectionView!
     
-    var pages: [Page] = []
+    var pages: [PageDetailData] = []
     var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "예선진출", "경축", "많관부"]
 
     override func viewDidLoad() {

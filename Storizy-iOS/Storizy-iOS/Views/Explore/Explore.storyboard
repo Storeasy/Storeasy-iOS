@@ -18,15 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="태그 검색" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-ET-GrP">
-                                <rect key="frame" x="0.0" y="89" width="414" height="60"/>
+                            <searchBar contentMode="redraw" placeholder="검색어를 입력하세요." translatesAutoresizingMaskIntoConstraints="NO" id="IvO-ET-GrP">
+                                <rect key="frame" x="20" y="94" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9L1-15-VTJ"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hx-1x-1fB">
+                                <rect key="frame" x="20" y="94" width="374" height="2"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="xYZ-L2-U4q"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEd-zD-CFS">
-                                <rect key="frame" x="0.0" y="149" width="414" height="664"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="661"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAn-cM-vjY">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="711"/>
@@ -38,7 +45,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-Or-MoX">
-                                                <rect key="frame" x="30" y="68" width="384" height="100"/>
+                                                <rect key="frame" x="0.0" y="68" width="414" height="100"/>
                                                 <color key="backgroundColor" name="extra_white"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Zal-VU-QwK"/>
@@ -47,11 +54,11 @@
                                                     <size key="itemSize" width="211" height="100"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="30" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContentCell" id="VXV-yi-O0W" customClass="ContentCell" customModule="Storizy_iOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="0.0" width="211" height="100"/>
+                                                        <rect key="frame" x="30" y="0.0" width="211" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2dU-Sy-CBq">
                                                             <rect key="frame" x="0.0" y="0.0" width="211" height="100"/>
@@ -105,7 +112,7 @@
                                             <constraint firstItem="8Ll-wz-gKG" firstAttribute="centerX" secondItem="YAn-cM-vjY" secondAttribute="centerX" id="2L9-BN-b3E"/>
                                             <constraint firstAttribute="trailing" secondItem="2nU-5g-oDm" secondAttribute="trailing" id="FUe-3F-rAz"/>
                                             <constraint firstItem="0CH-Du-PFZ" firstAttribute="leading" secondItem="YAn-cM-vjY" secondAttribute="leading" constant="33" id="Hhn-N4-IqZ"/>
-                                            <constraint firstItem="3S6-Or-MoX" firstAttribute="leading" secondItem="YAn-cM-vjY" secondAttribute="leading" constant="30" id="J0g-kD-H0s"/>
+                                            <constraint firstItem="3S6-Or-MoX" firstAttribute="leading" secondItem="YAn-cM-vjY" secondAttribute="leading" id="J0g-kD-H0s"/>
                                             <constraint firstItem="XRB-g3-07o" firstAttribute="top" secondItem="YAn-cM-vjY" secondAttribute="top" constant="36" id="LJJ-af-abD"/>
                                             <constraint firstItem="2nU-5g-oDm" firstAttribute="top" secondItem="0CH-Du-PFZ" secondAttribute="bottom" constant="8" id="P9S-M7-NEu"/>
                                             <constraint firstItem="0CH-Du-PFZ" firstAttribute="top" secondItem="3S6-Or-MoX" secondAttribute="bottom" constant="32" id="QLO-qA-viS"/>
@@ -130,7 +137,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="5TJ-K0-SAi"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJz-VM-aue">
-                                <rect key="frame" x="0.0" y="89" width="414" height="60"/>
+                                <rect key="frame" x="20" y="94" width="374" height="60"/>
                                 <connections>
                                     <action selector="searchBarBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lFt-xn-2PS"/>
                                 </connections>
@@ -159,23 +166,28 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aEd-zD-CFS" secondAttribute="bottom" id="422-kb-aaB"/>
                             <constraint firstItem="aEd-zD-CFS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BHK-rn-5Nm"/>
                             <constraint firstItem="Ieh-qr-mu9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="M48-x7-vYG"/>
-                            <constraint firstItem="aEd-zD-CFS" firstAttribute="top" secondItem="IvO-ET-GrP" secondAttribute="bottom" id="XrR-Md-Dgf"/>
+                            <constraint firstItem="8hx-1x-1fB" firstAttribute="top" secondItem="IvO-ET-GrP" secondAttribute="top" id="X6k-YX-tI0"/>
+                            <constraint firstItem="8hx-1x-1fB" firstAttribute="width" secondItem="IvO-ET-GrP" secondAttribute="width" id="XiU-bj-cOS"/>
+                            <constraint firstItem="aEd-zD-CFS" firstAttribute="top" secondItem="IvO-ET-GrP" secondAttribute="bottom" constant="-2" id="XrR-Md-Dgf"/>
                             <constraint firstItem="Ieh-qr-mu9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZA5-Ym-lyH"/>
                             <constraint firstItem="Ieh-qr-mu9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-45" id="ZHy-t1-1YD"/>
                             <constraint firstItem="eJz-VM-aue" firstAttribute="leading" secondItem="IvO-ET-GrP" secondAttribute="leading" id="e8T-jv-mJP"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IvO-ET-GrP" secondAttribute="trailing" id="eeL-gh-ZU1"/>
-                            <constraint firstItem="IvO-ET-GrP" firstAttribute="top" secondItem="Ieh-qr-mu9" secondAttribute="bottom" id="n35-ei-fFQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IvO-ET-GrP" secondAttribute="trailing" constant="20" id="eeL-gh-ZU1"/>
+                            <constraint firstItem="8hx-1x-1fB" firstAttribute="leading" secondItem="IvO-ET-GrP" secondAttribute="leading" id="j45-ry-bky"/>
+                            <constraint firstItem="IvO-ET-GrP" firstAttribute="top" secondItem="Ieh-qr-mu9" secondAttribute="bottom" constant="5" id="n35-ei-fFQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aEd-zD-CFS" secondAttribute="trailing" id="qNQ-BW-pU2"/>
                             <constraint firstItem="eJz-VM-aue" firstAttribute="bottom" secondItem="IvO-ET-GrP" secondAttribute="bottom" id="r2F-QV-XK9"/>
                             <constraint firstItem="eJz-VM-aue" firstAttribute="top" secondItem="IvO-ET-GrP" secondAttribute="top" id="rLg-mZ-oag"/>
+                            <constraint firstItem="8hx-1x-1fB" firstAttribute="trailing" secondItem="IvO-ET-GrP" secondAttribute="trailing" id="rpT-y0-A2S"/>
                             <constraint firstItem="eJz-VM-aue" firstAttribute="trailing" secondItem="IvO-ET-GrP" secondAttribute="trailing" id="wio-I5-kKg"/>
-                            <constraint firstItem="IvO-ET-GrP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zLt-dU-1jY"/>
+                            <constraint firstItem="IvO-ET-GrP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="zLt-dU-1jY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="A51-RI-mZL"/>
                     <connections>
                         <outlet property="contentCV" destination="3S6-Or-MoX" id="dSs-f5-X1W"/>
                         <outlet property="headBarView" destination="Ieh-qr-mu9" id="OwB-fL-ULo"/>
+                        <outlet property="searchBar" destination="IvO-ET-GrP" id="iBY-3k-sYz"/>
                         <outlet property="tableView" destination="2nU-5g-oDm" id="CI6-9e-6Cv"/>
                         <outlet property="tableViewHeight" destination="biA-8s-lGj" id="Zqk-4R-mhV"/>
                     </connections>
@@ -232,16 +244,30 @@
                                     <outlet property="delegate" destination="xzA-f0-dP3" id="YZf-GL-UEO"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="태그 검색" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOC-G0-wzs">
-                                <rect key="frame" x="0.0" y="89" width="414" height="60"/>
+                            <searchBar contentMode="redraw" placeholder="검색어를 입력하세요." showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOC-G0-wzs">
+                                <rect key="frame" x="20" y="94" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7Jj-sM-h7A"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="xzA-f0-dP3" id="EUY-R4-9oq"/>
                                 </connections>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gi-w2-H5P">
+                                <rect key="frame" x="20" y="152" width="374" height="2"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="I2I-oM-LQB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Du-L3-rKr">
+                                <rect key="frame" x="20" y="94" width="374" height="2"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="o6Z-JL-4kZ"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWa-C8-sJr">
                                 <rect key="frame" x="0.0" y="-1" width="414" height="90"/>
                                 <subviews>
@@ -264,14 +290,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eNS-WM-j7N" firstAttribute="top" secondItem="B3S-dD-KVw" secondAttribute="bottom" constant="15" id="5CY-45-Si4"/>
-                            <constraint firstItem="ZOC-G0-wzs" firstAttribute="top" secondItem="hWa-C8-sJr" secondAttribute="bottom" id="7fb-is-Kvd"/>
-                            <constraint firstItem="ZOC-G0-wzs" firstAttribute="leading" secondItem="F9x-n4-Cx9" secondAttribute="leading" id="Cvt-qX-i8O"/>
+                            <constraint firstItem="ZOC-G0-wzs" firstAttribute="top" secondItem="hWa-C8-sJr" secondAttribute="bottom" constant="5" id="7fb-is-Kvd"/>
+                            <constraint firstItem="9Du-L3-rKr" firstAttribute="top" secondItem="ZOC-G0-wzs" secondAttribute="top" id="Ay1-jt-l7l"/>
+                            <constraint firstItem="8Gi-w2-H5P" firstAttribute="width" secondItem="ZOC-G0-wzs" secondAttribute="width" id="Csf-Me-lN1"/>
+                            <constraint firstItem="ZOC-G0-wzs" firstAttribute="leading" secondItem="F9x-n4-Cx9" secondAttribute="leading" constant="20" id="Cvt-qX-i8O"/>
                             <constraint firstItem="F9x-n4-Cx9" firstAttribute="trailing" secondItem="hWa-C8-sJr" secondAttribute="trailing" id="EOw-xP-yRs"/>
-                            <constraint firstItem="B3S-dD-KVw" firstAttribute="top" secondItem="ZOC-G0-wzs" secondAttribute="bottom" constant="15" id="Pnk-MQ-JSX"/>
-                            <constraint firstItem="ZOC-G0-wzs" firstAttribute="trailing" secondItem="F9x-n4-Cx9" secondAttribute="trailing" id="Rlb-4z-Mcs"/>
+                            <constraint firstItem="9Du-L3-rKr" firstAttribute="width" secondItem="ZOC-G0-wzs" secondAttribute="width" id="EZY-np-DGD"/>
+                            <constraint firstItem="8Gi-w2-H5P" firstAttribute="bottom" secondItem="ZOC-G0-wzs" secondAttribute="bottom" id="Ldj-pd-xcr"/>
+                            <constraint firstItem="8Gi-w2-H5P" firstAttribute="leading" secondItem="ZOC-G0-wzs" secondAttribute="leading" id="M39-sf-tyK"/>
+                            <constraint firstItem="B3S-dD-KVw" firstAttribute="top" secondItem="ZOC-G0-wzs" secondAttribute="bottom" constant="10" id="Pnk-MQ-JSX"/>
+                            <constraint firstItem="ZOC-G0-wzs" firstAttribute="trailing" secondItem="F9x-n4-Cx9" secondAttribute="trailing" constant="-20" id="Rlb-4z-Mcs"/>
                             <constraint firstItem="hWa-C8-sJr" firstAttribute="leading" secondItem="F9x-n4-Cx9" secondAttribute="leading" id="TwN-MU-siP"/>
                             <constraint firstItem="F9x-n4-Cx9" firstAttribute="trailing" secondItem="eNS-WM-j7N" secondAttribute="trailing" id="alg-iO-pcN"/>
                             <constraint firstItem="F9x-n4-Cx9" firstAttribute="bottom" secondItem="eNS-WM-j7N" secondAttribute="bottom" id="b8K-qg-Vx2"/>
+                            <constraint firstItem="9Du-L3-rKr" firstAttribute="leading" secondItem="ZOC-G0-wzs" secondAttribute="leading" id="bsh-HD-k0y"/>
                             <constraint firstItem="eNS-WM-j7N" firstAttribute="leading" secondItem="F9x-n4-Cx9" secondAttribute="leading" id="fhW-6e-rkf"/>
                             <constraint firstItem="F9x-n4-Cx9" firstAttribute="trailing" secondItem="B3S-dD-KVw" secondAttribute="trailing" constant="20" id="jK0-8H-7BT"/>
                             <constraint firstItem="B3S-dD-KVw" firstAttribute="leading" secondItem="F9x-n4-Cx9" secondAttribute="leading" constant="20" id="teh-gE-Xyo"/>
@@ -281,6 +313,7 @@
                     <navigationItem key="navigationItem" id="gyV-iN-Vu7"/>
                     <connections>
                         <outlet property="headBarView" destination="hWa-C8-sJr" id="8hF-IK-lhI"/>
+                        <outlet property="searchBar" destination="ZOC-G0-wzs" id="QV6-8o-Wm6"/>
                         <outlet property="tableView" destination="eNS-WM-j7N" id="ejK-bS-6gn"/>
                     </connections>
                 </viewController>

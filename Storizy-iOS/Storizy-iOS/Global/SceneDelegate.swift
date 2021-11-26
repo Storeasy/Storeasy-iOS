@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 최초시작 테스트 하고 싶으면 주석 해제
 //        UserDefaults.standard.removeObject(forKey: "accessToken")
 //        UserDefaults.standard.removeObject(forKey: "firstLoad")
-        
+
 
         //자동로그인
         if (UserDefaults.standard.string(forKey: "accessToken") != nil) {

@@ -18,7 +18,7 @@ class OtherPageDetailVC: UIViewController {
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var pageFrameView: UIView!
-    @IBOutlet weak var imgCollectionView: UICollectionView!
+//    @IBOutlet weak var imgCollectionView: UICollectionView!
     @IBOutlet weak var contentTextViewHeight: NSLayoutConstraint!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var tagCV: UICollectionView!
@@ -29,7 +29,6 @@ class OtherPageDetailVC: UIViewController {
     
     var pageId: Int = 0
     var pageDetailData: PageDetailData?
-//    var tags: [String] = ["예선진출","경축", "스토리지", "빅토리지", "도미토리"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +59,13 @@ class OtherPageDetailVC: UIViewController {
         profileImgView.image = UIImage(data: imgData)
         nicknameLB.text = pageDetailData?.nickname
         
-        projectBTN.titleLabel?.text = pageDetailData?.projectTitle ?? ""
         pageTitleLB.text = pageDetailData?.title
         periodLB.text = "\(pageDetailData!.startDate!) - \(pageDetailData!.endDate!)"
         heartBTN.imageView?.image = (pageDetailData?.isLiked)! ? UIImage(named: "favorite") : UIImage(named: "favorite_un")
         contentTextView.text = pageDetailData?.content
+        if pageDetailData?.projectTitle != nil {
+            projectBTN.setTitle("\(pageDetailData?.projectTitle ?? "")에 속해있는 페이지 입니다.", for: .normal)
+        }
     }
     
     @IBAction func closeBtnAction(_ sender: Any) {

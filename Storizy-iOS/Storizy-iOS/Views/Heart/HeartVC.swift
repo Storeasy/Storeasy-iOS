@@ -17,9 +17,13 @@ class HeartVC: UIViewController {
     @IBOutlet weak var heartTableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
-    var pages: [Page] = []
-    var users: [User] = []
-    var currentDatas: [Any] = []
+    var pages: [PageDetailData] = []
+    var users: [ProfileData] = []
+    var currentDatas: [Any] = [] {
+        didSet {
+            heartTableView.reloadData()
+        }
+    }
     
     var type: Int? {
         didSet{
@@ -29,36 +33,14 @@ class HeartVC: UIViewController {
             } else {
                 currentDatas = users
             }
-            heartTableView.reloadData()
         }
     }
     
-    /*
-     // CustomSegmentedControl
-    @IBOutlet weak var interfaceSegmented: CustomSegmentedControl!{
-            didSet{
-                interfaceSegmented.setButtonTitles(buttonTitles: ["페이지","사용자"])
-                interfaceSegmented.selectorViewColor = .orange
-                interfaceSegmented.selectorTextColor = .orange
-                print(interfaceSegmented.selectedIndex)
-                self.type = interfaceSegmented.selectedIndex
-                print(type)
-            }
-        }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let codeSegmented = CustomSegmentedControl(frame: CGRect(x: 0, y: 90, width: self.view.frame.width, height: 50), buttonTitle: ["페이지","사용자"])
-//        codeSegmented.backgroundColor = .clear
-//        view.addSubview(codeSegmented)
-        
+        getPageData()
+        getUserData()
         // 페이지가 default
         type = PAGE
         
@@ -69,6 +51,35 @@ class HeartVC: UIViewController {
     // segment 변경시
     @IBAction func segmentDidChanged(_ sender: UISegmentedControl) {
         type = sender.selectedSegmentIndex
+    }
+    
+    // API
+    
+    func getUserData(){
+        // 사용자 호출
+        GetHeartUserService.shared.getHeartUser(accessToken: accessToken) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<[ProfileData]>
+                self.users = body.data ?? []
+                print(responseCode, responseBody)
+            } else {
+                print(responseCode, responseBody)
+            }
+        }
+    }
+    
+    func getPageData(){
+        // 페이지 호출
+        GetHeartPageService.shared.getHeartPage(accessToken: accessToken) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<[PageDetailData]>
+                self.pages = body.data ?? []
+                self.currentDatas = self.pages
+                print(responseCode, responseBody)
+            } else {
+                print(responseCode, responseBody)
+            }
+        }
     }
     
     // MARK: - Nib 등록
@@ -106,12 +117,35 @@ extension HeartVC: UITableViewDelegate, UITableViewDataSource {
         // 페이지
         if type == PAGE {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeartPageCell", for: indexPath) as! HeartPageCell
+            let page = pages[indexPath.row]
+            
+            let url = URL(string: page.profileImage ?? "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
+            let imgData = try! Data(contentsOf: url!)
+            cell.profileImg.image = UIImage(data: imgData)
+            
+            cell.nicknameLB.text = page.nickname
+            cell.pageTitleLB.text = page.title
+            cell.pageContentLB.text = page.content
+            cell.isLiked = page.isLiked ?? true
+            cell.heartBTN.imageView?.image = UIImage(named: "favorite")
+
             return cell
         }
         
         // 사용자
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeartUserCell", for: indexPath) as! HeartUserCell
+            let user = users[indexPath.row]
+            
+            let url = URL(string: user.profileImage ?? "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
+            let imgData = try! Data(contentsOf: url!)
+            cell.profileImg.image = UIImage(data: imgData)
+            
+            cell.usernameLabel.text = user.nickname
+            cell.univNameLabel.text = user.universityName
+            cell.tags = user.tags
+            cell.isLiked = user.isLiked ?? true
+            cell.heartBTN.imageView?.image = UIImage(named: "favorite")
             return cell
         }
     }
@@ -129,7 +163,8 @@ extension HeartVC: UITableViewDelegate, UITableViewDataSource {
         // 사용자
         else {
             let storyboard = UIStoryboard(name: "OtherHome", bundle: nil)
-            let otherHomeVC = storyboard.instantiateViewController(identifier: "OtherHomeVC")
+            guard let otherHomeVC = storyboard.instantiateViewController(identifier: "OtherHomeVC") as? OtherHomeVC else { return }
+            otherHomeVC.userId = users[indexPath.row].userId ?? 0 
             self.navigationController?.pushViewController(otherHomeVC, animated: true)
         }
         

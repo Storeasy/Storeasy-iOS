@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6w-8u-yId">
-                                <rect key="frame" x="0.0" y="141" width="414" height="20"/>
+                                <rect key="frame" x="0.0" y="147" width="414" height="20"/>
                                 <color key="backgroundColor" name="extra_white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="jKl-nZ-EHL"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-NT-7ie">
-                                <rect key="frame" x="0.0" y="89" width="414" height="52"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="58"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-jP-1Lh">
-                                        <rect key="frame" x="30" y="10" width="354" height="33"/>
+                                        <rect key="frame" x="30" y="15" width="354" height="34"/>
                                         <segments>
                                             <segment title="페이지"/>
                                             <segment title="사용자"/>
@@ -40,15 +40,15 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="j6z-jP-1Lh" firstAttribute="top" secondItem="2cB-NT-7ie" secondAttribute="top" constant="10" id="Bqg-HF-aOf"/>
-                                    <constraint firstAttribute="height" constant="52" id="NLN-vU-74Q"/>
+                                    <constraint firstItem="j6z-jP-1Lh" firstAttribute="top" secondItem="2cB-NT-7ie" secondAttribute="top" constant="15" id="Bqg-HF-aOf"/>
+                                    <constraint firstAttribute="height" constant="58" id="NLN-vU-74Q"/>
                                     <constraint firstAttribute="trailing" secondItem="j6z-jP-1Lh" secondAttribute="trailing" constant="30" id="OPp-cu-YCa"/>
                                     <constraint firstAttribute="bottom" secondItem="j6z-jP-1Lh" secondAttribute="bottom" constant="10" id="l0T-ug-wsd"/>
                                     <constraint firstItem="j6z-jP-1Lh" firstAttribute="leading" secondItem="2cB-NT-7ie" secondAttribute="leading" constant="30" id="paB-Mu-cPc"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Irz-gc-iuD">
-                                <rect key="frame" x="0.0" y="141" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="147" width="414" height="666"/>
                                 <color key="backgroundColor" name="white"/>
                                 <color key="separatorColor" name="light_gray2"/>
                                 <connections>
@@ -128,16 +128,16 @@
         <image name="like" width="24" height="24"/>
         <image name="like_active" width="24" height="24"/>
         <namedColor name="black">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="extra_white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="light_gray2">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
-            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

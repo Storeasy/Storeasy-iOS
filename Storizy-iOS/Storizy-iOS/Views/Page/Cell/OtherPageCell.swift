@@ -18,8 +18,9 @@ class OtherPageCell: UITableViewCell {
     @IBOutlet weak var pageContentLabel: UILabel!
     @IBOutlet weak var tagCV: UICollectionView!
     
-    var tags: [String] = ["kiki", "보브영원해라"]
 
+    var tags: [TagData?] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         tagCV.delegate = self
@@ -64,7 +65,7 @@ extension OtherPageCell: UICollectionViewDataSource, UICollectionViewDelegate, U
             return UICollectionViewCell()
         }
         cell.backgroundColor = UIColor(named: "white")
-        cell.tagNameLB.text = tags[indexPath.item]
+        cell.tagNameLB.text = "#\(tags[indexPath.item]?.tagName ?? "")"
         return cell
     }
     

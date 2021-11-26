@@ -33,7 +33,8 @@ class HeartPageCell: UITableViewCell {
     @IBAction func heartAction(_ sender: Any) {
         isLiked.toggle()
         DispatchQueue.main.async {
-            self.heartBTN.imageView?.image =        self.isLiked ? UIImage(named: "favorite") : UIImage(named: "favorite_un")
+            self.heartBTN.imageView?.image =
+                self.isLiked ? UIImage(named: "favorite") : UIImage(named: "favorite_un")
         }
     }
     

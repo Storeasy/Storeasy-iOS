@@ -153,9 +153,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-q6-NxG" userLabel="close">
-                                        <rect key="frame" x="363" y="57" width="21" height="22"/>
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
+                                            <imageReference key="image" image="keyboard_arrow_left" symbolScale="large" renderingMode="original"/>
                                         </state>
                                         <connections>
                                             <action selector="closeAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jGs-5L-gq5"/>
@@ -204,9 +204,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="keyboard_arrow_left" width="24" height="24"/>
         <image name="mimozi" width="640" height="652"/>
         <image name="more" width="24" height="24"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="black">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

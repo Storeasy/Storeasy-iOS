@@ -24,13 +24,32 @@ class OtherHomeVC: UIViewController {
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var feedTableViewHeight: NSLayoutConstraint!
     
-    var feedList: [Any] = []
-    var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "예선진출", "경축", "많관부"]
+    var userId: Int = 0
+    var profileData: ProfileData? {
+        didSet {
+            loadProfile()
+        }
+    }
+    var storyTagData: [TagData?] = [] {
+        didSet {
+            storyTagCV.reloadData()
+        }
+    }
+    
+    var storyData: [Story?] = [] {
+        didSet{
+            feedTableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNib()   // nib 셀 등록
         setUI()         // UI
+        // 프로필, 태그, 스토리 불러오기
+        getProfile()
+        getStoryTags()
+        getStory()
     }
     
     // 닫기
@@ -54,6 +73,66 @@ class OtherHomeVC: UIViewController {
         feedTableView.register(pageNibName, forCellReuseIdentifier: "OtherPageCell")
     }
     
+    // MARK: - 프로필 데이터 뷰에 반영
+
+    func loadProfile(){
+        // 이미지 URL
+        let url = URL(string: profileData?.profileImage ?? "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
+        let imgData = try! Data(contentsOf: url!)
+        profileImageView.image = UIImage(data: imgData)
+        nicknameLB.text = profileData?.nickname ?? "nickname"
+        universityNameLB.text = ( profileData?.universityName ?? "")
+        contactLB.text = profileData?.contact ?? "연락처를 추가해주세요"
+        bioLB.text = profileData?.bio ?? "자기소개를 추가해주세요"
+        
+        profileTagCV.reloadData()
+    }
+    
+    // MARK: - 서버에서 데이터 불러오기
+    
+    // 프로필 데이터
+    func getProfile(){
+        ProfileService.shared.getProfile(accessToken: accessToken ?? "", userId: userId) { (responseCode, responseBody) in
+            if responseCode == .success {
+                guard let body = responseBody as? ResponseData<ProfileData> else { return }
+                print(body)
+                // 프로필에 불러오기
+                self.profileData = body.data
+                self.loadProfile()
+            } else {
+                print(responseCode)
+            }
+        }
+    }
+    
+    
+    // 스토리 태그 데이터
+    func getStoryTags(){
+        GetStoryTagsService.shared.getStoryTags(accessToken: accessToken ?? "", userId: userId) { (responseCode, responseBody) in
+            if responseCode == .success {
+                guard let body = responseBody as? ResponseData<[TagData]> else { print("return"); return }
+                print(body)
+                self.storyTagData = body.data ?? []
+                self.storyTagCV.reloadData()
+            } else {
+                print(responseCode)
+            }
+        }
+    }
+    
+    // 스토리 데이터
+    func getStory(){
+        GetStoryService.shared.getStory(accessToken: accessToken ?? "", userId: userId) { (responseCode, responseBody) in
+            if responseCode == .success {
+                guard let body = responseBody as? ResponseData<[Story]> else { print("!!!!"); return }
+                self.storyData = body.data ?? []
+                self.feedTableView.reloadData()
+            } else {
+                print(responseCode)
+            }
+        }
+    }
+    
     // MARK: - UI
     
     func setShadow(view: UIView){
@@ -66,9 +145,9 @@ class OtherHomeVC: UIViewController {
     
     func setUI(){
         // table view 높이
-        DispatchQueue.main.async {
-            self.feedTableViewHeight.constant = self.feedTableView.contentSize.height
-        }
+//        DispatchQueue.main.async {
+//            self.feedTableViewHeight.constant = self.feedTableView.contentSize.height
+//        }
         // 이미지 원
         profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
         // 둥글
@@ -89,72 +168,109 @@ class OtherHomeVC: UIViewController {
 
 
 
-// MARK: - Table view
+// MARK: - 스토리
 extension OtherHomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedList.count
+        return storyData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let project = feedList[indexPath.row] as? Project {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectCell", for: indexPath) as! ProjectCell
-            cell.projectTitleLabel.text = project.title
-            cell.projectContentLabel.text = "프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용 프로젝트 내용"
-            cell.periodLabel.text = "2020.11.22 - 2021.01.16"
-            cell.moreBtn.isHidden = true
-            return cell
+        // 프로젝트 셀
+        if storyData[indexPath.row]?.page == nil {
+            if let project = storyData[indexPath.row]?.project {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectCell", for: indexPath) as! ProjectCell
+
+                // components
+                cell.projectTitleLabel.text = project.title
+                cell.projectContentLabel.text = project.description
+                cell.periodLabel.text = "\(project.startDate!) - \(project.endDate!)"
+                cell.tags = project.tags
+                cell.dotImage.image = UIImage(named: "tag_black_project")
+
+                // components ui
+                if indexPath.row == 0 {
+                    cell.topBar.isHidden = true
+                }
+                return cell
+            }
         }
+
         
-        else if let page = feedList[indexPath.row] as? Page {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OtherPageCell", for: indexPath) as! OtherPageCell
-            cell.pageTitleLabel.text = page.title
-            cell.pagePeriodLabel.text = "2020.11.22 - 2021.01.16"
-            cell.pageContentLabel.text = "페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용"
-            return cell
+        // 페이지 셀
+        else {
+            if let page = storyData[indexPath.row]?.page {
+
+                let cell = tableView.dequeueReusableCell(withIdentifier: "OtherPageCell", for: indexPath) as! OtherPageCell
+
+                cell.pageTitleLabel.text = page.title
+                cell.pagePeriodLabel.text = "\(page.startDate!) - \(page.endDate!)"
+                cell.pageContentLabel.text = page.content
+                cell.tags = page.tags
+                cell.dotImg.image = UIImage(named: "tag_black_page")
+
+                // components ui
+                if indexPath.row == 0 {
+                    cell.topBar.isHidden = true
+                }
+                return cell
+            }
         }
-        
         return UITableViewCell()
     }
     
+    // 셀 선택 시
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let project = feedList[indexPath.row] as? Project {
-            let storyboard = UIStoryboard(name: "OtherProjectDetail", bundle: nil)
-            let otherProjectDetailVC = storyboard.instantiateViewController(identifier: "OtherProjectDetailVC")
-            self.navigationController?.pushViewController(otherProjectDetailVC, animated: true)
+        
+        // 프로젝트 셀 선택
+        if storyData[indexPath.row]?.page == nil {
+            if let project = storyData[indexPath.row]?.project {
+                // 프로젝트 상세 화면 이동
+                let storyboard = UIStoryboard(name: "ProjectDetail", bundle: nil)
+                guard let projectDetailVC = storyboard.instantiateViewController(identifier: "ProjectDetailVC") as? ProjectDetailVC else { return }
+                projectDetailVC.projectId = project.projectId!
+                self.navigationController?.pushViewController(projectDetailVC, animated: true)
+            }
         }
-        else if let page = feedList[indexPath.row] as? Page {
-            let storyboard = UIStoryboard(name: "OtherPageDetail", bundle: nil)
-            let otherPageDetailVC = storyboard.instantiateViewController(identifier: "OtherPageDetailVC")
-            self.navigationController?.pushViewController(otherPageDetailVC, animated: true)
+        
+        // 페이지 셀 선택
+        else {
+            if let page = storyData[indexPath.row]?.page {
+                //페이지 상세 화면 이동
+                let storyboard = UIStoryboard(name: "PageDetail", bundle: nil)
+                guard let otherPageDetailVC = storyboard.instantiateViewController(identifier: "OtherPageDetailVC") as? OtherPageDetailVC else { return }
+                otherPageDetailVC.pageId = page.pageId!
+                self.navigationController?.pushViewController(otherPageDetailVC, animated: true)
+            }
         }
     }
     
+    
 }
+
 
 // MARK: - collection view
 extension OtherHomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
         switch collectionView {
         case profileTagCV:
-            return 0
-//            return myProfileData?.tags.count ?? 0
+            return profileData?.tags.count ?? 0
         case storyTagCV:
-            return storyTags.count
+            return storyTagData.count
         default:
             return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         switch collectionView {
         // 프로필 태그 셀 표현
         case profileTagCV:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileTagCell", for: indexPath) as? ProfileTagCell else {
                 return UICollectionViewCell()
             }
-//            cell.tagNameLabel.text = myProfileData?.tags[indexPath.item].tagName
+            cell.tagNameLabel.text = profileData?.tags[indexPath.item].tagName
             return cell
             
         // 스토리 태그 셀 표현
@@ -162,7 +278,11 @@ extension OtherHomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UIC
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryTagCell", for: indexPath) as? StoryTagCell else {
                 return UICollectionViewCell()
             }
-            cell.tagNameLB.text = storyTags[indexPath.item]
+            let cellData = storyTagData[indexPath.item]
+            cell.selectedColor = cellData?.tagColor
+            cell.tagNameLB.text = "#\(cellData?.tagName ?? "")"
+            cell.tagNameLB.textColor = UIColor(named: "dark_dray1")
+            cell.frameView.backgroundColor = UIColor(named: "white")
             return cell
             
         default:

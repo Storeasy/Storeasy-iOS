@@ -22,7 +22,11 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var tagCV: UICollectionView!
     
-    var tags: [TagData?] = []
+    var tags: [TagData?] = [] {
+        didSet {
+            tagCV.reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

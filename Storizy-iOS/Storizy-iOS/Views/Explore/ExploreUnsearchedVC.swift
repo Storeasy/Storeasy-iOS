@@ -13,10 +13,11 @@ class ExploreUnsearchedVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var contentCV: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     let contentImageNames: [String] = ["content1", "content2"]
-    let contentPageIds: [Int] = [16,17]
+    let contentPageIds: [Int] = [19,20]
     
     var recommPages: [PageDetailData] = [] {
         didSet{
@@ -66,6 +67,9 @@ class ExploreUnsearchedVC: UIViewController {
         headBarView.layer.shadowRadius = 6
         headBarView.layer.shadowOpacity = 1
         headBarView.layer.shadowColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.1).cgColor
+        
+        // 서치바
+        searchBar.layer.borderWidth = 0
         
         // table view - scroll view
 //        DispatchQueue.main.async {

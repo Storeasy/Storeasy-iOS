@@ -33,9 +33,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfY-4w-sun">
-                                        <rect key="frame" x="364" y="27.5" width="20" height="22"/>
+                                        <rect key="frame" x="360" y="26.5" width="24" height="24"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="arrow.forward" catalog="system" renderingMode="original"/>
+                                            <imageReference key="image" image="keyboard_arrow_right" renderingMode="original"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYT-0p-gss" userLabel="select">
@@ -78,10 +78,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayp-lS-MuW">
-                                        <rect key="frame" x="364" y="27.5" width="20" height="22"/>
-                                        <state key="normal">
-                                            <imageReference key="image" image="arrow.forward" catalog="system" renderingMode="original"/>
-                                        </state>
+                                        <rect key="frame" x="360" y="26.5" width="24" height="24"/>
+                                        <state key="normal" image="keyboard_arrow_right"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="extra_white"/>
@@ -107,7 +105,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bI-1X-M0S" userLabel="header">
                                 <rect key="frame" x="0.0" y="-1" width="414" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글작성" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-ks-K9r">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글쓰기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-ks-K9r">
                                         <rect key="frame" x="30" y="56" width="52" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" name="black"/>
@@ -167,9 +165,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv8-KN-RdU">
-                                        <rect key="frame" x="363" y="57" width="21" height="22"/>
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
+                                            <imageReference key="image" image="clear" symbolScale="large" renderingMode="original"/>
                                         </state>
                                         <connections>
                                             <action selector="closeAction:" destination="n77-0H-cU6" eventType="touchUpInside" id="sQR-gw-yhz"/>
@@ -402,9 +400,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48V-XZ-iqY">
-                                        <rect key="frame" x="363" y="57" width="21" height="22"/>
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
+                                            <imageReference key="image" image="clear" symbolScale="large" renderingMode="original"/>
                                         </state>
                                         <connections>
                                             <action selector="closeAction:" destination="ZR0-37-c1X" eventType="touchUpInside" id="btK-qe-GhX"/>
@@ -629,12 +627,12 @@
     </scenes>
     <resources>
         <image name="add_circle_outline" width="24" height="24"/>
-        <image name="arrow.forward" catalog="system" width="128" height="98"/>
+        <image name="clear" width="24" height="24"/>
         <image name="img_add" width="80" height="80"/>
+        <image name="keyboard_arrow_right" width="24" height="24"/>
         <image name="unlock" width="18" height="18"/>
         <image name="write" width="24" height="24"/>
         <image name="write_active" width="24" height="24"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="black">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

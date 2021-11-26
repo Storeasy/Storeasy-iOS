@@ -10,19 +10,25 @@ import UIKit
 class HeartUserCell: UITableViewCell {
     
 
-    @IBOutlet weak var heartBtn: UIButton!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var univNameLabel: UILabel!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var heartBTN: UIButton!
     
-    var tags: [String] = ["개발", "iOS", "Server"]
+    var tags: [TagData] = []
+    {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    var isLiked = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        setUI()
         let nibName = UINib(nibName: "ProfileTagCell", bundle: nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: "ProfileTagCell")
     }
@@ -36,13 +42,21 @@ class HeartUserCell: UITableViewCell {
         }
     }
     
+    @IBAction func heartAction(_ sender: Any) {
+        self.isLiked.toggle()
+        DispatchQueue.main.async {
+            self.heartBTN.imageView?.image =
+                self.isLiked ? UIImage(named: "favorite") : UIImage(named: "favorite_un")
+        }
+    }
+    
     func setUI(){
         profileImg.layer.cornerRadius = profileImg.bounds.height / 2
     }
     
 }
 
-extension HeartUserCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HeartUserCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tags.count
@@ -50,7 +64,7 @@ extension HeartUserCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileTagCell", for: indexPath) as! ProfileTagCell
-        cell.tagNameLabel.text = tags[indexPath.item]
+        cell.tagNameLabel.text = tags[indexPath.item].tagName
         return cell
     }
     

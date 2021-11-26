@@ -55,6 +55,14 @@ struct APIUrls {
     
 
     // exp
-    static let getRecomPageURL = baseURL + "explore/page/recommend" // 페이지 상세 조회
+    static let getRecomPageURL = baseURL + "explore/page/recommend" // 추천페이지목록조회
+    static let searchPageURL = baseURL + "explore/page" // 페이지 검색
+    static let searchProfileURL = baseURL + "explore/user" // 프로필 검색
+    
+    // like
+    static let getLikePageURL = baseURL + "like/page" // 좋아요한 페이지 목록
+    static let getLikeProfileURL = baseURL + "like/user" // 좋아요한 프로필 목록
+
+
 
 }

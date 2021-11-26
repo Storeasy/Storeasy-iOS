@@ -69,6 +69,9 @@
                         <state key="normal">
                             <imageReference key="image" image="favorite_un" renderingMode="original"/>
                         </state>
+                        <connections>
+                            <action selector="heartAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dSP-W5-clV"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -93,7 +96,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="wNm-Hd-6Gn" id="j18-ws-Q0X"/>
-                <outlet property="heartBtn" destination="cDP-3C-HFs" id="Alz-XY-F2x"/>
+                <outlet property="heartBTN" destination="cDP-3C-HFs" id="1gy-Xa-r1V"/>
                 <outlet property="profileImg" destination="ELW-Xm-1RW" id="2Ds-PF-3CT"/>
                 <outlet property="univNameLabel" destination="hpL-j9-hbu" id="Wl2-gk-9jF"/>
                 <outlet property="usernameLabel" destination="auE-BZ-QRM" id="XeK-wQ-gnH"/>
