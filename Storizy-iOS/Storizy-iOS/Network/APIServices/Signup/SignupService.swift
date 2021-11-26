@@ -26,7 +26,7 @@ struct SignupService {
             "universityName": signupUser.univName!,
             "department": signupUser.major!
         ]
-        let encoder = JSONEncoder()
+//        let encoder = JSONEncoder()
 //        let body = try? encoder.encode(signupUser)
 //        guard let bodyData = body, let bodyString = String(data: body!, encoding: .utf8) else {
 //        }
@@ -40,7 +40,8 @@ struct SignupService {
             case .success:
                 guard let status = response.response?.statusCode else { return }
                 guard let body =  response.value else { return }
-                
+                let bodyString = String(data: body, encoding: .utf8)
+                print(bodyString)
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
                 if status == 201 {

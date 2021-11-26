@@ -25,6 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        // 최초시작 테스트 하고 싶으면 주석 해제
+//        UserDefaults.standard.removeObject(forKey: "accessToken")
+//        UserDefaults.standard.removeObject(forKey: "firstLoad")
+        
+
         //자동로그인
         if (UserDefaults.standard.string(forKey: "accessToken") != nil) {
             let storyboard = UIStoryboard(name: "TabBar", bundle: nil)

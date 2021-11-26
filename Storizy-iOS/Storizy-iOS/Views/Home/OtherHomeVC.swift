@@ -24,7 +24,7 @@ class OtherHomeVC: UIViewController {
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var feedTableViewHeight: NSLayoutConstraint!
     
-    var feedList: [Any] = [Project(title: "프로젝트명"), Page(title: "페이지명"), Page(title: "페이지명2"), Project(title: "프로젝트명2"), Page(title: "페이지명3")]
+    var feedList: [Any] = []
     var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "예선진출", "경축", "많관부"]
 
     override func viewDidLoad() {

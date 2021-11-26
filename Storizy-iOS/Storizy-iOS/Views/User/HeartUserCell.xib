@@ -65,9 +65,9 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDP-3C-HFs">
-                        <rect key="frame" x="269" y="13" width="21" height="22"/>
+                        <rect key="frame" x="266" y="12" width="24" height="24"/>
                         <state key="normal">
-                            <imageReference key="image" image="suit.heart.fill" catalog="system" renderingMode="original"/>
+                            <imageReference key="image" image="favorite_un" renderingMode="original"/>
                         </state>
                     </button>
                 </subviews>
@@ -102,14 +102,14 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="favorite_un" width="24" height="24"/>
         <image name="mimozi" width="640" height="652"/>
         <image name="profile_back" width="80" height="80"/>
-        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <namedColor name="black">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="dark_gray2">
-            <color red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.39599999785423279" green="0.39599999785423279" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

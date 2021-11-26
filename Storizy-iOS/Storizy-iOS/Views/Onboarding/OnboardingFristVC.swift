@@ -42,7 +42,6 @@ class OnboardingFristVC: UIViewController {
     }
     
     func setUI(){
-        (self.tabBarController as! TabBarController).customTabBarView.isHidden = true
         // 헤더 그림자
         headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
         headBarView.layer.shadowRadius = 6

@@ -16,10 +16,8 @@ class SigninVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-//        UserDefaults.standard.setValue("email", forKey: "email")
-//        UserDefaults.standard.removeObject(forKey: "email")
-//        UserDefaults.standard.key
         
+        UserDefaults.standard.removeObject(forKey: "accessToken")
         
     }
     
@@ -49,14 +47,24 @@ class SigninVC: UIViewController {
                 print(body)
                 
                 // access token 저장
-                let accessToken = "Bearer \(body.data?.accessToken ?? "")"
-                UserDefaults.standard.setValue(accessToken, forKey: "accessToken")
-                print(UserDefaults.standard.string(forKey: "accessToken"))
-                //성공시 탭바C으로 이동
-                let tabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
-                let tabBarController = tabBarStoryboard.instantiateViewController(identifier: "TabBarController")
-                tabBarController.modalPresentationStyle = .fullScreen
-                self.present(tabBarController, animated: true, completion: nil)
+                let token = "Bearer \(body.data?.accessToken ?? "")"
+                UserDefaults.standard.setValue(token, forKey: "accessToken")
+                accessToken = token
+                // 최초시작이면
+                if UserDefaults.standard.string(forKey: "firstLoad") == nil {
+//                    print("최초시작")
+                    // 온보딩
+                    let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+                    let onboardingFristVC = storyboard.instantiateViewController(identifier: "OnboardingFristVC") as! OnboardingFristVC
+                    self.navigationController?.pushViewController(onboardingFristVC, animated: true)
+                }
+                else {
+                    //최초가 아니면 탭바C으로 이동
+                    let tabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
+                    let tabBarController = tabBarStoryboard.instantiateViewController(identifier: "TabBarController")
+                    tabBarController.modalPresentationStyle = .fullScreen
+                    self.present(tabBarController, animated: true, completion: nil)
+                }
             }
             // 로그인 실패
             else {

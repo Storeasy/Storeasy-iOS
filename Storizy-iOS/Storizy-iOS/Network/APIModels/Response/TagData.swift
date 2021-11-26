@@ -13,4 +13,3 @@ struct TagData: Codable {
     let tagColor: String?
 }
 
-//"{ \"id\": 1, \"tagName\": \"울랄라\", \"tagColor\": \"#123456\" }"

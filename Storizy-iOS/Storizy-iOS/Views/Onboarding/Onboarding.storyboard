@@ -144,8 +144,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HRV-Ry-5Rx">
-                                <rect key="frame" x="0.0" y="90" width="414" height="827"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HRV-Ry-5Rx">
+                                <rect key="frame" x="0.0" y="90" width="414" height="823"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="9Ro-GL-UBu">
                                     <size key="itemSize" width="344" height="431"/>
@@ -155,13 +155,13 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="guideImgCell" id="pgp-cM-2AO" customClass="GuideImgCell" customModule="Storizy_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="198" width="344" height="431"/>
+                                        <rect key="frame" x="0.0" y="196" width="344" height="431"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="sBA-e4-pVB">
                                             <rect key="frame" x="0.0" y="0.0" width="344" height="431"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mD4-Rr-nsQ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_home" translatesAutoresizingMaskIntoConstraints="NO" id="mD4-Rr-nsQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="344" height="431"/>
                                                 </imageView>
                                             </subviews>
@@ -219,12 +219,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GE0-R0-tXv" firstAttribute="trailing" secondItem="HRV-Ry-5Rx" secondAttribute="trailing" id="1qY-5E-2Tm"/>
-                            <constraint firstItem="HRV-Ry-5Rx" firstAttribute="bottom" secondItem="GE0-R0-tXv" secondAttribute="bottom" constant="55" id="7FB-ti-XPX"/>
                             <constraint firstItem="HRV-Ry-5Rx" firstAttribute="top" secondItem="V9p-uB-o7v" secondAttribute="bottom" id="9Kj-SR-yHH"/>
                             <constraint firstItem="HRV-Ry-5Rx" firstAttribute="leading" secondItem="GE0-R0-tXv" secondAttribute="leading" id="WgA-sS-joS"/>
                             <constraint firstItem="GE0-R0-tXv" firstAttribute="trailing" secondItem="V9p-uB-o7v" secondAttribute="trailing" id="gwL-un-phu"/>
                             <constraint firstItem="V9p-uB-o7v" firstAttribute="leading" secondItem="GE0-R0-tXv" secondAttribute="leading" id="lll-wY-rJP"/>
                             <constraint firstItem="GE0-R0-tXv" firstAttribute="top" secondItem="V9p-uB-o7v" secondAttribute="top" constant="44" id="uWL-Hr-P6f"/>
+                            <constraint firstItem="HRV-Ry-5Rx" firstAttribute="bottom" secondItem="GE0-R0-tXv" secondAttribute="bottom" constant="51" id="wfM-Uf-zSb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KGg-6h-7ZE"/>
@@ -279,12 +279,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ik-UV-Hr9">
-                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
+                                        <rect key="frame" x="351" y="57" width="33" height="22"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="BFb-fb-eXe"/>
-                                            <constraint firstAttribute="height" constant="24" id="WLt-gt-478"/>
+                                            <constraint firstAttribute="width" constant="33" id="BFb-fb-eXe"/>
+                                            <constraint firstAttribute="height" constant="22" id="WLt-gt-478"/>
                                         </constraints>
-                                        <state key="normal" image="clear">
+                                        <state key="normal" image="skip">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -355,8 +355,8 @@
     </scenes>
     <resources>
         <image name="add_circle_outline" width="24" height="24"/>
-        <image name="clear" width="24" height="24"/>
         <image name="info" width="187.5" height="406"/>
+        <image name="info_home" width="750" height="1482"/>
         <image name="skip" width="33" height="17"/>
         <namedColor name="black">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

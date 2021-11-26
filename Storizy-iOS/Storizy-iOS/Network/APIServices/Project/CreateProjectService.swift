@@ -12,16 +12,24 @@ struct CreateProjectService {
     
     static let shared = CreateProjectService()
     
-    func createProject(accessToken: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
+    func createProject(accessToken: String, projectRequest: ProjectRequest, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
         let url = APIUrls.postCreateProjectURL
         let header: HTTPHeaders = [ "Content-Type": "application/json"
                                     ,"Authorization": accessToken]
-//        let body: Parameters = [
-//
-//        ]
+        let body: Parameters = [
+            "title": projectRequest.title,
+            "description": projectRequest.description,
+            "startDate": projectRequest.startDate,
+            "endDate": projectRequest.endDate,
+            "isPublic": projectRequest.isPublic,
+            "projectColorId": projectRequest.projectColorId,
+            "tagIds": projectRequest.tagIds,
+        ]
+        
         let dataRequest = AF.request(url,
                                      method: .post,
+                                     parameters: body,
                                      encoding: JSONEncoding.default,
                                      headers: header)
         
@@ -30,10 +38,11 @@ struct CreateProjectService {
             case .success:
                 guard let status = response.response?.statusCode else { return }
                 guard let body =  response.value else { return }
-                
+                let str = String(decoding: body, as: UTF8.self)
+                print(str)
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
-                if status == 200 {
+                if status == 201 {
                     print("프로젝트 생성 성공")
                     responseCode = .success
                 } else {

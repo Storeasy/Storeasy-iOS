@@ -9,6 +9,12 @@ import UIKit
 
 class OtherPageDetailVC: UIViewController {
 
+    @IBOutlet weak var nicknameLB: UILabel!
+    @IBOutlet weak var profileImgView: UIImageView!
+    
+    @IBOutlet weak var pageTitleLB: UILabel!
+    @IBOutlet weak var periodLB: UILabel!
+    
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var pageFrameView: UIView!
@@ -16,13 +22,49 @@ class OtherPageDetailVC: UIViewController {
     @IBOutlet weak var contentTextViewHeight: NSLayoutConstraint!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var tagCV: UICollectionView!
+    @IBOutlet weak var tagCVHeight: NSLayoutConstraint!
+    @IBOutlet weak var projectBTN: UIButton!
+    @IBOutlet weak var heartBTN: UIButton!
     
-    var tags: [String] = ["예선진출","경축", "스토리지", "빅토리지", "도미토리"]
+    
+    var pageId: Int = 0
+    var pageDetailData: PageDetailData?
+//    var tags: [String] = ["예선진출","경축", "스토리지", "빅토리지", "도미토리"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getPageDetail()
         setUI()
         registerNib()
+    }
+    
+    
+    func getPageDetail(){
+        ReadPageService.shared.readPage(accessToken: accessToken, pageId: pageId) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<PageDetailData>
+                print(body)
+                self.pageDetailData = body.data
+                self.loadPage()
+                self.tagCV.reloadData()
+                self.setUI()
+            } else {
+                print(responseCode)
+            }
+        }
+    }
+    
+    func loadPage(){
+        let url = URL(string: pageDetailData?.profileImage ?? "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
+        let imgData = try! Data(contentsOf: url!)
+        profileImgView.image = UIImage(data: imgData)
+        nicknameLB.text = pageDetailData?.nickname
+        
+        projectBTN.titleLabel?.text = pageDetailData?.projectTitle ?? ""
+        pageTitleLB.text = pageDetailData?.title
+        periodLB.text = "\(pageDetailData!.startDate!) - \(pageDetailData!.endDate!)"
+        heartBTN.imageView?.image = (pageDetailData?.isLiked)! ? UIImage(named: "favorite") : UIImage(named: "favorite_un")
+        contentTextView.text = pageDetailData?.content
     }
     
     @IBAction func closeBtnAction(_ sender: Any) {
@@ -74,11 +116,14 @@ extension OtherPageDetailVC: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // tag
         if collectionView == tagCV {
-            return tags.count
+            if pageDetailData?.tags.isEmpty == true {
+                tagCVHeight.constant = 0
+            }
+            return pageDetailData?.tags.count ?? 0
         }
         // img
         else {
-            return 5
+            return 0
         }
     }
     
@@ -86,9 +131,9 @@ extension OtherPageDetailVC: UICollectionViewDelegate, UICollectionViewDataSourc
         // tag
         if collectionView == tagCV {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryTagCell", for: indexPath) as! StoryTagCell
-            cell.frameView.backgroundColor = UIColor(named: "tag_green-light")
-            cell.tagNameLB.textColor = UIColor(named: "tag_green")
-            cell.tagNameLB.text = tags[indexPath.item]
+            cell.frameView.backgroundColor = UIColor(named: "white")
+            cell.tagNameLB.textColor = UIColor(named: "dark_gray2")
+            cell.tagNameLB.text = "#\(pageDetailData?.tags[indexPath.item]?.tagName ?? "")"
             return cell
         }
         // img

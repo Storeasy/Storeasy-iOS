@@ -14,6 +14,7 @@ class HeartPageCell: UITableViewCell {
     @IBOutlet weak var pageTitleLB: UILabel!
     @IBOutlet weak var pageContentLB: UILabel!
     @IBOutlet weak var heartBTN: UIButton!
+    var isLiked = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,12 @@ class HeartPageCell: UITableViewCell {
             self.contentView.backgroundColor = UIColor(named: "extra_white")
         }
 
+    }
+    @IBAction func heartAction(_ sender: Any) {
+        isLiked.toggle()
+        DispatchQueue.main.async {
+            self.heartBTN.imageView?.image =        self.isLiked ? UIImage(named: "favorite") : UIImage(named: "favorite_un")
+        }
     }
     
     // ui

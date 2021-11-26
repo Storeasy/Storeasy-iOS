@@ -10,6 +10,7 @@ import Foundation
 struct ProfileData: Codable {
     let userId: Int?
     var isPublic: Bool?
+    var isLiked: Bool?
     var profileImage: String?
     var nickname: String?
     var universityName: String?

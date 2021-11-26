@@ -15,9 +15,10 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        UserDefaults.standard.removeObject(forKey: "email")
+        
         self.setupTabBarUI()
         self.addCustomTabBarView()
+        
     }
 
     

@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="1" id="Dbb-tf-RsP"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_dot" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-uw-4P7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tag_orange_project" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-uw-4P7">
                                 <rect key="frame" x="30" y="123" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="HfP-6B-SG3"/>
@@ -51,7 +51,7 @@
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ROP-vM-ahh">
                                         <rect key="frame" x="16" y="63" width="303" height="20"/>
-                                        <color key="backgroundColor" red="0.95439606899999996" green="0.75371390579999997" blue="0.34891277549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" name="white"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="NnM-R9-n8Y"/>
                                         </constraints>
@@ -102,8 +102,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClF-J9-Srf">
-                                        <rect key="frame" x="354" y="53" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClF-J9-Srf">
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
+                                        <state key="normal" image="clear"/>
                                         <connections>
                                             <action selector="closeAction:" destination="smV-Go-mqX" eventType="touchUpInside" id="QLU-Uc-KGz"/>
                                         </connections>
@@ -163,21 +164,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="red_dot" width="56" height="56"/>
+        <image name="clear" width="24" height="24"/>
+        <image name="tag_orange_project" width="28" height="28"/>
         <namedColor name="black">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="dark_gray2">
-            <color red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.39599999785423279" green="0.39599999785423279" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="extra_white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray1">
-            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
-            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

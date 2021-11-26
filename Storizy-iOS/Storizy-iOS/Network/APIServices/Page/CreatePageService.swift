@@ -12,16 +12,24 @@ struct CreatePageService {
     
     static let shared = CreatePageService()
     
-    func createPage(accessToken: String, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
+    func createPage(accessToken: String, pageRequest: PageRequest, completionHandler: @escaping (ResponseCode, Any) -> (Void)) {
 
         let url = APIUrls.postCreatePageURL
         let header: HTTPHeaders = [ "Content-Type": "application/json"
                                     ,"Authorization": accessToken]
-//        let body: Parameters = [
-//
-//        ]
+        let body: Parameters = [
+            "title": pageRequest.title,
+            "content": pageRequest.content,
+            "startDate": pageRequest.startDate,
+            "endDate": pageRequest.endDate,
+            "isPublic": pageRequest.isPublic,
+            "projectId": 5, //temp
+            "tagIds": pageRequest.tagIds,
+            "pageImages": pageRequest.pageImages
+        ]
         let dataRequest = AF.request(url,
                                      method: .post,
+                                     parameters: body,
                                      encoding: JSONEncoding.default,
                                      headers: header)
         
@@ -33,7 +41,7 @@ struct CreatePageService {
                 
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
-                if status == 200 {
+                if status == 201 {
                     print("페이지 생성 성공")
                     responseCode = .success
                 } else {

@@ -13,6 +13,7 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var bottomBar: UIView!
     @IBOutlet weak var insideFrameView: UIView!
     @IBOutlet weak var dotView: UIView!
+    @IBOutlet weak var dotImage: UIImageView!
     
     @IBOutlet weak var projectContentView: UIView!
     @IBOutlet weak var projectTitleLabel: UILabel!
@@ -21,7 +22,7 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var tagCV: UICollectionView!
     
-    var tags: [String] = []
+    var tags: [TagData?] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,6 +43,7 @@ class ProjectCell: UITableViewCell {
         insideFrameView.layer.cornerRadius = 12
         dotView.layer.cornerRadius = 10
         dotView.layer.zPosition = 2
+        tagCV.backgroundColor = UIColor(named: "white")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -68,15 +70,15 @@ extension ProjectCell: UICollectionViewDataSource, UICollectionViewDelegate, UIC
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PTagCell", for: indexPath) as? PTagCell else {
             return UICollectionViewCell()
         }
-        cell.backgroundColor = UIColor(named: "extra_white")
-        cell.tagNameLB.text = tags[indexPath.item]
+        let tag = tags[indexPath.item]
+        cell.tagNameLB.text = "#\(tag?.tagName ?? "")"
+        cell.tagNameLB.textColor = UIColor(named: tag?.tagColor ?? "black")
+        cell.frameView.backgroundColor = UIColor(named: "extra_white")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let cell = collectionView.cellForItem(at: indexPath) as! PTagCell
-//        let width = 16 + cell.tagNameLB.bounds.width
-        let width = collectionView.cellForItem(at: indexPath)?.bounds.width ?? 60
+        let width = collectionView.cellForItem(at: indexPath)?.bounds.width ?? 70
         let height = tagCV.bounds.height
         return CGSize(width: width, height: height)
     }

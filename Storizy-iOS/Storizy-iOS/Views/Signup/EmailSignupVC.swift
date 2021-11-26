@@ -83,7 +83,7 @@ class EmailSignupVC: UIViewController {
     
     // MARK: 인증 메일 전송 요청 전송하는 함수
     func sendEmailReq(_ email: String) {
-        
+        print("!")
         // 이메일 중복 통과되면 -> 인증 번호 입력란 보이기
         self.setAuthVisible()
         
@@ -92,7 +92,7 @@ class EmailSignupVC: UIViewController {
             if responseCode == .success {
                 let body = responseBody as! ResponseData<String>
                 print(body)
-                self.authMsg.text = "인증 메일이 전송되었습니다. 5분안에 인증해주세요."
+                self.authMsg.text = "인증메일이 발송되었습니다.\n메일 안에 있는 인증번호를 확인해주세요."
             } else {
                 self.authMsg.text = "인증 메일 전송 실패. 다시 시도해주세요."
                 print(responseCode)
@@ -109,6 +109,7 @@ class EmailSignupVC: UIViewController {
                 print(body)
                 self.emailSysMsg.text = ""
                 isUnique = true
+                print(isUnique)
             } else {
                 // 실패
                 self.emailSysMsg.text = "이미 존재하는 이메일입니다."
@@ -127,13 +128,8 @@ class EmailSignupVC: UIViewController {
     // MARK: 인증번호 전송 버튼 클릭
     @IBAction func sendAuthAction(_ sender: Any) {
         let email = EmailTextField.text!
-        
-        // 메일 중복 확인
-        if checkEmailReq(email) {
-            // 인증 메일 전송
-            sendEmailReq(email)
-        }
-                
+        checkEmailReq(email)
+        sendEmailReq(email)
     }
     
     // MARK: 인증번호 재전송 버튼 클릭
@@ -145,7 +141,7 @@ class EmailSignupVC: UIViewController {
             if responseCode == .success {
                 let body = responseBody as! ResponseData<String>
                 print(body)
-                self.authMsg.text = "인증 메일이 전송되었습니다. 5분안에 인증해주세요."
+                self.authMsg.text = "인증메일이 발송되었습니다.\n메일 안에 있는 인증번호를 확인해주세요."
             } else {
                 self.authMsg.text = "인증 메일 전송 실패. 다시 시도해주세요."
                 print(responseCode)
@@ -177,7 +173,15 @@ class EmailSignupVC: UIViewController {
             // 인증 실패
             else {
                 print(responseCode)
-                self.authMsg.text = "인증번호가 올바르지 않습니다.\n다시 시도해주세요."
+//                self.authMsg.text = "인증번호가 올바르지 않습니다.\n다시 시도해주세요."
+                self.authMsg.text = ""
+                //temp
+                if let pwSignupVC = self.storyboard?.instantiateViewController(identifier: "PWSignupVC") as? PWSignupVC {
+                    self.signupUser.email = self.EmailTextField.text!
+                    pwSignupVC.signupUser = self.signupUser
+                    self.navigationController?.pushViewController(pwSignupVC, animated: true)
+                }
+                //temp
             }
         }
     }

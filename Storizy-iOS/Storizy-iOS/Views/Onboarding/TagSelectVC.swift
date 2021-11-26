@@ -28,6 +28,7 @@ class TagSelectVC: UIViewController {
         super.viewDidLoad()
         getTagList()
         setUI()
+        print(accessToken)
     }
     
     @IBAction func finishAction(_ sender: Any) {
@@ -35,8 +36,9 @@ class TagSelectVC: UIViewController {
     }
     
     func setTagCV(){
+
         tagCV = TTGTextTagCollectionView.init(frame: CGRect.init(x: 30 , y: self.headBarView.bounds.maxY + 20, width: view.bounds.width - 60, height: 300))
-        tagCV.numberOfLines = 3
+        tagCV.numberOfLines = 4
         tagCV.enableTagSelection = true
         tagCV.selectionLimit = 3
         tagCV.alignment = .fillByExpandingWidthExceptLastLine
@@ -44,9 +46,9 @@ class TagSelectVC: UIViewController {
         tagCV.verticalSpacing = CGFloat(12)
 
         self.view.addSubview(tagCV)
-//        let tagNames = tags.map { $0.tagName }
         
         for tag in tags {
+            if (tag.id == 5) { continue }
             let content = TTGTextTagStringContent.init(text: tag.tagName!)
             content.textColor = UIColor(named: "black") ?? UIColor.black
             content.textFont = UIFont.systemFont(ofSize: 14)
@@ -78,7 +80,6 @@ class TagSelectVC: UIViewController {
             tag.selectedContent = selectedContent
             tagCV.addTag(tag)
         }
-        print(tagCV.allTags().count)
         tagCV.reload()
 
     }
@@ -88,8 +89,7 @@ class TagSelectVC: UIViewController {
             if rcode == .success {
                 guard let body = rbody as? ResponseData<[TagData]> else { return }
                 self.tags = body.data ?? []
-                print(body.data)
-//                self.setTagCV()
+//                print(body.data)
             } else {
                 print("errr\(rbody)")
             }
@@ -101,7 +101,7 @@ class TagSelectVC: UIViewController {
     func generateSelectedTagIds(){
         var tagIds: [Int] = []
         for tag in tagCV.allSelectedTags() {
-            tagIds.append( ( tags[Int(tag.tagId)].id ?? 1 ) - 1)
+            tagIds.append( ( tags[Int(tag.tagId)+1].id ?? 1 ) )
         }
         selectedTagIds = tagIds
         print(selectedTagIds)
@@ -113,10 +113,16 @@ class TagSelectVC: UIViewController {
         PostProfileTagsService.shared.postProfileTags(accessToken: accessToken, tagIds: selectedTagIds) { rcode, rbody in
             if rcode == .success {
                 print(rcode, rbody)
-                self.navigationController?.popToRootViewController(animated: true)
+                // 최초X 저장
+                UserDefaults.standard.setValue("false", forKey: "firstLoad")
+                //성공시 탭바C으로 이동
+                let tabBarStoryboard = UIStoryboard(name: "TabBar", bundle: nil)
+                let tabBarController = tabBarStoryboard.instantiateViewController(identifier: "TabBarController")
+                tabBarController.modalPresentationStyle = .fullScreen
+                self.present(tabBarController, animated: true, completion: nil)
+                
             } else {
                 print(rcode, rbody)
-//                self.navigationController?.popToRootViewController(animated: true)
             }
         }
     }
@@ -135,7 +141,6 @@ class TagSelectVC: UIViewController {
     }
     
     func setUI(){
-        (self.tabBarController as! TabBarController).customTabBarView.isHidden = true
         // 헤더 그림자
         headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
         headBarView.layer.shadowRadius = 6

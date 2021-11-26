@@ -8,8 +8,6 @@
 import UIKit
 
 class SplashVC: UIViewController {
-
-    @IBOutlet weak var frameView: UIView!
     
     @IBOutlet weak var signupBTN: UIButton!
     @IBOutlet weak var signinBTN: UIButton!
@@ -34,7 +32,6 @@ class SplashVC: UIViewController {
     
     // UI
     func setUI(){
-        frameView.layer.cornerRadius = frameView.bounds.height / 2
         signupBTN.layer.cornerRadius = 12
         signinBTN.layer.cornerRadius = 12
     }

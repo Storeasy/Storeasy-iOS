@@ -17,8 +17,8 @@ class HeartVC: UIViewController {
     @IBOutlet weak var heartTableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
-    var pages: [Page] = [Page(title: "페이지1"), Page(title: "러시아워")]
-    var users: [User] = [User(name: "임수정"), User(name: "유기현")]
+    var pages: [Page] = []
+    var users: [User] = []
     var currentDatas: [Any] = []
     
     var type: Int? {

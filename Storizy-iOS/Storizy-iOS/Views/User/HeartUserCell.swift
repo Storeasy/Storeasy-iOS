@@ -54,4 +54,10 @@ extension HeartUserCell: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.cellForItem(at: indexPath)?.bounds.width ?? 70
+        let height = collectionView.bounds.height
+        return CGSize(width: width, height: height)
+    }
+    
 }

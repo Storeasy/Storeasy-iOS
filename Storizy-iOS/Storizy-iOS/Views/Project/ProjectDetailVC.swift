@@ -10,6 +10,7 @@ import UIKit
 class ProjectDetailVC: UIViewController {
     // components
     @IBOutlet weak var headBarView: UIView!
+    @IBOutlet weak var dotImage: UIImageView!
     @IBOutlet weak var projectTitleLabel: UILabel!
     @IBOutlet weak var projectPeriodLabel: UILabel!
     @IBOutlet weak var projectContentTextView: UITextView!
@@ -23,11 +24,54 @@ class ProjectDetailVC: UIViewController {
     
     var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "예선진출", "경축", "많관부"]
 
+    var projectId: Int = 0
+    var projectDetail: ProjectDetail?
+    var project: Project?
+    var pages: [PageInProject] = [] {
+        didSet {
+            pageTableView.reloadData()
+        }
+    }
+    var projectTags: [TagData] = [] {
+        didSet{
+            projectTagCV.reloadData()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getProfileDetail()
         registerNib()   // nib 등록
         moreAction()    // more btn menu setting
         setUI()         // UI
+    }
+    
+    // 프로젝트 상세 조회 API
+    func getProfileDetail(){
+        GetProjectDetailService.shared.getProjectDetail(accessToken: accessToken, projectId: projectId) { (responseCode, responseBody) in
+            if responseCode == .success {
+                guard let body = responseBody as? ProjectDetail else { print("return!"); return }
+                print(body)
+                self.project = body.project
+                self.pages = body.pages
+//                self.pageTableView.reloadData()
+                self.loadProjectData()
+                self.setUI()
+            } else {
+                print(responseCode)
+            }
+        }
+    }
+    
+    // 뷰에 데이터 채우기
+    func loadProjectData(){
+        dotImage.image = UIImage(named: "\(project?.projectColor ?? "tag_green")_project")
+        projectTitleLabel.text = project?.title
+        projectPeriodLabel.text = "\(project!.startDate!) - \(project!.endDate!)"
+        projectTags = project!.tags
+        projectContentTextView.text = project?.description
+        
     }
     
     func moreAction(){
@@ -87,20 +131,16 @@ class ProjectDetailVC: UIViewController {
 // MARK: - table view
 extension ProjectDetailVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return pages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PageCell", for: indexPath) as? PageCell {
-            cell.pageTitleLabel.text = "페이지명 페이지명"
-            cell.periodLabel.text = "2021.11.22 - 2021.11.23"
-            cell.pageContentLabel.text = "페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용 페이지 내용"
-            cell.tags = storyTags
-            // components ui
-            if indexPath.row == 1 {
-                cell.bottomBar.isHidden = true
-            }
-            
+            cell.pageTitleLabel.text = pages[indexPath.row].title
+            cell.periodLabel.text = "\(pages[indexPath.row].startDate!) - \(pages[indexPath.row].endDate!)"
+            cell.pageContentLabel.text = pages[indexPath.row].content
+            cell.tags = pages[indexPath.row].tags
+            cell.dotImage.image = UIImage(named: "\(project!.projectColor!)_page")
             return cell
         }
         return UITableViewCell()
@@ -108,8 +148,12 @@ extension ProjectDetailVC: UITableViewDataSource, UITableViewDelegate {
     
     // 페이지 셀 선택
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 페이지 아이디 전달
+        //페이지 상세 이동
         let storyboard = UIStoryboard(name: "PageDetail", bundle: nil )
-        let pageDatailVC = storyboard.instantiateViewController(identifier: "PageDetailVC")
+        guard let pageDatailVC = storyboard.instantiateViewController(identifier: "PageDetailVC") as? PageDetailVC else { return }
+        pageDatailVC.pageId = pages[indexPath.row].pageId!
+
         self.navigationController?.pushViewController(pageDatailVC, animated: true)
     }
     
@@ -119,14 +163,14 @@ extension ProjectDetailVC: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Collection View
 extension ProjectDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return storyTags.count
+        return projectTags.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PTagCell", for: indexPath) as? PTagCell else { return UICollectionViewCell() }
-        cell.tagNameLB.text = storyTags[indexPath.item]
-        cell.frameView.backgroundColor = UIColor(named: "tag_pink-light")
-        cell.tagNameLB.textColor = UIColor(named: "tag_pink")
+        cell.tagNameLB.text = "#\(projectTags[indexPath.item].tagName!)"
+        cell.frameView.backgroundColor = UIColor(named:"extra_white")
+        cell.tagNameLB.textColor = UIColor(named: "\(projectTags[indexPath.item].tagColor!)")
         return cell
     }
     

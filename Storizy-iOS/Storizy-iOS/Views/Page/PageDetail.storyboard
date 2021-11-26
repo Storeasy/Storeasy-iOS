@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piV-dG-2vx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="488"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="412"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로젝트명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAS-Xc-8aM">
                                         <rect key="frame" x="30" y="75" width="61" height="17"/>
@@ -35,16 +35,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paK-37-vYh" userLabel="more">
-                                        <rect key="frame" x="365" y="95.5" width="19" height="22"/>
+                                        <rect key="frame" x="360" y="94.5" width="24" height="24"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="ellipsis" catalog="system" renderingMode="original"/>
+                                            <imageReference key="image" image="more" renderingMode="original"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0o4-GK-hmb" userLabel="lock">
-                                        <rect key="frame" x="97.5" y="95.5" width="16" height="22"/>
+                                        <rect key="frame" x="97.5" y="89.5" width="30" height="34"/>
                                         <state key="normal">
                                             <color key="titleColor" systemColor="labelColor"/>
-                                            <imageReference key="image" image="lock.fill" catalog="system" symbolScale="small" renderingMode="original"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.11.22 - 2021.01.16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7h-19-S4o">
@@ -56,16 +55,19 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hIf-ej-HtS">
                                         <rect key="frame" x="30" y="190" width="354" height="172"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="172" id="gO8-SS-mLg"/>
+                                        </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do et in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="dark_gray1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iYV-4U-X0s">
-                                        <rect key="frame" x="30" y="382" width="384" height="76"/>
+                                        <rect key="frame" x="30" y="382" width="384" height="0.0"/>
                                         <color key="backgroundColor" name="extra_white"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="76" id="FQ9-YA-vbe"/>
+                                            <constraint firstAttribute="height" id="FQ9-YA-vbe"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Egs-be-KcR">
                                             <size key="itemSize" width="76" height="76"/>
@@ -75,13 +77,11 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageDetailImgCell" id="aJD-nD-Vn5" customClass="PageDetailImgCell" customModule="Storizy_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3as-Xs-Pgc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="3as-Xs-Pgc">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mimozi" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-Yu-haM">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mimozi" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-Yu-haM">
                                                             <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
                                                         </imageView>
                                                     </subviews>
@@ -108,7 +108,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="pd0-Z6-X2l"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YGk-WQ-n0v">
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="YGk-WQ-n0v">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -136,7 +136,6 @@
                                     <constraint firstItem="pAS-Xc-8aM" firstAttribute="leading" secondItem="hqT-MN-ScA" secondAttribute="leading" id="VKd-bS-LEv"/>
                                     <constraint firstItem="hIf-ej-HtS" firstAttribute="leading" secondItem="hqT-MN-ScA" secondAttribute="leading" id="YyX-ux-V9j"/>
                                     <constraint firstItem="0o4-GK-hmb" firstAttribute="centerY" secondItem="hqT-MN-ScA" secondAttribute="centerY" id="cf4-ph-xvT"/>
-                                    <constraint firstAttribute="height" constant="488" id="jEk-AZ-hyU"/>
                                     <constraint firstAttribute="trailing" secondItem="iYV-4U-X0s" secondAttribute="trailing" id="u33-dg-gPj"/>
                                     <constraint firstItem="Fdw-6x-8q3" firstAttribute="leading" secondItem="hqT-MN-ScA" secondAttribute="leading" id="v17-cC-M6e"/>
                                     <constraint firstItem="0o4-GK-hmb" firstAttribute="leading" secondItem="hqT-MN-ScA" secondAttribute="trailing" constant="5" id="vWE-ch-xm7"/>
@@ -187,11 +186,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="TVHeight" destination="gO8-SS-mLg" id="sga-h3-Xng"/>
                         <outlet property="contentTextView" destination="hIf-ej-HtS" id="tJS-aT-qSk"/>
                         <outlet property="frameView" destination="piV-dG-2vx" id="3LO-q1-Dhp"/>
-                        <outlet property="frameViewHeight" destination="jEk-AZ-hyU" id="nKm-NQ-lUB"/>
                         <outlet property="imgCollectionView" destination="iYV-4U-X0s" id="PF8-5I-3hi"/>
                         <outlet property="moreBtn" destination="paK-37-vYh" id="pjF-Zf-Kwl"/>
+                        <outlet property="pageTitle" destination="hqT-MN-ScA" id="u7V-nS-gbP"/>
+                        <outlet property="periodLB" destination="u7h-19-S4o" id="btc-EO-ILQ"/>
+                        <outlet property="projectTitle" destination="pAS-Xc-8aM" id="jWB-sC-RM6"/>
                         <outlet property="tagCV" destination="Fdw-6x-8q3" id="YFi-h4-nFM"/>
                         <outlet property="topBarView" destination="N7y-Z8-a7D" id="vXW-nc-diC"/>
                     </connections>
@@ -202,24 +204,23 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="mimozi" width="640" height="652"/>
+        <image name="more" width="24" height="24"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="black">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="dark_gray1">
-            <color red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27099999785423279" green="0.27099999785423279" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="extra_white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray1">
-            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
-            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

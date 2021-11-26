@@ -18,9 +18,9 @@ struct CheckAuthEmailService {
         let url = APIUrls.getAuthEmailURL
         let header: HTTPHeaders = [ "Content-Type":"application/json"]
         let dataRequest = AF.request(url,
-                                     method: .get,
+                                     method: .post,
                                      parameters: body,
-                                     encoding: URLEncoding.default,
+                                     encoding: JSONEncoding.default,
                                      headers: header)
         
         dataRequest.responseData { (response) in
@@ -28,11 +28,12 @@ struct CheckAuthEmailService {
             case .success:
                 guard let status = response.response?.statusCode else { return }
                 guard let body =  response.value else { return }
-                
+                let str = String(decoding: body, as: UTF8.self)
+                print(str)
                 print(response.request)
                 // 상태 코드 처리
                 var responseCode: ResponseCode = .success
-                if status == 200 {
+                if status == 201 {
                     print("인증 번호 확인 성공")
                     responseCode = .success
                 } else {

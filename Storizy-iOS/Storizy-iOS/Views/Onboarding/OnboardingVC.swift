@@ -12,7 +12,7 @@ class OnboardingVC: UIViewController {
     @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var imgCV: UICollectionView!
     
-    let imgsName: [String] = ["info","info","splash"]
+    let imgsName: [String] = ["info_home","info_write","info_like","info_search","info_c"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,9 @@ class OnboardingVC: UIViewController {
     @IBAction func skipAction(_ sender: Any) {
         let tagSelectVC = self.storyboard?.instantiateViewController(identifier: "TagSelectVC")
         self.navigationController?.pushViewController(tagSelectVC!, animated: true)
-        
     }
     
     func setUI(){
-        (self.tabBarController as! TabBarController).customTabBarView.isHidden = true
         // 헤더 그림자
         headBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
         headBarView.layer.shadowRadius = 6

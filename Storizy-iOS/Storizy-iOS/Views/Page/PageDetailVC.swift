@@ -10,24 +10,25 @@ import UIKit
 class PageDetailVC: UIViewController {
 
     @IBOutlet weak var topBarView: UIView!
+    @IBOutlet weak var projectTitle: UILabel!
+    @IBOutlet weak var pageTitle: UILabel!
+    @IBOutlet weak var periodLB: UILabel!
     @IBOutlet weak var imgCollectionView: UICollectionView!
     @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var contentTextView: UITextView!
-    @IBOutlet weak var frameViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var TVHeight: NSLayoutConstraint!
     @IBOutlet weak var frameView: UIView!
     @IBOutlet weak var tagCV: UICollectionView!
     
     // data
-    var tags: [String] = ["예선진출","경축", "스토리지", "빅토리지", "도미토리"]
+    var pageId: Int = 0
+    var pageDetailData: PageDetailData?
+//    var tags: [String] = ["예선진출","경축", "스토리지", "빅토리지", "도미토리"]
 
     // 단독 페이지면 프로젝트명 공란
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // view height
-        DispatchQueue.main.async {
-            self.frameViewHeight.constant = 314 + self.contentTextView.contentSize.height
-        }
+        getPageDetail()
         // more btn menu set
         setMoreBtnMenu()
         
@@ -36,6 +37,28 @@ class PageDetailVC: UIViewController {
         
         //tag cell 등록
         registerNib()
+    }
+    
+    func getPageDetail(){
+        ReadPageService.shared.readPage(accessToken: accessToken, pageId: pageId) { (responseCode, responseBody) in
+            if responseCode == .success {
+                let body = responseBody as! ResponseData<PageDetailData>
+                print(body)
+                self.pageDetailData = body.data
+                self.loadPage()
+                self.tagCV.reloadData()
+                self.setUI()
+            } else {
+                print(responseCode)
+            }
+        }
+    }
+    
+    func loadPage(){
+        projectTitle.text = pageDetailData?.projectTitle ?? ""
+        pageTitle.text = pageDetailData?.title
+        periodLB.text = "\(pageDetailData!.startDate!) - \(pageDetailData!.endDate!)"
+        contentTextView.text = pageDetailData?.content
     }
     
     // MARK: - more btn menu set
@@ -86,6 +109,11 @@ class PageDetailVC: UIViewController {
         setShadow(view: frameView)
         // 둥글
         frameView.layer.cornerRadius = 20
+        
+        // view height
+        DispatchQueue.main.async {
+            self.TVHeight.constant = self.contentTextView.contentSize.height
+        }
     }
     
 }
@@ -95,9 +123,9 @@ extension PageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case tagCV:
-            return tags.count
+            return pageDetailData?.tags.count ?? 0
         case imgCollectionView:
-            return 5
+            return 0
         default:
             return 0
         }
@@ -108,8 +136,8 @@ extension PageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
         case tagCV:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryTagCell", for: indexPath) as! StoryTagCell
             cell.frameView.backgroundColor = UIColor(named: "white")
-            cell.tagNameLB.textColor = UIColor(named: "main")
-            cell.tagNameLB.text = tags[indexPath.item]
+            cell.tagNameLB.textColor = UIColor(named: (pageDetailData?.tags[indexPath.item]?.tagColor)!)
+            cell.tagNameLB.text = "#\(pageDetailData?.tags[indexPath.item]?.tagName ?? "tag_green")"
             return cell
         case imgCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PageDetailImgCell", for: indexPath) as! PageDetailImgCell

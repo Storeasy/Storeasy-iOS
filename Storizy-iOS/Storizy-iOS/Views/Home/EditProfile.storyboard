@@ -23,15 +23,15 @@
                                 <rect key="frame" x="0.0" y="-1" width="414" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7je-Bg-xWf">
-                                        <rect key="frame" x="363" y="57" width="21" height="22"/>
+                                        <rect key="frame" x="360" y="56" width="24" height="24"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="original"/>
+                                            <imageReference key="image" image="clear" symbolScale="large" renderingMode="original"/>
                                         </state>
                                         <connections>
                                             <action selector="closeAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3f6-T2-K6j"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 편집" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxX-g7-PUR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 수정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxX-g7-PUR">
                                         <rect key="frame" x="30" y="56" width="91" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" name="black"/>
@@ -67,7 +67,7 @@
                                     <constraint firstAttribute="height" constant="20" id="304-yu-yJH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="프로필 이미지 변경">
+                                <state key="normal" title="프로필 사진 바꾸기">
                                     <color key="titleColor" name="lasing_green"/>
                                 </state>
                                 <connections>
@@ -156,7 +156,7 @@
                                     <constraint firstAttribute="height" constant="50" id="5E0-ek-lt8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="정보수정">
+                                <state key="normal" title="정보 수정">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -221,8 +221,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clear" width="24" height="24"/>
         <image name="profile_back" width="80" height="80"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="black">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -35,8 +35,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="30Z-NL-CWp">
-                                <rect key="frame" x="0.0" y="63" width="284" height="20"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="16" y="63" width="268" height="20"/>
+                                <color key="backgroundColor" name="extra_white"/>
+                                <color key="tintColor" name="extra_white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="QSe-Hh-Ras"/>
                                 </constraints>
@@ -48,26 +49,25 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZE-lf-aL6">
-                                <rect key="frame" x="16" y="87" width="252" height="17"/>
+                                <rect key="frame" x="16" y="89" width="252" height="17"/>
                                 <string key="text">최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자...최대글자 150자입니다. 최대글자 150자...</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="dark_gray2"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-PB-UWC">
-                                <rect key="frame" x="249" y="15.5" width="19" height="22"/>
+                                <rect key="frame" x="248" y="15.5" width="20" height="22"/>
                                 <state key="normal">
-                                    <imageReference key="image" image="ellipsis" catalog="system" renderingMode="original"/>
+                                    <imageReference key="image" image="detail" renderingMode="original"/>
                                 </state>
                                 <connections>
                                     <action selector="moreAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bwH-Rl-SoB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiU-LC-bcT">
-                                <rect key="frame" x="104" y="15.5" width="16" height="22"/>
+                                <rect key="frame" x="104" y="9.5" width="30" height="34"/>
                                 <state key="normal">
                                     <color key="titleColor" systemColor="labelColor"/>
-                                    <imageReference key="image" image="lock.fill" catalog="system" symbolScale="small" renderingMode="original"/>
                                 </state>
                             </button>
                         </subviews>
@@ -83,10 +83,10 @@
                             <constraint firstItem="mpd-Dh-TqU" firstAttribute="leading" secondItem="IEr-KO-wxT" secondAttribute="leading" id="NcQ-CJ-PKA"/>
                             <constraint firstItem="IEr-KO-wxT" firstAttribute="leading" secondItem="hod-kj-udb" secondAttribute="leading" constant="16" id="R9a-cm-7lD"/>
                             <constraint firstItem="hiU-LC-bcT" firstAttribute="leading" secondItem="IEr-KO-wxT" secondAttribute="trailing" constant="10" id="Sas-AY-6ht"/>
-                            <constraint firstItem="FZE-lf-aL6" firstAttribute="top" secondItem="30Z-NL-CWp" secondAttribute="bottom" constant="4" id="Tcg-0b-xya"/>
+                            <constraint firstItem="FZE-lf-aL6" firstAttribute="top" secondItem="30Z-NL-CWp" secondAttribute="bottom" constant="6" id="Tcg-0b-xya"/>
                             <constraint firstItem="hiU-LC-bcT" firstAttribute="centerY" secondItem="IEr-KO-wxT" secondAttribute="centerY" id="Vx0-T4-OcE"/>
+                            <constraint firstItem="30Z-NL-CWp" firstAttribute="leading" secondItem="IEr-KO-wxT" secondAttribute="leading" id="eJI-oV-vIc"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FZE-lf-aL6" secondAttribute="bottom" constant="11" id="hW1-FF-NAw"/>
-                            <constraint firstItem="30Z-NL-CWp" firstAttribute="leading" secondItem="hod-kj-udb" secondAttribute="leading" id="lbQ-Ec-iyf"/>
                             <constraint firstItem="30Z-NL-CWp" firstAttribute="top" secondItem="mpd-Dh-TqU" secondAttribute="bottom" constant="8" id="vfI-tn-eS9"/>
                         </constraints>
                     </view>
@@ -137,6 +137,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bottomBar" destination="ekb-qH-f5u" id="VXv-pz-FnQ"/>
+                <outlet property="dotImage" destination="SjH-NL-HvX" id="Np0-Hf-zeY"/>
                 <outlet property="dotView" destination="B7U-7u-WyF" id="Mdx-UM-mPT"/>
                 <outlet property="insideFrameView" destination="hod-kj-udb" id="YXv-T9-bRj"/>
                 <outlet property="moreBtn" destination="f9c-PB-UWC" id="G9S-Ov-8Rx"/>
@@ -151,26 +152,25 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <image name="detail" width="20" height="20"/>
         <image name="red_dot" width="56" height="56"/>
         <namedColor name="black">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="dark_gray2">
-            <color red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.39599999785423279" green="0.39599999785423279" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="extra_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray1">
-            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
-            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

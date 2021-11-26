@@ -16,10 +16,11 @@ class PageCell: UITableViewCell {
     @IBOutlet weak var pageTitleLabel: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var pageContentLabel: UILabel!
+    @IBOutlet weak var dotImage: UIImageView!
     @IBOutlet weak var tagCV: UICollectionView!
     
     // data
-    var tags: [String] = ["kiki", "보브영원해라"]
+    var tags: [TagData?] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,9 +62,18 @@ extension PageCell: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PTagCell", for: indexPath) as? PTagCell else {
             return UICollectionViewCell()
         }
-        cell.backgroundColor = UIColor(named: "white")
-        cell.tagNameLB.text = tags[indexPath.item]
+        cell.backgroundColor = UIColor(named: "extra_white")
+        let tag = tags[indexPath.item]
+        cell.tagNameLB.text = "#\(tag?.tagName ?? "")"
+        cell.tagNameLB.textColor = UIColor(named: tag?.tagColor ?? "black")
+        cell.frameView.backgroundColor = UIColor(named: "white")
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.cellForItem(at: indexPath)?.bounds.width ?? 70
+        let height = tagCV.bounds.height
+        return CGSize(width: width, height: height)
     }
     
 }

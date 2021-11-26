@@ -12,8 +12,8 @@ class ExploreSearchedVC: UIViewController {
     @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    var pages: [Page] = [Page(title: "프로젝트1")]
-    var users: [User] = [User(name: "임수정"), User(name: "유기현")]
+    var pages: [Page] = []
+    var users: [User] = []
     var currentDatas: [Any] = []
     
     var type: Int? {
@@ -66,6 +66,8 @@ extension ExploreSearchedVC: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         print("cancel")
     }
+    
+    
 }
 
 extension ExploreSearchedVC: UITableViewDelegate, UITableViewDataSource {

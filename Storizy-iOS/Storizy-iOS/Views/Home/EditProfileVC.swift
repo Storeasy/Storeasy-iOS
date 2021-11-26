@@ -7,7 +7,6 @@
 
 import UIKit
 
-let accessToken = UserDefaults.standard.string(forKey: "accessToken") ?? ""
 
 class EditProfileVC: UIViewController {
     // components

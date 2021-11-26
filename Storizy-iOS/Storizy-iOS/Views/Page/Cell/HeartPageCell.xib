@@ -41,10 +41,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPB-oB-ltU">
-                        <rect key="frame" x="269" y="23" width="21" height="22"/>
+                        <rect key="frame" x="266" y="22" width="24" height="24"/>
                         <state key="normal">
-                            <imageReference key="image" image="suit.heart.fill" catalog="system" renderingMode="original"/>
+                            <imageReference key="image" image="favorite_un" renderingMode="original"/>
                         </state>
+                        <connections>
+                            <action selector="heartAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Aej-jJ-AKf"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김수정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amM-kd-5FD">
                         <rect key="frame" x="86" y="12" width="36.5" height="20"/>
@@ -95,17 +98,17 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="favorite_un" width="24" height="24"/>
         <image name="mimozi" width="640" height="652"/>
         <image name="profile_back" width="80" height="80"/>
-        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <namedColor name="black">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="dark_gray1">
-            <color red="0.27058823529411763" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27099999785423279" green="0.27099999785423279" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="dark_gray2">
-            <color red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.39599999785423279" green="0.39599999785423279" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
