@@ -31,7 +31,7 @@ class CreatePageVC: UIViewController {
     var tagIds: [Int] = []
     
     var projectList: [String] = ["오늘의 옷장"] // 프로젝트 id + name 구조체로 대체
-    var projectId = 11
+    var projectId: Int? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +97,7 @@ class CreatePageVC: UIViewController {
                                       startDate: getDateString(startDate),
                                       endDate: getDateString(endDate),
                                       isPublic: true,
-                                      projectId: 0, //temp
+                                      projectId: projectId, //temp
                                       tagIds: tagIds,
                                       pageImages: [])
         // API

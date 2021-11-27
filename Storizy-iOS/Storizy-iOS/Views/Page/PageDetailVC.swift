@@ -22,7 +22,11 @@ class PageDetailVC: UIViewController {
     
     // data
     var pageId: Int = 0
-    var pageDetailData: PageDetailData?
+    var pageDetailData: PageDetailData? {
+        didSet {
+            tagCV.reloadData()
+        }
+    }
 
     // 단독 페이지면 프로젝트명 공란
     override func viewDidLoad() {

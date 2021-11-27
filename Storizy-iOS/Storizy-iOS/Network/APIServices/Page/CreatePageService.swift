@@ -18,12 +18,11 @@ struct CreatePageService {
         let header: HTTPHeaders = [ "Content-Type": "application/json"
                                     ,"Authorization": accessToken]
         let body: Parameters = [
-            "title": pageRequest.title,
-            "content": pageRequest.content,
-            "startDate": pageRequest.startDate,
-            "endDate": pageRequest.endDate,
-            "isPublic": pageRequest.isPublic,
-            "projectId": 5, //temp
+            "title": pageRequest.title ?? "",
+            "content": pageRequest.content ?? "",
+            "startDate": pageRequest.startDate ?? "",
+            "endDate": pageRequest.endDate ?? "",
+            "isPublic": pageRequest.isPublic ?? true,
             "tagIds": pageRequest.tagIds,
             "pageImages": pageRequest.pageImages
         ]

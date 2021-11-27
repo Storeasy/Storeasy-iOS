@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		194341CFD6EC693CC2CFEB6A /* Pods_Storizy_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDD343F17D2006155264A4F /* Pods_Storizy_iOS.framework */; };
-		DE1E360B274654590095F581 /* DashedLineHorizonatalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */; };
 		DE1E3612274785080095F581 /* StoryTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3610274785070095F581 /* StoryTagCell.swift */; };
 		DE1E3613274785080095F581 /* StoryTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1E3611274785070095F581 /* StoryTagCell.xib */; };
 		DE1E3616274796170095F581 /* PTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1E3614274796160095F581 /* PTagCell.swift */; };
@@ -107,7 +106,6 @@
 		DEA36F25273E8DC500BBFEF5 /* UpdatePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F24273E8DC500BBFEF5 /* UpdatePageService.swift */; };
 		DEA36F27273E8E0000BBFEF5 /* DeletePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F26273E8DFF00BBFEF5 /* DeletePageService.swift */; };
 		DEA36F29273E8E5F00BBFEF5 /* ReadPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F28273E8E5F00BBFEF5 /* ReadPageService.swift */; };
-		DEA36F2B273EAFAA00BBFEF5 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36F2A273EAFA900BBFEF5 /* TokenData.swift */; };
 		DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5412732C6260022B33B /* AppDelegate.swift */; };
 		DEF9E5442732C6260022B33B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5432732C6260022B33B /* SceneDelegate.swift */; };
 		DEF9E5462732C6260022B33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9E5452732C6260022B33B /* ViewController.swift */; };
@@ -146,7 +144,6 @@
 		2F71D0D8576CEB0DA0BB93D6 /* Pods-Storizy-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storizy-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Storizy-iOS/Pods-Storizy-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ABDD343F17D2006155264A4F /* Pods_Storizy_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storizy_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B590BD19FAB941A712CFC66A /* Pods-Storizy-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storizy-iOS.release.xcconfig"; path = "Target Support Files/Pods-Storizy-iOS/Pods-Storizy-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineHorizonatalView.swift; sourceTree = "<group>"; };
 		DE1E3610274785070095F581 /* StoryTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTagCell.swift; sourceTree = "<group>"; };
 		DE1E3611274785070095F581 /* StoryTagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTagCell.xib; sourceTree = "<group>"; };
 		DE1E3614274796160095F581 /* PTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTagCell.swift; sourceTree = "<group>"; };
@@ -245,7 +242,6 @@
 		DEA36F24273E8DC500BBFEF5 /* UpdatePageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePageService.swift; sourceTree = "<group>"; };
 		DEA36F26273E8DFF00BBFEF5 /* DeletePageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePageService.swift; sourceTree = "<group>"; };
 		DEA36F28273E8E5F00BBFEF5 /* ReadPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPageService.swift; sourceTree = "<group>"; };
-		DEA36F2A273EAFA900BBFEF5 /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
 		DEF9E53E2732C6260022B33B /* Storizy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Storizy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF9E5412732C6260022B33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEF9E5432732C6260022B33B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -477,7 +473,6 @@
 				DEF9E55B2732C71F0022B33B /* Network */,
 				DEF9E5592732C66E0022B33B /* Global */,
 				DEF9E5472732C6260022B33B /* Main.storyboard */,
-				DE1E360A274654590095F581 /* DashedLineHorizonatalView.swift */,
 			);
 			path = "Storizy-iOS";
 			sourceTree = "<group>";
@@ -494,7 +489,6 @@
 				DEF9E5522732C6290022B33B /* Info.plist */,
 				DEF9E54D2732C6290022B33B /* Assets.xcassets */,
 				DEF9E54A2732C6260022B33B /* Storizy_iOS.xcdatamodeld */,
-				DEA36F2A273EAFA900BBFEF5 /* TokenData.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -919,7 +913,6 @@
 				DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */,
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
 				DE1E366B274F93130095F581 /* PageRequest.swift in Sources */,
-				DE1E360B274654590095F581 /* DashedLineHorizonatalView.swift in Sources */,
 				DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */,
 				DEF9E5AC273389930022B33B /* SigninNC.swift in Sources */,
 				DEA36F01273D361800BBFEF5 /* EmailCheckService.swift in Sources */,
@@ -985,7 +978,6 @@
 				DEF9E5762732D6970022B33B /* ProjectCell.swift in Sources */,
 				DEFE0741275035AD002EDC4C /* ProjectDetail.swift in Sources */,
 				DE1E3663274F471D0095F581 /* PostProfileTagsService.swift in Sources */,
-				DEA36F2B273EAFAA00BBFEF5 /* TokenData.swift in Sources */,
 				DEA36E5C2733CC6A00BBFEF5 /* PWSignupVC.swift in Sources */,
 				DEF9E5AA273388B20022B33B /* TabBarController.swift in Sources */,
 				DEA36E582733CAEA00BBFEF5 /* SignupNC.swift in Sources */,

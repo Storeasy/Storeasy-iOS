@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PageCellInProject: UITableViewCell {
+class PageCelInProject: UITableViewCell {
 
     @IBOutlet weak var projectTitleLabel: UILabel!
     @IBOutlet weak var pageTitleLabel: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OtherPageCellInProject: UITableViewCell {
+class OtherPageellInProject: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
