@@ -137,6 +137,7 @@ extension PageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
         case tagCV:
+            print("@@@@")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryTagCell", for: indexPath) as! StoryTagCell
             cell.frameView.backgroundColor = UIColor(named: "white")
             cell.tagNameLB.textColor = UIColor(named: (pageDetailData?.tags[indexPath.item]?.tagColor)!)

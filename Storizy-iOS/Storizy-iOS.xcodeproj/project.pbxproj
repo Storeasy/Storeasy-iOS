@@ -42,8 +42,6 @@
 		DEA36E872736A81A00BBFEF5 /* ProjectDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E862736A81A00BBFEF5 /* ProjectDetailVC.swift */; };
 		DEA36E8A2736A83900BBFEF5 /* PageDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */; };
 		DEA36E8C2736A84600BBFEF5 /* PageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */; };
-		DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */; };
-		DEA36E9427378AFF00BBFEF5 /* PageCellInProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */; };
 		DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */; };
 		DEA36E9C2737CBCB00BBFEF5 /* CreateSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */; };
 		DEA36E9E2737DF5800BBFEF5 /* CreateProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36E9D2737DF5700BBFEF5 /* CreateProjectVC.swift */; };
@@ -70,8 +68,6 @@
 		DEA36ECF2739555800BBFEF5 /* OtherHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36ECE2739555800BBFEF5 /* OtherHomeVC.swift */; };
 		DEA36ED32739867C00BBFEF5 /* OtherProjectDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36ED22739867C00BBFEF5 /* OtherProjectDetailVC.swift */; };
 		DEA36ED5273986BF00BBFEF5 /* OtherProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36ED4273986BF00BBFEF5 /* OtherProjectDetail.storyboard */; };
-		DEA36ED8273987CA00BBFEF5 /* OtherPageCellInProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36ED6273987CA00BBFEF5 /* OtherPageCellInProject.swift */; };
-		DEA36ED9273987CA00BBFEF5 /* OtherPageCellInProject.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36ED7273987CA00BBFEF5 /* OtherPageCellInProject.xib */; };
 		DEA36EDC273A25FF00BBFEF5 /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EDB273A25FF00BBFEF5 /* Explore.storyboard */; };
 		DEA36EDE273A262600BBFEF5 /* ExploreNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EDD273A262600BBFEF5 /* ExploreNC.swift */; };
 		DEA36EE0273A26F900BBFEF5 /* ExploreUnsearchedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EDF273A26F900BBFEF5 /* ExploreUnsearchedVC.swift */; };
@@ -82,8 +78,6 @@
 		DEA36EED273AC04900BBFEF5 /* CurationNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EEC273AC04900BBFEF5 /* CurationNC.swift */; };
 		DEA36EEF273BB81E00BBFEF5 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EEE273BB81D00BBFEF5 /* EditProfile.storyboard */; };
 		DEA36EF1273BB83A00BBFEF5 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EF0273BB83A00BBFEF5 /* EditProfileVC.swift */; };
-		DEA36EF4273BDA8A00BBFEF5 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EF2273BDA8900BBFEF5 /* ImageCell.swift */; };
-		DEA36EF5273BDA8A00BBFEF5 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA36EF3273BDA8900BBFEF5 /* ImageCell.xib */; };
 		DEA36EF9273CF1A600BBFEF5 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EF8273CF1A400BBFEF5 /* APIUrls.swift */; };
 		DEA36EFB273D168800BBFEF5 /* SignupUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EFA273D168600BBFEF5 /* SignupUser.swift */; };
 		DEA36EFF273D19FC00BBFEF5 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA36EFE273D19FC00BBFEF5 /* SignupService.swift */; };
@@ -178,8 +172,6 @@
 		DEA36E862736A81A00BBFEF5 /* ProjectDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailVC.swift; sourceTree = "<group>"; };
 		DEA36E892736A83900BBFEF5 /* PageDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageDetail.storyboard; sourceTree = "<group>"; };
 		DEA36E8B2736A84600BBFEF5 /* PageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetailVC.swift; sourceTree = "<group>"; };
-		DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCellInProject.swift; sourceTree = "<group>"; };
-		DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCellInProject.xib; sourceTree = "<group>"; };
 		DEA36E992737CB4D00BBFEF5 /* CreateNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNC.swift; sourceTree = "<group>"; };
 		DEA36E9B2737CBCB00BBFEF5 /* CreateSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSelectionVC.swift; sourceTree = "<group>"; };
 		DEA36E9D2737DF5700BBFEF5 /* CreateProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectVC.swift; sourceTree = "<group>"; };
@@ -206,8 +198,6 @@
 		DEA36ECE2739555800BBFEF5 /* OtherHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherHomeVC.swift; sourceTree = "<group>"; };
 		DEA36ED22739867C00BBFEF5 /* OtherProjectDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProjectDetailVC.swift; sourceTree = "<group>"; };
 		DEA36ED4273986BF00BBFEF5 /* OtherProjectDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OtherProjectDetail.storyboard; sourceTree = "<group>"; };
-		DEA36ED6273987CA00BBFEF5 /* OtherPageCellInProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPageCellInProject.swift; sourceTree = "<group>"; };
-		DEA36ED7273987CA00BBFEF5 /* OtherPageCellInProject.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherPageCellInProject.xib; sourceTree = "<group>"; };
 		DEA36EDB273A25FF00BBFEF5 /* Explore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
 		DEA36EDD273A262600BBFEF5 /* ExploreNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreNC.swift; sourceTree = "<group>"; };
 		DEA36EDF273A26F900BBFEF5 /* ExploreUnsearchedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUnsearchedVC.swift; sourceTree = "<group>"; };
@@ -218,8 +208,6 @@
 		DEA36EEC273AC04900BBFEF5 /* CurationNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurationNC.swift; sourceTree = "<group>"; };
 		DEA36EEE273BB81D00BBFEF5 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		DEA36EF0273BB83A00BBFEF5 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
-		DEA36EF2273BDA8900BBFEF5 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		DEA36EF3273BDA8900BBFEF5 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		DEA36EF8273CF1A400BBFEF5 /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
 		DEA36EFA273D168600BBFEF5 /* SignupUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUser.swift; sourceTree = "<group>"; };
 		DEA36EFE273D19FC00BBFEF5 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
@@ -305,19 +293,6 @@
 				ABDD343F17D2006155264A4F /* Pods_Storizy_iOS.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DE1E3650274B6F5D0095F581 /* Aside */ = {
-			isa = PBXGroup;
-			children = (
-				DEA36EF2273BDA8900BBFEF5 /* ImageCell.swift */,
-				DEA36EF3273BDA8900BBFEF5 /* ImageCell.xib */,
-				DEA36E9127378AFF00BBFEF5 /* PageCellInProject.swift */,
-				DEA36E9227378AFF00BBFEF5 /* PageCellInProject.xib */,
-				DEA36ED6273987CA00BBFEF5 /* OtherPageCellInProject.swift */,
-				DEA36ED7273987CA00BBFEF5 /* OtherPageCellInProject.xib */,
-			);
-			path = Aside;
 			sourceTree = "<group>";
 		};
 		DE1E3661274F3F2D0095F581 /* Tag */ = {
@@ -506,7 +481,6 @@
 		DEF9E55C2732C74D0022B33B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DE1E3650274B6F5D0095F581 /* Aside */,
 				DEA36EE3273A405900BBFEF5 /* Tag */,
 				DEA36EB927390F6200BBFEF5 /* User */,
 				DEA36E882736A82F00BBFEF5 /* Page */,
@@ -816,7 +790,6 @@
 				DEF9E5A32733855F0022B33B /* Signin.storyboard in Resources */,
 				DEA36EE9273A408D00BBFEF5 /* ProfileTagCell.xib in Resources */,
 				DE1E3667274F6FD00095F581 /* AddCell.xib in Resources */,
-				DEA36EF5273BDA8A00BBFEF5 /* ImageCell.xib in Resources */,
 				DEA36EB02738F58700BBFEF5 /* Create.storyboard in Resources */,
 				DEA36E6A27351D8300BBFEF5 /* HomeNC.storyboard in Resources */,
 				DEF9E5512732C6290022B33B /* LaunchScreen.storyboard in Resources */,
@@ -832,11 +805,9 @@
 				DEA36EA427383A5100BBFEF5 /* EditPage.storyboard in Resources */,
 				DEA36EEB273AC02A00BBFEF5 /* Curation.storyboard in Resources */,
 				DEA36E74273526F100BBFEF5 /* Onboarding.storyboard in Resources */,
-				DEA36ED9273987CA00BBFEF5 /* OtherPageCellInProject.xib in Resources */,
 				DEA36EA627383B6700BBFEF5 /* EditProject.storyboard in Resources */,
 				DEA36EC927394FF900BBFEF5 /* OtherPageDetail.storyboard in Resources */,
 				DEA36E8A2736A83900BBFEF5 /* PageDetail.storyboard in Resources */,
-				DEA36E9427378AFF00BBFEF5 /* PageCellInProject.xib in Resources */,
 				DE1E3613274785080095F581 /* StoryTagCell.xib in Resources */,
 				DE1E3617274796170095F581 /* PTagCell.xib in Resources */,
 				DEA36E852736A7FF00BBFEF5 /* ProjectDetail.storyboard in Resources */,
@@ -908,8 +879,6 @@
 				DEA36EC727391F0D00BBFEF5 /* CustomSegmentedControl.swift in Sources */,
 				DEA36EE0273A26F900BBFEF5 /* ExploreUnsearchedVC.swift in Sources */,
 				DEA36F03273D686500BBFEF5 /* ResponseData.swift in Sources */,
-				DEA36ED8273987CA00BBFEF5 /* OtherPageCellInProject.swift in Sources */,
-				DEA36E9327378AFF00BBFEF5 /* PageCellInProject.swift in Sources */,
 				DEA36E9A2737CB4D00BBFEF5 /* CreateNC.swift in Sources */,
 				DEF9E5422732C6260022B33B /* AppDelegate.swift in Sources */,
 				DE1E366B274F93130095F581 /* PageRequest.swift in Sources */,
@@ -936,7 +905,6 @@
 				DEFE076127512E87002EDC4C /* GetHeartPageService.swift in Sources */,
 				DE1E365E274F2B0D0095F581 /* TagSelectVC.swift in Sources */,
 				DEA36EBB27390F7100BBFEF5 /* User.swift in Sources */,
-				DEA36EF4273BDA8A00BBFEF5 /* ImageCell.swift in Sources */,
 				DEA36ECB2739501700BBFEF5 /* OtherPageDetailVC.swift in Sources */,
 				DEA36EED273AC04900BBFEF5 /* CurationNC.swift in Sources */,
 				DEFE075327508773002EDC4C /* PageData.swift in Sources */,
