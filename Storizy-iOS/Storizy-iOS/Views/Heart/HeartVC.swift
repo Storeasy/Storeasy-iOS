@@ -127,7 +127,7 @@ extension HeartVC: UITableViewDelegate, UITableViewDataSource {
             cell.pageTitleLB.text = page.title
             cell.pageContentLB.text = page.content
             cell.isLiked = page.isLiked ?? true
-            cell.heartBTN.imageView?.image = UIImage(named: "favorite")
+            cell.heartBTN.imageView?.image = UIImage(named: "favorite") // Temp
 
             return cell
         }
@@ -156,7 +156,8 @@ extension HeartVC: UITableViewDelegate, UITableViewDataSource {
         // 페이지
         if type == PAGE {
             let storyboard = UIStoryboard(name: "OtherPageDetail", bundle: nil)
-            let otherPageDetailVC = storyboard.instantiateViewController(identifier: "OtherPageDetailVC")
+            guard let otherPageDetailVC = storyboard.instantiateViewController(identifier: "OtherPageDetailVC") as? OtherPageDetailVC else { return }
+            otherPageDetailVC.pageId = pages[indexPath.row].pageId ?? 0
             self.navigationController?.pushViewController(otherPageDetailVC, animated: true)
         }
         

@@ -23,7 +23,6 @@ class AgreementSignupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        print(signupUser)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

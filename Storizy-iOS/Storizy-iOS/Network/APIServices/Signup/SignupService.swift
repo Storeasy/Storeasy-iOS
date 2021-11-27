@@ -18,18 +18,14 @@ struct SignupService {
         let url = APIUrls.postSignupURL
         let header: HTTPHeaders = [ "Content-Type":"application/json"]
         let body: Parameters = [
-            "email": signupUser.email!,
-            "password": signupUser.pw!,
-            "name": signupUser.name!,
-            "birthDate": signupUser.birth!,
-            "admissionYear": signupUser.enterYear!, //숫자로 변환
-            "universityName": signupUser.univName!,
-            "department": signupUser.major!
+            "email": signupUser.email ?? "",
+            "password": signupUser.pw ?? "",
+            "name": signupUser.name ?? "",
+            "birthDate": signupUser.birth ?? "",
+            "admissionYear": signupUser.enterYear ?? 0,
+            "universityName": signupUser.univName ?? "",
+            "department": signupUser.major ?? ""
         ]
-//        let encoder = JSONEncoder()
-//        let body = try? encoder.encode(signupUser)
-//        guard let bodyData = body, let bodyString = String(data: body!, encoding: .utf8) else {
-//        }
         let dataRequest = AF.request(url,
                                      method: .post,
                                      parameters: body,

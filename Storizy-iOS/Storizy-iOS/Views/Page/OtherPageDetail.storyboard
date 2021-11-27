@@ -13,7 +13,7 @@
         <!--Other Page DetailVC-->
         <scene sceneID="AVX-eC-0La">
             <objects>
-                <viewController storyboardIdentifier="OtherPageDetailVC" id="gyn-eJ-eFo" customClass="OtherPageDetailVC" customModule="Storizy_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OtherPageDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gyn-eJ-eFo" customClass="OtherPageDetailVC" customModule="Storizy_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IyE-AE-rrb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -53,6 +53,7 @@ class OtherPageDetailVC: UIViewController {
         }
     }
     
+    // 페이지 데이터 뷰에 표현
     func loadPage(){
         let url = URL(string: pageDetailData?.profileImage ?? "https://storeasy.s3.ap-northeast-2.amazonaws.com/profileImages/profile_image.png") // 없으면 기본이미지
         let imgData = try! Data(contentsOf: url!)
@@ -68,13 +69,16 @@ class OtherPageDetailVC: UIViewController {
         }
     }
     
+    // 닫기
     @IBAction func closeBtnAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // 프로필 선택
     @IBAction func profileAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "OtherHome", bundle: nil)
-        let otherHomeVC = storyboard.instantiateViewController(identifier: "OtherHomeVC")
+        guard let otherHomeVC = storyboard.instantiateViewController(identifier: "OtherHomeVC") as? OtherHomeVC else { return }
+        otherHomeVC.userId = pageDetailData?.userId ?? 0
         self.navigationController?.pushViewController(otherHomeVC, animated: true)
     }
     

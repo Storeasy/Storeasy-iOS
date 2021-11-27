@@ -8,7 +8,8 @@
 import UIKit
 
 class OtherHomeVC: UIViewController {
-    
+    var contentSizeObserver: NSKeyValueObservation?
+
     @IBOutlet weak var headBarView: UIView!
     
     @IBOutlet weak var profileFrameView: UIView!
@@ -50,6 +51,18 @@ class OtherHomeVC: UIViewController {
         getProfile()
         getStoryTags()
         getStory()
+        
+        contentSizeObserver = feedTableView.observe(\UITableView.contentSize, options: [NSKeyValueObservingOptions.new], changeHandler: { _, change in
+                    if let contentSize = change.newValue {
+                        self.feedTableViewHeight.constant = contentSize.height
+                    }
+                })
+    }
+    
+    override func viewDidLayoutSubviews() {
+        feedTableView.invalidateIntrinsicContentSize()
+        feedTableView.layoutIfNeeded()
+        feedTableViewHeight.constant = feedTableView.contentSize.height
     }
     
     // 닫기
@@ -225,10 +238,10 @@ extension OtherHomeVC: UITableViewDelegate, UITableViewDataSource {
         if storyData[indexPath.row]?.page == nil {
             if let project = storyData[indexPath.row]?.project {
                 // 프로젝트 상세 화면 이동
-                let storyboard = UIStoryboard(name: "ProjectDetail", bundle: nil)
-                guard let projectDetailVC = storyboard.instantiateViewController(identifier: "ProjectDetailVC") as? ProjectDetailVC else { return }
-                projectDetailVC.projectId = project.projectId!
-                self.navigationController?.pushViewController(projectDetailVC, animated: true)
+                let storyboard = UIStoryboard(name: "OtherProjectDetail", bundle: nil)
+                guard let otherProjectDetailVC = storyboard.instantiateViewController(identifier: "OtherProjectDetailVC") as? OtherProjectDetailVC else { return }
+                otherProjectDetailVC.projectId = project.projectId ?? 0
+                self.navigationController?.pushViewController(otherProjectDetailVC, animated: true)
             }
         }
         
@@ -236,9 +249,9 @@ extension OtherHomeVC: UITableViewDelegate, UITableViewDataSource {
         else {
             if let page = storyData[indexPath.row]?.page {
                 //페이지 상세 화면 이동
-                let storyboard = UIStoryboard(name: "PageDetail", bundle: nil)
+                let storyboard = UIStoryboard(name: "OtherPageDetail", bundle: nil)
                 guard let otherPageDetailVC = storyboard.instantiateViewController(identifier: "OtherPageDetailVC") as? OtherPageDetailVC else { return }
-                otherPageDetailVC.pageId = page.pageId!
+                otherPageDetailVC.pageId = page.pageId ?? 0 
                 self.navigationController?.pushViewController(otherPageDetailVC, animated: true)
             }
         }

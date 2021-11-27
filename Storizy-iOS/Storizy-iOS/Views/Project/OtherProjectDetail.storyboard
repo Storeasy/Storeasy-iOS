@@ -72,7 +72,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="133" id="dPr-kg-8uf"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt uroident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="dark_gray2"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -96,8 +95,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-3F-5LY">
                                 <rect key="frame" x="0.0" y="-1" width="414" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로젝트 상세" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-s8-1X9">
-                                        <rect key="frame" x="30" y="56" width="109" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로젝트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-s8-1X9">
+                                        <rect key="frame" x="30" y="56" width="70" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -151,10 +150,13 @@
                     <connections>
                         <outlet property="contentTV" destination="aKi-iF-qFa" id="qx1-Bh-BjY"/>
                         <outlet property="contentTVHeight" destination="dPr-kg-8uf" id="WGw-HB-5ra"/>
+                        <outlet property="dotImage" destination="tQq-uw-4P7" id="KCY-rp-fQh"/>
                         <outlet property="headBarView" destination="8lO-3F-5LY" id="lsk-ku-jaz"/>
                         <outlet property="pageTableView" destination="2NG-V8-c4K" id="AQa-Nr-xm6"/>
+                        <outlet property="periodLB" destination="V0n-CN-T3c" id="ZEC-7e-edB"/>
                         <outlet property="projectBarView" destination="kxy-Hi-8eP" id="uLP-bV-fmt"/>
                         <outlet property="projectFrameView" destination="pxp-68-gwE" id="wuY-1e-tcv"/>
+                        <outlet property="projectTitleLB" destination="Xe1-lW-fbf" id="1px-UX-gEa"/>
                         <outlet property="tagCV" destination="ROP-vM-ahh" id="6OM-yx-55q"/>
                     </connections>
                 </viewController>

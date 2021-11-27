@@ -97,7 +97,7 @@ class CreatePageVC: UIViewController {
                                       startDate: getDateString(startDate),
                                       endDate: getDateString(endDate),
                                       isPublic: true,
-                                      projectId: 8, //temp
+                                      projectId: 0, //temp
                                       tagIds: tagIds,
                                       pageImages: [])
         // API

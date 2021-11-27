@@ -64,9 +64,15 @@ extension OtherPageCell: UICollectionViewDataSource, UICollectionViewDelegate, U
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PTagCell", for: indexPath) as? PTagCell else {
             return UICollectionViewCell()
         }
-        cell.backgroundColor = UIColor(named: "white")
+        cell.frameView.backgroundColor = UIColor(named: "white")
+        cell.tagNameLB.textColor = UIColor(named: "black")
         cell.tagNameLB.text = "#\(tags[indexPath.item]?.tagName ?? "")"
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.cellForItem(at: indexPath)?.bounds.width ?? 70
+        let height = collectionView.bounds.height
+        return CGSize(width: width, height: height)
+    }
 }

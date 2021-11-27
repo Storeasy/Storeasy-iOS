@@ -45,9 +45,9 @@ class MajorSignupVC: UIViewController {
     // 다음
     @IBAction func nextToAgreementSignupAction(_ sender: Any) {
         if let agreementSignupVC = self.storyboard?.instantiateViewController(identifier: "AgreementSignupVC") as? AgreementSignupVC {
-            signupUser.enterYear = Int(enterYearTF.text!)
-            signupUser.univName = univTF.text! + "대학교"
-            signupUser.major = majorTF.text!
+            signupUser.enterYear = Int(enterYearTF.text ?? "0")
+            signupUser.univName = univTF.text ?? "" + "대학교"
+            signupUser.major = majorTF.text ?? ""
             agreementSignupVC.signupUser = self.signupUser
             self.navigationController?.pushViewController(agreementSignupVC, animated: true)
         }

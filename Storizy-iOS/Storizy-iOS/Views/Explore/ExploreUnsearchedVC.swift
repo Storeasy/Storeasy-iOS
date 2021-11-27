@@ -8,7 +8,8 @@
 import UIKit
 
 class ExploreUnsearchedVC: UIViewController {
-    
+    var contentSizeObserver: NSKeyValueObservation?
+
     @IBOutlet weak var headBarView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
@@ -33,6 +34,11 @@ class ExploreUnsearchedVC: UIViewController {
         registerNib()   // nib 등록
         setUI()         // UI
         
+        contentSizeObserver = tableView.observe(\UITableView.contentSize, options: [NSKeyValueObservingOptions.new], changeHandler: { _, change in
+                    if let contentSize = change.newValue {
+                        self.tableViewHeight.constant = contentSize.height
+                    }
+                })
     }
     
     // 추천 페이지 목록 조회
@@ -71,10 +77,6 @@ class ExploreUnsearchedVC: UIViewController {
         // 서치바
         searchBar.layer.borderWidth = 0
         
-        // table view - scroll view
-//        DispatchQueue.main.async {
-//            self.tableViewHeight.constant = self.tableView.contentSize.height
-//        }
     }
 
 }

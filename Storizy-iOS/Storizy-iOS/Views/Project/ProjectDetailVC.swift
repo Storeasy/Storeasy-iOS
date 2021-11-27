@@ -22,10 +22,7 @@ class ProjectDetailVC: UIViewController {
     
     @IBOutlet weak var projectInsideFrameView: UIView!
     
-    var storyTags: [String] = ["IT", "개발", "iOS", "안녕하세요태그인데요", "예선진출", "경축", "많관부"]
-
     var projectId: Int = 0
-    var projectDetail: ProjectDetail?
     var project: Project?
     var pages: [PageInProject] = [] {
         didSet {
@@ -55,7 +52,6 @@ class ProjectDetailVC: UIViewController {
                 print(body)
                 self.project = body.project
                 self.pages = body.pages
-//                self.pageTableView.reloadData()
                 self.loadProjectData()
                 self.setUI()
             } else {
@@ -71,7 +67,6 @@ class ProjectDetailVC: UIViewController {
         projectPeriodLabel.text = "\(project!.startDate!) - \(project!.endDate!)"
         projectTags = project!.tags
         projectContentTextView.text = project?.description
-        
     }
     
     func moreAction(){

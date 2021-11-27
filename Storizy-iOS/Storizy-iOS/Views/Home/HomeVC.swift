@@ -10,7 +10,8 @@ import UIKit
 var accessToken = UserDefaults.standard.string(forKey: "accessToken") ?? ""
 
 class HomeVC: UIViewController {
-    
+    var contentSizeObserver: NSKeyValueObservation?
+
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     // components
@@ -54,10 +55,20 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         accessToken = UserDefaults.standard.string(forKey: "accessToken")
-        // UI 적용
-        setViewUI()
-        // nib 셀 등록
-        registerNib()
+        setViewUI()         // UI 적용
+        registerNib()        // nib 셀 등록
+        
+        contentSizeObserver = storyTableView.observe(\UITableView.contentSize, options: [NSKeyValueObservingOptions.new], changeHandler: { _, change in
+                    if let contentSize = change.newValue {
+                        self.feedTableViewHeight.constant = contentSize.height
+                    }
+                })
+    }
+    
+    override func viewDidLayoutSubviews() {
+        storyTableView.invalidateIntrinsicContentSize()
+        storyTableView.layoutIfNeeded()
+        self.feedTableViewHeight.constant = self.storyTableView.contentSize.height
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -134,7 +145,7 @@ class HomeVC: UIViewController {
         ReadMyStoryService.shared.getMyStory(accessToken: accessToken ?? "") { (responseCode, responseBody) in
             if responseCode == .success {
                 guard let body = responseBody as? ResponseData<[Story]> else { print("!!!!"); return }
-                print("\(body)")
+//                print("\(body)")
                 self.myStoryData = body.data ?? []
             } else {
                 print(responseCode)
@@ -176,10 +187,6 @@ class HomeVC: UIViewController {
         // 그림자
         setShadow(view: profileFrameView)
         setShadow(view: feedFrameView)
-        // 피드 테이블 뷰 높이 동적 조정
-//        DispatchQueue.main.async {
-//            self.feedTableViewHeight.constant = self.storyTableView.contentSize.height
-//        }
     }
 
     
@@ -232,7 +239,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
         SearchStoryService.shared.getSearchedStory(accessToken: accessToken ?? "", tagId: myStoryTagData[indexPath.item]!.id!) { (responseCode, responseBody) in
             if responseCode == .success {
                 guard let body = responseBody as? ResponseData<[Story]> else { print("!!!!"); return }
-                print("\(body)")
+//                print("\(body)")
                 self.myStoryData = body.data ?? []
             } else {
                 print(responseCode)
