@@ -11,7 +11,7 @@
 
 ## 📦 Develop Environment
 
-_iOS Deployment Target : iOS 14.4_
+_iOS Deployment Target : iOS 14.1_
 
 ![SWIFT](https://img.shields.io/static/v1?style=for-the-badge&logo=swift&message=SWIFT&label=&color=FA7343&labelColor=000000)
 
